@@ -1,0 +1,40 @@
+# --- Secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Python / tooling ---
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+*.egg-info/
+build/
+dist/
+
+# --- Raw (unredacted) logs: must never enter the repo (PLAN 6.2) ---
+*.raw.log
+raw_logs/
+# Minecraft instance folders, if ever copied into the repo root by mistake.
+# Anchored with "/" so redacted copies under data/gold/ and data/demo/ are NOT ignored.
+/logs/
+/crash-reports/
+/hs_err_pid*.log
+
+# --- Local scratch ---
+scratch/
+tmp/
+.scratch/
+*.local.*
+
+# --- Editors / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -43,8 +43,17 @@ These verify certificates against the OS trust store. The app does the same at r
 uvicorn crashdoc.api:app --reload        # then open http://127.0.0.1:8000/health
 pytest -q                                 # unit tests (no network)
 ruff check . && ruff format --check .     # lint
-python scripts/validate_labels.py         # check gold labels in data/gold/{dev,test}
+python scripts/validate_labels.py         # check gold labels in data/gold/{dev,test} (--strict at freeze/gates)
 ```
+
+## Preparing gold logs (raw logs never enter the repo)
+
+```bash
+# Raw logs stay in a folder OUTSIDE the repo. This writes redacted copies to data/staging/ (git-ignored):
+python scripts/redact_logs.py /path/outside/repo/raw_logs --names Name1,Name2
+```
+
+Read every file in `data/staging/`, then move it into `data/gold/{dev,test}/` or `data/demo/`.
 
 ## Check the proxy (Phase 0)
 

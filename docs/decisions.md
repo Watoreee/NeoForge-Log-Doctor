@@ -83,8 +83,36 @@ and the redacted log sits next to it. The validator checks both.
 
 **`relevant_doc_ids: null` means "not judged yet."** PLAN fills relevance on Day 3–4, but labels exist earlier. So
 `null` = unjudged (allowed, warned) and `[]` = judged with nothing relevant, which needs `support_search`. With
-`--require-relevance` (Day 5 gate), unjudged is an error. The rule that copies per-scenario judgments into every
+`--strict` (Day 3 split freeze, Day 5 gate), unjudged is an error. The rule that copies per-scenario judgments into every
 log (PLAN 6.7) is added with the pool export on Day 3.
 
-**Category stratification is a warning, not an error.** A category with ≥2 scenario groups missing from dev or
+**Category stratification is a warning, an error under `--strict`.** A category with ≥2 scenario groups missing from dev or
 test is flagged. Whether the split can satisfy it depends on the real logs, so the human decides.
+
+## Redaction (Day 2)
+
+**Redacted output goes to git-ignored `data/staging/` first, not `data/gold/`.** `redact_logs.py` writes there by
+default; files move to `data/gold/` or `data/demo/` only after the human has read each one. A redaction miss
+therefore can't be committed by accident. (PLAN 6.2 writes straight into gold/demo; this adds a review buffer.)
+
+**Redaction logic lives in `src/crashdoc/redact.py`; `scripts/redact_logs.py` is a thin CLI.** Preprocessing will
+also redact pasted logs before any LLM call or cache write, so both share one implementation.
+
+**What gets redacted, beyond PLAN 6.2's list:**
+- Player names come from `Setting user:` **and** launcher `--username` args, plus `--names`. They are replaced
+  case-insensitively (Minecraft names are) and as whole tokens only, so `Steve` doesn't hit `Steven`.
+- OS account names are captured from user-home paths and also replaced elsewhere (e.g. `user.name=`), but
+  case-sensitively, so an account `Asus` doesn't erase a GPU vendor `ASUS`.
+- `hs_err` environment identity lines (`USERNAME=`, `COMPUTERNAME=`, …) and e-mail addresses are also redacted.
+- `127.0.0.1` / `0.0.0.0` are kept: they aren't personal and help diagnose bind errors.
+- Known limits: a 4-part version string that looks like an IPv4 address is over-redacted to `<ip>`; names that
+  appear only in chat and are never captured or listed survive (stated in the report).
+
+**Self-check and counts-only reporting.** After redacting, the script re-scans each output for known names, user
+paths, IPs, tokens and e-mails, using the same matching rules, and exits non-zero on any leftover. The printed
+summary and `redaction_report.json` contain counts only, never a redacted value. The raw folder must be outside
+the repo (enforced) and is only read.
+
+**`validate_labels.py --strict`** (Day 3 split freeze, Day 5 gate) replaces `--require-relevance`. It turns both
+warnings into errors: null `relevant_doc_ids`, and a category with ≥2 scenario groups missing from dev or test.
+A category with a single scenario group can't be in both splits and is exempt.

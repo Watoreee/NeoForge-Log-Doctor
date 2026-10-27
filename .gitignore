@@ -21,6 +21,9 @@ dist/
 # --- Raw (unredacted) logs: must never enter the repo (PLAN 6.2) ---
 *.raw.log
 raw_logs/
+# Redacted logs awaiting the human's read-through; moved to data/gold/ or data/demo/ only after review.
+data/staging/
+
 # Minecraft instance folders, if ever copied into the repo root by mistake.
 # Anchored with "/" so redacted copies under data/gold/ and data/demo/ are NOT ignored.
 /logs/

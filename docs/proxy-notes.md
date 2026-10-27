@@ -1,29 +1,84 @@
 # Proxy notes (Phase 0, PLAN.md section 4)
 
 Probed with `python scripts/probe_proxy.py` on 2026-10-27 18:35 UTC (two full runs, identical outcomes).
+Embedding batches probed on 2026-10-28 with `python scripts/probe_proxy.py --only embedding_batches`.
 Raw output: `docs/proxy-probe-results.json`. The proxy is LiteLLM in front of an OpenAI-compatible server
-(identified from error messages).
+(identified from its error messages).
 
-## Answers
+## Summary
 
-| Question | Answer | Evidence | Decision / fallback |
-|---|---|---|---|
-| Exact model id `gemma-4-E4B-it` accepted? | **Yes** | Listed by `models.list()`; a chat call returns `model = gemma-4-E4B-it` | Use it as-is |
-| System role accepted? | **Yes** | System + user message call succeeded | Prompts may use a system message |
-| Embedding model listed? | **Yes: `bge-m3`** | `models.list()` = `[bge-m3, gemma-4-E4B-it]`; `embeddings.create` returns a **1024-dim** vector | Use proxy `bge-m3` for corpus + query embeddings. Local `sentence-transformers` fallback **not needed**; reduced mode not needed |
-| `response_format` JSON mode works? | **No (accepted but ignored)** | `json_object`, `json_schema` and prompt-only all return the *same* output, wrapped in a ```` ```json ```` fence: 0/3 parse raw, 3/3 parse after fence-stripping. The schema required a `confidence` key the prompt never mentioned; it appeared 0/3 times, so the schema is not enforced | **Fallback:** prompt for JSON, strip a markdown fence, parse, validate with pydantic, one repair retry feeding back the error, then regex facts (PLAN 6.3). Don't send `response_format` (it does nothing and would suggest otherwise) |
-| Native `tools=[...]` reliable over ~5 trials? | **Yes** | 5/5 calls chose `get_mod_info` with valid JSON args naming the right mod; a full round trip (tool result sent back with `role: tool`) produced a correct final text answer | **Native tool calling** for the agent loop. Still validate name + args with pydantic (allow-list); the JSON text protocol remains the switch-over if the real agent prompts make it flaky |
-| Real context window? | **65,536 tokens** (prompt + output) | Server error: "maximum context length is 65536 tokens". Needle at the start was recalled at 58,338 server prompt tokens; 64k cl100k (~77k server tokens) was rejected | Truncation budget well below this (set in `config.py`; leave room for retrieved chunks, the agent transcript, and output). **cl100k undercounts Gemma tokens by ~21%** (server/cl100k = 1.17–1.22), so any cl100k-based budget needs that margin |
-| `stream=True` works? | **Yes** | 50 content chunks, first after 0.10 s, total 0.66 s | Not used (we stream events, not tokens) |
-| Latency | **Fast** | Tiny calls: median 0.11 s, max 0.13 s (5 sequential). 58k-token prompt: 2.4 s | Eval runtime is not a concern |
-| Rate limits | **150 requests, 200,000 tokens per API key** | Headers `x-ratelimit-api_key-limit-requests: 150`, `...-limit-tokens: 200000`. A burst of 8 concurrent calls: 8/8 OK, no 429 | Window is not stated in the headers; **assumed per minute** (LiteLLM's usual rpm/tpm). One near-full-context call uses ~30% of the token budget, so eval runs go sequentially through the response cache (PLAN 7.4), with backoff on 429 |
+| Question | Answer | Decision |
+|---|---|---|
+| Model id `gemma-4-E4B-it` accepted? | Yes | Use as-is |
+| System role accepted? | Yes | Prompts may use a system message |
+| Embedding model listed? | Yes: `bge-m3`, 1024-dim | Use the proxy's `bge-m3`; no local fallback, no reduced mode |
+| Embedding batch limit? | 64 inputs per call OK (largest tried) | Batch size 32 in `build_index.py` |
+| `response_format` JSON mode? | No: accepted but ignored | Prompt for JSON, strip fence, pydantic, one repair |
+| Native `tools=[...]` reliable? | Yes: 5/5, plus a full round trip | Native tool calling (allow-list still enforced) |
+| Context window? | 65,536 tokens (prompt + output) | Log text budget: 6k Gemma tokens (see below) |
+| `stream=True` works? | Yes | Not used (we stream events, not tokens) |
+| Latency? | Chat: ~0.1 s small, 2.4 s at 58k tokens. Embeddings: ~1 s per input | Fine for chat; corpus embedding is slow, so batch |
+| Rate limits? | 150 requests and 200,000 tokens per API key | Hard constraint: count, back off, cache, resume (below) |
 
-## Notes and caveats
+## Details
 
-- Probe calls are tiny or synthetic. Real extraction prompts on long logs may behave differently; the
-  pydantic validation + repair path is the guard.
-- Embeddings were tested with a single input. Batch size limits for embedding the corpus are untested and are
-  checked when `build_index.py` is written.
-- Tokenizer for chunking (PLAN 5): the embedding model runs on the proxy, not locally. The choice between
-  `tiktoken` cl100k (approximation) and bge-m3's own tokenizer is made with the chunker and recorded in
-  `docs/decisions.md`.
+**Model id.** `models.list()` returns exactly `[bge-m3, gemma-4-E4B-it]`. A chat call with `model="gemma-4-E4B-it"`
+succeeds and reports `model = gemma-4-E4B-it`.
+
+**Embeddings.** `embeddings.create(model="bge-m3", ...)` returns 1024-dim vectors.
+- Batch probe: 8, 32 and 64 inputs per call all succeeded, with every vector returned and `index` in input order.
+  Larger batches were not tried. Inputs were ~370 bge-m3 tokens each (~1,440 characters), about one chunk.
+- Time grows linearly with batch size: 9.4 s for 8, 32.2 s for 32, 63.5 s for 64 (about 1 s per input). A corpus
+  of ~3,000 chunks therefore takes ~50 min to embed. Chosen batch size: **32**. That keeps each call well under
+  any proxy timeout and needs only ~94 requests for 3,000 chunks.
+- **The proxy's `usage.prompt_tokens` for embeddings equals the input's character count, not tokens** (11,504 /
+  46,918 / 94,246 reported, matching the character totals exactly; the real bge-m3 counts are 2,869 / 11,617 /
+  23,623). `llm.py` records this number under a separate name and never adds it to chat tokens.
+- Rate-limit accounting, measured from the `x-ratelimit-api_key-remaining-*` headers: a 4,999-character embedding
+  call reduced remaining *tokens* by only 1, but reduced remaining *requests* by 1, while a 13-token chat call
+  reduced remaining tokens by 14. So **embeddings cost requests, not tokens**; chat costs both.
+
+**JSON mode.** `json_object`, `json_schema` and prompt-only all return the *same* output, wrapped in a
+```` ```json ```` markdown fence: 0/3 parse as-is, 3/3 parse after stripping the fence. The `json_schema` variant
+required a `confidence` key that the prompt never mentioned; it appeared 0/3 times, so the schema is not enforced.
+Fallback (PLAN 6.3): ask for JSON in the prompt, strip a markdown fence, parse, validate with pydantic, one repair
+retry that feeds back the validation error, then regex-derived facts. `response_format` is not sent (it does
+nothing, and sending it would suggest otherwise).
+
+**Tool calling.** 5/5 trials chose `get_mod_info` with valid JSON args naming the right mod (`jei`, `create`,
+`sodium`, `ae2`, `curios`). A full round trip (assistant tool call, then a `role: tool` result) produced a correct
+text answer. Decision: native tool calling, still validating tool name and args with pydantic against the
+allow-list. If the real agent prompts are flaky, switch to the JSON text protocol (PLAN 6.6) at once.
+
+**Context window.** The proxy's error message states "maximum context length is 65536 tokens" (prompt + output).
+A needle at the start of the prompt was recalled at 58,338 server-counted prompt tokens.
+- `tiktoken` cl100k **undercounts Gemma tokens by ~21%** (server/cl100k = 1.17 to 1.22 across the ladder).
+- **Budget (set by the human):** the log text sent to the LLM is at most **~6,000 Gemma tokens**, counted as
+  cl100k tokens × 1.25. We never budget anywhere near the 65k window; the rest is headroom for instructions,
+  retrieved chunks, the agent transcript and output. See `docs/decisions.md`.
+
+**Streaming.** 50 content chunks, first after 0.10 s, total 0.66 s. Not needed.
+
+**Rate limits.**
+- Response headers: `x-ratelimit-api_key-limit-requests: 150` and `x-ratelimit-api_key-limit-tokens: 200000`.
+- A burst of 8 concurrent chat calls all succeeded (no 429).
+- **Window: not stated by the proxy and not yet confirmed. Assumed to be per minute (LiteLLM's usual rpm/tpm
+  default) until course staff confirm.** Evidence for a short window: remaining requests were back at 149 of 150
+  a few minutes after runs that had used 20+ requests. This does not prove a 1-minute window.
+- Until the window is confirmed, the limits are treated as hard constraints:
+  - `llm.py` counts requests and tokens per run (chat and embeddings separately) for the results file.
+  - It honours `retry-after` on 429 errors, else exponential backoff.
+  - Every paid response is written to the on-disk cache immediately, so a rerun of `run_eval.py` resumes
+    from the cache and never repeats a paid call.
+  - Before any eval run, the full eval matrix's requests and tokens are estimated and checked with the human.
+
+## Caveats
+
+- **Tool calling depends on the prompt.** In a Day 1 smoke test of `llm.py` (2026-10-28), the bare prompt "Is the
+  mod 'jei' installed? Check." with the same tool and no system message got a text refusal ("I do not have the
+  capability to check…") instead of a tool call. The probe's 5/5 used "A crash log mentions the mod '…'. Check
+  whether it is installed." So the agent's system prompt must say that it has tools and when to use them, and the
+  agent tests must cover a turn that ends with no tool call and no diagnosis.
+- Probe prompts are tiny or synthetic. Real extraction prompts on long logs may behave differently; pydantic
+  validation + repair is the guard.
+- The probe run itself used several 10k–60k-token chat calls. Do not rerun the full probe casually.

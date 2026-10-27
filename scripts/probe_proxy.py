@@ -5,6 +5,7 @@ model id, embeddings, JSON mode, native tool calling, context window, streaming,
 
 Usage:
     python scripts/probe_proxy.py [--max-context-tokens 131072] [--out docs/proxy-probe-results.json]
+    python scripts/probe_proxy.py --only embedding_batches   # rerun some probes, keep the rest
 
 Config comes from the environment only (OPENAI_API_KEY, OPENAI_BASE_URL). A local .env is
 loaded with python-dotenv if present. The key and base URL are never printed or written.
@@ -289,7 +290,8 @@ def _context_prompt(target_tokens: int, enc) -> str:
     """A needle at the start + filler up to ~target tokens, so we test real use of the window."""
     per_line = len(enc.encode(FILLER_LINE))
     lines = max(1, (target_tokens - 100) // per_line)
-    return f"{NEEDLE}\n{FILLER_LINE * lines}\nWhat is the secret code word stated at the very start? Reply with the code word only."
+    question = "What is the secret code word stated at the very start? Reply with the code word only."
+    return f"{NEEDLE}\n{FILLER_LINE * lines}\n{question}"
 
 
 def probe_context(client, scrub, max_tokens: int) -> dict:
@@ -382,9 +384,51 @@ def probe_latency(client, scrub, sequential: int = 5, burst: int = 8) -> dict:
 # ---------------------------------------------------------------- main
 
 
-def run_all(client, scrub, max_context_tokens: int) -> dict:
-    """Run every probe in a fixed order; each one records its own errors instead of aborting."""
-    results = {"model": MODEL, "run_at_utc": datetime.now(UTC).isoformat(timespec="seconds")}
+EMBED_MODEL = "bge-m3"
+EMBED_BATCH_SIZES = (8, 32, 64)
+
+
+def _chunk_like_text(i: int) -> str:
+    """A distinct ~300-token text, roughly the size of one corpus chunk."""
+    body = " ".join(
+        f"Mod{i}_{j} failed to load because dependency lib{j} version {i}.{j} is missing." for j in range(20)
+    )
+    return f"Chunk {i}. {body}"
+
+
+def probe_embedding_batches(client, scrub, sizes=EMBED_BATCH_SIZES) -> dict:
+    """How many inputs does one embeddings call accept? Grow the batch; stop at the first failure."""
+    steps = []
+    for size in sizes:
+        texts = [_chunk_like_text(i) for i in range(size)]
+        t0 = time.perf_counter()
+        try:
+            resp = client.embeddings.create(model=EMBED_MODEL, input=texts)
+        except Exception as e:  # noqa: BLE001
+            steps.append({"batch": size, "ok": False, "error": scrub(e)})
+            break
+        indices = [d.index for d in resp.data]
+        steps.append(
+            {
+                "batch": size,
+                "ok": len(resp.data) == size,
+                "vectors": len(resp.data),
+                "in_order": indices == list(range(size)),
+                "dim": len(resp.data[0].embedding),
+                "prompt_tokens": getattr(resp.usage, "prompt_tokens", None),
+                "seconds": round(time.perf_counter() - t0, 2),
+            }
+        )
+    return {"model": EMBED_MODEL, "steps": steps, "largest_ok": max((s["batch"] for s in steps if s["ok"]), default=0)}
+
+
+def run_all(client, scrub, max_context_tokens: int, only: set[str] | None = None, previous: dict | None = None) -> dict:
+    """Run the probes in a fixed order; each records its own errors instead of aborting.
+
+    With `only`, run just those probes and merge into `previous`, so earlier results are kept.
+    """
+    results = dict(previous or {}) if only else {"model": MODEL}
+    results["run_at_utc" if not only else "partial_run_at_utc"] = datetime.now(UTC).isoformat(timespec="seconds")
     steps = [
         ("models", lambda: probe_models(client, scrub)),
         ("model_accepted", lambda: probe_model_accepted(client, scrub)),
@@ -395,8 +439,11 @@ def run_all(client, scrub, max_context_tokens: int) -> dict:
         ("streaming", lambda: probe_streaming(client, scrub)),
         ("latency", lambda: probe_latency(client, scrub)),
         ("context", lambda: probe_context(client, scrub, max_context_tokens)),
+        ("embedding_batches", lambda: probe_embedding_batches(client, scrub)),
     ]
     for name, fn in steps:
+        if only and name not in only:
+            continue
         print(f"[probe] {name} ...", flush=True)
         results[name] = fn()
         print(scrub(json.dumps(results[name], indent=2, default=str), limit=1500), flush=True)
@@ -407,14 +454,17 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--max-context-tokens", type=int, default=131_072)
     parser.add_argument("--out", default="docs/proxy-probe-results.json")
+    parser.add_argument("--only", help="comma-separated probe names to (re)run, merged into --out")
     args = parser.parse_args()
 
     key, base = load_config()
     use_os_trust_store()
     scrub = Scrubber(key, base)
-    results = run_all(make_client(key, base), scrub, args.max_context_tokens)
-
     out = Path(args.out)
+    only = set(args.only.split(",")) if args.only else None
+    previous = json.loads(out.read_text(encoding="utf-8")) if only and out.exists() else None
+    results = run_all(make_client(key, base), scrub, args.max_context_tokens, only, previous)
+
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(scrub(json.dumps(results, indent=2, default=str), limit=None), encoding="utf-8")
     print(f"[probe] wrote {out}")

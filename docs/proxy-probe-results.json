@@ -173,5 +173,39 @@
       }
     ],
     "largest_ok_server_tokens": 58338
+  },
+  "partial_run_at_utc": "2026-10-27T18:54:58+00:00",
+  "embedding_batches": {
+    "model": "bge-m3",
+    "steps": [
+      {
+        "batch": 8,
+        "ok": true,
+        "vectors": 8,
+        "in_order": true,
+        "dim": 1024,
+        "prompt_tokens": 11504,
+        "seconds": 9.37
+      },
+      {
+        "batch": 32,
+        "ok": true,
+        "vectors": 32,
+        "in_order": true,
+        "dim": 1024,
+        "prompt_tokens": 46918,
+        "seconds": 32.23
+      },
+      {
+        "batch": 64,
+        "ok": true,
+        "vectors": 64,
+        "in_order": true,
+        "dim": 1024,
+        "prompt_tokens": 94246,
+        "seconds": 63.5
+      }
+    ],
+    "largest_ok": 64
   }
 }

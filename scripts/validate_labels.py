@@ -2,9 +2,10 @@
 
 Usage:
     python scripts/validate_labels.py [--gold-dir data/gold] [--manifest data/processed/manifest.json]
-                                      [--require-relevance]
+                                      [--strict]
 
-Exit code 1 if any check fails. Use --require-relevance once annotation must be complete (Day 5 gate).
+Exit code 1 if any check fails. --strict (Day 3 split freeze, Day 5 gate) also fails on null
+relevant_doc_ids and on a category with >=2 scenario groups that is missing from dev or test.
 """
 
 from __future__ import annotations
@@ -21,10 +22,10 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Validate gold labels.")
     parser.add_argument("--gold-dir", type=Path, default=REPO_ROOT / "data" / "gold")
     parser.add_argument("--manifest", type=Path, default=REPO_ROOT / "data" / "processed" / "manifest.json")
-    parser.add_argument("--require-relevance", action="store_true", help="unjudged relevance is an error")
+    parser.add_argument("--strict", action="store_true", help="unjudged relevance + split imbalance are errors")
     args = parser.parse_args()
 
-    report = validate_gold(args.gold_dir, args.manifest, args.require_relevance)
+    report = validate_gold(args.gold_dir, args.manifest, args.strict)
     for split, items in report.labels.items():
         print(f"{split}: {describe_split(items)}")
     for w in report.warnings:

@@ -110,7 +110,7 @@ def test_unjudged_relevance_is_warning_then_error_when_required(tmp_path):
     _write(tmp_path, "test", log_id="a")
     assert validate_gold(tmp_path).ok
     assert validate_gold(tmp_path).warnings
-    assert not validate_gold(tmp_path, require_relevance=True).ok
+    assert not validate_gold(tmp_path, strict=True).ok
 
 
 def test_label_needs_matching_log_file_and_name(tmp_path):
@@ -146,3 +146,10 @@ def test_category_missing_from_a_split_is_warned(tmp_path):
     _write(tmp_path, "test", log_id="a", scenario_id="s1")
     _write(tmp_path, "test", log_id="b", scenario_id="s2")
     assert any("none in dev" in w for w in validate_gold(tmp_path).warnings)
+    assert any("none in dev" in e for e in validate_gold(tmp_path, strict=True).errors)
+
+
+def test_single_group_category_is_fine_even_when_strict(tmp_path):
+    _write(tmp_path, "test", log_id="a", scenario_id="s1", relevant_doc_ids=["d1"])
+    _write(tmp_path, "test", log_id="b", scenario_id="s1", relevant_doc_ids=["d1"])
+    assert validate_gold(tmp_path, strict=True).ok

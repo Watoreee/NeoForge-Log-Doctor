@@ -138,8 +138,12 @@ def load_manifest_doc_ids(manifest_path: Path) -> set[str] | None:
     return {row["doc_id"] for row in rows}
 
 
-def validate_gold(gold_dir: Path, manifest_path: Path | None = None, require_relevance: bool = False) -> LabelReport:
-    """Run every label check. `require_relevance` turns unjudged relevance into errors (Day 5 gate)."""
+def validate_gold(gold_dir: Path, manifest_path: Path | None = None, strict: bool = False) -> LabelReport:
+    """Run every label check.
+
+    `strict` (Day 3 split freeze, Day 5 gate) turns two warnings into errors: unjudged relevance
+    (null relevant_doc_ids) and a category with >=2 scenario groups missing from dev or test.
+    """
     report = LabelReport()
     for split in SPLITS:
         split_dir = gold_dir / split
@@ -151,8 +155,8 @@ def validate_gold(gold_dir: Path, manifest_path: Path | None = None, require_rel
     report.errors += check_scenario_leakage(report.labels)
     report.errors += check_scenario_consistency(report.labels)
     unjudged = check_relevance_judged(report.labels)
-    (report.errors if require_relevance else report.warnings).extend(unjudged)
-    report.warnings += check_category_stratification(report.labels)
+    unbalanced = check_category_stratification(report.labels)
+    (report.errors if strict else report.warnings).extend(unjudged + unbalanced)
 
     known = load_manifest_doc_ids(manifest_path) if manifest_path else None
     if known is not None:

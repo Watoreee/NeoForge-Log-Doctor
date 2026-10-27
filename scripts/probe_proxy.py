@@ -149,22 +149,35 @@ JSON_PROMPT = (
 )
 
 
-def _parses_as_object(text: str | None) -> bool:
+def _load_object(text: str | None, strip_fences: bool = False) -> dict | None:
+    """Parse a JSON object; optionally strip a ```json ... ``` markdown fence first."""
+    text = (text or "").strip()
+    if strip_fences and text.startswith("```"):
+        text = text.split("\n", 1)[-1].rsplit("```", 1)[0]
     try:
-        return isinstance(json.loads(text or ""), dict)
+        obj = json.loads(text)
     except json.JSONDecodeError:
-        return False
+        return None
+    return obj if isinstance(obj, dict) else None
 
 
 def probe_json_mode(client, scrub, trials: int = 3) -> dict:
-    """Q3: response_format json_object / json_schema, vs. prompt-only JSON (the fallback)."""
+    """Q3: response_format json_object / json_schema, vs. prompt-only JSON (the fallback).
+
+    The schema requires a "confidence" key the prompt never mentions, so its presence
+    shows the proxy actually enforces the schema rather than ignoring response_format.
+    """
     schema = {
         "name": "facts",
         "strict": True,
         "schema": {
             "type": "object",
-            "properties": {"category": {"type": "string"}, "mod_ids": {"type": "array", "items": {"type": "string"}}},
-            "required": ["category", "mod_ids"],
+            "properties": {
+                "category": {"type": "string"},
+                "mod_ids": {"type": "array", "items": {"type": "string"}},
+                "confidence": {"type": "string", "enum": ["low", "medium", "high"]},
+            },
+            "required": ["category", "mod_ids", "confidence"],
             "additionalProperties": False,
         },
     }
@@ -175,16 +188,26 @@ def probe_json_mode(client, scrub, trials: int = 3) -> dict:
     }
     out = {}
     for name, kw in variants.items():
-        ok, errors, sample = 0, [], None
+        raw_ok, stripped_ok, has_confidence, errors, sample = 0, 0, 0, [], None
         for _ in range(trials):
             try:
                 resp, _ = chat(client, [{"role": "user", "content": JSON_PROMPT}], max_tokens=200, **kw)
                 text = resp.choices[0].message.content
                 sample = (text or "")[:200]
-                ok += _parses_as_object(text)
+                raw_ok += _load_object(text) is not None
+                obj = _load_object(text, strip_fences=True)
+                stripped_ok += obj is not None
+                has_confidence += bool(obj and "confidence" in obj)
             except Exception as e:  # noqa: BLE001
                 errors.append(scrub(e))
-        out[name] = {"parsed_ok": ok, "trials": trials, "sample": sample, "errors": errors[:1]}
+        out[name] = {
+            "parsed_raw": raw_ok,
+            "parsed_after_fence_strip": stripped_ok,
+            "has_schema_only_key": has_confidence,
+            "trials": trials,
+            "sample": sample,
+            "errors": errors[:1],
+        }
     return out
 
 
@@ -274,7 +297,7 @@ def probe_context(client, scrub, max_tokens: int) -> dict:
     import tiktoken
 
     enc = tiktoken.get_encoding("cl100k_base")
-    ladder = [t for t in (2_000, 8_000, 16_000, 32_000, 64_000, 100_000, 128_000, 200_000) if t <= max_tokens]
+    ladder = [t for t in (2_000, 8_000, 16_000, 32_000, 48_000, 64_000, 100_000, 128_000, 200_000) if t <= max_tokens]
     steps = []
     for target in ladder:
         prompt = _context_prompt(target, enc)

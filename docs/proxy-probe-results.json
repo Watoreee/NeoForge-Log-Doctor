@@ -1,0 +1,177 @@
+{
+  "model": "gemma-4-E4B-it",
+  "run_at_utc": "2026-10-27T18:35:29+00:00",
+  "models": {
+    "ok": true,
+    "ids": [
+      "bge-m3",
+      "gemma-4-E4B-it"
+    ],
+    "target_listed": true,
+    "embedding_candidates": [
+      "bge-m3"
+    ],
+    "metadata": {}
+  },
+  "model_accepted": {
+    "accepted": true,
+    "reported_model": "gemma-4-E4B-it",
+    "reply": "OK",
+    "seconds": 0.13
+  },
+  "system_role": {
+    "accepted": true,
+    "reply": "Blue"
+  },
+  "embeddings": {
+    "tried": {
+      "bge-m3": {
+        "ok": true,
+        "dim": 1024
+      }
+    },
+    "any_working": true
+  },
+  "json_mode": {
+    "json_object": {
+      "parsed_raw": 0,
+      "parsed_after_fence_strip": 3,
+      "has_schema_only_key": 0,
+      "trials": 3,
+      "sample": "```json\n{\n  \"category\": \"missing_dependency\",\n  \"mod_ids\": [\n    \"jei\",\n    \"mod_x\"\n  ]\n}\n```",
+      "errors": []
+    },
+    "json_schema": {
+      "parsed_raw": 0,
+      "parsed_after_fence_strip": 3,
+      "has_schema_only_key": 0,
+      "trials": 3,
+      "sample": "```json\n{\n  \"category\": \"missing_dependency\",\n  \"mod_ids\": [\n    \"jei\",\n    \"mod_x\"\n  ]\n}\n```",
+      "errors": []
+    },
+    "prompt_only": {
+      "parsed_raw": 0,
+      "parsed_after_fence_strip": 3,
+      "has_schema_only_key": 0,
+      "trials": 3,
+      "sample": "```json\n{\n  \"category\": \"missing_dependency\",\n  \"mod_ids\": [\n    \"jei\",\n    \"mod_x\"\n  ]\n}\n```",
+      "errors": []
+    }
+  },
+  "tools": {
+    "valid": 5,
+    "trials": 5,
+    "details": [
+      {
+        "mod_id": "jei",
+        "valid": true,
+        "name": "get_mod_info",
+        "args": {
+          "mod_id": "jei"
+        },
+        "seconds": 0.31
+      },
+      {
+        "mod_id": "create",
+        "valid": true,
+        "name": "get_mod_info",
+        "args": {
+          "mod_id": "create"
+        },
+        "seconds": 0.3
+      },
+      {
+        "mod_id": "sodium",
+        "valid": true,
+        "name": "get_mod_info",
+        "args": {
+          "mod_id": "sodium"
+        },
+        "seconds": 0.3
+      },
+      {
+        "mod_id": "ae2",
+        "valid": true,
+        "name": "get_mod_info",
+        "args": {
+          "mod_id": "ae2"
+        },
+        "seconds": 0.31
+      },
+      {
+        "mod_id": "curios",
+        "valid": true,
+        "name": "get_mod_info",
+        "args": {
+          "mod_id": "curios"
+        },
+        "seconds": 0.31
+      }
+    ],
+    "round_trip": {
+      "ok": true,
+      "final_text": "The mod 'jei' is not installed."
+    }
+  },
+  "streaming": {
+    "works": true,
+    "content_chunks": 50,
+    "time_to_first_s": 0.1,
+    "total_s": 0.66,
+    "text": "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20"
+  },
+  "latency": {
+    "sequential_ok": 5,
+    "sequential_median_s": 0.11,
+    "sequential_max_s": 0.13,
+    "burst_size": 8,
+    "burst_ok": 8,
+    "burst_statuses": [],
+    "burst_errors": [],
+    "rate_limit_headers": {
+      "x-ratelimit-api_key-limit-requests": "150",
+      "x-ratelimit-api_key-limit-tokens": "200000",
+      "x-ratelimit-api_key-remaining-requests": "135",
+      "x-ratelimit-api_key-remaining-tokens": "198316"
+    }
+  },
+  "context": {
+    "steps": [
+      {
+        "target_cl100k": 2000,
+        "server_prompt_tokens": 2338,
+        "needle_found": true,
+        "seconds": 0.17
+      },
+      {
+        "target_cl100k": 8000,
+        "server_prompt_tokens": 9646,
+        "needle_found": true,
+        "seconds": 0.19
+      },
+      {
+        "target_cl100k": 16000,
+        "server_prompt_tokens": 19390,
+        "needle_found": true,
+        "seconds": 0.21
+      },
+      {
+        "target_cl100k": 32000,
+        "server_prompt_tokens": 38850,
+        "needle_found": true,
+        "seconds": 0.25
+      },
+      {
+        "target_cl100k": 48000,
+        "server_prompt_tokens": 58338,
+        "needle_found": true,
+        "seconds": 2.39
+      },
+      {
+        "target_cl100k": 64000,
+        "error": "Error code: 400 - {'error': {'message': \"litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: OpenAIException - This model's maximum context length is 65536 tokens. However, you requested 20 output tokens and your prompt contains at least 65517 input tokens, for a total of at least 65537 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=65517)\\nmodel=gemma-4-E4B-it. context_window_fall"
+      }
+    ],
+    "largest_ok_server_tokens": 58338
+  }
+}

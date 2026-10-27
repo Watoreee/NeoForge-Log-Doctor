@@ -1,0 +1,23 @@
+# Python 3.11+. Exact pins = the versions this project was developed and evaluated with.
+
+# LLM proxy client + config
+openai==2.54.0
+python-dotenv==1.2.4
+# Use the OS certificate store for TLS (some networks re-sign HTTPS; see docs/decisions.md)
+truststore==0.10.5
+
+# Schemas + API
+pydantic==2.14.1
+fastapi==0.162.0
+uvicorn==0.54.0
+
+# Retrieval
+numpy==2.4.6
+rank-bm25==0.2.2
+tiktoken==0.14.0
+# Local embedding fallback (only needed if the proxy has no embedding model; see docs/proxy-notes.md)
+sentence-transformers==6.2.0
+
+# Dev
+pytest==9.1.1
+ruff==0.17.3

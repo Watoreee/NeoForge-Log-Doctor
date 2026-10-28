@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:P3pp3rF1y/SophisticatedStorage#931",
+ "url": "https://github.com/P3pp3rF1y/SophisticatedStorage/issues/931",
+ "title": "SophisticatedStorage issue #931: [Create][1.21.1] Stack upgrades on max barrels kick players (IndexOutOfBoundsException",
+ "source_type": "github_issue",
+ "repo": "P3pp3rF1y/SophisticatedStorage",
+ "state": "closed",
+ "created_at": "2026-09-20T15:58:45Z",
+ "fetched_at": "2026-10-28T08:09:06+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by FoxfireDrifter]\nI put a netherite stack upgrade on my compression storage barrel (netherite tier).  When I try to access my create storage system, I get kicked from the server with the following error.\n\n[disconnect-2026-09-20_11.46.56-client.txt](https://github.com/user-attachments/files/32437441/disconnect-2026-09-20_11.46.56-client.txt)\n\nI think its the same error that was causing the nested backpack crash, since it is an Index out of bounds error.\n\n[comment by P3pp3rF1y (owner)]\nI can't see anything in that exception especially no reference to sophisticated in any way and you're saying that you're trying to access create storage system? That sounds like that would be an error that Create would need to look into.\n\n[comment by P3pp3rF1y (owner)]\nUnless of course by Create storage system you mean access gui of the barrel\n\n[comment by FoxfireDrifter (none)]\nWhen I access the ui through the stock ticker entity, it kicks me from the server.  I had no issues before. However, after I installed the netherite stack upgrade on a limited barrel I used for storing iron, it started to kick me from the server with that error. it looks similar to the issue backpacks had.  I saw that the backpacks had an issue with create and nested backpacks with an Index out of bounds exception, I thought it might be related, so I created the ticket.\n\n[comment by P3pp3rF1y (owner)]\nYou will need to report this one to create, sounds like perhaps stock ticker isn't ready for that many slots."
+}

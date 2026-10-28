@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:thedarkcolour/KotlinForForge#110",
+ "url": "https://github.com/thedarkcolour/KotlinForForge/issues/110",
+ "title": "KotlinForForge issue #110: [1.21.1-Neoforge] EventBusSubscriber Annotation doesn't work on Java class",
+ "source_type": "github_issue",
+ "repo": "thedarkcolour/KotlinForForge",
+ "state": "open",
+ "created_at": "2024-11-29T11:43:48Z",
+ "fetched_at": "2026-10-28T08:08:37+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-2.1) does not cover issue text",
+ "text": "[issue by alegian]\nI want to integrate KFF into a large codebase incrementally. I was happy to see that the `@Mod` annotation works for my main Java mod class, even when using KFF loader. \r\n\r\nI expected the `@EventBusSubscriber` annotation to do the same on my events class (uses **static** methods), but it doesn't. It doesn't even complain, Neo just crashes because of unregistered stuff. Switching my event class to Kotlin object immediately solved it.\r\n\r\nI don't know how KFF works, so I dont know if this is feasible, but it should definitely be documented somewhere. I spent hours debugging it, since there is no visible KFF error. The skeleton projects have no dedicated event file example.\r\n\r\nTo be clear, the issue is: Following the steps in README for an existing mod, the resulting setup may sometimes crash, due to events not being loaded.\n\n[comment by thedarkcolour (owner)]\n[This is the code](https://github.com/thedarkcolour/KotlinForForge/blob/5.x/forge/kfflang/src/main/kotlin/thedarkcolour/kotlinforforge/AutoKotlinEventBusSubscriber.kt) where @EventBusSubscriber classes are loaded. I'll add documentation for where exactly EventBusSubscriber is applicable (since you can even use it as a file: annotation)\n\n[comment by alegian (none)]\nthank you :)"
+}

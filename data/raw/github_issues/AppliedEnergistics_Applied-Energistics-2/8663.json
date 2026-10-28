@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:AppliedEnergistics/Applied-Energistics-2#8663",
+ "url": "https://github.com/AppliedEnergistics/Applied-Energistics-2/issues/8663",
+ "title": "Applied-Energistics-2 issue #8663: Suspend button not working on 1.21",
+ "source_type": "github_issue",
+ "repo": "AppliedEnergistics/Applied-Energistics-2",
+ "state": "closed",
+ "created_at": "2025-09-13T23:52:01Z",
+ "fetched_at": "2026-10-28T08:11:01+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by JoanFo1456]\n### Describe the bug\n\nOn 1.21 the suspend button recently added it doesn't suspend the jobs.\n\n### How to reproduce the bug\n\nCreate a job for the terminal, for example crafting and try to suspend it.\n\n### Expected behavior\n\nIt should suspend the work and display \"Resume\" (or similar)\n\n### Additional details\n\n_No response_\n\n### Which minecraft version are you using?\n\n1.21\n\n### On which mod loaders does it happen?\n\nForge, NeoForge\n\n### Crash log\n\nThis doesn't create a crash log\n\n[comment by Mari023 (collaborator)]\nI can't reproduce this.\nIs this in singleplayer or multiplayer?\ncan you please post a crash log (hold F3 + C for 10 seconds to create one)\n\n[comment by pedroksl (contributor)]\nAre you using a quantum computer? I have not yet added support for that functionality. Working on it now.\n\n[comment by Mithi83 (collaborator)]\nIs this still a problem? In my ATM10 instance I‘ve successfully suspended a crafting job running on a quantum computer.\n\n[comment by pedroksl (contributor)]\n@Mithi83 It isn't. The commit referenced in this issue was my implementation of the suspend/resume feature for quantum computers."
+}

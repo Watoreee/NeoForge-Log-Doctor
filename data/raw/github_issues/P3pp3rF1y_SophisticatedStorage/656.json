@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:P3pp3rF1y/SophisticatedStorage#656",
+ "url": "https://github.com/P3pp3rF1y/SophisticatedStorage/issues/656",
+ "title": "SophisticatedStorage issue #656: Stack Upgrade Limit Config Option Location",
+ "source_type": "github_issue",
+ "repo": "P3pp3rF1y/SophisticatedStorage",
+ "state": "closed",
+ "created_at": "2025-05-23T02:04:21Z",
+ "fetched_at": "2026-10-28T08:09:26+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by 7OOTnegaTerces]\nWhere is the config option to increase the number of Stack Upgrades that a particular storage option can accept?  Like, I've got a Diamond Jungle Storage Barrel, and I want to be able to use 6 Diamond Stack Upgrades on it, not just 2.  Asking for 1.18.2, 1.20.1, and 1.21 versions!\n\n[comment by P3pp3rF1y (owner)]\n`sophisticatedstorage-server.toml` > `maxUpgradesPerStorage`, also Discord is better suited for questions like this and you will likely get response much faster\n\n[comment by 7OOTnegaTerces (none)]\nI’d have loved to ask there, but I couldn’t find any links to it!  Where is your discord invite?!?\n\n[comment by P3pp3rF1y (owner)]\nhttps://discord.com/invite/ZNxRYScDS7 \n\nIt's actually on the project pages of my projects, but on CurseForge this shows just as a small discord icon, which can be hard to find if you don't know where to look. I need to create a new header for my projects with useful links that would go below the main image and would be easy to see.\n\n[comment by 7OOTnegaTerces (none)]\nFYI, I found that icon you were mentioning, and that only shows up when looking at the site on a desktop, not on mobile, even if you request the desktop version. So if, say, one was playing the game on their desktop and open the mod page on their phone looking for something, they wouldn’t ever see or know about that link…\n\nSo, yeah, maybe make that new header a higher priority?!?  Thanks again for the AMAZING mod!!!"
+}

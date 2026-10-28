@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:AppliedEnergistics/Applied-Energistics-2#9019",
+ "url": "https://github.com/AppliedEnergistics/Applied-Energistics-2/issues/9019",
+ "title": "Applied-Energistics-2 issue #9019: Crystal Assembler output config has return text say Circuit Slicer",
+ "source_type": "github_issue",
+ "repo": "AppliedEnergistics/Applied-Energistics-2",
+ "state": "closed",
+ "created_at": "2026-10-04T08:33:59Z",
+ "fetched_at": "2026-10-28T08:11:12+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by BenLeclerc]\n### Describe the bug\n\nConfiguring the output for the Crystal Assembler, set the output to auto-export.  Then clicking on the Open Output Config lets you select the side to output to.  But the return button on this screen says to return to the \"Circuit Slicer\", not the \"Crystal Assembler\" as expected.\n\n### How to reproduce the bug\n\nConfiguring the output for the Crystal Assembler, set the output to auto-export.  Then clicking on the Open Output Config lets you select the side to output to.  But the return button on this screen says to return to the \"Circuit Slicer\", not the \"Crystal Assembler\" as expected.\n\nThis is in the 0.6.1 of ATM 10 Aero pack.\n\n### Expected behavior\n\nThe return button should say \"Crystal Assembler\"\n\n### Additional details\n\n_No response_\n\n### Which minecraft version are you using?\n\n1.21\n\n### On which mod loaders does it happen?\n\nNeoForge\n\n### Crash log\n\nNo crash\n\n[comment by shartte (member)]\nThere is no such thing as a \"Crystal Assembler\" in this mod. You must be using something from an addon.\n\n[comment by Mithi83 (collaborator)]\nTry https://github.com/GlodBlock/ExtendedAE"
+}

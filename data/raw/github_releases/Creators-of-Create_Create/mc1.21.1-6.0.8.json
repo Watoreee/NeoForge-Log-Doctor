@@ -1,0 +1,11 @@
+{
+ "doc_id": "gh-release:Creators-of-Create/Create@mc1.21.1-6.0.8",
+ "url": "https://github.com/Creators-of-Create/Create/releases/tag/mc1.21.1-6.0.8",
+ "title": "Create release Create 6.0.8 for mc1.21.1",
+ "source_type": "github_release",
+ "repo": "Creators-of-Create/Create",
+ "created_at": "2025-11-02T16:12:51Z",
+ "fetched_at": "2026-10-28T08:01:34+00:00",
+ "licence": "Release notes; repo licence NOASSERTION (custom or unrecognised licence; see the repo's LICENSE file)",
+ "text": "Create 6.0.8:\n\n\n#### Bug Fixes\n\n- Fix StockKeeperRequestScreen focusing search box if the chat key is pressed when typing in the address box\n- Fix signals not reacting to redstone input #9444\n- Fix held-item based menus not working correctly #9433\n- Fix z-fighting between elevators and walls\n- Fix crash with certain mods that add spawn eggs\n- Fix copycat blocks and other blocks depending on ModelData not being rendered correctly on contraptions when using indirect or instanced rendering #9410 (1.21.1)\n- Fix threshold switches not correctly counting empty slots #9420 (1.21.1)"
+}

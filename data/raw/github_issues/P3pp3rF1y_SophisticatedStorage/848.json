@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:P3pp3rF1y/SophisticatedStorage#848",
+ "url": "https://github.com/P3pp3rF1y/SophisticatedStorage/issues/848",
+ "title": "SophisticatedStorage issue #848: Crash 1.21.11",
+ "source_type": "github_issue",
+ "repo": "P3pp3rF1y/SophisticatedStorage",
+ "state": "closed",
+ "created_at": "2026-04-14T14:28:15Z",
+ "fetched_at": "2026-10-28T08:09:10+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by TookUrSweetRoll]\nHappens when connecting Tom's inventory controller to SS barrels.\n\n[crash-2026-04-14_09.20.53-server.txt](https://github.com/user-attachments/files/26715038/crash-2026-04-14_09.20.53-server.txt)\n\n[comment by P3pp3rF1y (owner)]\nthis needs to be reported to Tom's to adjust compat and I was pretty sure it already was and that they have a version with fix."
+}

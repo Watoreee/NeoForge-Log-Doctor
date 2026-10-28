@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:CaffeineMC/sodium#3792",
+ "url": "https://github.com/CaffeineMC/sodium/issues/3792",
+ "title": "sodium issue #3792: crash 1.21.1 neoforge",
+ "source_type": "github_issue",
+ "repo": "CaffeineMC/sodium",
+ "state": "closed",
+ "created_at": "2026-06-30T09:03:29Z",
+ "fetched_at": "2026-10-28T08:04:20+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by bryaN171Z]\n### Bug Description\n\nThe error happens sometimes; sometimes it loads without crashing, and at other times, a crash occurs.\n\n### Reproduction Steps\n\nSodium works fine when it's the only mod in the folder; the error starts when you add the Ender Cataclysm mod to the folder.\n\n### Log File\n\nsodium-neoforge-0.8.12-beta.2+mc1.21.1.jar \n\n### Crash Report\n\nhttps://mclo.gs/XMzlhH4\n\n[comment by jellysquid3 (member)]\nThis is almost guaranteed to not be a bug with Sodium (cascading mod load error), but your crash report is useless and you did not provide any of the information we asked for.\n\n[comment by bryaN171Z (none)]\nI've already added what was missing."
+}

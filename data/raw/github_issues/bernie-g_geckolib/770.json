@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:bernie-g/geckolib#770",
+ "url": "https://github.com/bernie-g/geckolib/issues/770",
+ "title": "geckolib issue #770: Crashing with mowzie's mobs and epic fight (neoforge 1.21.1)",
+ "source_type": "github_issue",
+ "repo": "bernie-g/geckolib",
+ "state": "closed",
+ "created_at": "2025-10-06T15:02:45Z",
+ "fetched_at": "2026-10-28T08:05:11+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by smoliv-tato]\n[latest.log](https://github.com/user-attachments/files/22724861/latest.log)\n\nIf i have a mask from mowzie's mobs and open my inventory, the game crashes. The only mods I installed are mowzie's mobs and epic fight.\n\n[comment by Tslat (collaborator)]\nepicfight mod is broken\nnothing I can do here, take this to them"
+}

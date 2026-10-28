@@ -1,0 +1,11 @@
+{
+ "doc_id": "gh-release:CaffeineMC/sodium@mc26.3-0.9.3-alpha.1",
+ "url": "https://github.com/CaffeineMC/sodium/releases/tag/mc26.3-0.9.3-alpha.1",
+ "title": "sodium release Sodium 0.9.3-alpha.1 for Minecraft 26.3",
+ "source_type": "github_release",
+ "repo": "CaffeineMC/sodium",
+ "created_at": "2026-09-20T21:27:06Z",
+ "fetched_at": "2026-10-28T08:04:50+00:00",
+ "licence": "Release notes; repo licence NOASSERTION (custom or unrecognised licence; see the repo's LICENSE file)",
+ "text": "Sodium 0.9.3-alpha.1 fixes graphical glitches on Intel iGPUs, fluid culling for unusual blocks, and adds the macOS fullscreen menu visibility option.\n\n- Fix graphical glitches on some Intel iGPUs\n- Show macOS fullscreen menu visibility option on the Video Settings screen\n- Fix Fluid Culling For Non-Full Blocks With Unusual Shapes ([#3916](https://github.com/CaffeineMC/sodium/pull/3916))"
+}

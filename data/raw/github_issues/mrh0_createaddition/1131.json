@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:mrh0/createaddition#1131",
+ "url": "https://github.com/mrh0/createaddition/issues/1131",
+ "title": "createaddition issue #1131: Compatability crash with Create Aeronautics",
+ "source_type": "github_issue",
+ "repo": "mrh0/createaddition",
+ "state": "closed",
+ "created_at": "2026-04-23T20:33:13Z",
+ "fetched_at": "2026-10-28T08:10:13+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by Hoodstain]\nWhen you give a blaze burner with a straw on a physic contraption from Create Aeronautics and then try to view that with a contraption diagram also from Create Aeronautics the game crashes. This has also been reported to the simulated team just thought id be thorough in terms of reporting\n\n- Mod version: 1.5.10\n- Forge version: Neoforge 21.1.225\n- Create version: 6.0.9\n-Minecraft Version: 1.21.1\n\n[crash-2026-04-23_13.15.55-client.txt](https://github.com/user-attachments/files/27026437/crash-2026-04-23_13.15.55-client.txt)\n\n[comment by mrh0 (owner)]\nCrash seams to happen in Aeronautics side\n\n[comment by mrh0 (owner)]\nFixed in 1.5.11"
+}

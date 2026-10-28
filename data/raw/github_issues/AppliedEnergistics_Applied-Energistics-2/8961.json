@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:AppliedEnergistics/Applied-Energistics-2#8961",
+ "url": "https://github.com/AppliedEnergistics/Applied-Energistics-2/issues/8961",
+ "title": "Applied-Energistics-2 issue #8961: JEI Disabling the press recipes in the inscriber",
+ "source_type": "github_issue",
+ "repo": "AppliedEnergistics/Applied-Energistics-2",
+ "state": "open",
+ "created_at": "2026-09-01T08:44:50Z",
+ "fetched_at": "2026-10-28T08:11:19+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by DuckTyler90]\n### Describe the bug\n\nTBH I'm not sure if i should post this here or the JEI github im ligit lost for words i went throw my 205 mod list trying to fix this issue disabling all the mods and found it as a JEI issue.\n\nwhats happening is JEI is just not letting the recipes register or there failing to load only for inscriber that i found so far As i said i don't know if its how you integrated JEI in to Ae2 or its  jei issue \n\ni tryed on modrinth loader and curse both are not working\n\nInfo {\nNeoForge: 1.21.1\nAE2 Version: 19.2.17\nJEI Version: 19.51.0.417\n}\n\n### How to reproduce the bug\n\na\n\n### Expected behavior\n\na\n\n### Additional details\n\n_No response_\n\n### Which minecraft version are you using?\n\n1.21\n\n### On which mod loaders does it happen?\n\nNeoForge\n\n### Crash log\n\nhttps://gist.github.com/DuckTyler90/1d58e0c8cdd2393e90b84c90f8242879\n\n[comment by Mithi83 (collaborator)]\nYou know that AE2 in 1.21.1 has no native JEI support? You need a 3rd-party mod: https://www.curseforge.com/minecraft/mc-mods/ae2-jei-integration"
+}

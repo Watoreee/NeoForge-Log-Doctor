@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:bernie-g/geckolib#836",
+ "url": "https://github.com/bernie-g/geckolib/issues/836",
+ "title": "geckolib issue #836: Crash Between Winter Overhaul (Uses GeckoLib) and Hostile Neural Networks",
+ "source_type": "github_issue",
+ "repo": "bernie-g/geckolib",
+ "state": "closed",
+ "created_at": "2026-04-05T18:16:02Z",
+ "fetched_at": "2026-10-28T08:05:05+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by CraftyZombie]\n### Bug Description\n\nMinecraft 1.21.1\nNeoForge 21.1.217\nMods:\n<img width=\"680\" height=\"162\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/8c83549b-e66f-46df-9f26-ddf432a3bed9\" />\n\nWinter Overhaul overrides the Snow Golem model with a new, Geckolib one. Attempting to render the Snow Golem Data model while both mods are installed together crashes the game.\n\nLogs/Crash: https://gist.github.com/CraftyZombie/28823e5a5786dfce1bd7401f4406107a\n\n### How to Reproduce?\n\n1. Install mods.\n2. Open world.\n3. Open HNN tab in Creative mode.\n4. Crash.\n\n### Expected Behavior\n\nI expected the model to render rather than crashing.\n\n### Notes\n\n*I originally reported this to Winter Overhaul's and Hostile Neural Networks' issue trackers. Shadows_of_Fire (HNN dev) pointed me here.\n\n> I don't think there's anything I can do about this. The method I'm using to render the entity is pretty stock, and the crash is due to a mismatch in the vertex builder state which isn't even due to the wrappers I have applied for translucency.\n> \n> You could try reporting it to GeckoLib, they might have some idea what's going on. \n\n _Originally posted by @Shadows-of-Fire in [#106](https://github.com/Shadows-of-Fire/Hostile-Neural-Networks/issues/106#issuecomment-3865548615)_\n\nhttps://github.com/bonsaistudi0s/Winter-Overhaul/issues/24\nhttps://github.com/Shadows-of-Fire/Hostile-Neural-Networks/issues/106\n\n[comment by Tslat (collaborator)]\nThis is something on Shadows' side.\n\nRaised a PR here: https://github.com/Shadows-of-Fire/Hostile-Neural-Networks/pull/118"
+}

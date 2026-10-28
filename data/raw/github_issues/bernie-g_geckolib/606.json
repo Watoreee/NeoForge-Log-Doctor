@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:bernie-g/geckolib#606",
+ "url": "https://github.com/bernie-g/geckolib/issues/606",
+ "title": "geckolib issue #606: [1.21] Buffer Builder Not Building! with glowing item/armor render layers on 4.5.7",
+ "source_type": "github_issue",
+ "repo": "bernie-g/geckolib",
+ "state": "closed",
+ "created_at": "2024-07-24T22:57:13Z",
+ "fetched_at": "2026-10-28T08:05:19+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by iron431]\nNeoforge 1.21 21.0.103-beta\r\nGeckolib 4.5.7\r\nhttps://gist.github.com/iron431/05bb9914a6cf994e82f77e48176a9212\r\n\r\nGeoEntities with an `ItemArmorGeoLayer` or `BlockAndItemGeoLayer` will throw the Not Building! error when attempting to render the items/armor if the entity is glowing, seemingly due to the buffer while glowing failing the `instanceof BufferBuilder` check. Other render layers that render custom models do not experience this issue\r\n\r\n![image](https://github.com/user-attachments/assets/de30ff38-ff43-421a-b052-0a4c6aabdcc1)\n\n[comment by JaisDK (none)]\nIs this supposed to have been fixed? it still happens on 4.5.8 https://mclo.gs/ZXVS32O\n\n[comment by Tslat (collaborator)]\n> Is this supposed to have been fixed? it still happens on 4.5.8 https://mclo.gs/ZXVS32O\r\n\r\nDoes it happen without Embeddium enabled\n\n[comment by djnifos (none)]\nGot a user to remove embeddium and it still happens https://mclo.gs/yiQ2A7l\n\n[comment by Tslat (collaborator)]\nThis is proving to be rather an annoying bug lol\n\n[comment by Tslat (collaborator)]\n> Got a user to remove embeddium and it still happens https://mclo.gs/yiQ2A7l\r\n\r\n@djnifos \r\nCan you try this without any mods other than irons spellbooks & geckolib?\r\n\r\nYou have a lot of mods that could be interfering\n\n[comment by SolarNightx (none)]\nI tried with only downloading Gecko and Iron's and I got the same result: https://mclo.gs/gMNpJ03\n\n[comment by djnifos (none)]\nhttps://mclo.gs/eGM9nxm\r\n\r\nan hs_err_pid log from this issue\n\n[comment by Tslat (collaborator)]\nThis error will not generate an hs_err_pid, that is an unrelated error\n\n[comment by djnifos (none)]\nMy bad.  I saw similar wording and jumped to the conclusion.\n\n[comment by djnifos (none)]\nI should add, I was leaning towards driver issue because it doesn't seem to effect my machine.\n\n[comment by Tslat (collaborator)]\nLol alright\r\nLet's try this once more\r\n\r\nthis should be fixed once more in 4.6"
+}

@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:architectury/architectury-api#727",
+ "url": "https://github.com/architectury/architectury-api/issues/727",
+ "title": "architectury-api issue #727: Crash with allowCharType on Architectury 20.0.8/21.0.3",
+ "source_type": "github_issue",
+ "repo": "architectury/architectury-api",
+ "state": "closed",
+ "created_at": "2026-07-13T06:14:38Z",
+ "fetched_at": "2026-10-28T08:06:45+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by Madis0]\nThe users of my modpack report crashes with Architectury 20.0.8 and Minecraft 26.1.2/21.0.3 and 26.2, that did not happen on Architectury 20.0.7. Since Architectury is not currently a part of the modpack, each user has a different set of mods they got the crash with.\n\nCrash logs / latest logs:\n\nhttps://mclo.gs/q748ONJ / https://mclo.gs/DQaW8fg\nhttps://mclo.gs/1CyspDv / https://mclo.gs/nWjC1W9\nhttps://mclo.gs/bMNzPui / https://mclo.gs/Lhu6APv\n\nRelated to https://github.com/architectury/architectury-api/issues/726\n\n[comment by st0x0ef (collaborator)]\nYou need to update fabric api to 0.154+\n\n[comment by Madis0 (none)]\nThat makes sense, how about adding the requirement to manifest then?"
+}

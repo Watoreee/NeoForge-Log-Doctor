@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:thedarkcolour/KotlinForForge#88",
+ "url": "https://github.com/thedarkcolour/KotlinForForge/issues/88",
+ "title": "KotlinForForge issue #88: KotlinForForge crash on startup on latest NeoForge",
+ "source_type": "github_issue",
+ "repo": "thedarkcolour/KotlinForForge",
+ "state": "closed",
+ "created_at": "2023-12-04T12:34:25Z",
+ "fetched_at": "2026-10-28T08:08:44+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-2.1) does not cover issue text",
+ "text": "[issue by Prototik]\nDue to changes in FML in https://github.com/neoforged/FancyModLoader/commit/a43f00e9aaf2e2e08498fcbcf453fc28c90f1d1a\r\nKFF crashes right on startup due to assignment to removed field here:\r\nhttps://github.com/thedarkcolour/KotlinForForge/blob/2183403f3851cd6b564cb4c8761d8abde629744a/neoforge/kfflang/src/main/kotlin/thedarkcolour/kotlinforforge/neoforge/KotlinModContainer.kt#L41\n\n[comment by thedarkcolour (owner)]\nI'll fix it today when I'm out of class\n\n[comment by thedarkcolour (owner)]\nFixed in 4.8.0"
+}

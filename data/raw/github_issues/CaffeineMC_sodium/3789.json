@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:CaffeineMC/sodium#3789",
+ "url": "https://github.com/CaffeineMC/sodium/issues/3789",
+ "title": "sodium issue #3789: Issue when loading alongside Create: Aeronautics",
+ "source_type": "github_issue",
+ "repo": "CaffeineMC/sodium",
+ "state": "closed",
+ "created_at": "2026-06-29T05:44:22Z",
+ "fetched_at": "2026-10-28T08:04:21+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by laji233]\n### Bug Description\n\nIf you launch the game once with both Create: Aeronautics and Sodium loaded, uninstalling Create: Aeronautics and restarting the game will cause the game to crash.\n\n### Reproduction Steps\n\n1.Neoforge 21.1.233 for Minecraft 1.21.1\n2.Sodium 0.8.12 and Create Aeronautics 1.3.0\n3.launch the game\n4.exit the game\n5.delete Create Aeronautics\n6.restart the game\n\n### Log File\n\n[latest.log](https://github.com/user-attachments/files/29452105/latest.log)\n\n### Crash Report\n\n[crash-2026-06-29_13.26.29-client.txt](https://github.com/user-attachments/files/29452110/crash-2026-06-29_13.26.29-client.txt)\n\n[comment by jellysquid3 (member)]\n```\njava.lang.NoClassDefFoundError: dev/simulated_team/simulated/ponder/instructions/CustomAnimateWorldSectionInstruction\n\tat TRANSFORMER/create_dragons_plus@1.11.2b/plus.dragons.createdragonsplus.integration.simulated.client.ponder.CDPSEPonderScenes.register(CDPSEPonderScenes.java:32)\n```\n\nYour problem is because mod loading failed, because _Create: Dragons Plus_ depends on _Create._"
+}

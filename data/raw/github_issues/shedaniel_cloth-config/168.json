@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:shedaniel/cloth-config#168",
+ "url": "https://github.com/shedaniel/cloth-config/issues/168",
+ "title": "cloth-config issue #168: Current version (7.0.73) crashes in 1.19.1",
+ "source_type": "github_issue",
+ "repo": "shedaniel/cloth-config",
+ "state": "closed",
+ "created_at": "2022-07-29T03:20:41Z",
+ "fetched_at": "2026-10-28T08:07:35+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by PieKing1215]\nLooks like `net.minecraft.client.gui.chat.NarratorChatListener` became `net.minecraft.client.GameNarrator` in 1.19.1, which is causing NoClassDefFoundError when trying to open a cloth screen.\r\n\r\nThis is only a problem in 1.19.1 not 1.19, and appears to only crash on Forge for some reason (?).\r\n\r\nCloth Config 7.0.73-forge\r\nMinecraft 1.19.1\r\nForge 42.0.0\r\nNo other mods\n\n[comment by shedaniel (owner)]\nPushed a new update for 8.x"
+}

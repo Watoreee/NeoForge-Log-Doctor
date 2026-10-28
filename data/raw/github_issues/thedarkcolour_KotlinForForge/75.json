@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:thedarkcolour/KotlinForForge#75",
+ "url": "https://github.com/thedarkcolour/KotlinForForge/issues/75",
+ "title": "KotlinForForge issue #75: 1.19.2 crashes after installing KFF",
+ "source_type": "github_issue",
+ "repo": "thedarkcolour/KotlinForForge",
+ "state": "closed",
+ "created_at": "2023-08-18T17:53:41Z",
+ "fetched_at": "2026-10-28T08:08:46+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-2.1) does not cover issue text",
+ "text": "[issue by BartholomewIII]\nTrying to install cobblemon which requires KFF. Everytime I install any version of KFF the game crashes with exit code 2. It loads just fine without KFF installed but says that I need to install KFF for the cobblemon mod to work.\n\n[comment by thedarkcolour (owner)]\nYou're missing Architectury API.\n\n[comment by BartholomewIII (none)]\nThis fixed it thanks."
+}

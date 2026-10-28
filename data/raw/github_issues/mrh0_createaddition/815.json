@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:mrh0/createaddition#815",
+ "url": "https://github.com/mrh0/createaddition/issues/815",
+ "title": "createaddition issue #815: game will crash when running 1.2.4c (most recent version)",
+ "source_type": "github_issue",
+ "repo": "mrh0/createaddition",
+ "state": "closed",
+ "created_at": "2024-07-01T23:43:43Z",
+ "fetched_at": "2026-10-28T08:10:39+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by poly-1810]\n**Describe the bug**\r\nwhen running the most recent release for 1.20.1(neo)forge, the game crashes upon loading worlds or creating new ones due to \"cannot modify empty stack\"\r\n\r\n**To Reproduce**\r\ninstall mod alongside create, run game, try to load or create new world\r\n\r\n**Additional context**\r\n- Mod version: 1.2.4c\r\n- Forge version: 47.1.103 neoforge\r\n- Create version: 0.5.1f\r\n- Crash report: [crash-2024-07-01_18.32.19-client.txt](https://github.com/user-attachments/files/16059869/crash-2024-07-01_18.32.19-client.txt)\n\n[comment by mrh0 (owner)]\ntry 1.2.4d\n\n[comment by tobi1449 (none)]\nIs it intentional that 1.2.4d has not been uploaded to CurseForge yet?\n\n[comment by mrh0 (owner)]\nNo it was not, but its up now"
+}

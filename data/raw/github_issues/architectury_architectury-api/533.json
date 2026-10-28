@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:architectury/architectury-api#533",
+ "url": "https://github.com/architectury/architectury-api/issues/533",
+ "title": "architectury-api issue #533: [1.20.6] Neoforge fails to function during runCommonDatagen",
+ "source_type": "github_issue",
+ "repo": "architectury/architectury-api",
+ "state": "open",
+ "created_at": "2024-07-07T01:46:40Z",
+ "fetched_at": "2026-10-28T08:07:03+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by Lyinginbedmon]\nI've created a fresh 1.20.6 workspace using the Architectury project generator for Fabric & Neoforge. Having followed the documentation guidelines to implement data generation, I am able to access the runCommonDatagen gradle task.\r\n\r\nHowever, firstly I encounter an error related to the absence of a proper processResources call in the data generation procedure, causing the mod to be rejected due to an invalid version number defined in mods.toml using a placeholder. I amended this to a static value of 1.0.0 for the time being and repeated running the runCommonDatagen task.\r\n\r\nThis resulted in the following crash, which seems to be rooted in the Neoforge sub-project itself and not with any portion of my own code. As stated, this occurs even in a blank slate workspace.\r\n\r\n[Full crash report](https://gist.github.com/Lyinginbedmon/922e6873437739fdd7cfcefa9be7229f)\n\n[comment by KangaliaV (none)]\nI am experiencing the exact same issue in 1.21, which is preventing me from running any world generation data gen tasks. Hopefully this is fixed soon!\n\n[comment by Jab125 (member)]\nare you using the official Mojang mappings, or Yarn?\n\n[comment by Lyinginbedmon (none)]\nYarn"
+}

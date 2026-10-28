@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:architectury/architectury-api#748",
+ "url": "https://github.com/architectury/architectury-api/issues/748",
+ "title": "architectury-api issue #748: NeoForge fails to launch with architectury-api (except 26.2)",
+ "source_type": "github_issue",
+ "repo": "architectury/architectury-api",
+ "state": "closed",
+ "created_at": "2026-10-04T17:36:02Z",
+ "fetched_at": "2026-10-28T08:06:43+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by Lilyy2565]\nArchitectury fails to launch on several NeoForge versions including 26.1 and 26.3  (but it does work fine on 26.2) which is the only version I have tested that works due to an issue with a mixin `MixinBlockTransformer`, this occurs on all NeoForge versions and with only architectury-api installed. I found this issue while attempting to port one of my mods to a multi-platform setup.\nCrash Report: [https://pastebin.com/HbLk3aif](https://pastebin.com/HbLk3aif)\n\n[comment by BugmanBugman (none)]\nGetting this too on latest neoforge\n\n[comment by Lilyy2565 (none)]\n26.3 was fixed in the latest update 22.0.4+neoforge\nHowever, 26.1 still has the issue.\n\n[comment by st0x0ef (collaborator)]\n> 26.3 was fixed in the latest update 22.0.4+neoforge However, 26.1 still has the issue.\n\nThat's weird, it does work for me\n<img width=\"3200\" height=\"1859\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/32118729-a85d-4929-ae48-dae86fbefa51\" />\n\n[comment by st0x0ef (collaborator)]\nCan you send me the crash your getting in 26.1?\n\n[comment by Lilyy2565 (none)]\nSure, this is my 26.1 instance running with only architectury-api installed\nhttps://pastebin.com/uG2GesT5\n\n[comment by st0x0ef (collaborator)]\nYou have architectury 20.0.4 installed, the latest is 20.1.16.\n\n[comment by Lilyy2565 (none)]\n20.1.16 does not appear to be released on modrinth, where can I obtain this version?\n\n<img width=\"948\" height=\"439\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/6d803926-854d-4352-a0d2-b9723316fb43\" />\n\n[comment by st0x0ef (collaborator)]\n<img width=\"894\" height=\"124\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/a78fd6b0-6b4c-4607-b1ec-12f31384544b\" />\n\nAnd you should update MC to 26.1.2"
+}

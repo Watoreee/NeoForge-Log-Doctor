@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:AppliedEnergistics/Applied-Energistics-2#8718",
+ "url": "https://github.com/AppliedEnergistics/Applied-Energistics-2/issues/8718",
+ "title": "Applied-Energistics-2 issue #8718: AE2 inscriber chunk ban",
+ "source_type": "github_issue",
+ "repo": "AppliedEnergistics/Applied-Energistics-2",
+ "state": "closed",
+ "created_at": "2025-11-12T06:06:36Z",
+ "fetched_at": "2026-10-28T08:11:30+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by Neptune1190]\n### Describe the bug\n\ni seem to have accidentally have made a chunk ban, i was making logic processors (the gold one) started cranking and it immediately kicked me and crashed my game, \n\n### How to reproduce the bug\n\ni was making the gold processor, i think i may have used the wrong press though?\n\n### Expected behavior\n\nnot crash\n\n### Additional details\n\nseems to effect me as well as other people on the chunks hence why im calling it a chunk ban\n\n### Which minecraft version are you using?\n\n1.21\n\n### On which mod loaders does it happen?\n\nNeoForge\n\n### Crash log\n\nhttps://pastebin.com/45sjh2WJ\n\n[comment by Mari023 (collaborator)]\ncan you please post the crash report?\nthe log you posted doesn't contain the crash\n\n[comment by Neptune1190 (none)]\nhow do i get the crash log? this was on a server, but im going to try and reproduce on my own world/server\n\n[comment by Neptune1190 (none)]\nokay, turns out this is from a weird compatibility thing, completely seperate from ae2, so nothing to worry about"
+}

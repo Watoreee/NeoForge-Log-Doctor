@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:shedaniel/cloth-config#182",
+ "url": "https://github.com/shedaniel/cloth-config/issues/182",
+ "title": "cloth-config issue #182: Crash on string list buttons",
+ "source_type": "github_issue",
+ "repo": "shedaniel/cloth-config",
+ "state": "closed",
+ "created_at": "2022-11-29T18:43:48Z",
+ "fetched_at": "2026-10-28T08:07:33+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by Madis0]\nCloth Config 9.0.93/Minecraft 1.19.3-pre3\r\n\r\nThese three buttons crash the game\r\n![Screenshot_20221129_204305](https://user-images.githubusercontent.com/8611110/204618291-0f03d6b8-e5df-4ceb-954a-d618db532da0.png)\r\n\r\nhttps://mclo.gs/ahdawjj\r\n\r\nTo be fair, it might be just the fact of Cloth Config not being updated for pre3 yet as pre3 changed some sound stuff and this crash is about sound... :sweat_smile:\n\n[comment by shedaniel (owner)]\nYeah it got hit with the pre3 changes.\r\nI don’t leave snapshot update issues open, I will close this. Cloth Config will however be updated very soon"
+}

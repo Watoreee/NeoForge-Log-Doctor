@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:wisp-forest/owo-lib#480",
+ "url": "https://github.com/wisp-forest/owo-lib/issues/480",
+ "title": "owo-lib issue #480: [26.1] Crash when another mod attempts to access the args on a TranslatableContents",
+ "source_type": "github_issue",
+ "repo": "wisp-forest/owo-lib",
+ "state": "closed",
+ "created_at": "2026-05-16T19:13:31Z",
+ "fetched_at": "2026-10-28T08:08:19+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by MoriyaShiine]\nThis notably happens when Enchancement is installed (see https://github.com/MoriyaShiine/enchancement/issues/300), but this will happen with any other mod as well if they mixin into TranslatableContents and attempt to modify or access the `args` field (this might even crash without mixins by just calling `getArgs()`? I'm unsure if you set the args later but regardless :p).\n\nReproducible simply by launching the game lol\n\nSomething as simple as [this](https://github.com/MoriyaShiine/enchancement/blob/main/src/main/java/moriyashiine/enchancement/mixin/enchantment/buoy/client/TranslatableContentsMixin.java) causes a problem\n\n[comment by TherealdustmanYT (none)]\nuhm what do i look at i'm unsure (sry i don't know how to read code)\n\n[comment by Dragon-Seeker (member)]\nShould be fixed via https://github.com/wisp-forest/owo-lib/commit/e4d7e839fc30e5d034e97b2f39d0e217473b640a btw just will need to wait on a release.\n\n[comment by Dragon-Seeker (member)]\n[0.13.1+26.1](https://modrinth.com/mod/owo-lib/version/0.13.1+26.1) should fix this crash"
+}

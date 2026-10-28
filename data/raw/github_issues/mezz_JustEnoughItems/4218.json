@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:mezz/JustEnoughItems#4218",
+ "url": "https://github.com/mezz/JustEnoughItems/issues/4218",
+ "title": "JustEnoughItems issue #4218: [Crash]: Tried to register resource reloader jei:lifecycle twice",
+ "source_type": "github_issue",
+ "repo": "mezz/JustEnoughItems",
+ "state": "closed",
+ "created_at": "2025-12-25T01:04:01Z",
+ "fetched_at": "2026-10-28T08:02:15+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by StarWindv]\n### Steps to Reproduce the Crash\n\nHow to Cause   : Play for a few minutes after entering The End\n\n### Mod Pack URL (Optional)\n\nhttps://modrinth.com/modpack/rso\n\n### Mod Pack Version (Optional)\n\n1.21.11-0.7\n\n### Extra Notes (Optional)\n\nMinecraft Version: 1.21.11\n<br>Fabric Version : 0.18.3\n<br>JEI Version    : 27.3.0.10\n\n<img width=\"1182\" height=\"711\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/ed2542c8-1d2c-4d30-b661-aa5272ac99c0\" />\n\n### Crash Report\n\nhttps://gist.github.com/StarWindv/e2edac5f6fb8616fad3a2b7a91711808\n\n[comment by mezz (owner)]\nThanks for the report!\nSorry but the linked crash log seems to be for something else, it's not the same as what's in the screenshot. Can you please include the full client log for this issue?\n\n[comment by github-actions[bot] (none)]\nThis has been automatically marked as stale because it has not had recent activity, and will be closed if no further activity occurs. If this was overlooked, forgotten, or should remain open for any other reason, please reply here to call attention to it and remove the stale status. Thank you for your contributions.\n\n[comment by github-actions[bot] (none)]\nThis has been automatically closed because it has not had recent activity. Please feel free to update or reopen it."
+}

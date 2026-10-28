@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:shedaniel/cloth-config#28",
+ "url": "https://github.com/shedaniel/cloth-config/issues/28",
+ "title": "cloth-config issue #28: Crash in dev environment",
+ "source_type": "github_issue",
+ "repo": "shedaniel/cloth-config",
+ "state": "closed",
+ "created_at": "2020-02-24T03:45:26Z",
+ "fetched_at": "2026-10-28T08:07:42+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by qouteall]\nI used \r\n`modApi \"me.shedaniel.cloth:config-2:2.9.3\"`\r\nin build.gradle.\r\nWhen I clicked the mods button, it crashed \r\n`\r\njava.lang.NoSuchMethodError: net.minecraft.client.texture.TextureManager.method_4616(Lnet/minecraft/util/Identifier;Lnet/minecraft/client/texture/AbstractTexture;)Z\r\n\tat io.github.prospector.modmenu.gui.ModListEntry.bindIconTexture(ModListEntry.java:119)\r\n\tat io.github.prospector.modmenu.gui.ModListEntry.render(ModListEntry.java:49)\r\n\tat io.github.prospector.modmenu.gui.ModListWidget.renderList(ModListWidget.java:227)\r\n`\r\nThis may be caused by yarn names mismatch.\r\nI am using yarn mapping 1.15.2+build.14\n\n[comment by shedaniel (owner)]\n![image](https://user-images.githubusercontent.com/34910653/75131665-1a901e80-570f-11ea-96e3-52a57ee82408.png)\n\n[comment by shedaniel (owner)]\nhttps://shedaniel.gitbook.io/cloth-config/advanced/modmenu-integration"
+}

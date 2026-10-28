@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:mezz/JustEnoughItems#4319",
+ "url": "https://github.com/mezz/JustEnoughItems/issues/4319",
+ "title": "JustEnoughItems issue #4319: [Crash]: Crashes when oppening config icon in the creative menu",
+ "source_type": "github_issue",
+ "repo": "mezz/JustEnoughItems",
+ "state": "closed",
+ "created_at": "2026-05-25T16:54:16Z",
+ "fetched_at": "2026-10-28T08:02:03+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by msoso38]\n### Steps to Reproduce the Crash\n\nHave you ever gotten past the crash condition without crashing, or does the game always crash? It always crash\nWhat steps cause the crash? Launch modpack, connect to a server with custom domain name, open inventory while in creative and then open the JEI config icon\n\n### Mod Pack URL (Optional)\n\nhttps://www.curseforge.com/minecraft/modpacks/all-of-create-aeronautics\n\n### Mod Pack Version (Optional)\n\n1.21.1\n\n### Extra Notes (Optional)\n\nSo it happens everytime and here are the server logs :\n[16:45:51] [Netty Epoll Server IO #7/ERROR] [minecraft/Connection]: Exception caught in connection\nio.netty.channel.unix.Errors$NativeIoException: recvAddress(..) failed: Connection reset by peer\n[16:45:51] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: Msoso38 lost connection: Disconnected\n[16:45:51] [Server thread/INFO] [minecraft/MinecraftServer]: Msoso38 left the game\n\n### Crash Report\n\nhttps://gist.github.com/msoso38/555cbafe06929124ebe03461e5e535c4\n\n[comment by mezz (owner)]\nThanks for the report!\n\nThis looks like a FancyMenu compatibility bug, not a JEI or server failure.\nThe failure path is:\n1. JEI cannot open an in-game config screen, so it displays a local message containing an `OPEN_FILE` link to the config folder.\n2. FancyMenu 3.9.1 intercepts and serializes that message.\n3. Minecraft rejects serializing the client-only `OPEN_FILE` action, producing `JsonParseException: Action not allowed: OPEN_FILE`.\n\nPlease report this issue to `FancyMenu` and link back to this issue in case they have questions or need support.\n\n[comment by mezz (owner)]\nIt looks like this was already reported as FancyMenu [#1628](https://github.com/Keksuccino/FancyMenu/issues/1628) and fixed. The fix first shipped for Minecraft 1.21.1 in FancyMenu 3.9.7"
+}

@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:AppliedEnergistics/Applied-Energistics-2#8978",
+ "url": "https://github.com/AppliedEnergistics/Applied-Energistics-2/issues/8978",
+ "title": "Applied-Energistics-2 issue #8978: AE2 causes problems to the renderer on neoforge 21.1.250, 1.21.1",
+ "source_type": "github_issue",
+ "repo": "AppliedEnergistics/Applied-Energistics-2",
+ "state": "closed",
+ "created_at": "2026-09-16T01:18:29Z",
+ "fetched_at": "2026-10-28T08:11:17+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by SMGPDBGMCB]\n### Describe the bug\n\nWhen launching AE2 version 19.2.17 on neoforge 21.1.250 1.21.1:\nthe game gets stuck not rendering anything while the ui can still be interacted with and sounds can be heard. this  tends to be stuck on the mojang loadingscreen unless i move the window in which case it becomes a black screen.\n\n\n### How to reproduce the bug\n\nuse neoforge 21.1.250, minecraft 1.21.1\nget ae2 19.2.17 and guideme 21.1.18\nlaunch the game\n\n### Expected behavior\n\nthe title screen should appear\n\n### Additional details\n\nWhen [Remove Reloading Screen](https://modrinth.com/mod/ZP7xHXtw) is added, the title screen can be reached. I found there were some further issues in my kitchen sink modpack when doing that however.\n\n### Which minecraft version are you using?\n\n1.21\n\n### On which mod loaders does it happen?\n\nNeoForge\n\n### Crash log\n\nhttps://gist.github.com/SMGPDBGMCB/3e7c7a892de5dedee00b1cd82f3affdd\n\n[comment by Mari023 (collaborator)]\nthis is probably caused by AppliedEnergistics/GuideME#114\n\ndowngrading guideme to 21.1.17 should fix it\n\n[comment by SMGPDBGMCB (none)]\nyep, it fixes it\nthx"
+}

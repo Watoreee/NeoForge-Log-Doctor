@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:architectury/architectury-api#535",
+ "url": "https://github.com/architectury/architectury-api/issues/535",
+ "title": "architectury-api issue #535: Architectury api always crashing",
+ "source_type": "github_issue",
+ "repo": "architectury/architectury-api",
+ "state": "open",
+ "created_at": "2024-07-07T07:53:01Z",
+ "fetched_at": "2026-10-28T08:07:02+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by AdithyaGithubRepos]\nWhat the hell is this mod's problem? Like what, does this mod expect us to have mods that ONLY support architectury api? I'm tired of these crash logs and half of my mods had to be removed in 1.16.5. DO SOMETHING! MANY MODS DEPEND ON YOUR API!\n\n[comment by Jab125 (member)]\nWhat is the crash report/logs?, we can't help without log files\n\n[comment by AdithyaGithubRepos (none)]\nWill send.\r\n\r\nOn Sun, 7 Jul 2024, 13:56 Jab125, ***@***.***> wrote:\r\n\r\n> What is the crash report/logs?, we can't help without log files\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/architectury/architectury-api/issues/535#issuecomment-2212368517>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/BIXPUYXEXNCLSTRRGSICIQDZLD3URAVCNFSM6AAAAABKPEIIJ6VHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMZDEMJSGM3DQNJRG4>\r\n> .\r\n> You are receiving this because you authored the thread.Message ID:\r\n> ***@***.***>\r\n>\n\n[comment by ms-daniel (none)]\nthe same here:\r\n\r\nNeoforge: 21.0.87\r\nArchitectury: i try it with 4 versions available\r\n\r\n\r\nlog:\r\n[log crash.txt](https://github.com/user-attachments/files/16202574/log.crash.txt)\n\n[comment by ascenstohe4vn (none)]\ni also have this issue\n\n[comment by Jab125 (member)]\n> the same here:\r\n> \r\n> Neoforge: 21.0.87 Architectury: i try it with 4 versions available\r\n> \r\n> log: [log crash.txt](https://github.com/user-attachments/files/16202574/log.crash.txt)\r\n\r\nYour crash is not related.\r\nYou need to install [YACL](https://modrinth.com/mod/yacl)."
+}

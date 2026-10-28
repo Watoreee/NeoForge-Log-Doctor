@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:wisp-forest/owo-lib#399",
+ "url": "https://github.com/wisp-forest/owo-lib/issues/399",
+ "title": "owo-lib issue #399: Crashes on Neoforge's latest version (21.1.186)",
+ "source_type": "github_issue",
+ "repo": "wisp-forest/owo-lib",
+ "state": "open",
+ "created_at": "2025-07-04T07:32:47Z",
+ "fetched_at": "2026-10-28T08:08:02+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by seymourimadeit]\nTrying to load Owo Lib (latest 1.21 Neoforge) alone on version 21.1.186 of Neoforge crashes the game. Downgrading to at least version 21.1.184 resolves the issue entirely.\n\nLog: https://mclo.gs/7W4K9kx\n\n[comment by SpicyMayonnaise (none)]\nhad this issue as well\n\n[comment by Dragon-Seeker (member)]\nCan not confirm such on latest version owolib and neo version given\n\n[comment by uhloin (none)]\nI have the same issue for Neoforge 21.1.191 and \"owo-lib-neoforge-0.12.15.1-beta.6+1.21.jar\" \nNo problems with \"owo-lib-neoforge-0.12.15.1-beta.3+1.21.jar\" \nCrash report is below\n\n[crash-2025-07-12_21.30.03-server.txt](https://github.com/user-attachments/files/21198115/crash-2025-07-12_21.30.03-server.txt)\n\n[comment by Dragon-Seeker (member)]\n@uhloin Not the same issue and it pretains to the fact that you need to update Accessories as the version within the Aether I assume is using a older version and owolib updated to remove more Depedency on FFAPI modules, please update accessories to resolve the issue or add FFAPI for the time being"
+}

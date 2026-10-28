@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:P3pp3rF1y/SophisticatedStorage#782",
+ "url": "https://github.com/P3pp3rF1y/SophisticatedStorage/issues/782",
+ "title": "SophisticatedStorage issue #782: [BUG] disappresing items",
+ "source_type": "github_issue",
+ "repo": "P3pp3rF1y/SophisticatedStorage",
+ "state": "closed",
+ "created_at": "2025-12-20T11:26:27Z",
+ "fetched_at": "2026-10-28T08:09:23+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by Krystian20857]\n**Environment:**\n\n1. Mod version: 1.21.1-1.5.16.1380\n2. Modpack: Craftoria 1.29.0 - server\n\n**Issue**\nPlacing and destroying chests next to each other can cause all items to disappear(without drops)\n\n**How to reproduce**\n\n1. Place single chest(A)\n2. Put items into single chest(A)\n3. Place single chest(B) next to chest A\n4. Destroy combined chest(A + B)\n5. Place double chest(A + B)\n6. Place single chest next to double chest(C)\n7. Chests should look something like that - C (A + B)\n8. Destroy middle chest(A)\n9. Place middle chest(A) - now chest rendering is broken\n10. All items within chests disappeared\n\n[comment by P3pp3rF1y (owner)]\nI will need more info on how to recreate - tried the same thing in test pack for 1.21 and ended up with correct chest rendering. the only thing is that C + A formed a double chest and B stayed single, but no contents were affected. \n\nAre you able to consistently recreate like this in the pack? \nAre you using packing tape (to get A+B chest to drop) or is the pack setup to drop all chests as packed? \nIf so how are you breaking only A chest in step 8?\n\n[comment by P3pp3rF1y (owner)]\nclosing as no follow-up with reproduction steps"
+}

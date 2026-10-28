@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:malte0811/FerriteCore#178",
+ "url": "https://github.com/malte0811/FerriteCore/issues/178",
+ "title": "FerriteCore issue #178: Version 7.0.2 Fabric Crashing",
+ "source_type": "github_issue",
+ "repo": "malte0811/FerriteCore",
+ "state": "closed",
+ "created_at": "2024-10-27T09:37:34Z",
+ "fetched_at": "2026-10-28T08:03:29+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by Quetzalis]\nThe game crashed whilst bootstrap\r\nError: java.lang.ExceptionInInitializerError\r\nExit Code : -1\r\n\r\nAlso tested with minimal mods - only Fabric API and FerrriteCore. Still crashing with the same error.\n\n[comment by malte0811 (owner)]\nAh, the automatic release code is uploading the wrong jar. I'll fix that in a moment.\n\n[comment by malte0811 (owner)]\nI have uploaded fixed versions of both 7.0.2 and 7.1.0.\n\n[comment by Quetzalis (none)]\nAlright thanks :)\n\n[comment by suerion (none)]\nThanks for the fast fix :)"
+}

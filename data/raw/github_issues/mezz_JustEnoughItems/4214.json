@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:mezz/JustEnoughItems#4214",
+ "url": "https://github.com/mezz/JustEnoughItems/issues/4214",
+ "title": "JustEnoughItems issue #4214: [Crash]: Entering singleplayer world crash the game",
+ "source_type": "github_issue",
+ "repo": "mezz/JustEnoughItems",
+ "state": "closed",
+ "created_at": "2025-12-23T01:55:51Z",
+ "fetched_at": "2026-10-28T08:02:22+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by RuafuMan-Obs]\n### Steps to Reproduce the Crash\n\nwindows 11 pro\nneoforge-21.1.215\nsodium-neoforge-0.6.13\nchloride-NEOFORGE-mc1.21.1-v1.7.4\njei-1.21.1-neoforge-19.25.1.335\n\nEntering singleplayer world just crash the game , the AI analyse shows it might be conflict between sodium or chloride\n\n[crash-2025-12-22_17.05.51-client.txt](https://github.com/user-attachments/files/24302310/crash-2025-12-22_17.05.51-client.txt)\n\n### Mod Pack URL (Optional)\n\n_No response_\n\n### Mod Pack Version (Optional)\n\n_No response_\n\n### Extra Notes (Optional)\n\nI backed to 19.25.1.334 and crash doesn't occur again\n\n### Crash Report\n\nhttps://gist.github.com/RuafuMan-Obs/01d4b9d31c3a9501cf45807e40500010\n\n[comment by mezz (owner)]\nThanks for the report!\nThis issue is caued by a mixin from Chloride:\n`[chloride.mixin.json:jei_rei_emi.JeiOverlayMixin from mod chloride]`\nhttps://github.com/SrRapero720/chloride/blob/014672226c00f50710a2edccc3e29dddd1ee73df/src/main/java/me/srrapero720/chloride/mixins/impl/jei_rei_emi/JeiOverlayMixin.java#L21\nIt has been reported to them here:\n* https://github.com/SrRapero720/chloride/issues/145\n\n[comment by TheBedrockMaster (none)]\nFixed on their side."
+}

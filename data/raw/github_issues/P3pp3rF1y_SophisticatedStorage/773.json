@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:P3pp3rF1y/SophisticatedStorage#773",
+ "url": "https://github.com/P3pp3rF1y/SophisticatedStorage/issues/773",
+ "title": "SophisticatedStorage issue #773: (1.21.1)Sophisticated storage corner texture flashing.",
+ "source_type": "github_issue",
+ "repo": "P3pp3rF1y/SophisticatedStorage",
+ "state": "closed",
+ "created_at": "2025-11-26T01:25:48Z",
+ "fetched_at": "2026-10-28T08:09:25+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by ZenosBZ]\nhttps://i.ibb.co/fd4h72M5/1-21-1-sophisticated-storage-corner-texture-flashing-v0-uvwnm1q6b63g1.gif\n\nPics here\n\nUsing Sophisticatedstorage-1.21.1-1.5.14.1355 (Which supposedly fix the problem?)\n\nOnly the chest version will have this visual bug, barrel ones are fine.\n\nStill happens when I remove all resource and sodium / iris.\n\n[comment by P3pp3rF1y (owner)]\nI have never seen anything like this in any of the 1.21 packs I played. Looks like some rendering mod is changing how the tier layer is rendered on the chest. I would at the very least need to understand the list of mods that you have but would prefer to understand the minimal set of mods with which you're having this issue. Very likely the result will be that the mod that changes rendering just isn't compatible with what needs to be rendered here, but perhaps there could be some way to adjust what I do there. Anyway definitely need more info on how I would be able to recreate / look into this further.\n\n[comment by AstralAstrea (none)]\nHad the same issue, fixed after removing \"Accelerated Rendering\" mod. It may be caused by some entity optimization mod.\n\n[comment by tobi1449 (none)]\nFYI: Enabling Core Settings > Upload Mesh Immediately in the settings for Accelerated Rendering fixes this.\n\n[comment by P3pp3rF1y (owner)]\nclosing as this is how Accelerated Rendering mod affects rendering and other optimization mods don't seem to have this issue."
+}

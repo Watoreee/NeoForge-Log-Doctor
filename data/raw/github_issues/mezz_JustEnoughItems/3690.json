@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:mezz/JustEnoughItems#3690",
+ "url": "https://github.com/mezz/JustEnoughItems/issues/3690",
+ "title": "JustEnoughItems issue #3690: [Crash]: JEI crash Minecraft Launcher when I press the inventory key",
+ "source_type": "github_issue",
+ "repo": "mezz/JustEnoughItems",
+ "state": "closed",
+ "created_at": "2024-08-15T18:19:47Z",
+ "fetched_at": "2026-10-28T08:02:24+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by danivela12]\n### Steps to Reproduce the Crash\r\n\r\nWith mod version jei-1.21-forge-19.8.2.99, Minecraft (v.1.21) crashes when I pressing the E key to view recipes in a new world.\r\n\r\n[crash-2024-08-15_19.26.41-client.txt](https://github.com/user-attachments/files/16628572/crash-2024-08-15_19.26.41-client.txt)\r\n\r\n\r\n### Mod Pack URL (Optional)\r\n\r\n_No response_\r\n\r\n### Mod Pack Version (Optional)\r\n\r\njei-1.21-forge-19.8.2.99\r\n\r\n### Extra Notes (Optional)\r\n\r\n_No response_\r\n\r\n### Crash Report\r\n\r\nhttps://github.com/mezz/JustEnoughItems/issues/3690\n\n[comment by mezz (owner)]\nThanks for the report!\r\nPlease update your version of Forge to at least `51.0.31`\n\n[comment by github-actions[bot] (none)]\nThis has been automatically marked as stale because it has not had recent activity, and will be closed if no further activity occurs. If this was overlooked, forgotten, or should remain open for any other reason, please reply here to call attention to it and remove the stale status. Thank you for your contributions.\n\n[comment by github-actions[bot] (none)]\nThis has been automatically closed because it has not had recent activity. Please feel free to update or reopen it."
+}

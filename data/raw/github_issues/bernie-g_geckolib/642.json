@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:bernie-g/geckolib#642",
+ "url": "https://github.com/bernie-g/geckolib/issues/642",
+ "title": "geckolib issue #642: [Bug] Crash on neoforge 21.1.61",
+ "source_type": "github_issue",
+ "repo": "bernie-g/geckolib",
+ "state": "closed",
+ "created_at": "2024-10-22T20:29:15Z",
+ "fetched_at": "2026-10-28T08:05:17+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by schindlershadow]\ngeckolib-neoforge-1.21.1-4.6.6 crashed neoforge 21.1.61 with no other mods installed \r\nhttps://pastebin.com/raw/XzKcguYD\n\n[comment by Witixin1512 (contributor)]\nDoes this issue still happen with latest NeoForge?\n\n[comment by Seggellion (none)]\nYes i'm getting the same issue on NeoForge 21.1.37:\r\n\r\n```\r\nCaused by: org.spongepowered.asm.mixin.injection.throwables.InjectionError: Critical injection failure: Callback method geckolib$wrapArmorPieceRender(Lnet/minecraft/client/renderer/entity/layers/HumanoidArmorLayer;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/EquipmentSlot;ILnet/minecraft/client/model/HumanoidModel;FFFFFF)Z in geckolib.mixins.json:client.HumanoidArmorLayerMixin from mod geckolib failed injection check, (0/1) succeeded. Scanned 0 target(s). No refMap loaded.\r\n```\n\n[comment by Tslat (collaborator)]\nI can't seem to replicate this?\r\n\r\nIt's working fine for me in neoforge 21.1.71, using geckolib 4.6.6\n\n[comment by Seggellion (none)]\n> I can't seem to replicate this?\r\n> \r\n> It's working fine for me in neoforge 21.1.71, using geckolib 4.6.6\r\n\r\nWhat does your gradle file look like?\n\n[comment by schindlershadow (none)]\nTry neoforge 21.1.61 or older\n\n[comment by Tslat (collaborator)]\nI mean that defeats the purpose lol\r\n\r\nIf it only has errors on old versions, then don't use old versions\r\n\r\nEspecially since 4.6.6 was _literally_ to fix a bug caused by a change in NeoForge"
+}

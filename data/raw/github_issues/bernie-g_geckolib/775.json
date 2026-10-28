@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:bernie-g/geckolib#775",
+ "url": "https://github.com/bernie-g/geckolib/issues/775",
+ "title": "geckolib issue #775: Armor with new geoBones render w/ all armor pieces instead of one",
+ "source_type": "github_issue",
+ "repo": "bernie-g/geckolib",
+ "state": "closed",
+ "created_at": "2025-10-21T17:10:20Z",
+ "fetched_at": "2026-10-28T08:05:22+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by WenXin20]\n```\nMinecraft v1.21.1\nNoeforge v21.1.205\nGeckolib v4.8.2\n```\nI have coded the leggings to render with `armorWaist` and `armorDress`. It renders correctly when equipped on non-geckolib mobs, but when equipped by a geckolib mob, the `armorWaist `will render with each armor piece, even if only the hat is worn. The items used in the images are named `marioverse:mario_hat` and `marioverse:mario_pants`\n\nArmor Renderer: https://github.com/WenXin20/Marioverse/blob/1.21/src/main/java/com/wenxin2/marioverse/client/renderers/costumes/CostumeRenderer.java\n\nMob Renderer:\nhttps://github.com/WenXin20/Marioverse/blob/1.21/src/main/java/com/wenxin2/marioverse/client/renderers/entities/GoombaRenderer.java\n\nArmor stand w/ leggings - goomba `armorWaist` appears\n<img width=\"824\" height=\"737\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/f2bcde19-1820-4c56-8da3-80d0fb9937de\" />\n\nIf the mob can wear multiple armor pieces, it renders `armorWaist` for each piece worn\n<img width=\"1015\" height=\"775\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/70b6af2b-f9f2-4577-bde8-cf1db7572589\" />\n\n[comment by Tslat (collaborator)]\nIt looks like you're setting the dress bone visible if the humanoidmodel's body is visible\n\nhttps://github.com/WenXin20/Marioverse/blob/90d60422ebc1bbd8c725c94f182e6d505effa4a4/src/main/java/com/wenxin2/marioverse/client/renderers/costumes/CostumeRenderer.java#L121\n\nYou should only be setting it by slot in that method\noverride applyBoneVisibilityByPart if you need to do part-based visibility\n\n[comment by Tslat (collaborator)]\nGoing to close this until the above resolution is looked at"
+}

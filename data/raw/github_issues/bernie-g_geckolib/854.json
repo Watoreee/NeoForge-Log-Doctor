@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:bernie-g/geckolib#854",
+ "url": "https://github.com/bernie-g/geckolib/issues/854",
+ "title": "geckolib issue #854: crashing on world creation",
+ "source_type": "github_issue",
+ "repo": "bernie-g/geckolib",
+ "state": "closed",
+ "created_at": "2026-05-10T04:16:45Z",
+ "fetched_at": "2026-10-28T08:05:26+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by NobodyH3re]\ntrying to create a world with Geckolib installed, and crashes before world creation. only errors are from gecko lib. Log included for clarity\nhttps://mclo.gs/ORD1EHF\n\n[comment by Tslat (collaborator)]\nOne of those mods has an invalid animation json"
+}

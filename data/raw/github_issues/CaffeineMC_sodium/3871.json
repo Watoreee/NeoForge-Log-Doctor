@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:CaffeineMC/sodium#3871",
+ "url": "https://github.com/CaffeineMC/sodium/issues/3871",
+ "title": "sodium issue #3871: AMD_GAME_OPTIMIZATION_BROKEN on modern AMD Graphics card with latest driver",
+ "source_type": "github_issue",
+ "repo": "CaffeineMC/sodium",
+ "state": "closed",
+ "created_at": "2026-08-10T01:22:32Z",
+ "fetched_at": "2026-10-28T08:04:02+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by ShiriYeka]\n### Bug Description\n\nSince i updated my 1.21.1 NeoForge modpack, my latest.log says this: \n\n[14:20:22] [main/WARN]: Sodium has applied one or more workarounds to prevent crashes or other issues on your system: [AMD_GAME_OPTIMIZATION_BROKEN]\n[14:20:22] [main/WARN]: This is not necessarily an issue, but it may result in certain features or optimizations being disabled. You can sometimes fix these issues by upgrading your graphics driver.\n\nAnd i notice significant performance issues like drop from 200fps to 50fps in certain areas. \n\nSpark profile: https://spark.lucko.me/WxaEt9DrrV\n\nI reported it to Xaero's World Map and it was said to me that \"For some reason an OpenGL operation is very slow for you.\". I have the latest 26.7.1 driver and it was installed cleanly with AMD Cleanup utility.\n\nThis performance issue did not happen before in the same 1.21.1 version, it happened since i updated my modpack and i tried to revert the Sodium and Iris version but is giving the same results, so maybe it's not completely Sodium related but the message in the latest log worries me, there is something i can do to fix this? Thank you in advance!\n\n### Reproduction Steps\n\nIn AMD 7800 XT with latest Sodium version open the game and create a world, there is a message in the log about some incompatibilities: [AMD_GAME_OPTIMIZATION_BROKEN]\n\n### Log File\n\nhttps://mclo.gs/vkHamyF\n\n### Crash Report\n\nThis is a random crash report from when i tried to play reverting the sodium version and i had to revert Supplementaries version too:\nhttps://mclo.gs/Tb4VfR6\n\n[comment by ShiriYeka (none)]\nlatest.log with just Sodium:\nhttps://mclo.gs/vg3YkTU\n\n[comment by jellysquid3 (member)]\nThis is not a problem. This warning is shown with all versions of the Adrenalin graphics driver on Windows, and is merely informational.\n\nSee https://github.com/CaffeineMC/sodium/issues/3318."
+}

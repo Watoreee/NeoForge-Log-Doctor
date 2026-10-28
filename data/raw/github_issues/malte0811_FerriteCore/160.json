@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:malte0811/FerriteCore#160",
+ "url": "https://github.com/malte0811/FerriteCore/issues/160",
+ "title": "FerriteCore issue #160: UnsupportedOperationException with SimpleStorageNetwork 1.7.0 (1.18.2 Forge)",
+ "source_type": "github_issue",
+ "repo": "malte0811/FerriteCore",
+ "state": "closed",
+ "created_at": "2024-04-26T20:30:58Z",
+ "fetched_at": "2026-10-28T08:03:32+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by LordDarthDan]\nWhen running my pack with that version of SSN, I get a crash with UnsupportedOperationException: \"A mod tried to access the state neighbor table directly.\"\r\n\r\nReporting here as that's what the log suggested.\r\n\r\nMC version: 1.18.2 Forge\r\nForge version: 40.2.18\r\nFerriteCore version: 4.2.2\r\nSimple Storage Network version: 1.7.0\r\n\r\nLog: https://mclo.gs/YQs06Rd\r\n\r\n(Note: the issue does not appear with Simple Storage Network version 1.6.2)\n\n[comment by malte0811 (owner)]\nYou need to update JEI. The problem is this: Simple Storage Network wants a newer JEI version than you have. This causes Forge to stop loading mods, but not completely (in a certain sense). Canary has some code that is incompatible with FerriteCore, that they disable when FerriteCore is detected. BUT the detection does not work if there has been a dependency issue, even though the code still runs. So the code runs, thinks FerriteCore is not present (even though it is in the sense that is relevant here), and crashes because it is incompatible with FC."
+}

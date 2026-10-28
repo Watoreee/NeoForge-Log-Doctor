@@ -1,0 +1,11 @@
+{
+ "doc_id": "gh-release:CaffeineMC/sodium@mc1.21.11-0.8.15-beta.1",
+ "url": "https://github.com/CaffeineMC/sodium/releases/tag/mc1.21.11-0.8.15-beta.1",
+ "title": "sodium release Sodium 0.8.15-beta.1 for Minecraft 1.21.11",
+ "source_type": "github_release",
+ "repo": "CaffeineMC/sodium",
+ "created_at": "2026-09-20T21:25:53Z",
+ "fetched_at": "2026-10-28T08:04:50+00:00",
+ "licence": "Release notes; repo licence NOASSERTION (custom or unrecognised licence; see the repo's LICENSE file)",
+ "text": "Sodium 0.8.15-beta.1 adds optimized pitcher plant models, and fixes two bugs.\n\n- Optimize pitcher plant models ([#3881](https://github.com/CaffeineMC/sodium/pull/3881))\n- Correctly handle vertexIndex state when discarding invalid translucent quads\n- Fix Fluid Culling For Non-Full Blocks With Unusual Shapes ([#3916](https://github.com/CaffeineMC/sodium/pull/3916))"
+}

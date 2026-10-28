@@ -1,0 +1,11 @@
+{
+ "doc_id": "gh-release:CaffeineMC/sodium@mc26.3-0.9.3-beta.1",
+ "url": "https://github.com/CaffeineMC/sodium/releases/tag/mc26.3-0.9.3-beta.1",
+ "title": "sodium release Sodium 0.9.3-beta.1 for Minecraft 26.3",
+ "source_type": "github_release",
+ "repo": "CaffeineMC/sodium",
+ "created_at": "2026-10-15T17:51:38Z",
+ "fetched_at": "2026-10-28T08:04:50+00:00",
+ "licence": "Release notes; repo licence NOASSERTION (custom or unrecognised licence; see the repo's LICENSE file)",
+ "text": "Sodium 0.9.3-beta.1 implements a number of bug fixes and minor improvements.\n\n- Show macOS fullscreen menu visibility option on the Sodium options screen\n- Fix Fluid Culling For Non-Full Blocks With Unusual Shapes ([#3916](https://github.com/CaffeineMC/sodium/pull/3916))\n- Use SDL message box instead of TFD ([#3923](https://github.com/CaffeineMC/sodium/pull/3923))\n- Optimization for shelf mushroom models ([#3927](https://github.com/CaffeineMC/sodium/pull/3927))\n- Fix compatibility with Neoforge 26.3.0.65-beta and remove platform-specific LevelExtractorMixin ([#3948](https://github.com/CaffeineMC/sodium/pull/3948))\n- Source vanilla option defaults and ranges directly from vanilla options ([#3947](https://github.com/CaffeineMC/sodium/pull/3947))\n- Allow rendering buffer debug outside F3 Debug Screen ([#3943](https://github.com/CaffeineMC/sodium/pull/3943))\n- Make VideoSettingsScreen trigger onClose in keyPressed to fix interaction with Iris, for example ([#3938](https://github.com/CaffeineMC/sodium/pull/3938))"
+}

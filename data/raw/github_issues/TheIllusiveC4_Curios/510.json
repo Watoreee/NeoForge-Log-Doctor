@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TheIllusiveC4/Curios#510",
+ "url": "https://github.com/TheIllusiveC4/Curios/issues/510",
+ "title": "Curios issue #510: [Bug]: Curios causing game to crash when opening worlds",
+ "source_type": "github_issue",
+ "repo": "TheIllusiveC4/Curios",
+ "state": "closed",
+ "created_at": "2025-04-14T17:22:30Z",
+ "fetched_at": "2026-10-28T08:05:49+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by kikir0se]\n### Minecraft Version\n\n1.20.1\n\n### What happened?\n\nHi, so it usually doesnt crash, however after two days of playing on this modded world. my game crashes everytime i open the world. It seems curios is causing the issue. Ive tried updating it, didnt work and still crashed. As well as deleting the config files which still made the game crash when opening a world.  I am playing on forge 1.20.1 and using the modpack, LOPA with some added mods like macaws doors etc\n\n### Relevant Log Outputs\n\nhttps://mclo.gs/SkMj1nI\n\n[comment by TheIllusiveC4 (owner)]\nResolved via Discord: Issue was corrupted configuration files, solution was to delete the world save's `serverconfig` folder and let the files regenerate."
+}

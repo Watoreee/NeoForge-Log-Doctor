@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TwelveIterations/Waystones#851",
+ "url": "https://github.com/TwelveIterations/Waystones/issues/851",
+ "title": "Waystones issue #851: upgrade from 1.20.4 to 1.21,all waystones that already existed in the game cannot be used",
+ "source_type": "github_issue",
+ "repo": "TwelveIterations/Waystones",
+ "state": "closed",
+ "created_at": "2024-06-16T11:05:32Z",
+ "fetched_at": "2026-10-28T08:09:54+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by fyk210]\n### Minecraft Version\n\n1.21\n\n### Mod Loader\n\nFabric\n\n### Mod Loader Version\n\n0.15.11\n\n### Mod Version\n\n21.0.1\n\n### Balm Version\n\n21.0.5\n\n### Describe the Issue\n\njust upgrade from 1.20.4 to 1.21,all waystones that already existed in the game cannot be used\r\nwill display\"the waystone you tried to teleport to is currently being moved or has gone missing\" \r\nand after rightclicking on the waystone,teleport UI will flash once,cannot be used normally\n\n### Logs\n\n_No response_\n\n### Do you use any performance-enhancing mods (e.g. OptiFine) or custom server distributions (e.g. SpongeForge)?\n\n_No response_\n\n[comment by fyk210 (none)]\n[latest.log](https://github.com/user-attachments/files/15857535/latest.log)\n\n[comment by BlayTheNinth (member)]\nThis is expected, Mojang made a lot of internal changes between 1.20.4, 1.20.6 and 1.21. Modded worlds generally cannot be migrated fully between those versions.\n\n[comment by fyk210 (none)]\nI see,thanks for reply\n\n[comment by Smalldero (none)]\nI created a little tool that converted my 1.20.1 savegame to be compatible with 1.21 waystones. All my waystones are still working after the conversion. So if anyone wants to try to get their waystones working again you can check out my little [conversion tool](https://github.com/Smalldero/waystones-1.21-converter). How to use it is described there. But make sure to use a savegame where the waystones were still working, otherwise it sadly wont work. And you dont need the whole savegame, just the `waystones.dat` file. So it is possible to mix your current savegame with an older `waystones.dat` that you converted with this tool if you dont care about losing the new waystones you created since the old working version.\n\n[comment by fyk210 (none)]\nThis is really helpful,thanks a lot for sharing"
+}

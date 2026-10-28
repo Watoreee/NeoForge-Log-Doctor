@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:mrh0/createaddition#1079",
+ "url": "https://github.com/mrh0/createaddition/issues/1079",
+ "title": "createaddition issue #1079: Blaze burners with straws crashes my game",
+ "source_type": "github_issue",
+ "repo": "mrh0/createaddition",
+ "state": "closed",
+ "created_at": "2025-10-27T08:14:17Z",
+ "fetched_at": "2026-10-28T08:10:25+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by SmoothieCubie]\n**Describe the bug**\nWhen ever I pump lava into a blaze burner, my game crashes.\n\n**To Reproduce**\nSteps to reproduce the behavior:\nPump lava into a blaze burner with a straw.\n**Additional context**\n- Mod version:1.5.5\n- NeoForge version: 21.1.209\n- Create version: 6.0.6\nCrash Report:\n\n[crash-2025-10-18_11.03.58-client.txt](https://github.com/user-attachments/files/23159638/crash-2025-10-18_11.03.58-client.txt)\n\n[comment by RedstoneSam (none)]\nNot sure if you guys want me to open a new bug or not due to me being on Create 6.0.7 but my game is also crashing as soon as I put the straw in the blaze burner.\n\n[crash-2025-10-28_14.13.15-server.txt](https://github.com/user-attachments/files/23189836/crash-2025-10-28_14.13.15-server.txt)\n\n[comment by Knito58 (none)]\nCreate 6.0.7 crashes when blazeburner receives straw.\n\n[comment by SkyRunner55 (none)]\nsince my world had blazeburner with straw, it crash when i start sadly\n\n[comment by CallCalca (none)]\nHii, i have the same exact problem. When i put a straw in a balze burner, my game (or server) completely shut down. Then, whenever i try to go back inside the world, a crash prevent me to do so. Hopefull this bug gets fixed since my world is kinda lost at this point.\n\nIm playing on NeoForge 1.21.1, and the mod version is 1.5.6 (also the preview would have the same problem)\n\n[comment by FortyTwoCn (none)]\nhttps://github.com/Creators-of-Create/Create/commit/58876e2b135e0eab86699670af11aa4adadebbf7#diff-2586086a20d90d38f997d36620f5bdfadb53dbce58386876d5aa61d3fb9737ff Create 6.0.7 Updated due to fluid changes\n\n[comment by FortyTwoCn (none)]\nThe same issue but with a different log\n\n[2025-11-01-7.log.zip](https://github.com/user-attachments/files/23280595/2025-11-01-7.log.zip)\n\n[comment by mrh0 (owner)]\nWeird this doesnt happen to me, the blaze burner works fine in my test save\n\nedit: able to reproduce it now, fix up soon\n\n[comment by mrh0 (owner)]\nFix is up in 1.5.7"
+}

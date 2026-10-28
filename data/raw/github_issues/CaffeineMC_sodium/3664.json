@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:CaffeineMC/sodium#3664",
+ "url": "https://github.com/CaffeineMC/sodium/issues/3664",
+ "title": "sodium issue #3664: Driver workarounds are applied twice when FML early window control is disabled",
+ "source_type": "github_issue",
+ "repo": "CaffeineMC/sodium",
+ "state": "closed",
+ "created_at": "2026-05-15T05:39:37Z",
+ "fetched_at": "2026-10-28T08:04:33+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by decce6]\n### Bug Description\n\nOn NeoForge, when early window control is disabled, driver workarounds are applied twice, potentially causing error.\n\nThe first, in `GraphicsBootstrapper`:\n\nhttps://github.com/CaffeineMC/sodium/blob/59e7586b49da6ba278912d03e8d83eef7a8b07d5/neoforge/src/main/java/net/caffeinemc/mods/sodium/service/SodiumWorkarounds.java#L23-L24\n\nThe second, in `WindowMixin`:\n\nhttps://github.com/CaffeineMC/sodium/blob/59e7586b49da6ba278912d03e8d83eef7a8b07d5/common/src/main/java/net/caffeinemc/mods/sodium/mixin/workarounds/context_creation/WindowMixin.java#L40-L41\n\nThe root cause seems to be a change in NeoForge. On 1.21.1 the `glfwCreateWindow` call is [removed](https://github.com/neoforged/NeoForge/blob/869777fa2e6fc91b55a406e4b9733cb1dca92402/patches/com/mojang/blaze3d/platform/Window.java.patch#L7-L9), so the `WindowMixin` won't inject. On 1.21.11+, however, the `glfwCreateWindow` call [remains](https://github.com/neoforged/NeoForge/blob/6cb49467014c294e6cd6adae618d516a27c17cb5/patches/com/mojang/blaze3d/platform/Window.java.patch#L11) in place.\n\nNote: This had been reported in https://github.com/CaffeineMC/sodium/issues/3636 but it was wrongly attributed to Ixeris or Async Logger.\n\n### Reproduction Steps\n\n1. Create a 1.21.11+ NeoForge instance and launch, for `fml.toml` to be created\n2. In `fml.toml`, set `earlyWindowControl = false`\n3. Install Sodium and launch the game\n4. Observe that the driver workarounds are applied twice (the game might crash with message \"Command line is already modified\")\n\n### Log File\n\nNot needed (something similiar to \"Modifying process environment to apply workarounds for the AMD graphics driver...\" would be printed twice)\n\n### Crash Report\n\nSee #3636\n\n[comment by jellysquid3 (member)]\nAh, you're right. Good catch.\n\n[comment by douira (contributor)]\nPlease test whether the PR https://github.com/CaffeineMC/sodium/pull/3697 fixes this"
+}

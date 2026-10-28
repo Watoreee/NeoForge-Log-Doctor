@@ -1,0 +1,11 @@
+{
+ "doc_id": "gh-release:wisp-forest/owo-lib@0.12.24+1.21.9",
+ "url": "https://github.com/wisp-forest/owo-lib/releases/tag/0.12.24%2B1.21.9",
+ "title": "owo-lib release [1.21.9+] oωo - 0.12.24",
+ "source_type": "github_release",
+ "repo": "wisp-forest/owo-lib",
+ "created_at": "2025-10-09T21:53:43Z",
+ "fetched_at": "2026-10-28T08:08:23+00:00",
+ "licence": "Release notes; repo licence MIT",
+ "text": "## Additions\n- owo-ui components can use the new `inspectorDescriptor` getter to customize the text displayed below them when the inspector is active\n- `ReadView` and `WriteView` have new methods for getting/setting values in them using keyed Endecs\n\n## Fixes\n- `ModDataLoader` now works properly in a development environment using split sources\n- The surface setter on `DropdownComponent` now correctly returns the dropdown"
+}

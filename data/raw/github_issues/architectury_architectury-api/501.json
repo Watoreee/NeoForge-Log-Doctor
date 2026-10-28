@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:architectury/architectury-api#501",
+ "url": "https://github.com/architectury/architectury-api/issues/501",
+ "title": "architectury-api issue #501: Opening Config Freezes Game",
+ "source_type": "github_issue",
+ "repo": "architectury/architectury-api",
+ "state": "open",
+ "created_at": "2024-05-02T05:17:55Z",
+ "fetched_at": "2026-10-28T08:07:10+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by renatocs81]\nI think by \"Freezes\", it is \"Crashes\" probably.\r\nSteps To Reproduce:\r\n1. Enter The Game With Catalogue and Architectury API\r\n2. Click On Mods Button (Must Be The Catalogue One)\r\n3. Click on Architectury API\r\n4. Click On Config Button (The Button With The Wrench)\r\n5. Frozen Game/Crash\n\n[comment by Jab125 (member)]\nWhat version of Catalogue are you using?\r\nWhat version of Minecraft are you using?\r\nWhat version of Architectury API are you using?\r\n\r\nAlso, you'll need to attach the logs to get help here."
+}

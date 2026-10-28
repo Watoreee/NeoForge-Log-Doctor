@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:bernie-g/geckolib#713",
+ "url": "https://github.com/bernie-g/geckolib/issues/713",
+ "title": "geckolib issue #713: java.lang.NullPointerException: Cannot invoke \"net.minecraft.world.entity.Entity.m_142038_()\" because \"p_91315_\" is null",
+ "source_type": "github_issue",
+ "repo": "bernie-g/geckolib",
+ "state": "closed",
+ "created_at": "2025-04-14T13:26:11Z",
+ "fetched_at": "2026-10-28T08:05:13+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by jediultras]\n### **Observed behaviour**\n\nCrash when trying to see any Iron's Spell and Spellbooks enchanted armor. When hovering in inventory (using a mod that renders armor from hovering on it) cause severe lag and when equipped it crashes every player seeing it.\n\n### **Expected behaviour**\n\nEquip and see the armor on.\n\n### **Steps to reproduce**\n\nTake any Iron's Spell and Spellbooks' armor, enchant it, and hover it or equip it, after that, try to look at it with third person, from inventory or from another player perspective -> client who tries this crashes.\n\n### **Server Type**\n\nThird part hosted server (but I guess also singleplayer, not tested though).\n\n### **Crashlog**\n\nhttps://gist.github.com/jediultras/a92634cef01df287eec2c1f3ac7ee03b\n\n### **Mentioned mods and modloader versions**\n\nforge 47.4.0\ngeckolib-forge-1.20.1-4.7.1.2\nirons_spellbooks-1.20.1-3.4.0.7\n\n### **Other comments**\n\nThis is somehow very similar if not identical to #616, https://github.com/iron431/irons-spells-n-spellbooks/issues/653 and https://github.com/iron431/irons-spells-n-spellbooks/issues/524, so, obviously I tried to update all listed mods but it did not fix it. I am on minecraft 1.20.1, I looked at those older issues but they are almost all referred to minecraft 1.21.1. I posted this here, because the crash log says this is the suspected mod, but if you tell me that is an Iron's Spell and Spellbooks problem I'll post it there asap!\n\n[comment by Tslat (collaborator)]\nI can't see any way this would happen other than not calling prepForRender prior to passing the GeoArmorRenderer as required, or by passing a null entity.\n\nNeither of those are on GeckoLib's side.\n\nIf we want to take this further I'm going to need to do it in Discord where we can discuss the code used and such, but given that it seems to be almost exclusively irons-spells that has the issue as well, I'm pretty inclined to say it's not on GeckoLib's side"
+}

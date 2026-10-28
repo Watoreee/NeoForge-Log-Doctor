@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:wisp-forest/owo-lib#395",
+ "url": "https://github.com/wisp-forest/owo-lib/issues/395",
+ "title": "owo-lib issue #395: [1.21.1] owolib causing Pastel's Black Hole Chest filtering to break",
+ "source_type": "github_issue",
+ "repo": "wisp-forest/owo-lib",
+ "state": "closed",
+ "created_at": "2025-06-21T19:17:01Z",
+ "fetched_at": "2026-10-28T08:08:17+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by Tlp300]\nWas told to bring this here, so...\n\n**Bug explanation:**\nHaving owolib installed alongside Pastel seems to break Pastel's black hole chest, causing it to not suck up items at all when filters are set on it.\n\n**To reproduce:**\n1. Install Pastel and owolib\n2. Place a Black Hole Chest\n3. Set a filter\n4. Watch it become unable to suck in items\n\n[owo-lib-neoforge-0.12.15.1-beta.3+1.21]\n[Pastel-1.0.0-alpha4]\n\nhttps://github.com/user-attachments/assets/c61b3236-1467-41d2-a343-5b20c1d33a4f\n\n[comment by Dragon-Seeker (member)]\nSeems possibly related to API involved with Derived Components, investigating a fix for such issue after making sure it is such feature.\n\n[comment by Dragon-Seeker (member)]\n@Tlp300 Sorry for the wait but a fix has been pushed for curseforge and modrinth fixing the issue"
+}

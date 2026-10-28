@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:architectury/architectury-api#541",
+ "url": "https://github.com/architectury/architectury-api/issues/541",
+ "title": "architectury-api issue #541: Minecraft launcher crash - new crash file - Version 21.0.86",
+ "source_type": "github_issue",
+ "repo": "architectury/architectury-api",
+ "state": "closed",
+ "created_at": "2024-07-11T17:35:06Z",
+ "fetched_at": "2026-10-28T08:07:04+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by Fidulus]\nhttps://pastebin.com/BtwY5fbk\r\n\r\nAfter updating everything to newest version game won´t start anymore.\r\nI hope my crash log helps locating any problems.\r\nIt seems to me this is still an architectury issue.\r\nIf that is not the case please tell me whats wrong instead, i´m not very good in reading the crash logs.\r\nThank you\n\n[comment by TheeMrCheeky (none)]\nYa I am having this issue with neoforge \r\n[crash-2024-07-12_07.10.01-client.txt](https://github.com/user-attachments/files/16192836/crash-2024-07-12_07.10.01-client.txt)\n\n[comment by Jab125 (member)]\nDuplicate of #527"
+}

@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TheIllusiveC4/Curios#619",
+ "url": "https://github.com/TheIllusiveC4/Curios/issues/619",
+ "title": "Curios issue #619: [Bug]: Failure message: An uncaught parallel processing error has occurred. java.lang.NoClassDefFoundError: net/hazen/hazentouvelib/Items/Curios/WingCurioRenderer",
+ "source_type": "github_issue",
+ "repo": "TheIllusiveC4/Curios",
+ "state": "closed",
+ "created_at": "2026-06-22T06:01:01Z",
+ "fetched_at": "2026-10-28T08:05:39+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by LordOfCinders]\n### Minecraft Version\n\n1.21.1\n\n### What happened?\n\nWhen I was logging onto Minecraft (NeoForge) - 1.21.1 - I had recently updated my Curse Forge with alongside with 7 other mods that depend on Curios API, thinking it was all good, then when I log into Minecraft itself, the error code shows up, suddenly it was working the day before, then now suddenly the game stopped working with the error code. As Curios API, is not only the mod has been affected by the error, but other mods too, such as, (\"Ace's Spell Utils, Charm of Undying (Fabric/Forge/Quilt), Crystal Chronicles - Iron's Spells 'n Spellbooks, Elytra Slot, Hazen 'N Stuff, HazentouveLib, Iron's Spells 'n Spellbooks.\") These mods are depended on Curios API, without that mod, I wouldn't be able to enjoy the mods that I had originally. I understand that you have a personal life outside of modding and providing the community with passion and humility. Whenever you see this bug issue, ensure that this just happened and never happened to me until today at 1:22 AM Eastern Time, from where I am. Thank you, and have a great rest of your night. :D\n\n### Relevant Log Outputs\n\n[crash-2026-06-22_01.07.02-fml.txt](https://github.com/user-attachments/files/29192010/crash-2026-06-22_01.07.02-fml.txt)\n\n[comment by TheIllusiveC4 (owner)]\nIt looks like this was an issue with Hazen 'N Stuff and should be resolved as of their `1.4.0.14` update for that mod."
+}

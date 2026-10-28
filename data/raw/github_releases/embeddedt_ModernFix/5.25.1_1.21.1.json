@@ -1,0 +1,11 @@
+{
+ "doc_id": "gh-release:embeddedt/ModernFix@5.25.1+1.21.1",
+ "url": "https://github.com/embeddedt/ModernFix/releases/tag/5.25.1%2B1.21.1",
+ "title": "ModernFix release 5.25.1+1.21.1",
+ "source_type": "github_release",
+ "repo": "embeddedt/ModernFix",
+ "created_at": "2025-11-08T19:59:20Z",
+ "fetched_at": "2026-10-28T08:03:04+00:00",
+ "licence": "Release notes; repo licence NOASSERTION (custom or unrecognised licence; see the repo's LICENSE file)",
+ "text": "Depending on the size of this release, there may be a human-readable changelog available on [the wiki page](https://github.com/embeddedt/ModernFix/wiki/Changelog).\n\n## Changes since 5.25.0+1.21.1\n\n  * [Remove dynamic_sounds](https://github.com/embeddedt/ModernFix/commit/8959c2ff9122a24638a2188eff0b5369725d6961) - embeddedt"
+}

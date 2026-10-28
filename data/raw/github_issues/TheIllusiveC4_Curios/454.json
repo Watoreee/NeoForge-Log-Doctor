@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TheIllusiveC4/Curios#454",
+ "url": "https://github.com/TheIllusiveC4/Curios/issues/454",
+ "title": "Curios issue #454: [Bug]: sided_setup crash 1.20.1 even when uninstalled?",
+ "source_type": "github_issue",
+ "repo": "TheIllusiveC4/Curios",
+ "state": "closed",
+ "created_at": "2024-11-03T21:44:19Z",
+ "fetched_at": "2026-10-28T08:05:57+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by Aceplante]\n### Minecraft Version\r\n\r\n1.20.1\r\n\r\n### What happened?\r\n\r\nI have been having this crash regardless of whether your mod in installed or not?\r\n\r\n### How do you trigger this bug?\r\n\r\nunknown\r\n\r\n### Loader\r\n\r\nForge\r\n\r\n### Loader Version\r\n\r\n47.3.0\r\n\r\n### Mod Version\r\n\r\nlatest/none\r\n\r\n### Relevant Log Outputs\r\n\r\n![image](https://github.com/user-attachments/assets/f759a6f7-0090-4432-9ba7-6851cac4b959)\n\n[comment by TheIllusiveC4 (owner)]\nIt's impossible for the mod to crash if it's uninstalled, so you do have it installed in some manner. Did you check the correct folder when you were verifying the installed mods? If so, and this still seems to occur, please share the crash report for further investigation.\n\n[comment by Silverbolt666 (none)]\nHello, I'm facing the same issue on the latest version of curious (5.11.0+1.20.1 Forge) here is my crash report if it helps\r\n\r\n[Curious - crash-2024-11-05_11.10.03-fml.txt](https://github.com/user-attachments/files/17631489/Curious.-.crash-2024-11-05_11.10.03-fml.txt)\n\n[comment by Aceplante (none)]\nIve determined this was caused by https://www.curseforge.com/minecraft/mc-mods/brb\n\n[comment by Silverbolt666 (none)]\n@Aceplante <del>that's for version 1.21 I suppose, in version 1.20.1 </del> (I'm an idiot and thought this was for 1.21...) I don't have that mod installed, maybe the closer one would be nerb https://www.curseforge.com/minecraft/mc-mods/notenoughrecipebook. I haven't had time to recreate\r\n\r\nEdit: Tbh, after checking this issue I understood that is not the same thing, I'm going to open a new issue. Mine has to do with the last version presenting the error above, but I do have the mod installed"
+}

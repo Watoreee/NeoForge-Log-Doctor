@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:CaffeineMC/sodium#3837",
+ "url": "https://github.com/CaffeineMC/sodium/issues/3837",
+ "title": "sodium issue #3837: Pixels of fire texture appear on screen when on fire Neoforge/Fabric 1.21.1",
+ "source_type": "github_issue",
+ "repo": "CaffeineMC/sodium",
+ "state": "closed",
+ "created_at": "2026-07-19T14:58:07Z",
+ "fetched_at": "2026-10-28T08:03:59+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by RedyRT]\n### Bug Description\n\nAre we still be ignoring that fact this bug still exist? #3098 #3364 I even tested with my friend this, and on friend PC its the same bug that i mention and also i have only 1 sodium mod installed, with modpack there somehow will be really multiple pixels on screen and it gets really annoying with this... i know you'll say on 1.21.11 its fixed but not that many people plays on this version really... is there any chance this graphic bug will be fixed? Because i just checked very first version of sodium on this minecraft version mc1.21-0.6.0-beta.1-neoforge, and this version doesnt even have this bug, but subsequent versions of this mod starting to have this bug\n\n### Reproduction Steps\n\n1. Minecraft 1.21.1 Neoforge Build 21.1.238\n2. Sodium 0.8.12 Release\n3. Create a world\n4. Make yourself on fire in dark place [because you can see this bug pixel good in dark places]\n5. Then you will see 1 or multiple tiny \"fire pixels\" on your screen\n\n### Log File\n\n-\n\n### Crash Report\n\n-\n\n[comment by Lolothepro (contributor)]\nI don't even know if this can be fixed in earlier versions, as the bug is actually caused by a broken system in Minecraft, which was fixed in 1.21.11\n\n[comment by Lolothepro (contributor)]\nAlso, the bug is present with Fabric as well, I don't know why you added NeoForge to the title of the bug report\n\n[comment by RedyRT (none)]\n> Also, the bug is present with Fabric as well, I don't know why you added NeoForge to the title of the bug report\n\nits just me who is playin on neoforge, but i got you\n\n[comment by jellysquid3 (member)]\nThis issue isn't adding any more information that wasn't already in the prior issues. That said, it is a bug caused by Sodium, in the sense that we are changing behavior that then makes a different bug in Minecraft much worse."
+}

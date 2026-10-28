@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TheIllusiveC4/Curios#486",
+ "url": "https://github.com/TheIllusiveC4/Curios/issues/486",
+ "title": "Curios issue #486: Crash on server with blood magic",
+ "source_type": "github_issue",
+ "repo": "TheIllusiveC4/Curios",
+ "state": "closed",
+ "created_at": "2025-02-26T22:32:59Z",
+ "fetched_at": "2026-10-28T08:05:53+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by Rojmeister]\nVersion: 1.20.1\n\nWhat happens:\nOccasionally when I die it kicks me from the server. Bit of a pain but not the end of the world, however I sometimes get kicked out and it is impossible to join back. I showed someone the log and they mentioned that somehow I don't have a curios' inventory. But this affects nobody else. Only me and this is the second time it has happened. I fixed it previously by wiping my character but it happening again means it will continue to happen and I do not want to wipe my character every 5 hours.\n\nHow to trigger it:\nBy dying you will occasionally be kicked out but sometimes you will be kicked every time you try to rejoin server. It happened both times around one of my friends but they were doing different things both times so I believe it was unrelated. The log specifies it has something to do with the mod blood magic. I was wearing some living armour and a charm from that mod during the kick.\n\nServer log: https://mclo.gs/VC9uxG7\n\n[comment by TheIllusiveC4 (owner)]\nThis is an issue that should be reported to Blood Magic for resolution as the relevant code is on their end."
+}

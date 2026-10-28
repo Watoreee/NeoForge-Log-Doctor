@@ -1,0 +1,10 @@
+{
+ "doc_id": "neoforge-docs:docs/1.21.1/networking/index",
+ "url": "https://docs.neoforged.net/docs/1.21.1/networking/",
+ "title": "NeoForge docs: Networking",
+ "source_type": "neoforge_docs",
+ "repo": "neoforged/Documentation",
+ "fetched_at": "2026-10-28T08:00:12+00:00",
+ "licence": "MIT (neoforged/Documentation)",
+ "text": "# Networking\n\nCommunication between servers and clients is the backbone of a successful mod implementation.\n\nThere are two primary goals in network communication:\n\n1. Making sure the client view is \"in sync\" with the server view\n    - The flower at coordinates (X, Y, Z) just grew\n1. Giving the client a way to tell the server that something has changed about the player\n    - the player pressed a key\n\nThe most common way to accomplish these goals is to pass messages between the client and the server. These messages will usually be structured, containing data in a particular arrangement, for easy sending and receiving.\n\nThere is a technique provided by NeoForge to facilitate communication mostly built on top of [netty]. This technique can be used by listening for the `RegisterPayloadHandlersEvent` event, and then registering a specific type of [payloads], its reader, and its handler function to the registrar.\n\n[netty]: https://netty.io \"Netty Website\"\n[payloads]: ./payload.md \"Registering custom Payloads\""
+}

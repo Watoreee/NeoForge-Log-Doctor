@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TwelveIterations/Waystones#1187",
+ "url": "https://github.com/TwelveIterations/Waystones/issues/1187",
+ "title": "Waystones issue #1187: Crash due to WaystonesSable on newest update [Solution: Update WaystonesSable]",
+ "source_type": "github_issue",
+ "repo": "TwelveIterations/Waystones",
+ "state": "closed",
+ "created_at": "2026-07-03T19:23:21Z",
+ "fetched_at": "2026-10-28T08:09:44+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by Ctoer1]\n### Minecraft Version\n\n1.21.1\n\n### Mod Loader\n\nNeoForge\n\n### Describe the Issue\n\nAfter the latest update I can't open the Waystones GUI without worlds crashing back to the main menu, it seems to be a compatibility issue with something else as loading a different instance of the game with only Waystones and its prerequisites doesn't cause a world crash.\n\n### Logs\n\n[latest.log](https://github.com/user-attachments/files/29646197/latest.log)\n\n[comment by BlayTheNinth (member)]\nYou have WaystonesSable installed, which makes a lot of invasive changes to Waystones.\n\nWaystonesSable is not yet compatible with this update.\n\n[comment by BlayTheNinth (member)]\nFixed in latest versions of Waystones and WaystonesSable."
+}

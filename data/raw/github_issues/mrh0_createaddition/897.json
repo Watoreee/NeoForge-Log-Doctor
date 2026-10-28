@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:mrh0/createaddition#897",
+ "url": "https://github.com/mrh0/createaddition/issues/897",
+ "title": "createaddition issue #897: No support for create 6.0.0?",
+ "source_type": "github_issue",
+ "repo": "mrh0/createaddition",
+ "state": "open",
+ "created_at": "2025-03-04T01:01:06Z",
+ "fetched_at": "2026-10-28T08:10:30+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by EhBrokenToaster]\n**Describe the bug**\nA clear and concise description of what the bug is.\n\nEncountered an error when booting, 1 Mod has errors loading and the game points to createadditions. Says it requires 6.0.1 or above and the next version down doesn't support 6.0.0 either as it requires an even older version of Create, that then requires flywheel, of which wont run with create being version 6.0. I've been attempting to make a giant conglomeration mod pack to put on a server with a few buddies to stream and most mods aren't currently updated to 6.0.1 as of yet. Removing the mod doesn't seem to change much but crashing before it loads, this issue may or may not be related to your mod but I figured Id let you know, and if possible release a version compatible with 6.0.0 create. I've attached the logs associated with the crash here, if it helps. If you need anymore info feel free to get ahold of me and I can help get any extra logs or info if need be. If its a compatibility issue that your able to easily find out and tell me that'd also be awesome, nonetheless thanks for your time and great mod BTW.\n\n[crash-2025-03-03_19.37.48-fml.txt](https://github.com/user-attachments/files/19062271/crash-2025-03-03_19.37.48-fml.txt)\n\n[latest.log](https://github.com/user-attachments/files/19062281/latest.log)\n\n**To Reproduce**\nSteps to reproduce the behavior: Boot the game, with all the mods\n\n**Additional context**\n- Mod version: 1.20.1-1.2.5/1.3.0\n- Forge version: 47.3.33\n- Create version: 1.20.1-6.0.0\n\n[comment by crazykiddo (none)]\nSame issue using Create 1.20.1-6.0.1 confirmed\n\n[comment by mrh0 (owner)]\nCc&a 1.3.0 and Create 6.0.1 is correct, make sure you have the correct versions installed, you crash-log says you have create 6.0.0\n\n[comment by Avi-E-Koenig (none)]\nany fix planned anytime soon?\nmiss that mod ;("
+}

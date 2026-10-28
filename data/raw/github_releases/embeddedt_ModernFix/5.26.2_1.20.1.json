@@ -1,0 +1,11 @@
+{
+ "doc_id": "gh-release:embeddedt/ModernFix@5.26.2+1.20.1",
+ "url": "https://github.com/embeddedt/ModernFix/releases/tag/5.26.2%2B1.20.1",
+ "title": "ModernFix release 5.26.2+1.20.1",
+ "source_type": "github_release",
+ "repo": "embeddedt/ModernFix",
+ "created_at": "2026-01-24T01:49:02Z",
+ "fetched_at": "2026-10-28T08:03:04+00:00",
+ "licence": "Release notes; repo licence NOASSERTION (custom or unrecognised licence; see the repo's LICENSE file)",
+ "text": "**Note from the future:** ModernFix now uses continuous deployment, and GitHub releases are not generated anymore. You should either use the latest artifact from the last action run for your Minecraft version, or download from CurseForge/Modrinth directly."
+}

@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TwelveIterations/Waystones#881",
+ "url": "https://github.com/TwelveIterations/Waystones/issues/881",
+ "title": "Waystones issue #881: Silktouch waystones causing crash",
+ "source_type": "github_issue",
+ "repo": "TwelveIterations/Waystones",
+ "state": "closed",
+ "created_at": "2024-08-11T17:39:55Z",
+ "fetched_at": "2026-10-28T08:09:55+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by Tankerin]\n### Minecraft Version\n\n1.21\n\n### Mod Loader\n\nForge\n\n### Mod Loader Version\n\n51.0.29\n\n### Mod Version\n\n10\n\n### Balm Version\n\nNA\n\n### Describe the Issue\n\nWhen waystones are mined with silktouch pickaxes the chunks crash.\n\n### Logs\n\n_No response_\n\n### Do you use any performance-enhancing mods (e.g. OptiFine) or custom server distributions (e.g. SpongeForge)?\n\n_No response_\n\n[comment by Tankerin (none)]\nInternal Exception: io.netty.handler.codec.DecoderException: java.io.IOException:\r\nPacket play/clientbound/minecraft:set_equpment (ClientboundSetEqupmentPacket)\r\nwas larger then I expected found 148 bytes extra whilst reading packet \r\nclientbound/minecraft:set_equipment\n\n[comment by BlayTheNinth (member)]\nPlease provide the full logs. You can find the logs in the `logs` directory of the client or server. Most of the time `latest.log` is the correct file (unless the crash or issue happened during an earlier run).\r\n\r\nLogs can be uploaded here by dragging the file into the comment field, or you can post them on a site like https://gist.github.com/ or https://pastebin.com/. Make sure they are set to be `public` (or unlisted) and to `never expire`."
+}

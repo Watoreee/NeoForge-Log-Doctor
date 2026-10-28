@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:wisp-forest/owo-lib#336",
+ "url": "https://github.com/wisp-forest/owo-lib/issues/336",
+ "title": "owo-lib issue #336: Minecraft crashing error code 2",
+ "source_type": "github_issue",
+ "repo": "wisp-forest/owo-lib",
+ "state": "closed",
+ "created_at": "2024-11-29T11:04:15Z",
+ "fetched_at": "2026-10-28T08:08:08+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by NikitaDarkstar]\nThe latest update causes Minecraft 1.21.1 (Neoforge) to crash, giving error code 2. Rolling back to the previous version fixes the problem.\n\n[comment by uhloin (none)]\nYes log is here:\r\n\r\n[stdout.txt](https://github.com/user-attachments/files/17958531/stdout.txt)\n\n[comment by Dragon-Seeker (member)]\nAh my bad, I believe the latest was mis labeled for 1.21.1 instead of 1.21.3\n\n[comment by Dragon-Seeker (member)]\nSorry about this as the script is currently set to 1.21.1 and forgot when uploading yesterday to adjust the version to 1.21.2 for latest release but it has been corrected now"
+}

@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:bernie-g/geckolib#844",
+ "url": "https://github.com/bernie-g/geckolib/issues/844",
+ "title": "geckolib issue #844: Geckolib doesn't like owo-lib",
+ "source_type": "github_issue",
+ "repo": "bernie-g/geckolib",
+ "state": "closed",
+ "created_at": "2026-04-19T11:35:22Z",
+ "fetched_at": "2026-10-28T08:05:06+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by Kres-sou]\nIm trying to run the newest version of geckolib on 1.21.1. neoforge for the mod Create: Pantographs and wires as it needs the 4.8.4 version. \n\nBut on this version, it will crash modrinth at startup instantly. Tried lower version owo-lib (as it was on the newest one) that didn't help, as other mods need it and newest.\n\n[comment by Tslat (collaborator)]\nprovide the crash report. Nothing I can do without it\n\n[comment by Kres-sou (none)]\nhttps://mclo.gs/hEmrFLV\n\n[comment by Tslat (collaborator)]\nThere's no crash there\n\n[comment by Kres-sou (none)]\nThe modrinth doesnt even recognize it as crash. I press play, nothing happends for 2-10 seconds, then stop button is changed for play.\n\n[comment by Tslat (collaborator)]\nTry it in prismlauncher instead\n\n[comment by Kres-sou (none)]\n[message.txt](https://github.com/user-attachments/files/26908369/message.txt) did not work either\n\n[comment by Tslat (collaborator)]\nNot sure then\n\nThis isn't a known issue with geckolib\n\nHave you reported it to owo lib?\n\n[comment by Kres-sou (none)]\nDid just now, i'll see what they came up with\n\n[comment by Witixin1512 (contributor)]\nUsing MultiMC and Neoforge 21.1.233\n\ncreate-1.21.1-6.0.10.jar\ndragonlib-neoforge-1.21.1-beta-3.0.28.jar\ngeckolib-neoforge-1.21.1-4.8.4.jar\njei-1.21.1-neoforge-19.27.0.340.jar\nowo-lib-neoforge-0.12.15.5-beta.1+1.21.jar\npantographsandwires-neoforge-1.21.1-beta-0.2.3-C6.jar\n\n\nI can launch just fine with no errors, get to the main menu, etc. My recommendation would be you binary search your pack, start with this bunch of mods, and slowly add mods in packs until you can replicate the issue and isolate the minimum required mods to have this."
+}

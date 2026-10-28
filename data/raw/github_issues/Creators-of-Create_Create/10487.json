@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:Creators-of-Create/Create#10487",
+ "url": "https://github.com/Creators-of-Create/Create/issues/10487",
+ "title": "Create issue #10487: Server crashed",
+ "source_type": "github_issue",
+ "repo": "Creators-of-Create/Create",
+ "state": "closed",
+ "created_at": "2026-06-09T06:00:31Z",
+ "fetched_at": "2026-10-28T08:01:33+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by Yulapersii2522]\n### Context\n\nI have a Minecraft 1.21.1 server running on the magma core.\nForge 2.1.228, Java 21/22. When using Mechanical Bearing, the server crashes\n\n\n### Crash Report\n\nhttps://mclo.gs/lLtiOZR\n\n[comment by VoidLeech (collaborator)]\nSome other mod is adding an incorrect assumption into the constructor of the Level class. Try a binary search to find the offending mod so you can report it to them, it is a simple process:\n\n1) Remove half your mods\n2) Try to reproduce the issue\n3) If you can, repeat from 1); otherwise, remove all mods, add back the mods removed in 1), then repeat from 1)"
+}

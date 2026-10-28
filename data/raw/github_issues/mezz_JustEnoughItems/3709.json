@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:mezz/JustEnoughItems#3709",
+ "url": "https://github.com/mezz/JustEnoughItems/issues/3709",
+ "title": "JustEnoughItems issue #3709: [Crash]: Lunar Client is incompatible with JEI mod 1.21/1.21.1",
+ "source_type": "github_issue",
+ "repo": "mezz/JustEnoughItems",
+ "state": "closed",
+ "created_at": "2024-08-25T14:04:15Z",
+ "fetched_at": "2026-10-28T08:02:24+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by KR99991]\n### Steps to Reproduce the Crash\n\n1. Download lunar client. Select the 1.21.1 or 1.21 fabric version in lunar client.  3. Install jei mod to lunar client. 4. Launch game.\n\n### Mod Pack URL (Optional)\n\nhttps://www.curseforge.com/minecraft/mc-mods/jei/files/5623551\n\n### Mod Pack Version (Optional)\n\njei-1.21.1-fabric-19.8.4.113\n\n### Extra Notes (Optional)\n\nPlease fix it, thanks!\n\n### Crash Report\n\nhttps://gist.github.com/KR99991/7a9982edfe16b8328218399cd7687424\n\n[comment by mezz (owner)]\nThanks for the report!\r\nThe crash log has this error:\r\n```\r\n[2024-08-25 17:02:10.802] [error] \t - Mod 'Just Enough Items' (jei) 19.8.4.113 requires version 0.102.1+1.21.1 or later of mod 'Fabric API' (fabric-api), but only the wrong versions are present: 0.100.8+1.21/0.100.8+1.21!\r\n```\r\nPlease ask Lunar Client devs to fix their fabric-api version string, it seems to be messed up somehow.\n\n[comment by github-actions[bot] (none)]\nThis has been automatically marked as stale because it has not had recent activity, and will be closed if no further activity occurs. If this was overlooked, forgotten, or should remain open for any other reason, please reply here to call attention to it and remove the stale status. Thank you for your contributions.\n\n[comment by github-actions[bot] (none)]\nThis has been automatically closed because it has not had recent activity. Please feel free to update or reopen it."
+}

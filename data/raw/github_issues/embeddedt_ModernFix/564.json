@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:embeddedt/ModernFix#564",
+ "url": "https://github.com/embeddedt/ModernFix/issues/564",
+ "title": "ModernFix issue #564: ModernFix 1.21.4 repo is not buildable",
+ "source_type": "github_issue",
+ "repo": "embeddedt/ModernFix",
+ "state": "closed",
+ "created_at": "2025-05-30T19:38:24Z",
+ "fetched_at": "2026-10-28T08:02:49+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by Kichura]\n### Bug Description\n\nWhen attempting to compile the latest 1.21.4 branch of ModernFix with Gradle, The compiler complains about kubejs and rhino libraries not being found.\n\n### Reproduction Steps\n\n1. Clone the 1.21.4 branch,\n2. Run `gradlew build` in the cloned repo,\n3. Wait for a while,\n4. Get the 404 error.\n\n### Log File\n\nThe logs can be found [here](https://pastebin.com/raw/DKShzBXw).\n\n[comment by embeddedt (owner)]\nThanks, I fixed the build (but I haven't merged any other changes from 1.20/1.21)."
+}

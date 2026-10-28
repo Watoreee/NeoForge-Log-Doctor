@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:wisp-forest/owo-lib#414",
+ "url": "https://github.com/wisp-forest/owo-lib/issues/414",
+ "title": "owo-lib issue #414: mc crash // fabric-function call under neoforge",
+ "source_type": "github_issue",
+ "repo": "wisp-forest/owo-lib",
+ "state": "closed",
+ "created_at": "2025-07-30T16:56:43Z",
+ "fetched_at": "2026-10-28T08:08:01+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by BriegelDerBusch]\nFirst time reporting an issue on github so I am sorry in advance.\n\nMinecraft Version: 1.21.1\nLaunched Version: neoforge-21.1.194\n\nI wanted to update my modpack and ran into issues. As far as I could isolate the problem the crash posted below started appearing when just updating owo via curseforge. I was trying to load a singleplayer map.\n\nIt seems owo somehow loads accessories-neoforge-1.1.0-beta.34+1.21.1.jar into the load-order, which itself tries to call net/fabricmc/fabric/api/networking/v1/PlayerLookup\n\n\nMinecraft Crashlog:\nhttps://gist.github.com/BriegelDerBusch/3abad9e17b8d90fafff49a432b1f5caa\n\n[comment by Noaaan (member)]\nThis is a duplicate of https://github.com/wisp-forest/accessories/issues/301, and already fixed in newer versions of Accessories\n\n[comment by BriegelDerBusch (none)]\nI am very sorry for bothering in this case."
+}

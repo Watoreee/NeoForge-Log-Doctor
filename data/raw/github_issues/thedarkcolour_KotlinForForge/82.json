@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:thedarkcolour/KotlinForForge#82",
+ "url": "https://github.com/thedarkcolour/KotlinForForge/issues/82",
+ "title": "KotlinForForge issue #82: Latest Update is Crashing on 1.20.1",
+ "source_type": "github_issue",
+ "repo": "thedarkcolour/KotlinForForge",
+ "state": "closed",
+ "created_at": "2023-11-14T01:54:34Z",
+ "fetched_at": "2026-10-28T08:08:46+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-2.1) does not cover issue text",
+ "text": "[issue by Devilswarchild]\nforge 47.2.1\r\nmod version: kotlinforforge-4.6.1-all.jar\r\nmc 1.20.1\r\n\r\n![image](https://github.com/thedarkcolour/KotlinForForge/assets/27385258/e455a121-be1c-400a-9f10-0fa475e6712b)\r\n\r\ncausing a crash during startup sequence\r\n\r\nhere is the crash log: \r\n\r\n[crash log](https://mclo.gs/CTp7Wlz)\r\n\r\n[debug](https://mclo.gs/0pz0WD6)\r\n\r\n[latest.log](https://mclo.gs/oJChJ4C)\n\n[comment by thedarkcolour (owner)]\nDoes it crash with 4.5.0?\n\n[comment by thedarkcolour (owner)]\nFixed in 4.6.2"
+}

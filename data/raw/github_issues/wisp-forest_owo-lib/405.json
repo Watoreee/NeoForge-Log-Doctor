@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:wisp-forest/owo-lib#405",
+ "url": "https://github.com/wisp-forest/owo-lib/issues/405",
+ "title": "owo-lib issue #405: NeoForge 1.21.1 - Crash with Accessories and owo-lib",
+ "source_type": "github_issue",
+ "repo": "wisp-forest/owo-lib",
+ "state": "closed",
+ "created_at": "2025-07-08T19:09:38Z",
+ "fetched_at": "2026-10-28T08:08:02+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by muggleorwizard]\nInstall Accessories via curseforge, owo-lib will automatically install as a dependency. Load game, open world or create new world, game will crash when loading reaches 100%\nCrash error is: java.lang.NoClassDefFoundError: net/fabricmc/fabric/api/networking/v1/PlayerLookup\nGame crashes with owo-lib 0.12.15.1-beta.6+1.21 (latest version for NeoForge 1.21.1). Does not crash with owo-lib 0.12.15.1-beta.3+1.21 (previous version)\nLatest.log: https://gnomebot.dev/paste/mclogs/5FHQNvc \nDebug.log: https://gnomebot.dev/paste/mclogs/gMpJdRU\nCrash Report: https://gnomebot.dev/paste/mclogs/IpGDGyo\n\nhttps://github.com/wisp-forest/accessories/issues/301\n\n[comment by Dragon-Seeker (member)]\nConsequence of changes within owo neo that was to remove the FFAPI dependency, such should prevent future issues with avoiding using FFAPI due to numerous issues unresolved on there end.\n\n[comment by uhloin (none)]\nAnd what to do? Use beta.3?\n\n[comment by muggleorwizard (none)]\n> And what to do? Use beta.3?\n\nnewest update of accessories fixes the issue, just update and you will be fine\n\n[comment by uhloin (none)]\nI already had newest Accessories. It was not enough. I installed Forgified Fabric API, now OK"
+}

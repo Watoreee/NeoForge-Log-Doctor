@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:mrh0/createaddition#768",
+ "url": "https://github.com/mrh0/createaddition/issues/768",
+ "title": "createaddition issue #768: Server crashing after breaking accumulator from Create: Crafts and Additions",
+ "source_type": "github_issue",
+ "repo": "mrh0/createaddition",
+ "state": "closed",
+ "created_at": "2024-04-03T10:20:45Z",
+ "fetched_at": "2026-10-28T08:10:40+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by rymusov]\nAs soon as I want to break the accumulator, with energy and it is connected by wires - the server crashes. If I disconnect the connectors and wires beforehand, the crash does not happen. Version 1.20.1, Forge 47.2.21. Video: https://youtu.be/sEwVBQ1Fihs\r\n\r\n**To Reproduce**\r\n[Steps to reproduce the behavior:] https://youtu.be/sEwVBQ1Fihs\r\n\r\n**Additional context**\r\n- Mod version: 1.20.1-1.2.3\r\n- Forge version: 47.2.21\r\n- Create version: 0.5.1f\n\n[comment by mrh0 (owner)]\nCould you please provide the crash logs for the server?\n\n[comment by rymusov (none)]\nOh, sorry, yes\r\n[2024-04-03-1 (1).log](https://github.com/mrh0/createaddition/files/14896838/2024-04-03-1.1.log)\r\n[debug-1 (1).log](https://github.com/mrh0/createaddition/files/14896839/debug-1.1.log)\r\n[crash-2024-04-03_12.25.47-server (1).txt](https://github.com/mrh0/createaddition/files/14896840/crash-2024-04-03_12.25.47-server.1.txt)\n\n[comment by mrh0 (owner)]\nThis is a Create New age error `org.antarcticgardens.newage`"
+}

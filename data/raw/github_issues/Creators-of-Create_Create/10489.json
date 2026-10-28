@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:Creators-of-Create/Create#10489",
+ "url": "https://github.com/Creators-of-Create/Create/issues/10489",
+ "title": "Create issue #10489: Mechanical Bearings don't work!",
+ "source_type": "github_issue",
+ "repo": "Creators-of-Create/Create",
+ "state": "closed",
+ "created_at": "2026-06-09T11:55:01Z",
+ "fetched_at": "2026-10-28T08:01:32+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by Raeid08A]\n### Context\n\nI made a new world, put a creative motor(works), put a Mechanical bearing on top of it(Didn't rotate but didn’t crash), put a grass block on the bearing, the block vanished and bearing was rotating, tried Again and crashed. Now how do i solve it?\n\nI think because of a missing code in flywheel. \n\nNB: using 6.0.10 in 1.21.1 neoforge with more mods.\n\n### Crash Report\n\nhttps://mclo.gs/0SgVyDc\n\n[comment by VoidLeech (collaborator)]\nRemove Vanillin for now.\n\n[comment by Raeid08A (none)]\nThanks, it worked."
+}

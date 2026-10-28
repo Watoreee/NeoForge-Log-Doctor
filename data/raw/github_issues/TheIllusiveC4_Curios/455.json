@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TheIllusiveC4/Curios#455",
+ "url": "https://github.com/TheIllusiveC4/Curios/issues/455",
+ "title": "Curios issue #455: [Bug]: Curious API encountered am error during the sided_setup event phase",
+ "source_type": "github_issue",
+ "repo": "TheIllusiveC4/Curios",
+ "state": "closed",
+ "created_at": "2024-11-07T19:25:12Z",
+ "fetched_at": "2026-10-28T08:05:58+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by Silverbolt666]\n### Minecraft Version\n\n1.20.1\n\n### What happened?\n\n**Curious API encountered am error during the sided_setup event phase**\r\norg.spongepowered.asm.mixin.transformer.throwables.MixinTransformerError; An unexpected critical error was encountered\n\n### How do you trigger this bug?\n\n1. Update to version curios-forge-5.11.0+1.20.1\r\n2. Start the game in a custom moded setting\r\n\r\n\n\n### Loader\n\nForge\n\n### Loader Version\n\n47.3.10\n\n### Mod Version\n\ncurios-forge-5.11.0+1.20.1\n\n### Relevant Log Outputs\n\n[Curious_latest.log](https://github.com/user-attachments/files/17668260/Curious_latest.log)\r\n[Curious_crash-2024-11-07_19.16.50-fml.txt](https://github.com/user-attachments/files/17668261/Curious_crash-2024-11-07_19.16.50-fml.txt)\r\n\r\n\r\nNote: have not been able to identify if another mod is causing the error\n\n[comment by TheIllusiveC4 (owner)]\nDuplicate of https://github.com/TheIllusiveC4/Curios/issues/344\r\nThis is an issue with the Tiered mod."
+}

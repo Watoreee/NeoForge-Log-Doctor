@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:thedarkcolour/KotlinForForge#40",
+ "url": "https://github.com/thedarkcolour/KotlinForForge/issues/40",
+ "title": "KotlinForForge issue #40: Log marker crash on 1.19",
+ "source_type": "github_issue",
+ "repo": "thedarkcolour/KotlinForForge",
+ "state": "closed",
+ "created_at": "2022-06-08T12:10:46Z",
+ "fetched_at": "2026-10-28T08:08:52+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-2.1) does not cover issue text",
+ "text": "[issue by Juuxel]\nFull log: https://gist.github.com/Juuxel/f2f3eef40925bae5400ee214bf58398e\r\n\r\nRelevant part of stacktrace:\r\n```\r\nCaused by: java.lang.NoSuchFieldError: SCAN\r\n\tat thedarkcolour.kotlinforforge.KotlinLanguageProvider.getFileVisitor$lambda-2(KotlinLanguageProvider.kt:32) ~[kotlinforforge-3.0.0.jar%23110!/:3.0.0] {}\r\n\tat net.minecraftforge.fml.loading.moddiscovery.Scanner.lambda$scan$1(Scanner.java:37) ~[fmlloader-1.19-41.0.1.jar%230!/:?] {}\r\n\tat java.lang.Iterable.forEach(Iterable.java:75) ~[?:?] {}\r\n\tat net.minecraftforge.fml.loading.moddiscovery.Scanner.scan(Scanner.java:35) ~[fmlloader-1.19-41.0.1.jar%230!/:?] {}\r\n\tat net.minecraftforge.fml.loading.moddiscovery.ModFile.compileContent(ModFile.java:122) ~[fmlloader-1.19-41.0.1.jar%230!/:?] {}\r\n\tat java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[?:?] {}\r\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[?:?] {}\r\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[?:?] {}\r\n\tat java.lang.Thread.run(Thread.java:833) ~[?:?] {}\r\n```\r\n\r\nThis is caused by Forge's move to SLF4J in 1.19, which means the [`LogMarkers` fields changed types](https://github.com/MinecraftForge/MinecraftForge/blob/1.19.x/fmlloader/src/main/java/net/minecraftforge/fml/loading/LogMarkers.java) (to SLF4J's `Marker`) and KFF can't find them. Should be pretty simple to fix with a move from Log4J to SLF4J here as well.\n\n[comment by thedarkcolour (owner)]\nFixed in Kotlin for Forge 3.5.0\n\n[comment by Juuxel (none)]\nThanks for the quick fix! 😃"
+}

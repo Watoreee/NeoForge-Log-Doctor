@@ -1,0 +1,11 @@
+{
+ "doc_id": "gh-release:wisp-forest/owo-lib@0.13.0+1.21.11",
+ "url": "https://github.com/wisp-forest/owo-lib/releases/tag/0.13.0%2B1.21.11",
+ "title": "owo-lib release [1.21.11] oωo - 0.13.0",
+ "source_type": "github_release",
+ "repo": "wisp-forest/owo-lib",
+ "created_at": "2026-01-31T22:47:38Z",
+ "fetched_at": "2026-10-28T08:08:23+00:00",
+ "licence": "Release notes; repo licence MIT",
+ "text": "## API Renamings\r\nIn preparation for future unobfuscated versions of the game, owo-lib is now developed using the official Mojang Mappings and relevant API elements have been renamed accordingly. Besides a number of straight-forward adaptations (like `World` -> `Level`), this also meant that **the core class of owo-ui (previously `Component`) had to be renamed to `UIComponent`** to avoid a name collision with `net.minecraft.network.chat.Component`. Related classes follow suit, e.g. `ParentComponent` -> `ParentUIComponent`, `Containers` -> `UIContainers`.\r\n\r\n## Language Extensions\r\nIn addition to Rich Translations, owo-lib now supports nested language files which help to greatly reduce repetition in language keys. Additionally, to reduce conflict potential, **all of owo's language extensions are now opt-in**. Check out the relevant [section of the docs](https://docs.wispforest.io/owo/data-extensions/nested-lang).\r\n\r\n## JSON5 Support\r\nThe majority of JSON files in any data/resource pack can be converted to use JSON5 when owo-lib is configured to read and convert them to JSON on-the-fly. Once again, check out [the docs](https://docs.wispforest.io/owo/data-extensions/json5).\r\n\r\n## braid UI framework\r\nDue to unforeseen technical circumstances (I did not want to remap the entire library twice), this build includes an early pre-alpha version of the upcoming braid UI framework. While reasonably well-tested and somewhat mature feature-wise, we do not consider it ready for release and we make *absolutely no guarantees about API stability*.\r\n\r\nIf you want to try it out or toy around with it anyways, check out the [getting started guide](https://docs.wispforest.io/braid/getting-started). We'd love to get some early feedback!"
+}

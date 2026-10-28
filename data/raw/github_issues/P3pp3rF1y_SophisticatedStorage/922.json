@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:P3pp3rF1y/SophisticatedStorage#922",
+ "url": "https://github.com/P3pp3rF1y/SophisticatedStorage/issues/922",
+ "title": "SophisticatedStorage issue #922: [1.21.1 ] Crash Soph Storage / Core",
+ "source_type": "github_issue",
+ "repo": "P3pp3rF1y/SophisticatedStorage",
+ "state": "closed",
+ "created_at": "2026-08-31T17:55:06Z",
+ "fetched_at": "2026-10-28T08:09:08+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by jinkhya]\nHello,\n\nWhen a player joins my server, her base crashes the server and crash log seems to point to soph core/storage\nHere's the crash-report : https://gist.github.com/jinkhya/48fe1d9d46948591d445ed642c0c44a4 \n\nI'm not quite sure what is causing it, she said she doesn't have her chests connected to anything else. \n\nModpack Craftoria v.1.33.1\nSoph Core : 1.4.90\nSoph Storage : 1.5.91\n\nThanks in advance,\nJin\n\n[comment by jinkhya (none)]\nI found it's her neighbor's controller crashing, she was close enough to trigger the crash. I'll let you read the crashlog :)\n\n[comment by P3pp3rF1y (owner)]\nAre you able to recreate that crash? I can't really see much from that crash log other than that it was trying to get blockentity at given position at that the time of the crash.\n\n[comment by jinkhya (none)]\nHello, I'm gonna close this ticket as I was not able to reproduce it, I'm sorry. Maybe it was a one time fluke. Thanks for checking it out though.\nAnd thanks for your awesome mods ;)"
+}

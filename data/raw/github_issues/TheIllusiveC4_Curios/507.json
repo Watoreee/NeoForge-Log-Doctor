@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TheIllusiveC4/Curios#507",
+ "url": "https://github.com/TheIllusiveC4/Curios/issues/507",
+ "title": "Curios issue #507: [Bug]: i am so confused",
+ "source_type": "github_issue",
+ "repo": "TheIllusiveC4/Curios",
+ "state": "closed",
+ "created_at": "2025-04-09T17:52:09Z",
+ "fetched_at": "2026-10-28T08:05:41+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by Vadewolf]\n### Minecraft Version\n\n1.21.1\n\n### What happened?\n\ni updated curios to 9.4.2 - 1.21.1 and my game would crash repeatedly but it would say a different mod caused the crash yet i downgraded back to 9.4.1 and the game loads so info needed please\n\n[crash-2025-04-09_10.05.01-client.txt](https://github.com/user-attachments/files/19671603/crash-2025-04-09_10.05.01-client.txt)\n[crash-2025-04-09_10.04.07-client.txt](https://github.com/user-attachments/files/19671604/crash-2025-04-09_10.04.07-client.txt)\n\n### Relevant Log Outputs\n\n_No response_\n\n[comment by TheIllusiveC4 (owner)]\nUnfortunately, I'm not able to reproduce this error. The game loads fine with me, even with Cobblemon installed as well as listed in your crash log. Are you able to just load Curios 9.4.2 by itself? If so, I'll need a more narrow list of mods to help track down the error. If you can, you can try having Curios 9.4.2 installed on its own and then add back your mods in batches until you can isolate the probable conflicts.\n\n[comment by Vadewolf (none)]\nwill try tho it crashes for me on 9.4.2 which is odd but will try\n\n[comment by Vadewolf (none)]\nok so it was curios but a fork mod of this mod that broke the 9.4.2 version i removed it and 9.4.2 works now thank you\n\n[comment by Vadewolf (none)]\nhttps://www.curseforge.com/minecraft/mc-mods/curios-continuation\n\nthis was the culprit\n\n[comment by TheIllusiveC4 (owner)]\nThat's odd, are you saying that you had that downloaded instead of the official one? Or you had both downloaded? Because I only see the official one listed in your crash report."
+}

@@ -1,0 +1,11 @@
+{
+ "doc_id": "gh-release:AppliedEnergistics/Applied-Energistics-2@v26.2.1-alpha",
+ "url": "https://github.com/AppliedEnergistics/Applied-Energistics-2/releases/tag/v26.2.1-alpha",
+ "title": "Applied-Energistics-2 release 26.2.1-alpha for Minecraft 26.2",
+ "source_type": "github_release",
+ "repo": "AppliedEnergistics/Applied-Energistics-2",
+ "created_at": "2026-10-01T22:57:08Z",
+ "fetched_at": "2026-10-28T08:11:32+00:00",
+ "licence": "Release notes; repo licence NOASSERTION (custom or unrecognised licence; see the repo's LICENSE file)",
+ "text": "## What's Changed\r\n\r\n* Port to Minecraft 26.2 by @shartte in https://github.com/AppliedEnergistics/Applied-Energistics-2/pull/9012\r\n\r\n\r\n**Full Changelog**: https://github.com/AppliedEnergistics/Applied-Energistics-2/compare/v26.1.13-beta...v26.2.1-alpha"
+}

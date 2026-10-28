@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:malte0811/FerriteCore#223",
+ "url": "https://github.com/malte0811/FerriteCore/issues/223",
+ "title": "FerriteCore issue #223: ferritecore crash 1.19.2 forge 43.5.0",
+ "source_type": "github_issue",
+ "repo": "malte0811/FerriteCore",
+ "state": "open",
+ "created_at": "2026-02-05T22:33:46Z",
+ "fetched_at": "2026-10-28T08:03:24+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by lukssg]\ngame crashed in forge 43.5.0 in 1.19.2 #\n\n<img width=\"786\" height=\"470\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/974f0273-c87b-4ada-a9d2-f7b49ba78248\" />\n\n[comment by malte0811 (owner)]\nWithout a full crashlog I have no way of knowing what exactly went wrong. If you have Radium installed, check https://github.com/malte0811/FerriteCore/issues/96#issuecomment-1278544397 for a possible reason/fix for the crash."
+}

@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:embeddedt/ModernFix#431",
+ "url": "https://github.com/embeddedt/ModernFix/issues/431",
+ "title": "ModernFix issue #431: Neoforge 1.21 latest beta- Infinite loading",
+ "source_type": "github_issue",
+ "repo": "embeddedt/ModernFix",
+ "state": "closed",
+ "created_at": "2024-07-06T23:44:31Z",
+ "fetched_at": "2026-10-28T08:03:03+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by Handrail9]\n### Bug Description\r\n\r\nHello, I have run into an issue with ModernFix where it will cause the launcher to \"bootloop\" on the \"Loading Mods\" section of NeoForge when there are a large amount of mods present (in my case 121). Removing ModernFix gets rid of this bootloop so I assume this is because of ModernFix. The bootloop seemed to happen randomly as I added or removed mods, but the issue completely resided after removing ModernFix. \r\n\r\n### Reproduction Steps\r\n\r\n1. Have a large amount of mods in the mods folder with ModernFix\r\n2. Launch Minecraft\r\n\r\n### Log File\r\n\r\n[2024-07-06-6.log](https://github.com/user-attachments/files/16117622/2024-07-06-6.log)\n\n[comment by embeddedt (owner)]\nThis sounds more likely to be a race condition in one of your other mods, which ModernFix exacerbates by speeding up the game launch. \r\n\r\nPlease add `mixin.feature.spam_thread_dump=true` at the bottom of `config/modernfix-mixins.properties`, relaunch the game, wait one minute, and send an updated game log.\n\n[comment by Handrail9 (none)]\n[latest.log](https://github.com/user-attachments/files/16117652/latest.log)\r\nThanks for replying so fast. Looking through the debug myself I don't see what's wrong but I've also never been the greatest at reading logs. I appreciate your help! :)\n\n[comment by embeddedt (owner)]\nI think I know what the issue is on my end, to confirm can you see if removing CreativeCore fixes the problem?\n\n[comment by Handrail9 (none)]\nDisabling CreativeCore fixes the issue and ModernFix can be enabled :)\n\n[comment by embeddedt (owner)]\n5.18.6 should fix this then."
+}

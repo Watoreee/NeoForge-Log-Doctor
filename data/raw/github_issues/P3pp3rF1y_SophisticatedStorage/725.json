@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:P3pp3rF1y/SophisticatedStorage#725",
+ "url": "https://github.com/P3pp3rF1y/SophisticatedStorage/issues/725",
+ "title": "SophisticatedStorage issue #725: Server side crash when inserting Compression upgrade into limited barrel Neoforge 1.21.8",
+ "source_type": "github_issue",
+ "repo": "P3pp3rF1y/SophisticatedStorage",
+ "state": "closed",
+ "created_at": "2025-08-28T22:46:36Z",
+ "fetched_at": "2026-10-28T08:09:15+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by Neposis]\nMod: Sophisticated Storage\nVersion: 1.4.50 (NeoForge 1.21.8)\nCore: Sophisticated Core 1.3.65\n\nEnvironment:\nMinecraft 1.21.8\nNeoForge 21.8.35\nDedicated server (Linux, Java 21)\n\nGood afternoon, \nI am having an issue where my server insta crashes as soon as I right click the compression upgrade onto a limited barrel 3 (only tested black) or trying to insert it in via the interface. Maybe caused by a client side call on server?\n\njava.lang.NoClassDefFoundError: net/minecraft/client/renderer/texture/TextureAtlas\n    at net.p3pp3rf1y.sophisticatedstorage.upgrades.compression.CompressionInventoryPart.<clinit>(CompressionInventoryPart.java:30)\n\nFull crash log: \n[crash-2025-08-28_22.25.08-server.txt](https://github.com/user-attachments/files/22034344/crash-2025-08-28_22.25.08-server.txt)\n\nKind regards,\nNepo\n\n[comment by P3pp3rF1y (owner)]\nThanks for reporting this. Looks like I introduced client side code where it doesn't belong during the port and because of that it crashed for you on dedicated server. Just released new versions of SophisticatedCore and SophisticatedStorage to fix this issue."
+}

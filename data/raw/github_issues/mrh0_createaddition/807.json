@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:mrh0/createaddition#807",
+ "url": "https://github.com/mrh0/createaddition/issues/807",
+ "title": "createaddition issue #807: Fluid error after updating the mod and trying to make a new world",
+ "source_type": "github_issue",
+ "repo": "mrh0/createaddition",
+ "state": "closed",
+ "created_at": "2024-06-24T10:10:08Z",
+ "fetched_at": "2026-10-28T08:10:38+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by ScottishEngineer]\n**Describe the bug**\r\nA clear and concise description of what the bug is.\r\n[crash-2024-06-24_03.03.52-client.txt](https://github.com/user-attachments/files/15953487/crash-2024-06-24_03.03.52-client.txt)\r\n\r\n**To Reproduce**\r\nAll i am doing is trying to make a new world and that error code pops up \r\nSteps to reproduce the behavior:\r\n\r\n**Additional context**\r\n- Mod version:1.2.4\r\n- Forge version:47.3.1\r\n- Create version:0.5.1\r\nI hope the crash file i sent will work if not @ me on the discord, name is Scottish Engineer \r\nso far the crash log is saying moderfix and create are causing the issue but i disabled Moderfix and it still happend and i cant disable create and have this mod on so yeah\n\n[comment by 5Cascade (none)]\nI had a similar issue with this mod and Thermal Foundation. I fixed it by downgrading Create: Crafts and Additions from version 1.2.4 to 1.2.3. Someone said in the CoFH discord it was to do with this mod being created with MCreator. Hope this helps.\n\n[comment by mrh0 (owner)]\nFixed in 1.2.4d"
+}

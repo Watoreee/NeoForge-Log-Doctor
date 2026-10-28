@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TheIllusiveC4/Curios#452",
+ "url": "https://github.com/TheIllusiveC4/Curios/issues/452",
+ "title": "Curios issue #452: [Bug]: 1.20.1 crash during loading",
+ "source_type": "github_issue",
+ "repo": "TheIllusiveC4/Curios",
+ "state": "closed",
+ "created_at": "2024-10-26T04:29:02Z",
+ "fetched_at": "2026-10-28T08:06:00+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by TheSexyYeti]\n### Minecraft Version\n\n1.20.1\n\n### What happened?\n\nNot sure what is exactly causing it. But I keep getting a crash involving Curios.\r\n\r\n\n\n### How do you trigger this bug?\n\nI don't know\n\n### Loader\n\nForge\n\n### Loader Version\n\n47.3.11\n\n### Mod Version\n\n5.11.0\n\n### Relevant Log Outputs\n\nhttps://pastecode.io/s/ge8e0c52\n\n[comment by TheIllusiveC4 (owner)]\nDuplicate of https://github.com/TheIllusiveC4/Curios/issues/344\r\nThis is an issue with the Tiered mod."
+}

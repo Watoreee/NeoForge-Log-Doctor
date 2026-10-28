@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:embeddedt/ModernFix#509",
+ "url": "https://github.com/embeddedt/ModernFix/issues/509",
+ "title": "ModernFix issue #509: Protocol error",
+ "source_type": "github_issue",
+ "repo": "embeddedt/ModernFix",
+ "state": "closed",
+ "created_at": "2025-01-19T09:00:26Z",
+ "fetched_at": "2026-10-28T08:02:53+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by sh2kcs]\n### Bug Description\n\nWhen logging into hypixel on 1.21.4, a protocol error occurs\n\n### Reproduction Steps\n\n1. Install modernfix\n2. Launch minecraft on 1.21.4\n3. Go to hypixel.net\n\n### Log File\n\nhttps://pastes.dev/wBh4MyRXoS - crahs report\n\n[comment by embeddedt (owner)]\nI cannot reproduce this in a standalone 1.21.4 instance with ModernFix installed. Is there a specific lobby it occurs in?\n\n[comment by sh2kcs (none)]\n> I cannot reproduce this in a standalone 1.21.4 instance with ModernFix installed. Is there a specific lobby it occurs in?\n\ntnt games\n\n[comment by sh2kcs (none)]\nhttps://pastes.dev/Afg4mUQVMW Here is a crash report without lithium\n\n[comment by embeddedt (owner)]\nStill couldn't reproduce it, and I am pretty sure it's not my fault (the server seems to send an invalid palette to the client), but I've added a check on my end to prevent a crash from occuring in that specific code.\n\n[comment by sh2kcs (none)]\n> Still couldn't reproduce it, and I am pretty sure it's not my fault (the server seems to send an invalid palette to the client), but I've added a check on my end to prevent a crash from occuring in that specific code.\n\nWhen will the full version with this fix be released? I need a modrinth version for my mod-pack:)\n\n[comment by sh2kcs (none)]\nIts fixed! Thank you"
+}

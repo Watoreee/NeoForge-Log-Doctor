@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:wisp-forest/owo-lib#246",
+ "url": "https://github.com/wisp-forest/owo-lib/issues/246",
+ "title": "owo-lib issue #246: [incompatibility report] Update for 1.21",
+ "source_type": "github_issue",
+ "repo": "wisp-forest/owo-lib",
+ "state": "closed",
+ "created_at": "2024-06-15T06:16:49Z",
+ "fetched_at": "2026-10-28T08:08:12+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by c0nstexpr]\nAs title suggested. Currently the mod is broken\r\n\r\n> [14:14:36] [main/ERROR]: Mixin apply for mod owo failed owo.mixins.json:ui.ScreenMixin from mod owo -> net.minecraft.class_437: org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException Critical injection failure: @ModifyArg annotation on injectProperLinkSource could not find any targets matching 'Lnet/minecraft/class_437;method_25428(Z)V' in net.minecraft.class_437. Using refmap owo-lib-refmap.json [PREINJECT Applicator Phase -> owo.mixins.json:ui.ScreenMixin from mod owo -> Prepare Injections ->  -> modify$bob000$owo$injectProperLinkSource(Lnet/minecraft/class_437;)Lnet/minecraft/class_437; -> Parse]\n\n[comment by Noaaan (member)]\nWill be fixed by https://github.com/wisp-forest/owo-lib/pull/242\r\nAfter all, 1.21 unsurprisingly broke a ton of mods with very extensive changes\n\n[comment by c0nstexpr (none)]\nNew version was tested in my mod project"
+}

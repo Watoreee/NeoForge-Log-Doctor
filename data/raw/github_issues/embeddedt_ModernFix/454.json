@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:embeddedt/ModernFix#454",
+ "url": "https://github.com/embeddedt/ModernFix/issues/454",
+ "title": "ModernFix issue #454: Dynamic Resources changes the behaviour of Fabric Api's `getModel()`",
+ "source_type": "github_issue",
+ "repo": "embeddedt/ModernFix",
+ "state": "closed",
+ "created_at": "2024-08-14T22:28:59Z",
+ "fetched_at": "2026-10-28T08:02:57+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by Estecka]\n### Bug Description\n\nThe class `ModelManager` has two different overloads for `getModel`:   \r\nThe vanilla implementation takes a `ModelResourceLocation` as argument, and falls back to returning a missing model.  \r\nFabric Api's implementation takes a plain `ResourceLocation` as argument, and falls back to returning `null`.\r\n\r\nWhen ModernFix's Dynamic Resources is enabled, Fabric Api's overload returns a missing model instead of null, which can throw off mods that rely on detecting missing models.\r\n\r\nThe context for this is similar to #433, but involves a different overload of `getModel`. This time it will be trivial to work around this on my end, so there's no urgency to fix this, but I still thought this behaviour was worth documenting.\r\n(And honnestly I have no idea why those two behave differently to begin with. I might just take this issue to Fabric Api as well.)\n\n### Reproduction Steps\n\n- Install [Enchants-CIT v1.0.0](https://modrinth.com/mod/enchants-cit/version/1.0.0+1.21)\r\n- Search for enchanted books with the newest enchantments (e.g windburst)\r\n   - Without Dynamic Resources: the item uses the vanilla texture.\r\n   - With Dynamic Resources: the item has a missing texture.\n\n### Log File\n\n[latest.log](https://github.com/user-attachments/files/16619493/latest.log)\n\n[comment by embeddedt (owner)]\nThanks, will take a look and see what I can do.\n\n[comment by embeddedt (owner)]\nI think my reply to this was lost in a GitHub outage (I attempted to reply, it seemed to have gone through, but GitHub went down minutes later). Anyway, what I had said before was that I looked into it, and it wasn't that trivial to emulate the behavior. I think it would be better to correct it on Fabric API's end. Generally the missing model is preferred over `null`, as it will at least not crash."
+}

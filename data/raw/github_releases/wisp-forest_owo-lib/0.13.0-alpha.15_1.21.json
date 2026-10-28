@@ -1,0 +1,11 @@
+{
+ "doc_id": "gh-release:wisp-forest/owo-lib@0.13.0-alpha.15+1.21",
+ "url": "https://github.com/wisp-forest/owo-lib/releases/tag/0.13.0-alpha.15%2B1.21",
+ "title": "owo-lib release [1.21+] oωo - 0.13.0-alpha.15",
+ "source_type": "github_release",
+ "repo": "wisp-forest/owo-lib",
+ "created_at": "2026-04-29T10:41:35Z",
+ "fetched_at": "2026-10-28T08:08:23+00:00",
+ "licence": "Release notes; repo licence MIT",
+ "text": "## Compatibility Warning\r\nThis release represents a build of the largely untested braid-ui-1.21 branch, hence it is marked as an alpha. It is not entirely equivalent in features to 0.13.0 for 1.21.11+ and the features which were backported have not been comprehensively tested for backwards compatibility with mods compiled against previous 1.21 versions of owo-lib.\r\n\r\nThis release is provided primarily for mods like Arcane Repository and Trickster, which want to make use of braid on 1.21. Besides fixes for major compatibility issues we will not be supporting or updating it."
+}

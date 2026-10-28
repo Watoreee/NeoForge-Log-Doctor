@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:wisp-forest/owo-lib#346",
+ "url": "https://github.com/wisp-forest/owo-lib/issues/346",
+ "title": "owo-lib issue #346: Mixing Debug -> Minecraft Crash on Start (Client Fabric 1.21.1 - API 115 - 0.16.10)",
+ "source_type": "github_issue",
+ "repo": "wisp-forest/owo-lib",
+ "state": "closed",
+ "created_at": "2025-01-21T22:21:44Z",
+ "fetched_at": "2026-10-28T08:08:05+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by suerion]\nHey, i got an Crash on start from owo.\n\nPlease look on the Mixin Errors on Debug. Thanks\n\nlatest.log Client\nhttps://gnomebot.dev/paste/mclogs/tgpZc6a\n\n[comment by gliscowo (member)]\nJudging from how verbose this log is about mixin applications, I suspect the problem is that you used the `-Dmixin.debug=true` flag (or some variant of it) which forces very strict validation for all injections. This also changes behavior (likely in ways you didn't intend) and breaks the perfectly valid pair of Fabric/Quilt-specific injections of which only one must succeed under normal circumstances due to being grouped.\n\n[comment by suerion (none)]\nyeah, it was a problem with the debugin from mixin, but now it work again, had only searched an bug and it got me the owo bug also"
+}

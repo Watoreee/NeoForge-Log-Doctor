@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:thedarkcolour/KotlinForForge#47",
+ "url": "https://github.com/thedarkcolour/KotlinForForge/issues/47",
+ "title": "KotlinForForge issue #47: Game crashes on start-up",
+ "source_type": "github_issue",
+ "repo": "thedarkcolour/KotlinForForge",
+ "state": "closed",
+ "created_at": "2022-09-27T20:48:57Z",
+ "fetched_at": "2026-10-28T08:08:51+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-2.1) does not cover issue text",
+ "text": "[issue by Nevrai]\nMy game crashes immediately on start-up. I narrowed it down to Kotlin for Forge. Disabling Kotlin for Forge lets the game boot normally, aside from not booting because of the mods that require Kotlin for Forge.\r\n\r\n    Exception in thread \"main\" \r\n    java.lang.RuntimeException: java.lang.reflect.InvocationTargetException\r\n\r\nNo crash report is generated, and I couldn’t find anything relevant in the log.\r\n\r\n**latest.log** = https://pastebin.com/raw/EX551YSc\r\n\r\n**Console errors:** https://pastebin.com/raw/UpFTZ0tb\r\n\r\n### Versions\r\n* **Minecraft:** 1.18.2\r\n* **Forge:** 40.1.80 (latest for 1.18.2)\r\n* **Kotlin for Forge:** 3.7.1 (latest for 1.18.2)\n\n[comment by thedarkcolour (owner)]\nNot a Kotlin for Forge issue. Anti Ad mods mixins dont work properly, complain to them.\n\n[comment by Nevrai (none)]\n@thedarkcolour What do you mean “Anti Ad mod”? Are you talking about [No Telemetry](https://www.curseforge.com/minecraft/mc-mods/no-telemetry)? My game did launch fine without Kotlin for Forge.\n\n[comment by thedarkcolour (owner)]\nThe issue comes from a mod whose code is in \"org.anti_ad.mc.common.config.options.ConfigBoolean\"\n\n[comment by thedarkcolour (owner)]\nWhich mods depend on Kotlin for Forge? Have you tried removing those along with Kotlin for Forge?\n\n[comment by Peli93ESP (none)]\nentonces no hay solucion no?\n\n[comment by Peli93ESP (none)]\nporque ami me pasa exactamente lo mismo que al compañero de arriba\n\n[comment by thedarkcolour (owner)]\nUn de los mods tiene un error que causa el juego a cerrar, y porque no lo esta de kff cierre este issue\n\n[comment by Peli93ESP (none)]\npero InventoryProfilesNext le hace falta este mod, entonces no pode utilizar el InventoryProfilesNext\n\n[comment by thedarkcolour (owner)]\nEs el problema de InventoryProfilesNext y se necesita reportado a su GitHub, porque es un error de su codigo, no de mio.\n\n[comment by Peli93ESP (none)]\nlo raro es que hace unos dias si funcionaba y ahora no"
+}

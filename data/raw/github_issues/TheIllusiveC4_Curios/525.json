@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TheIllusiveC4/Curios#525",
+ "url": "https://github.com/TheIllusiveC4/Curios/issues/525",
+ "title": "Curios issue #525: [Bug]: Game Crashes After Trying to Add More Slots",
+ "source_type": "github_issue",
+ "repo": "TheIllusiveC4/Curios",
+ "state": "closed",
+ "created_at": "2025-06-11T10:24:38Z",
+ "fetched_at": "2026-10-28T08:05:47+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by JunkJaguar]\n### Minecraft Version\n\n1.20.1\n\n### What happened?\n\nWhat I changed\n![Image](https://github.com/user-attachments/assets/24df4b29-0ec0-4ef8-98c1-aeaae6b25375)\n\n![Image](https://github.com/user-attachments/assets/45069825-c2c3-47f6-96c0-cdde8f68dc84)\n\nThis is my third attempt. On my first, I was recording (screen sharing) via discord, so I stopped that closed out of everything, and tried again (launching the modpack through curse forge). At first it worked, but when I created a new world (creative) and looked at the slots I had, it was defaulted back to one for each. So I closed out of the game and went back to the common config to see what was wrong. Everything was the same as the first image I shared. So I saved it, closed the file and tried again, but this time I got the error message, but I'm not recording this time. \n\nThis is my first time trying to edit the slot amount in curios, I followed the directions on the configuration page, and I'm not sure where I went wrong.\n\n### Relevant Log Outputs\n\n[Crash Report](https://pastebin.com/RHZnmbNG)\n\n[comment by TheIllusiveC4 (owner)]\nI think the issue is the quotation marks. Based on the crash log, the quotes you have around each entry are not actually quotes. It appears to be a different character that resembles quotes. I'm not sure how that happened, perhaps a copy-paste error if that's what you did? In any case, replacing those with regular quotes should solve this issue."
+}

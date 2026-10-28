@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:P3pp3rF1y/SophisticatedStorage#729",
+ "url": "https://github.com/P3pp3rF1y/SophisticatedStorage/issues/729",
+ "title": "SophisticatedStorage issue #729: Crash when opening sophisticated chest 1.21.1 Neoforge",
+ "source_type": "github_issue",
+ "repo": "P3pp3rF1y/SophisticatedStorage",
+ "state": "closed",
+ "created_at": "2025-09-01T19:48:35Z",
+ "fetched_at": "2026-10-28T08:09:14+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by ObieTheWitchBoy]\nI'm playing a modded world featuring mainly Dragon Survival, Sophisticated Backpacks, Sophisticated Storage and Iron's Spells and Spellbooks. Everything was going normal for days, I have a double dark oak chest with iron upgrades that I'm storing all my stuff in, but I added a starter tier stack upgrade to the chest, sorted it, and then my game crashed. I can load back into the game fine and everything plays normally, unless I open that chest, then it crashes again. \nMinecraft 1.21.1 \nNeoForge 21.1.206\nSophsticated Core 1.3.68.1116\nSophisticated Storage 1.5.1.1260\nSophisticated Backpacks 3.24.22.1319\n\n[latest.log](https://github.com/user-attachments/files/22083476/latest.log)\n\n[comment by P3pp3rF1y (owner)]\nstackableitems is the cause - looks like they are trying to reformat the stack count and just parse it as number when it doesn't necessarily need to be just a number when higher counts get involved and something like 1.1K is used instead of 1,123. They need to fix this on their side."
+}

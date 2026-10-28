@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:thedarkcolour/KotlinForForge#65",
+ "url": "https://github.com/thedarkcolour/KotlinForForge/issues/65",
+ "title": "KotlinForForge issue #65: 1.19.4 file crashes game",
+ "source_type": "github_issue",
+ "repo": "thedarkcolour/KotlinForForge",
+ "state": "closed",
+ "created_at": "2023-03-23T18:58:29Z",
+ "fetched_at": "2026-10-28T08:08:49+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-2.1) does not cover issue text",
+ "text": "[issue by Droolphobia]\nHello I'm currently in the process of installing the Cobblemon mod, it requires Kotlin, and I've made sure it was this specific file that is causing the issue. I need version 1.19.4 for the mod, but whenever I launch the game with the file installed, the game crashes before launch and I get a crash exit code:1. I'm not familiar at all with programming, and I'm not the brightest with tech in general, so perhaps I'm doing something wrong here. I should say that I'm putting this file in my mods folder. I appreciate any help I can get, thank you!\n\n[comment by davidromrell (none)]\nIt probably is a combination of this mod and another that it is interacting with that is the problem.\n\n[comment by thedarkcolour (owner)]\nEnsure that you have Architectury API installed as well.\n\n[comment by Droolphobia (none)]\nI left only Cobblemon and it's requirements in its folder (other than optifine, which shouldn't be a problem) so no other mods are interacting with it. I also have Architectury API installed with the correct version. The game launches perfectly fine if I remove Kotlin so I think it's the problem here.\n\n[comment by thedarkcolour (owner)]\nSend crash log because probably not KFF related\n\n[comment by Droolphobia (none)]\n[crash-2023-03-23_23.31.06-fml.txt](https://github.com/thedarkcolour/KotlinForForge/files/11058395/crash-2023-03-23_23.31.06-fml.txt)\n\n[comment by thedarkcolour (owner)]\nCobblemon isn't out for 1.19.4. The latest version says 1.19.2, and according to your log KFF isn't in the mods folder. Switch to Minecraft 1.19.2 and use Kotlin for Forge 3.11.0\n\n[comment by Droolphobia (none)]\noh man seriously, my dyslexia was the problem the whole time lmaoooo, really read it as 1.19.4. Thank you so much for the help :)"
+}

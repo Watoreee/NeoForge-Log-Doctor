@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:mezz/JustEnoughItems#4227",
+ "url": "https://github.com/mezz/JustEnoughItems/issues/4227",
+ "title": "JustEnoughItems issue #4227: [Crash]: IllegalArgumentException when tabbing out while in inventory",
+ "source_type": "github_issue",
+ "repo": "mezz/JustEnoughItems",
+ "state": "closed",
+ "created_at": "2026-01-05T08:02:36Z",
+ "fetched_at": "2026-10-28T08:01:56+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by evhub]\n### Steps to Reproduce the Crash\n\nThe crash occurs when tabbing out and then back in to Minecraft while the inventory is open.\n\n### Mod Pack URL (Optional)\n\n_No response_\n\n### Mod Pack Version (Optional)\n\n_No response_\n\n### Extra Notes (Optional)\n\nI'm using `jei-1.21.1-neoforge-19.27.0.336`. I am somewhat suspicious that the crash could be coming from [JustEnoughMekanismMultiblocks](https://github.com/gisellevonbingen-Minecraft/JustEnoughMekanismMultiblocks) (of which I am using `JustEnoughMekanismMultiblocks-1.21.1-7.12`) rather than JEI itself, since there's a mixin from it in the crash report, so feel free to redirect me there.\n\n### Crash Report\n\nhttps://bytebin.lucko.me/QWclO0qTX2\n\n[comment by mezz (owner)]\nThanks for the report!\nThis is probably caused by the mixin or a very weird screen, but I may be able to work around it.\n\n[comment by mezz (owner)]\nThis should be fixed in the most recent version of JEI for 1.21.1, please let me know if you run into more issues.\n\n[comment by mezz-bot (collaborator)]\n🚀 A fix for this issue is available in Just Enough Items version `15.28.1.168` for Minecraft `1.20.1`.\nThanks for reporting this issue!\n\n**CurseForge:** [Fabric](https://www.curseforge.com/minecraft/mc-mods/jei/files/8575785) | [Forge](https://www.curseforge.com/minecraft/mc-mods/jei/files/8575786)\n**Modrinth:** [Fabric](https://modrinth.com/mod/u6dRKJwZ/version/E8jJJK1I) | [Forge](https://modrinth.com/mod/u6dRKJwZ/version/b3rXIQsb)\n\n_Note: CurseForge and Modrinth links may take a little time to work while new files are reviewed._\n\n[comment by mezz-bot (collaborator)]\n🚀 A fix for this issue is available in Just Enough Items version `10.81.0.1029` for Minecraft `1.18.2` (Fabric, Forge).\nThanks for reporting this issue!\n\n- [CurseForge (Fabric)](<https://www.curseforge.com/minecraft/mc-mods/jei/files/8829815>)\n- [CurseForge (Forge)](<https://www.curseforge.com/minecraft/mc-mods/jei/files/8829822>)"
+}

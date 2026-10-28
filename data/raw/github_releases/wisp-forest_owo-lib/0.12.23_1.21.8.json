@@ -1,0 +1,11 @@
+{
+ "doc_id": "gh-release:wisp-forest/owo-lib@0.12.23+1.21.8",
+ "url": "https://github.com/wisp-forest/owo-lib/releases/tag/0.12.23%2B1.21.8",
+ "title": "owo-lib release [1.21.6+] oωo - 0.12.23",
+ "source_type": "github_release",
+ "repo": "wisp-forest/owo-lib",
+ "created_at": "2025-10-09T21:47:22Z",
+ "fetched_at": "2026-10-28T08:08:23+00:00",
+ "licence": "Release notes; repo licence MIT",
+ "text": "## Fixes\n- Labels with text that has an empty style no longer crash when clicked on\n- Scissoring on draw contexts which have complex transforms should no longer incorrectly cut off content"
+}

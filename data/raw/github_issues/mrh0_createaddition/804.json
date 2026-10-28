@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:mrh0/createaddition#804",
+ "url": "https://github.com/mrh0/createaddition/issues/804",
+ "title": "createaddition issue #804: Latest version results in datapack error when trying to load a new world and a crash when creating new ones.",
+ "source_type": "github_issue",
+ "repo": "mrh0/createaddition",
+ "state": "closed",
+ "created_at": "2024-06-23T11:24:50Z",
+ "fetched_at": "2026-10-28T08:10:38+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by Nereithr]\n**Describe the bug**\r\nAttempting to load a world with Crafts and Additions v1.20 - 1.2.4 results in the following datapack-related error:\r\n\r\n<details>\r\n  <summary>Image</summary>\r\n  \r\n![unknown_2024 06 23-12 28](https://github.com/mrh0/createaddition/assets/72263884/767f14b9-6639-4267-be58-e026c4c37929)\r\n  \r\n</details>\r\n\r\nAttempting to create a new world results in a crash. [Here is the log file.](https://github.com/user-attachments/files/15944302/latest.log)\r\n\r\nDownpatching to version 1.20.-1.2.3 fixes the issue.\r\n\r\n**To Reproduce**\r\nSteps to reproduce the behavior:\r\n\r\n1. Attempt to load an old world with Crafts and Additions v1.2.3\r\n2. Observe\r\n3. Quit out and attempt to create a new world\r\n4. Crash\r\n\r\n**Additional context**\r\n- Mod version: 1.20.1-1.2.4\r\n- Forge version: NeoForge 47.1.106/Forge 47.3.0\r\n- Create version: 0.5.1.f\n\n[comment by Maxi90909 (none)]\nIf this is correct I wasted 6 hours and 30min trying to find this issue\n\n[comment by Maxi90909 (none)]\nYes I wasted indeed 6,5 hours. Thanks man.\n\n[comment by mrh0 (owner)]\nFixed in 1.2.4d"
+}

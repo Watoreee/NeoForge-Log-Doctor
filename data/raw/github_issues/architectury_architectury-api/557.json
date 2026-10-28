@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:architectury/architectury-api#557",
+ "url": "https://github.com/architectury/architectury-api/issues/557",
+ "title": "architectury-api issue #557: mod compiled in java 22 (i can be wrong)",
+ "source_type": "github_issue",
+ "repo": "architectury/architectury-api",
+ "state": "open",
+ "created_at": "2024-09-01T02:54:29Z",
+ "fetched_at": "2026-10-28T08:06:32+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by IINovaIl]\nso I've been trying to get my 1.21 profile to run and after a bunch of skull crushing and having to ask chatGPT. I've come to the conclusion that architectury's latest version for 1.21 has been compiled in java 22 which minecraft doesn't use on 1.21/.1\r\na log and some info below\r\nmod loader: fabric\r\nmod loader V: 0.16.3\r\nmc V: 1.21\r\ncrash report: https://mclo.gs/afNRkSH\r\n\r\nNOTICE:\r\nif this is not related to architectury then i apologize for wasting time.\n\n[comment by Jab125 (member)]\nPerhaps check out if puzzleslib is causing a problem"
+}

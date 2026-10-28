@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TwelveIterations/Waystones#866",
+ "url": "https://github.com/TwelveIterations/Waystones/issues/866",
+ "title": "Waystones issue #866: Waystone Crash",
+ "source_type": "github_issue",
+ "repo": "TwelveIterations/Waystones",
+ "state": "closed",
+ "created_at": "2024-07-04T23:03:37Z",
+ "fetched_at": "2026-10-28T08:09:58+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by Brixxii]\n### Minecraft Version\n\n1.21\n\n### Mod Loader\n\nFabric\n\n### Mod Loader Version\n\n0.15.11\n\n### Mod Version\n\n21.0.7\n\n### Balm Version\n\n21.0.11\n\n### Describe the Issue\n\nAble to place down waystones but the menu does not recognize new ones added, the screen remains blank. Clicking the next button causes the whole game to save and crash. \n\n### Logs\n\nhttps://pastebin.com/iqXHhcrX\n\n### Do you use any performance-enhancing mods (e.g. OptiFine) or custom server distributions (e.g. SpongeForge)?\n\n_No response_\n\n[comment by BlayTheNinth (member)]\nYour warpRequirements config option seems to be invalid. The next version should no longer crash in that case, but you should still consider fixing/resetting it."
+}

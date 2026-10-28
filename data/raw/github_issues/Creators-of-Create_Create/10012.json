@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:Creators-of-Create/Create#10012",
+ "url": "https://github.com/Creators-of-Create/Create/issues/10012",
+ "title": "Create issue #10012: 1.21.1 Neoforge Crash",
+ "source_type": "github_issue",
+ "repo": "Creators-of-Create/Create",
+ "state": "closed",
+ "created_at": "2026-02-23T17:09:16Z",
+ "fetched_at": "2026-10-28T08:00:57+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by Vancomb]\n### Context\n\nI'm experiencing a clientside crash on my server. \n\nI think it has something to do with Epic Fight but the logs don't suggest anything. \n\n### Crash Report\n\nhttps://mclo.gs/1quz1u5\n\n[comment by AyOhEe (collaborator)]\nThat's convenient. Saw another issue like this come in (#10011) but it was on 1.20.1 and the logs weren't terribly helpful. Do you know how to trigger the crash? That other crash also had epicfight, so you may well be right.\n\n[comment by VoidLeech (collaborator)]\n(it's the same issue author :p)\n\nhttps://discord.com/channels/620934202875183104/689866656914210897/1475509085947433213\n\nHave Epic Fight's Guard Skill, then click a sliding door. (see the issue mentioning this one)\n\n[comment by AyOhEe (collaborator)]\n(ha, missed that detail)\n\nHuh. Well, I'm satisfied that this is confirmed, the video is quite clear.\nI've taken a peek at what's happening and it honestly _shouldn't_ be possible. The state should get flipped before `isDoubleDoor` gets called.\n\nhttps://github.com/Creators-of-Create/Create/blob/89dd311eea390128ba84a603620012c3bc68f2e6/src/main/java/com/simibubi/create/content/decoration/slidingDoor/SlidingDoorBlock.java#L240-L241\n\n[comment by VoidLeech (collaborator)]\nHad to up my stacktrace limit to get useful logs, but:\nEpic Fight seems to have a bit of their own bits on top of the interaction pipeline: \nhttps://github.com/Epic-Fight/epicfight/blob/6bb8ee5f661c50ecb9b1e8a531bb8e8d19e0f8d6/neoforge/src/main/java/yesman/epicfight/client/events/engine/ControlEngine.java#L995-L1075\n\nBut notably, they handle the block's `useWithoutItem` method in their FakeLevel, which ignores `setBlock`. Which logically means our doors never get their state flipped. We could open the doors in a non-recursive manner but otherwise I don't think this is really our issue to fix.\n\n[comment by Vancomb (none)]\nI am glad you guys were able to get to the bottom of this. Thank you for looking into it. I guess I'll wait and see what the Epic Fight folks say."
+}

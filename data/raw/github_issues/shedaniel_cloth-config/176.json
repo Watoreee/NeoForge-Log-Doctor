@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:shedaniel/cloth-config#176",
+ "url": "https://github.com/shedaniel/cloth-config/issues/176",
+ "title": "cloth-config issue #176: Trying to navigate using TAB key in config menu crashes the game",
+ "source_type": "github_issue",
+ "repo": "shedaniel/cloth-config",
+ "state": "closed",
+ "created_at": "2022-10-09T11:12:40Z",
+ "fetched_at": "2026-10-28T08:07:29+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by KabanFriends]\nCloth Config API version: 8.2.88\r\nMinecraft version: 1.19.2\r\nMod Loader: Happens on both Forge & Fabric\r\n\r\nWhen you try to navigate through the config GUI using TAB key, the game crashes. Strangely, this crash only happens on config menus created manually using cloth config, not the ones created with auto config.\r\n\r\nThis bug can easily be reproduced by pressing TAB key a few tiems in the Cloth Config API's example config menu.\n\n[comment by shedaniel (owner)]\nCrash Logs?\n\n[comment by KabanFriends (none)]\n[crash-2022-10-09_20.10.33-client.txt](https://github.com/shedaniel/cloth-config/files/9741393/crash-2022-10-09_20.10.33-client.txt)\n\n[comment by haykam821 (none)]\nThis issue is still present on Minecraft 1.19.3.\n\n[comment by MattSturgeon (contributor)]\nThis is caused by an implementation detail of the search box widget. Changing focus using `<TAB>` might still work if something is already focused. I'll put together a PR with a fix shortly."
+}

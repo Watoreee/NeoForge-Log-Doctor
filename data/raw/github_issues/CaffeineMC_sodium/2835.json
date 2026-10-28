@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:CaffeineMC/sodium#2835",
+ "url": "https://github.com/CaffeineMC/sodium/issues/2835",
+ "title": "sodium issue #2835: NeoForge QuadTransformers.transform does not rotate sodium quad data",
+ "source_type": "github_issue",
+ "repo": "CaffeineMC/sodium",
+ "state": "open",
+ "created_at": "2024-10-24T13:41:42Z",
+ "fetched_at": "2026-10-28T08:04:47+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by MehVahdJukaar]\n### Bug Description\n\nNeoforge QuadTransformers.transform does not seem to rotate sodium extra quad data such as ModelQuadFacing .\r\nThis results in quads from custom models to being culled away by backface culling despite them baving both their Normal direction and Direction set correctly\n\n### Reproduction Steps\n\nI could observe these effect in 1.21 which caused some of my models to get culled away when looked at from certain angles\n\n### Log File\n\nnot crashing\n\n### Crash Report\n\nno crash\n\n[comment by IMS212 (member)]\nThis may be partially fixed in this commit. A full fix is not particularly feasible, as NeoForge does not have a callback for when the data is modified.\n\n[comment by MehVahdJukaar (none)]\nWould you mind telling me what would I need to modify to allow a proper fix for this through compat code on my and at least? Ideally in a way that would not clash with this half fix. In other word some code I could run for my own stuff so that this won't happen for my own transforms\n\n[comment by IMS212 (member)]\nAs long as the quad you’re transforming has not been used to render yet, it is fine.\n\n[comment by MehVahdJukaar (none)]\nWould it work if I copy it? I'm transforming quads from another block to use in my own model\n\n[comment by IMS212 (member)]\nYes, that’d work.\n\n[comment by MehVahdJukaar (none)]\nJust to be clear this will work on next update?"
+}

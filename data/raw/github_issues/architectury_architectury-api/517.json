@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:architectury/architectury-api#517",
+ "url": "https://github.com/architectury/architectury-api/issues/517",
+ "title": "architectury-api issue #517: MenuRegistry in 1.21 NeoForge",
+ "source_type": "github_issue",
+ "repo": "architectury/architectury-api",
+ "state": "open",
+ "created_at": "2024-06-14T11:47:46Z",
+ "fetched_at": "2026-10-28T08:06:41+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by gigabit101]\nMenuRegistry.registerScreenFactory()  does not seem to be working in NeoForge 1.21 however using NeoForge's RegisterMenuScreensEvent is working fine.\r\n\r\nThis only effects NeoForge and the MenuRegistry works fine in Fabric\n\n[comment by Luligabi1 (none)]\nHad the same issue on 1.20.6; I assume it doesn't even get to call impl, since there were no errors when attempting to register the same screen twice...\n\n[comment by tksonix (none)]\nSame here, happens on 1.20.6 neoforge. It calls the registration but failed to register it in HandledScreens.PROVIDERS\n\n[comment by tksonix (none)]\nAlso one thing I noticed that, `MenuRegistry` does work in fabric, but there are about 50/50 chance it fails to register.\n\n[comment by sshcrack (none)]\nAny fixes yet?\n\n[comment by Jab125 (member)]\nDo you have a reproducible testmod/log files?\n\n[comment by Jab125 (member)]\nIt's _supposed_ to work: https://github.com/architectury/architectury-api/blob/cd9551fab2e0ca323443f9736bc8e3c9fad9ab41/neoforge/src/main/java/dev/architectury/registry/menu/forge/MenuRegistryImpl.java#L57-L61 but there might be an oversight here\n\n[comment by AlexiyOrlov (none)]\nDoesn't work on 1.21.1"
+}

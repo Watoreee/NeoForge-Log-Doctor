@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:AppliedEnergistics/Applied-Energistics-2#8809",
+ "url": "https://github.com/AppliedEnergistics/Applied-Energistics-2/issues/8809",
+ "title": "Applied-Energistics-2 issue #8809: TheOneProbe integration doesn't work correctly on 1.21.1",
+ "source_type": "github_issue",
+ "repo": "AppliedEnergistics/Applied-Energistics-2",
+ "state": "closed",
+ "created_at": "2026-03-14T10:32:04Z",
+ "fetched_at": "2026-10-28T08:11:15+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by Lauriichan]\n### Describe the bug\n\nWhen looking at an AE2 block which stores power the tooltip is not being generated, instead a exception is thrown and TheOneProbe shows `Error: ae2:block-entity`.\n\n### How to reproduce the bug\n\n1. Setup a server and client with AE2 and TheOneProbe\n2. Join the server and look at any AE2 block which can store energy\n3. See `Error: ae2:block-entity` in the one probe\n4. Opening the debug log provides a stacktrace.\n\n### Expected behavior\n\nThat the tooltip is being shown correctly\n\n### Additional details\n\nI also investigated where this is coming from and it seems like the tooltip built on the server is accesing the client config value `powerUnit`. I suppose this would work if the server is the client (singleplayer) but as seen here it doesn't work on a server-client environment as the server never creates the client config.\n\nThe reason for this issue is simply that the tooltip generation for the power related blocks use `Platform#formatPower` which in turn accesses the mentioned value.\n\n<img width=\"566\" height=\"917\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/e5d21a25-03d5-4d13-930a-9052383c419d\" />\n\nMod versions:\n- AE2: 19.2.17\n- TheOneProbe: 1.21_neo-12.0.8\n\n### Which minecraft version are you using?\n\n1.21\n\n### On which mod loaders does it happen?\n\nNeoForge\n\n### Crash log\n\nhttps://gist.github.com/Lauriichan/b954ecb04a767c0c00ff7d552aa42f1e\n\n[comment by Lauriichan (none)]\nAn easy solution would probably be to just use the AE power unit. And a possibly better solution would be that the client tells the server which Power unit it has selected and the server stores that in the player data or smth like that\n\n[comment by shartte (member)]\nWe've since removed TOP support from main, so I don't think this issue is relevant anymore to main."
+}

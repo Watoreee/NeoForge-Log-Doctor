@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:mrh0/createaddition#837",
+ "url": "https://github.com/mrh0/createaddition/issues/837",
+ "title": "createaddition issue #837: Accumulator multiblock crashes the game when on mechanical bearing contraptions",
+ "source_type": "github_issue",
+ "repo": "mrh0/createaddition",
+ "state": "open",
+ "created_at": "2024-09-22T16:15:50Z",
+ "fetched_at": "2026-10-28T08:10:34+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by Konhaiii]\n**Describe the bug**\r\nWhen an Accumulator multiblock (only when 2 or more blocks are connected, the block itself dont throw a crash) is mounted on a moving contraption, either the game crash immediately or it does when the contraption stops.\r\n\r\nIt may be due to recent changes on how contraptions are handled in Create.\r\n\r\n**To Reproduce**\r\n1-Place a Mechanical Bearing\r\n2-Glue an Accumulator multiblock on it\r\n3-Apply rotational force\r\n4-If the game has not crashed already, break the mechanical bearing\r\n5-Tada! game crashed\r\n\r\n**Additional context**\r\n- Mod version: 1.2.4e\r\n- Forge version: 47.3.10\r\n- Create version: 0.5.1.h\r\n- Minecraft version: 1.20.1\r\n\r\n[crash-2024-09-22_17.59.33-server.txt](https://github.com/user-attachments/files/17090372/crash-2024-09-22_17.59.33-server.txt)\n\n[comment by mrh0 (owner)]\nIt's an issue on Creates side, either downgrade to Create 0.5.1.g or wait for Create 0.5.1.i"
+}

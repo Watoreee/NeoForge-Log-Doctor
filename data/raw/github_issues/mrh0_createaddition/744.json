@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:mrh0/createaddition#744",
+ "url": "https://github.com/mrh0/createaddition/issues/744",
+ "title": "createaddition issue #744: 1.20.1 Error logging into server - Loading NBT data",
+ "source_type": "github_issue",
+ "repo": "mrh0/createaddition",
+ "state": "closed",
+ "created_at": "2024-02-28T13:23:42Z",
+ "fetched_at": "2026-10-28T08:10:41+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by Gamerbolts]\n**Describe the bug**\r\nI updated your mod to 1.2.1b on my server and the client loads fine and the server loads up fine but when I try to connect I get an error\r\nCaused by: java.io.IOException: Invalid tag id: -103\r\nat com.mrh0.createaddition.recipe.charging.SequencedAssemblyChargingRecipeSerializer.readFromBuffer(SequencedAssemblyChargingRecipeSerializer.java:83) ~[createaddition-fabric+1.20.1-1.2.1b.jar:?]\r\n\r\n**To Reproduce**\r\nSteps to reproduce the behavior: This is my modpack PXC Fabric Adventure which is on CurseForge, I was updating mods and got this error logging into my server\r\n\r\n**Additional context**\r\n- Mod version: 1.2.1b\r\n- Fabric version: 0.15.7\r\n- Create version: I am using Prominent Create v0.5.1-d\r\n\r\nHere is the log since it was not technically a crash I don't have a crash log. Any help is appreciated. Thanks!\r\n[latest.log](https://github.com/mrh0/createaddition/files/14434550/latest.log)\n\n[comment by LoAndEvolve (none)]\nI have the same issue\n\n[comment by CassieRoseZA (none)]\nSame Here\n\n[comment by skippyall (contributor)]\nOh no I forgot to write the max charge rate to the buffer. I'm going to make a pull request\n\n[comment by skippyall (contributor)]\n#749\n\n[comment by mrh0 (owner)]\nFixed in 1.2.1c"
+}

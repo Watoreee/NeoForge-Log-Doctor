@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:mezz/JustEnoughItems#4585",
+ "url": "https://github.com/mezz/JustEnoughItems/issues/4585",
+ "title": "JustEnoughItems issue #4585: [Crash]: Game crashes upon opening inventory",
+ "source_type": "github_issue",
+ "repo": "mezz/JustEnoughItems",
+ "state": "closed",
+ "created_at": "2026-10-26T21:38:17Z",
+ "fetched_at": "2026-10-28T08:01:48+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by ZaRe4per]\n### Steps to Reproduce the Crash\n\nOpening my inventory instantly causes my game to instantly crash.\n\n### Mod Pack URL (Optional)\n\n_No response_\n\n### Mod Pack Version (Optional)\n\n_No response_\n\n### Extra Notes (Optional)\n\nMinecraft Version 1.21.1 \nNeoforge 21.1.265\nJEI 19.70.0.460\nLatest Log: https://gist.github.com/ZaRe4per/83b7f428c7df0cf9c1e47b7f0ebbeaa0\n\nThis crash even happens when opening my inventory for the first time after creating a new world. I have also confirmed that opening other inventories such as chests also instantly crashes the game.\n\n### Crash Report\n\nhttps://gist.github.com/ZaRe4per/bfb8994c82e56140c3fc0b9a63d47ab6\n\n[comment by IAmVensey (none)]\nI can confirm I'm also having this issue. Only happened after my Neoforge updated to the most recent version (the one you listed). Downgrading Neoforge unfortunately does not fix it. Hoping for this to be fixed soon.\n\n[comment by mezz (owner)]\nThanks for the report!\nThis is caused by:\n* https://github.com/pietro-lopes/AllTheLeaks/issues/114\n\n[comment by Staegrin (none)]\n> 1. I can confirm I'm also having this issue. Only happened after my Neoforge updated to the most recent version (the one you listed). Downgrading Neoforge unfortunately does not fix it. Hoping for this to be fixed soon.\n\nDowngrading to JEI jei-1.21.1-neoforge-19.70.0.458 is a temporary fix."
+}

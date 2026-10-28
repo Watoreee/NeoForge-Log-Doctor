@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:bernie-g/geckolib#811",
+ "url": "https://github.com/bernie-g/geckolib/issues/811",
+ "title": "geckolib issue #811: bug",
+ "source_type": "github_issue",
+ "repo": "bernie-g/geckolib",
+ "state": "closed",
+ "created_at": "2026-01-11T08:11:52Z",
+ "fetched_at": "2026-10-28T08:05:08+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by pit800]\nUncaught exception in thread \"main\"\njava.lang.RuntimeException: Failed to read classTweaker file from mod geckolib\n\tat net.fabricmc.loader.impl.FabricLoaderImpl.loadClassTweakers(FabricLoaderImpl.java:534)\n\tat net.fabricmc.loader.impl.launch.knot.Knot.init(Knot.java:145)\n\tat net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:66)\n\tat net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)\nCaused by: net.fabricmc.loader.impl.lib.classtweaker.reader.ClassTweakerFormatException: line 1: Namespace (named) does not match current runtime namespace (intermediary)\n\tat net.fabricmc.loader.impl.lib.classtweaker.reader.ClassTweakerReaderImpl.error(ClassTweakerReaderImpl.java:305)\n\tat net.fabricmc.loader.impl.lib.classtweaker.reader.ClassTweakerReaderImpl.read(ClassTweakerReaderImpl.java:93)\n\tat net.fabricmc.loader.impl.FabricLoaderImpl.loadClassTweakers(FabricLoaderImpl.java:532)\n\t... 3 more\nNeues update verursacht diesen error in der 1.21.11 fabric\n\n[comment by Tslat (collaborator)]\noh ffs\n\n[comment by Tslat (collaborator)]\nCan you provide the Crash report?\n\n[comment by pit800 (none)]\nno icant. minecraft sagt error code1. es wird kein crash report ausgegeben\n\n[comment by jimmywalker1978-gif (none)]\nIs this normal bc this is what’s coming up for me rn\n\n[comment by jimmywalker1978-gif (none)]\n> oh ffs\n\nHow can I see the crash report"
+}

@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:mrh0/createaddition#755",
+ "url": "https://github.com/mrh0/createaddition/issues/755",
+ "title": "createaddition issue #755: Modular Accumulator",
+ "source_type": "github_issue",
+ "repo": "mrh0/createaddition",
+ "state": "closed",
+ "created_at": "2024-03-12T00:54:53Z",
+ "fetched_at": "2026-10-28T08:10:40+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by LordMaximus05]\n**Describe the bug**\r\nA clear and concise description of what the bug is.\r\nSomeone on the server has a modular accumulator, and every time anyone goes to their area, it crashes the server and no longer allows them to join the server as it keeps crashing. Log attached.\r\n\r\n**To Reproduce**\r\nSteps to reproduce the behavior:\r\nLog onto server\r\nGo to area\r\ncrash.\r\n\r\n**Additional context**\r\n- Mod version: createaddition-fabric+1.20.1-0.9.0\r\n- Fabric version: 1.20.1\r\n- Create version: create-sodium-fix-0.5.1-d-build.5+mc1.20.1 \r\n[latest (6).log](https://github.com/mrh0/createaddition/files/14565855/latest.6.log)\n\n[comment by mrh0 (owner)]\nPlease update to the latest version of the mod"
+}

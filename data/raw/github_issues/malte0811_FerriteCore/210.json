@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:malte0811/FerriteCore#210",
+ "url": "https://github.com/malte0811/FerriteCore/issues/210",
+ "title": "FerriteCore issue #210: Game Crush",
+ "source_type": "github_issue",
+ "repo": "malte0811/FerriteCore",
+ "state": "closed",
+ "created_at": "2025-12-10T22:37:52Z",
+ "fetched_at": "2026-10-28T08:03:24+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by deaddiesel]\n1. Forge 47.4.10\n2. Minecraft 1.20.1\n3. [ferritecore-6.0.1-forge.jar](https://www.curseforge.com/minecraft/mc-mods/ferritecore/files/4810975)\n\n[crash-2025-12-10_14.59.18-client.txt](https://github.com/user-attachments/files/24089186/crash-2025-12-10_14.59.18-client.txt)\n\nYour mod conflicts with Industrial Upgrade.\n\n[comment by malte0811 (owner)]\nThis should be fixed in the latest release of Industrial Upgrade."
+}

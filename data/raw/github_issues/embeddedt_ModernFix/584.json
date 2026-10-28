@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:embeddedt/ModernFix#584",
+ "url": "https://github.com/embeddedt/ModernFix/issues/584",
+ "title": "ModernFix issue #584: Minecraft Crashes in 1.21.1",
+ "source_type": "github_issue",
+ "repo": "embeddedt/ModernFix",
+ "state": "closed",
+ "created_at": "2025-07-18T02:49:30Z",
+ "fetched_at": "2026-10-28T08:02:47+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by abcdefg700]\n### Bug Description\n\nCrash while preparing to create a world in version 1.21.1\n\n### Reproduction Steps\n\n1. Start Minecraft\n2. Open SinglePlay\n\n### Log File\n\n[latest.log](https://github.com/user-attachments/files/21308681/latest.log)\n\n[debug.log](https://github.com/user-attachments/files/21308682/debug.log)\n\n[comment by embeddedt (owner)]\nPlease provide steps to reproduce the issue with a minimal number of mods installed. It is not realistic for me to debug a full modpack.\n\n[comment by abcdefg700 (none)]\nPossible Mods\n- immediatelyfast\n- Flywheel\n- chloride\n- Fastquit\n- All the leak\n- Ponder\n- Create and Addons\n- KubeJS\n- owo\n\n[comment by ShadowRocks2 (none)]\n\"java.lang.IllegalStateException: Unbound values in registry ResourceKey[minecraft:root / minecraft:worldgen/configured_feature]: [nova_structures:cobblestone_toxic_base, nova_structures:oak_log_base, nova_structures:polished_tuff_base, nova_structures:stone_bricks_citadel_base, nova_structures:stone_bricks_toxic_base]\"\n\nperhaps its nova_structures?"
+}

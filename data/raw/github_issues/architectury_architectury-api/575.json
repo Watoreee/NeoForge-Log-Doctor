@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:architectury/architectury-api#575",
+ "url": "https://github.com/architectury/architectury-api/issues/575",
+ "title": "architectury-api issue #575: [1.21] Architectury 13.0.8 is labelled as incompatible with 1.21.1 on Modrinth",
+ "source_type": "github_issue",
+ "repo": "architectury/architectury-api",
+ "state": "closed",
+ "created_at": "2024-10-25T23:55:31Z",
+ "fetched_at": "2026-10-28T08:06:31+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by cassiancc]\nArchitectury 13.0.8 is not labelled as compatible with 1.21.1, unlike 13.0.6. This causes some mods like Right Click Harvest that depend on 13.0.8 to crash when loaded with 13.0.6, despite that currently being the latest version that supports 1.21.1.\n\n[comment by shedaniel (member)]\nThanks for reporting, this is now resolved"
+}

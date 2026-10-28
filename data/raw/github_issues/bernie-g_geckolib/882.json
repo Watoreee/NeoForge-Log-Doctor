@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:bernie-g/geckolib#882",
+ "url": "https://github.com/bernie-g/geckolib/issues/882",
+ "title": "geckolib issue #882: [26.1.2][Neoforge] Crash when using Anvil to add High Level enchantments",
+ "source_type": "github_issue",
+ "repo": "bernie-g/geckolib",
+ "state": "closed",
+ "created_at": "2026-07-21T01:28:00Z",
+ "fetched_at": "2026-10-28T08:05:04+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by ffuentesm]\nApothicAttributes-26.1.2-3.0.1\nApothicEnchanting-26.1.2-2.0.0\nPlacebo-26.1.2-10.0.0\nPuzzlesLib-v26.1.10-mc26.1.x-NeoForge\nEasyAnvils-v26.1.1-mc26.1.x-NeoForge\ngeckolib-neoforge-26.1.2-5.5.2\n\nCrashLog: https://gnomebot.dev/paste/mclogs/fNO0MAJ\nlatest.log: https://gnomebot.dev/paste/mclogs/QCW1DFR\n\nThis crash is coming from a geckolib mixin.\nThe game crashes when I attempt to add a Fortune 5 Enchantment book to a Silent Gear Pickaxe.\nI recall being able to use them both back in 1.21.1, as in, both could be installed, and no crash would happen.\n(Even if Apothic enchanting would take priority on the overwrite)\n\nhttps://github.com/Shadows-of-Fire/Apothic-Enchanting/issues/88#issuecomment-5028363268\n\n[comment by Tslat (collaborator)]\nI'm not sure it is\n\nShow me the crash without easyanvils installed"
+}

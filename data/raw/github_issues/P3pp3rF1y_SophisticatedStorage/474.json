@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:P3pp3rF1y/SophisticatedStorage#474",
+ "url": "https://github.com/P3pp3rF1y/SophisticatedStorage/issues/474",
+ "title": "SophisticatedStorage issue #474: Crashing when crafting with a sophisticated barrel",
+ "source_type": "github_issue",
+ "repo": "P3pp3rF1y/SophisticatedStorage",
+ "state": "closed",
+ "created_at": "2024-09-23T16:21:20Z",
+ "fetched_at": "2026-10-28T08:09:21+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by Wormisduh1]\nHi im not sure if this is a sophisticated storage issue but i was recommended to post here i am playing atm10 and whenever you put an item in a crafting grid with a sophisticated barrel it crashes the game because the barrel is trying to change appearance to that block. this causes constant game and server crashing. i only first noticed it when using this mod with AE2 but it happens in any crafting grid. the version i am using is 1.21-0.10.35.862\n\n[comment by Wormisduh1 (none)]\ni am noticing its fine on singleplayer just causes crashing on a server\n\n[comment by P3pp3rF1y (owner)]\nI need the actual crash log to be able to do anything here.\n\n[comment by P3pp3rF1y (owner)]\nanything you can add here or should I just close?\n\n[comment by P3pp3rF1y (owner)]\nclosing given no response"
+}

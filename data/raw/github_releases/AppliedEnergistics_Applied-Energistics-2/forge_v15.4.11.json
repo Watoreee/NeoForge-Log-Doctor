@@ -1,0 +1,11 @@
+{
+ "doc_id": "gh-release:AppliedEnergistics/Applied-Energistics-2@forge/v15.4.11",
+ "url": "https://github.com/AppliedEnergistics/Applied-Energistics-2/releases/tag/forge/v15.4.11",
+ "title": "Applied-Energistics-2 release 15.4.11 for Forge on Minecraft 1.20.1",
+ "source_type": "github_release",
+ "repo": "AppliedEnergistics/Applied-Energistics-2",
+ "created_at": "2026-09-27T15:00:52Z",
+ "fetched_at": "2026-10-28T08:11:32+00:00",
+ "licence": "Release notes; repo licence NOASSERTION (custom or unrecognised licence; see the repo's LICENSE file)",
+ "text": "## What's Changed\r\n* Fix Tooltips crashing for extremely large byte amounts (#8991)\r\n* Fix Spatial Anchor overlay rendering in 1.20.1 by @paperky in https://github.com/AppliedEnergistics/Applied-Energistics-2/pull/8630\r\n* Be more lenient about misplaced addon crafting storage units leading to permanent world crashes by @pedroksl in https://github.com/AppliedEnergistics/Applied-Energistics-2/pull/8707\r\n* Fix Korean translation by @Mithi83 in https://github.com/AppliedEnergistics/Applied-Energistics-2/pull/8936\r\n* Fix ingredients being moved out of the crafting grid when transferring a recipe not being used for other slots of that recipe\r\n\r\n## New Contributors\r\n* @paperky made their first contribution in https://github.com/AppliedEnergistics/Applied-Energistics-2/pull/8630\r\n\r\n**Full Changelog**: https://github.com/AppliedEnergistics/Applied-Energistics-2/compare/forge/v15.4.10...forge/v15.4.11"
+}

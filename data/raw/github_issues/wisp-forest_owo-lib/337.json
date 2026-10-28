@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:wisp-forest/owo-lib#337",
+ "url": "https://github.com/wisp-forest/owo-lib/issues/337",
+ "title": "owo-lib issue #337: Crash",
+ "source_type": "github_issue",
+ "repo": "wisp-forest/owo-lib",
+ "state": "closed",
+ "created_at": "2024-12-10T23:21:08Z",
+ "fetched_at": "2026-10-28T08:08:07+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by lowercasebtw]\nhttps://mclo.gs/hwyR7cG\r\n\r\n1.21.4, latest owo\r\n\r\nCrash during game start\n\n[comment by Noaaan (member)]\nWhile owo shows up in this crash report, it seems that there were other mods that crashed way earlier  Notably it seems to be caused by `rlls` (not sure what mod this is)\n\n[comment by lowercasebtw (none)]\nRemoved that mod as I know that one is incompatible forgot to remove it but I still get the OwO crash\n\n[comment by lowercasebtw (none)]\nnvm apparently there isn't a 1.21.4 version for owo-lib\n\n[comment by gliscowo (member)]\nSuch a version has now [been released](https://github.com/wisp-forest/owo-lib/releases/tag/0.12.19%2B1.21.4)\r\nCheers"
+}

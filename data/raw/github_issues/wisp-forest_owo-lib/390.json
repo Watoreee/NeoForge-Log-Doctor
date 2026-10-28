@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:wisp-forest/owo-lib#390",
+ "url": "https://github.com/wisp-forest/owo-lib/issues/390",
+ "title": "owo-lib issue #390: [1.21.5] Crashes when I try to load up a cross-bow",
+ "source_type": "github_issue",
+ "repo": "wisp-forest/owo-lib",
+ "state": "open",
+ "created_at": "2025-06-19T11:53:28Z",
+ "fetched_at": "2026-10-28T08:08:04+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by TheDarkPanther]\nGame Version: 1.21.5\n\nMod Version: [1.21.5] oωo - 0.12.21\n\nLoader: Fabric\n\nLoader Version: 0.16.14\n\nLogs:\n\n[crash-2025-06-19_06.49.48-server.txt](https://github.com/user-attachments/files/20818575/crash-2025-06-19_06.49.48-server.txt)\n\n[latest.log](https://github.com/user-attachments/files/20818578/latest.log)\n[launcher_log.txt](https://github.com/user-attachments/files/20818579/launcher_log.txt)\n\n[comment by Dragon-Seeker (member)]\nNothing here indicates a direct issues with owolib as there is a owo in the stacktrace but its for a wrapper mixin for helpful errors within debug. Can you try to limit your mod set to find if its a incompatibility with another mod."
+}

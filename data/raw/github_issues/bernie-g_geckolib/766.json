@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:bernie-g/geckolib#766",
+ "url": "https://github.com/bernie-g/geckolib/issues/766",
+ "title": "geckolib issue #766: Crashing due to glowing",
+ "source_type": "github_issue",
+ "repo": "bernie-g/geckolib",
+ "state": "closed",
+ "created_at": "2025-09-20T19:15:17Z",
+ "fetched_at": "2026-10-28T08:05:12+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by Cittycool]\nHello, I frequently crash due to glowing entities\n\nI am playing RageCraft NeoForged V2.1-alpha on minecraft version 1.21.1, with geckolib 4 version 4.8.1\n\nI have copy pasted what crash assistant provided, I don't know if everything is relevant but better to have too much then too little. \n\nLet me know if you need anything else :)\n\n\n### [latest.log](<https://gnomebot.dev/paste/mclogs/n1YUCIN>)   |   [debug.log head](<https://gnomebot.dev/paste/mclogs/PMF2q2y>) / [tail](<https://gnomebot.dev/paste/mclogs/9TxQUUG>) (~17MB & ~88k lines)   |   [crash-2025-09-20_20.06.13-client.txt](<https://gnomebot.dev/paste/mclogs/BjFvN7R>)   |   [PrismLauncher-0.log](<https://gnomebot.dev/paste/mclogs/SUORkra>)   |   KubeJS: [client.log](<https://gnomebot.dev/paste/mclogs/sEN6SJX>) / [server.log](<https://gnomebot.dev/paste/mclogs/eLq8kzF>) / [startup.log](<https://gnomebot.dev/paste/mclogs/wq20Vpe>)   |   [crash_assistant_app.log](<https://gnomebot.dev/paste/mclogs/JSZhKDQ>)   |   [modlist.txt](<https://gnomebot.dev/paste/mclogs/DkTxDL8>)\n\n[comment by Tslat (collaborator)]\nYou'd need to narrow it down to whatever mod is adding the armour it's crashing with =/\n\n[comment by Cittycool (none)]\n> You'd need to narrow it down to whatever mod is adding the armour it's crashing with =/\n\nAh so is it due to armour, that is good to know, thank you- would you like an update if i figure it out?\n\n[comment by Tslat (collaborator)]\nNevermind found it\n\nThis is because EndermanOverhaul mod is using an old style of rendering for GeckoLib armour, which we found problems with\n\nThey should swap their HoodItem to use the GeoRenderer system the wiki details\nhttps://github.com/bernie-g/geckolib/wiki/Geckolib-Armor-(Geckolib4)#registering-the-renderer"
+}

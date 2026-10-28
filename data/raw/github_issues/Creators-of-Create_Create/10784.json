@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:Creators-of-Create/Create#10784",
+ "url": "https://github.com/Creators-of-Create/Create/issues/10784",
+ "title": "Create issue #10784: Create 1.21.1-6.0.10 Keeps Fatal Crashing Dues To EMI's Recipe Reading",
+ "source_type": "github_issue",
+ "repo": "Creators-of-Create/Create",
+ "state": "closed",
+ "created_at": "2026-09-26T18:33:18Z",
+ "fetched_at": "2026-10-28T08:01:06+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by Bopkasen]\n### Context\n\nCreate 1.21.1-6.0.10 Keeps Fatal Crashing Dues To EMI's Recipe Reading\n\n\nCreate's item:create:filter, item:create:attribute_filter, and item:create:package_filter are causing fatal crash when using EMI - all configs are flipped with mods that could fix this. It was like 10 hours yesterday working with it. \n\nI will try few more ideas to get Create to back off.\n\n\n\n### Crash Report\n\nhttps://mclo.gs/wM6ww7l\n\n[comment by IThundxr (member)]\nYou don't have a keybind set for Create's shift modifier bind in the controls setting, once you set one this will go away\n\n[comment by Bopkasen (none)]\n> You don't have a keybind set for Create's shift modifier bind in the controls setting, once you set one this will go away\n\nSorry, just for more context, I have successfully logged into the world. However, to find the conflicts, I have to go into Creative mode to trigger the problem. I should be allowed to enter the world with no keybind set for Create. If I don't want to play with the Create mod, I should be allowed to keep it unbound.\n\nAn issue involving Create Railways Navigator and the Architectury API causes a non-responsive deadlock when keybinds cannot be set. To bypass this and avoid manually clearing conflicts across 400 mods, I edited the options.txt file directly to remove the offending pre-set keybind line. For the solution for that problem with Create Railways Navigator was to remove the unbound or pre-set keybind to allows the mod through.\n\nI resolved the issue with the Create mod by checking the configuration files of every mod capable of restricting recipes—including the main EMI config in the instance directory. The problem was resolved after adding item:create:filter, item:create:attribute_filter, and item:create:package_filter to all available recipe blacklists."
+}

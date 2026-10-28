@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TwelveIterations/Waystones#1202",
+ "url": "https://github.com/TwelveIterations/Waystones/issues/1202",
+ "title": "Waystones issue #1202: Crash with FTB XMod Compat [Solution: Update FTB XMod Compat]",
+ "source_type": "github_issue",
+ "repo": "TwelveIterations/Waystones",
+ "state": "closed",
+ "created_at": "2026-07-11T16:04:35Z",
+ "fetched_at": "2026-10-28T08:09:43+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by lerai77]\n### Minecraft Version\n\n1.21.1\n\n### Mod Loader\n\nNeoForge\n\n### Describe the Issue\n\nI usually play modpacks that allow for file editing; I'm currently playing AllTheMons. I updated Waystones to the latest version (1.21.1.36) and it crashed, so I had to revert to a previous version (1.21.1.35)—where the scroll button doesn't work.\n\n### Logs\n\n[crash-2026-07-11_09.57.07-server.txt](https://github.com/user-attachments/files/29927302/crash-2026-07-11_09.57.07-server.txt)\n\n[comment by BlayTheNinth (member)]\nThis is originating from FTB XMod Compat and is already being fixed (https://github.com/FTBTeam/FTB-XMod-Compat/commit/d7dd7a026bd016adcd34a7f1137f4f9d07fc9452).\n\nAs a workaround, disabling the `ONLY_SHOW_KNOWN_WAYSTONES` in FTB XMod Compat should prevent the crash until an update is released.\n\n[comment by BlayTheNinth (member)]\nShould be fixed in FTB XMod Compat 21.1.9+"
+}

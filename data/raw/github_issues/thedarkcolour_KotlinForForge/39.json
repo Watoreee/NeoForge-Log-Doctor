@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:thedarkcolour/KotlinForForge#39",
+ "url": "https://github.com/thedarkcolour/KotlinForForge/issues/39",
+ "title": "KotlinForForge issue #39: (1.18.x) Any chance at rebundling JetBrains annotations?",
+ "source_type": "github_issue",
+ "repo": "thedarkcolour/KotlinForForge",
+ "state": "closed",
+ "created_at": "2022-04-25T10:07:53Z",
+ "fetched_at": "2026-10-28T08:08:53+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-2.1) does not cover issue text",
+ "text": "[issue by ghost]\nGetting a crash in prod as Forge 1.18 doesn't *actually* bundle annotations, it only makes it available at compile time, not runtime.\r\n\r\nIf necessary, [here's a crash report with said crash](https://hst.sh/eyugixobez.md), thank you.\n\n[comment by thedarkcolour (owner)]\nAlright\n\n[comment by thedarkcolour (owner)]\nJetBrains annotations is bundled in 3.3.2 now 👍"
+}

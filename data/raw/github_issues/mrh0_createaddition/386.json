@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:mrh0/createaddition#386",
+ "url": "https://github.com/mrh0/createaddition/issues/386",
+ "title": "createaddition issue #386: Crash with Vanity Splash Text, due to the ${version} label",
+ "source_type": "github_issue",
+ "repo": "mrh0/createaddition",
+ "state": "closed",
+ "created_at": "2022-11-25T11:55:01Z",
+ "fetched_at": "2026-10-28T08:10:43+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by SplendidAlakey]\n**Describe the bug**\r\n\r\nThe game crashes, if Vanity Splash Text and Crafts and Additions are installed together, because Vanity Splash Text is trying to look for the mod's version, but instead finds `${version}`. I can simply add the mod to the ignore list of VST for now, but would like to see the issue fixed, so that the mod can be featured in vanity splashes.\r\n\r\n**To Reproduce**\r\n\r\n1. Install Create, Crafts and Additions and [Vanity Splash Text](https://www.curseforge.com/minecraft/mc-mods/vanity-splash-text)\r\n2. Launch the game\r\n\r\n**Additional context**\r\n\r\n- Mod version: 1.19.2-20221124b\r\n- [Quilt](https://www.curseforge.com/minecraft/mc-mods/qsl) version: 4.0.0-beta.21\r\n- Create version: 0.5.0g\r\n\r\nLogs: https://gist.github.com/SplendidAlakey/33b36319d48324ce549525592a667d19\n\n[comment by mrh0 (owner)]\nNot familiar with vanity splash but this looks like a vanity spalsh error more than a cc&a error\n\n[comment by SplendidAlakey (none)]\nThere was another mod, that caused the same crash, and they fixed it on their side. Is it something you could replicate? The fix looks simple https://github.com/AbsolemJackdaw/FatChickens/issues/3"
+}

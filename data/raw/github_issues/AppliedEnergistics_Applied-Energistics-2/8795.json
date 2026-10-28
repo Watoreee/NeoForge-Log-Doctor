@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:AppliedEnergistics/Applied-Energistics-2#8795",
+ "url": "https://github.com/AppliedEnergistics/Applied-Energistics-2/issues/8795",
+ "title": "Applied-Energistics-2 issue #8795: Hovering over a Certus Quartz Crystal in my inventory crashes the game",
+ "source_type": "github_issue",
+ "repo": "AppliedEnergistics/Applied-Energistics-2",
+ "state": "closed",
+ "created_at": "2026-02-23T01:10:38Z",
+ "fetched_at": "2026-10-28T08:11:07+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by vizthex123]\n### Describe the bug\n\nI think it might be a conflict with EMI or something, but i don't know and can't find much in the log. I'd just mined it from an ore block from [AE2 Crystal Science](https://github.com/Frostbite-time/AE2-Crystal-Science), so maybe that's why? Could've been [Legendary Tooltips](https://www.curseforge.com/minecraft/mc-mods/legendary-tooltips), though.\n\n### How to reproduce the bug\n\n1. Install EMI and/or Legendary Tooltips\n2. Hover over a Certus Quartz Crystal in your inventory\n\n### Expected behavior\n\nViewing the tooltip of the item.\n\n### Additional details\n\n_No response_\n\n### Which minecraft version are you using?\n\n1.21\n\n### On which mod loaders does it happen?\n\nNeoForge\n\n### Crash log\n\nhttps://gist.github.com/vizthex123/f4eaadda156682ac7338a32ead46b5d1\n\n[comment by vizthex123 (none)]\nremoving legendary tooltips didn't fix it, so other than maybe [EMI](https://www.curseforge.com/minecraft/mc-mods/emi) or [Clean Tooltips](https://www.curseforge.com/minecraft/mc-mods/clean-tooltips) idk what a possible cause could be.\n\n[comment by Mari023 (collaborator)]\nfrom the crash log it seems like `Replication` might be causing this\n\n[comment by HaphLife (contributor)]\nYour pack adds a custom matter type called \"alien\" for replication using kubeJS, but either the pack doesn't have, or your game is unable to find, the texture for it, so it crashes once it has to display it.\n\n[comment by shartte (member)]\nDon't really see how this relates to AE2."
+}

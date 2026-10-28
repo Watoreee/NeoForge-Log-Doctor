@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:CaffeineMC/sodium#3874",
+ "url": "https://github.com/CaffeineMC/sodium/issues/3874",
+ "title": "sodium issue #3874: Framerate issues with Create train tracks",
+ "source_type": "github_issue",
+ "repo": "CaffeineMC/sodium",
+ "state": "closed",
+ "created_at": "2026-08-13T16:03:54Z",
+ "fetched_at": "2026-10-28T08:04:03+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by dti131]\n### Bug Description\n\nCreate Train Tracks cause large framerate drops, especially curved tracks. Using Spark profiler I was able to find that it's specifically this: \n\n<img width=\"1010\" height=\"57\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/bfc584da-848e-4f9c-87de-4014e19d928a\" />\n\n\n\n### Reproduction Steps\n\n- Install Create and Sodium on Neoforge 1.21.1\n- Place train tracks, ideally curved (in an empty superflat world to ensure that there is nothing else causing the drop)\n- Run a Spark profiler while looking at the train tracks and another while not looking at them or observe your framerate.\n- Note: for some reason F3+C didn't allow me to force a crash (probably keyboard issues) but I'll upload an unrelated crash report anyway.\n\n### Log File\n\n[latest.log](https://github.com/user-attachments/files/31036282/latest.log)\n\n### Crash Report\n\n[crash-2026-08-11_18.50.13-client.txt](https://github.com/user-attachments/files/31036302/crash-2026-08-11_18.50.13-client.txt)\n\n[comment by douira (contributor)]\nGive us the spark profile and not just a screenshot\n\n[comment by jellysquid3 (member)]\n`glMultiDrawElementsBaseVertex` taking time is not evidence of a problem in Sodium. OpenGL drivers will execute commands asynchronously, and if the command buffer gets too full, this will cause random OpenGL rendering functions to appear slow."
+}

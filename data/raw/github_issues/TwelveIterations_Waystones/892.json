@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TwelveIterations/Waystones#892",
+ "url": "https://github.com/TwelveIterations/Waystones/issues/892",
+ "title": "Waystones issue #892: Incompatible with Flashback mod",
+ "source_type": "github_issue",
+ "repo": "TwelveIterations/Waystones",
+ "state": "closed",
+ "created_at": "2024-08-26T09:01:06Z",
+ "fetched_at": "2026-10-28T08:09:51+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by RustinPlays]\n### Minecraft Version\n\n1.21\n\n### Mod Loader\n\nFabric\n\n### Mod Loader Version\n\n0.100.8+1.21\n\n### Mod Version\n\n21.0.8+fabric-1.21\n\n### Balm Version\n\n21.0.18+fabric-1.21.1\n\n### Describe the Issue\n\nIncompatible with new mod Flashback, another kind of replay mod\n\n### Logs\n\n_No response_\n\n### Do you use any performance-enhancing mods (e.g. OptiFine) or custom server distributions (e.g. SpongeForge)?\n\n_No response_\n\n[comment by RustinPlays (none)]\nIts not letting me extract or run either\n\n[comment by BlayTheNinth (member)]\n(in response to a now deleted malicious spam post) Do not do that, it's a spambot trying to give you a virus.\n\n[comment by RustinPlays (none)]\nOh crap, okay, thank god it didnt load\n\n[comment by BlayTheNinth (member)]\nIf you've downloaded and double clicked the file (even if it looked like nothing happened or it just gave an error), I highly recommend you run a full virus scan of your system and consider your system compromised until you can be sure otherwise.\n\n[comment by RustinPlays (none)]\nYeah i ran the Antivirus immediatly as i saw the comment\n\n[comment by BlayTheNinth (member)]\nWhat part is actually incompatible? What is happening?"
+}

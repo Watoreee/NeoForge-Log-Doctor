@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:CaffeineMC/sodium#3760",
+ "url": "https://github.com/CaffeineMC/sodium/issues/3760",
+ "title": "sodium issue #3760: minecraft crashing after collapsing window on 1.21.1 neoforge",
+ "source_type": "github_issue",
+ "repo": "CaffeineMC/sodium",
+ "state": "closed",
+ "created_at": "2026-06-23T22:00:30Z",
+ "fetched_at": "2026-10-28T08:04:23+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by Kishebek]\n### Bug Description\n\nminecraft crashing after collapsing window both in the menu and in the world, also after collapsing my gpu is running up to 100 percent for a second. i checked other version but nothing changed. maybe happening cuz off legacy launcher\n\nused sodium 0.6.7 on 1.21.1 neoforge\n\nGPU\nIntel(R) HD Graphics 4600\nCPU\nIntel(R) Core(TM) i3-4000M CPU @ 2.40GHz\n\n\n\n\n\n\n\n### Reproduction Steps\n\n1. lauch sodium 0.6.7 on 1.21.1 neoforge\n2. collapse window\n\n### Log File\n\n[latest.log](https://github.com/user-attachments/files/29269020/latest.log)\n\n### Crash Report\n\n[crash-2026-06-24_00.54.04-client.txt](https://github.com/user-attachments/files/29269225/crash-2026-06-24_00.54.04-client.txt)\n\n[comment by jellysquid3 (member)]\nCracked launchers are not supported."
+}

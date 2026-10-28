@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:mrh0/createaddition#820",
+ "url": "https://github.com/mrh0/createaddition/issues/820",
+ "title": "createaddition issue #820: Create Additions 1.2.4c is incompatible with Immersive Engineering",
+ "source_type": "github_issue",
+ "repo": "mrh0/createaddition",
+ "state": "closed",
+ "created_at": "2024-07-08T19:08:57Z",
+ "fetched_at": "2026-10-28T08:10:37+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by TheOneSalem]\n**Describe the bug**\r\nI once had Immersive Engineering running alongside Create but, after a while the server began to time out with a rendering error. I since removed Immersive Engineering everything's worked fine. Lately I've been wanting to bridge compatibility with ore processing and found IE on the list of supported mods. So, I thought I'd try it again and immediately crashed in single player during world creation. So, digging into it, I reached out for some help and learned that the issue isn't Create itself conflicting with IE but, Create: Additions. \r\n   \r\n  This is my first time learning how to locate exact issues and reporting them. If you need any additional information, I can post the log. \r\n\r\n\r\n**To Reproduce**\r\nI've reproduced this numerous times while trying to figure out what exactly the problem is. Either of the most recent versions of Immersive Engineering causes this crash although I have not tried a previous version of Create: Additions yet. \r\n\r\n**Additional context**\r\n- Mod version: Createaddition 1.20.1-1.2.4c\r\n- Forge version: 47.3.1\r\n- Create version: 0.5.1f\n\n[comment by Luviam (none)]\nAlso having this happen to me with just the following:\r\n- create-1.20.1-0.5.1.f\r\n- createaddition-1.20.1-1.2.4c\r\n- ImmersiveEngineering-1.20.1-10.1.0-171\r\n- Forge 47.3.5\r\n[latest.log](https://github.com/user-attachments/files/16138370/latest.log)\r\n\r\nEdit: Lowest version of Additions I avoided the crash on is 1.2.3\n\n[comment by karouvirae (none)]\nJust a heads-up from someone who's stumbled upon this: modrinth has a newer version that is compatible (1.2.4d)\n\n[comment by TheOneSalem (none)]\nOh awesome! I didn't realize there was a compatible version out. Thanks for the info!\n\n[comment by mrh0 (owner)]\nFixed in 1.2.4d"
+}

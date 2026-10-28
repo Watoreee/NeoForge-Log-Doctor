@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TwelveIterations/Waystones#1144",
+ "url": "https://github.com/TwelveIterations/Waystones/issues/1144",
+ "title": "Waystones issue #1144: Unable to edit names in UI",
+ "source_type": "github_issue",
+ "repo": "TwelveIterations/Waystones",
+ "state": "closed",
+ "created_at": "2026-03-30T21:02:42Z",
+ "fetched_at": "2026-10-28T08:09:46+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by uwuboi273]\n### Minecraft Version\n\n1.21.1\n\n### Mod Loader\n\nFabric\n\n### Describe the Issue\n\nEvery time I even attempt to edit a name the game completely crashes.\n\n### Logs\n\nhttps://mclo.gs/c4BHmKR\n\n[comment by BlayTheNinth (member)]\n`Veinminer Client` is including an incompatible version of `fabric-permissions-api` for a newer version of Minecraft. Which is funny because on newer versions of Minecraft, the version they include is also incompatible, but instead for older versions of Minecraft.\n\nThe only way around this is reporting the issue to Veinminer Client, and either removing that mod or manually removing the wrong fabric-permissions-api jar from the Veinminer Client .jar."
+}

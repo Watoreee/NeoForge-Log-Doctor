@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:embeddedt/ModernFix#486",
+ "url": "https://github.com/embeddedt/ModernFix/issues/486",
+ "title": "ModernFix issue #486: 1.21.1 false 40k tps crash out",
+ "source_type": "github_issue",
+ "repo": "embeddedt/ModernFix",
+ "state": "closed",
+ "created_at": "2024-12-09T00:56:49Z",
+ "fetched_at": "2026-10-28T08:02:56+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by Joshernoob]\n### Bug Description\n\nfor some reason i can not seem to narrow down in my modpack im currently making, 1.21.1 neoforge when this mod is enabled and you load to many new chunks or sit for more then about 15 minutes, the game gives an error of \r\nA single server tick has taken 40001, more than 40000 milliseconds\r\nThen thred dumps even though the game itself is still fine. do to this the game does not crash but will no longer load chunks or chest loot but I seem to be able to open chest i place myself.\r\n\r\nSide note: if you keep the game going past the false crash it seems that the error will repeat itself but double the number each time. along with this I've also tested with no extrea \"help mods\" installed how i narrowed it to this one for sure\n\n### Reproduction Steps\n\nplay personal pack with mod\r\nwait for a bit or load enough chunks\r\nfalse crash happens.\r\n\n\n### Log File\n\n[2024-12-08-7.log](https://github.com/user-attachments/files/18054897/2024-12-08-7.log)\n\n[comment by embeddedt (owner)]\nThe game is not fine if chunks/chest loot no longer load. ModernFix is not the cause of that problem, it just prints more diagnostic information to help with troubleshooting it.\r\n\r\nThe actual issue in this case appears to be Superior Smithing trying to load a chunk when a zombie is spawned as part of world generation."
+}

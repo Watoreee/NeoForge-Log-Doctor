@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:mezz/JustEnoughItems#3757",
+ "url": "https://github.com/mezz/JustEnoughItems/issues/3757",
+ "title": "JustEnoughItems issue #3757: [Crash]: Opening inventory causes game to crash (Game Version 1.21, Forge v51.0.8)",
+ "source_type": "github_issue",
+ "repo": "mezz/JustEnoughItems",
+ "state": "closed",
+ "created_at": "2024-09-12T04:14:04Z",
+ "fetched_at": "2026-10-28T08:02:20+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by JohnSmith2007]\n### Steps to Reproduce the Crash\n\n1. Install JEI\r\n2. Join Solo World or Public Server\r\n3. Open inventory\r\n4. Hover cursor over **literally anything** in the JEI menu\n\n### Mod Pack URL (Optional)\n\n_No response_\n\n### Mod Pack Version (Optional)\n\n_No response_\n\n### Extra Notes (Optional)\n\nI'm using CurseForge to run the game, and only have 2 other mods installed; Xaero's Minimap & World Map. Tried running the game without them enabled and only keeping JEI, but it still crashes.\n\n### Crash Report\n\nhttps://gist.github.com/JohnSmith2007/3845cd82f48e0803595fa135d59f1495\n\n[comment by mezz (owner)]\nThanks for the report!\r\nJEI for 1.21.x requires Forge version `51.0.31` or higher.\r\nI am not sure why Forge is not checking this version requirement, it should be giving you an error that asks you to update Forge to a newer version. Please report this issue to them and link back here.\n\n[comment by github-actions[bot] (none)]\nThis has been automatically marked as stale because it has not had recent activity, and will be closed if no further activity occurs. If this was overlooked, forgotten, or should remain open for any other reason, please reply here to call attention to it and remove the stale status. Thank you for your contributions.\n\n[comment by github-actions[bot] (none)]\nThis has been automatically closed because it has not had recent activity. Please feel free to update or reopen it."
+}

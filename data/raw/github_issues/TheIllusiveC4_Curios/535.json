@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TheIllusiveC4/Curios#535",
+ "url": "https://github.com/TheIllusiveC4/Curios/issues/535",
+ "title": "Curios issue #535: [Bug]: Curios API for 1.21.1 and 1.21 on curseforge can't load in 1.21",
+ "source_type": "github_issue",
+ "repo": "TheIllusiveC4/Curios",
+ "state": "closed",
+ "created_at": "2025-06-29T12:04:45Z",
+ "fetched_at": "2026-10-28T08:05:42+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by Cassy-Lee]\n### Minecraft Version\n\n1.21\n\n### What happened?\n\nAs described in the title, Curios API for 1.21(.1) depends on neoforge `[21.1.60,)` (in `neoforge.mods.toml`), but newest neoforge for 1.21 was `21.0.167`.\nPlease change supported minecraft version for those files on curseforge to 1.21.1 only.\nIf compatible, please use `[21.0,)` for neoforge version range and make a new release for 1.21.\n\n### Relevant Log Outputs\n\n_No response_\n\n[comment by Cassy-Lee (none)]\nAll releases for 1.21(.1) have this problem.\n\n[comment by TheIllusiveC4 (owner)]\nThanks for notifying me of this oversight, I've fixed this issue and have marked the affected files as being for 1.21.1 only."
+}

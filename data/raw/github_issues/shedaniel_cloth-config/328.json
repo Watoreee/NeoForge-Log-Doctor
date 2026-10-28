@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:shedaniel/cloth-config#328",
+ "url": "https://github.com/shedaniel/cloth-config/issues/328",
+ "title": "cloth-config issue #328: [request] 1.21.10",
+ "source_type": "github_issue",
+ "repo": "shedaniel/cloth-config",
+ "state": "closed",
+ "created_at": "2025-10-12T16:41:41Z",
+ "fetched_at": "2026-10-28T08:07:22+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by ChimeraGaming]\nPing me when released \n1.21.9 crashes the server\n\n[comment by kotleni (none)]\nVery uncomfortable situation when my mod depend on update of this mod...\n\n[comment by shedaniel (owner)]\nHuh but 1.21.9 version works on 1.21.10? Also CC doesn't do anything special on the server.\n\n[comment by MattSturgeon (contributor)]\n> 1.21.9 crashes the server\n\nCould be a similar underlying issue to https://github.com/MinecraftFreecam/Freecam/pull/293 ?"
+}

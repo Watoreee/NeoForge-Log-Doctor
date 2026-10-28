@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TheIllusiveC4/Curios#480",
+ "url": "https://github.com/TheIllusiveC4/Curios/issues/480",
+ "title": "Curios issue #480: CURIOS Api crash during world generation",
+ "source_type": "github_issue",
+ "repo": "TheIllusiveC4/Curios",
+ "state": "open",
+ "created_at": "2025-02-12T19:30:22Z",
+ "fetched_at": "2026-10-28T08:05:54+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by Domin8trdom]\n[crash-2025-02-12_14.24.58-client.txt](https://github.com/user-attachments/files/18773068/crash-2025-02-12_14.24.58-client.txt)\n\n[comment by Domin8trdom (none)]\nVersions\n\nCurios: 5.11.1\nForge: 47.3.22\nMinecraft: 1.20.1\n\nWhat Happened?\n\nCurios encountered error while loading create new world\n\nHow to trigger this bug\n\nOpen game\nclick on singleplayer \nclick on new world to get a crash text \nCrash\n\n[comment by TheIllusiveC4 (owner)]\nNot exactly sure what could be causing this. Does this occur every time or only occasionally?\n\n[comment by Domin8trdom (none)]\n> Not exactly sure what could be causing this. Does this occur every time or only occasionally?\n\nEverytime\n\n[comment by TheIllusiveC4 (owner)]\nDo you have anything your `curios-common.toml` configuration file?"
+}

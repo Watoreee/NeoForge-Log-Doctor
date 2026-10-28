@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:mezz/JustEnoughItems#4463",
+ "url": "https://github.com/mezz/JustEnoughItems/issues/4463",
+ "title": "JustEnoughItems issue #4463: [Crash]: Viewing mob drops from JER causes an IndexOutOfBoundsException (1.21.1 NeoForge)",
+ "source_type": "github_issue",
+ "repo": "mezz/JustEnoughItems",
+ "state": "closed",
+ "created_at": "2026-08-31T17:17:40Z",
+ "fetched_at": "2026-10-28T08:01:58+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by Luviam]\n### Steps to Reproduce the Crash\n\n1. Open a world with the latest version of JER and a version of JEI that is > 19.50.0.414\n2. Open the inventory menu and click on a mob drop within the JEI menu.\n3. View mobs that drop said item. (You might need to wait a few seconds or click on the GUI)\n\n### Mod Pack URL (Optional)\n\n_No response_\n\n### Mod Pack Version (Optional)\n\n_No response_\n\n### Extra Notes (Optional)\n\n_No response_\n\n### Crash Report\n\nhttps://mclo.gs/Nmn6USx\n\n[comment by mezz (owner)]\nThanks for the report!\nThis is a duplicate of \n* #4461\n\nIt has already been fixed on 1.20.1, I will make sure to port the fix to 1.21.1 now\n\n[comment by mezz (owner)]\nFixed in JEI 19.51.0.420"
+}

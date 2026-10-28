@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:mrh0/createaddition#841",
+ "url": "https://github.com/mrh0/createaddition/issues/841",
+ "title": "createaddition issue #841: item search in creative crashes game combined with pixelmon...",
+ "source_type": "github_issue",
+ "repo": "mrh0/createaddition",
+ "state": "open",
+ "created_at": "2024-10-04T08:42:13Z",
+ "fetched_at": "2026-10-28T08:10:35+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by RileySagan]\n**Describe the bug**\r\nso i love pokemon, i wanted to play this with pixelmon combined then while in creative, i search an item, game crashes.\r\nits annoying to begin with...\r\n\r\n**To Reproduce**\r\nSteps to reproduce the behavior:\r\n1; boot up pixelmon with C&A\r\n2; go into creative\r\n3; search anything\r\n4; crashes\r\n\r\n**Additional context**\r\n- i will comment one if i can\n\n[comment by mrh0 (owner)]\nPlease provide a crash log"
+}

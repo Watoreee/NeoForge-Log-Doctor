@@ -1,0 +1,11 @@
+{
+ "doc_id": "gh-release:wisp-forest/owo-lib@0.13.1+26.1",
+ "url": "https://github.com/wisp-forest/owo-lib/releases/tag/0.13.1%2B26.1",
+ "title": "owo-lib release [26.1+] oωo - 0.13.1",
+ "source_type": "github_release",
+ "repo": "wisp-forest/owo-lib",
+ "created_at": "2026-08-06T17:39:24Z",
+ "fetched_at": "2026-10-28T08:08:23+00:00",
+ "licence": "Release notes; repo licence MIT",
+ "text": "## Fixes\r\n- The game no longer crashes when running with REI, and the REI integration of the library mostly works again\r\n- Resolve [crash](https://github.com/wisp-forest/owo-lib/issues/480) with translation arg unpacker passing a null value instead of empty array\r\n\r\n## Additions\r\n- `BaseOwoContainerScreen` has gained a secondary constructor which allows specifying the texture width and height, since they're now final"
+}

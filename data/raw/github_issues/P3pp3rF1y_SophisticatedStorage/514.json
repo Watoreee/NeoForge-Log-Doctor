@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:P3pp3rF1y/SophisticatedStorage#514",
+ "url": "https://github.com/P3pp3rF1y/SophisticatedStorage/issues/514",
+ "title": "SophisticatedStorage issue #514: [1.21.1] Missing recipes - EMI compatibility",
+ "source_type": "github_issue",
+ "repo": "P3pp3rF1y/SophisticatedStorage",
+ "state": "closed",
+ "created_at": "2024-10-26T04:27:50Z",
+ "fetched_at": "2026-10-28T08:09:17+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by 2ndkirbyever]\nThe copper storages - except for shulker boxes - and the pump upgrades are missing recipes as of version 1.21-0.10.45.910.\r\nYou can still upgrade storages to copper even though they do not display in recipe viewers.\r\n\r\nTest steps:\r\n\r\n1. Search for @sophisticatedstorage copper in the recipe viewer of your choice.\r\n2. Try viewing the recipe of a copper storage.\r\n3. Nothing happens.\r\n4. Replace copper with pump in the search bar.\r\n5. Try viewing the recipe of the pump upgrade, advanced pump upgrade and the experience pump upgrade.\r\n6. Nothing happens.\n\n[comment by P3pp3rF1y (owner)]\nPump doesn't have a recipe because there's no fluid storage in the mod yet. And when you say copper storage what do you mean - any specific item?\n\n[comment by 2ndkirbyever (none)]\nAny copper-tier storage block, except for shulker boxes. Neither barrels, limited barrels, nor chests have a visible recipe. In this instance, I’m using a combination of JEI and EMI. EMI gets recipes from JEI when both are installed together, then JEI is hidden automatically. I can check if the recipes are visible in JEI, though.\n\n[comment by 2ndkirbyever (none)]\nUpdate: The storage recipes are visible in JEI, but not in EMI.\n\n[comment by P3pp3rF1y (owner)]\nI have no idea why EMI would not show the recipes as they are not different from other tiers and are registered to JEI exactly the same way. I may take a look at EMI compatibility as I don't have any compatibility specifically for EMI. Until then you can either take it to EMI or just wait for when/if this compat may happen.\n\n[comment by P3pp3rF1y (owner)]\nwe now have proper EMI compat in the latest versions of sophisticated mods and I don't see this issue happening anymore so closing."
+}

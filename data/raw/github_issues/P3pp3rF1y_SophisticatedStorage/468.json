@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:P3pp3rF1y/SophisticatedStorage#468",
+ "url": "https://github.com/P3pp3rF1y/SophisticatedStorage/issues/468",
+ "title": "SophisticatedStorage issue #468: CTD while swapping backpacks with JDT Fuel Canister",
+ "source_type": "github_issue",
+ "repo": "P3pp3rF1y/SophisticatedStorage",
+ "state": "closed",
+ "created_at": "2024-09-19T04:07:51Z",
+ "fetched_at": "2026-10-28T08:09:22+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by Evan109]\ncrash log: https://pastebin.com/PJgMgyah\r\nworld file: https://drive.google.com/file/d/1FNUJja34p-K544JYWWmRE0m6J-p_VZdz/view?usp=drive_link\r\nSophisticated Core 0.6.31 for 1.21\r\nSophisticated Storage v3.20.9 for 1.21\r\nSophisticated Backpacks v0.10.26 for 1.21\r\nLoaded with the modpack Direwolf20 v11 ver. 1.0.0 for 1.21\r\n\r\nBeing a junior programmer, I investigated the crash log and originally opened an issue under Just Dire Things, linked here:\r\nhttps://github.com/Direwolf20-MC/JustDireThings/issues/161\r\nAs JDT's Fuel Canister is front and center in the crash log.\r\nDirewolf then reviewed the logs and communicated that he believes this is caused by sophisticated storage.\r\n\r\nThe crash's situation is difficult to reproduce, but the world file linked above will always crash on the first tick it's loaded.\r\nEstimated reproduction steps: I'm unable to reproduce\r\nMake a gold backpack with a blast furnace addon, put a JDT fuel canister inside and use it to smelt some vanilla ore.\r\nAdditionally, insert the Crafting Table and Anvil upgrades.\r\nPick up a mob-dropped backpack with loot inside and open it with the backpack hotkey (B by default for me) while hovering over it in the inventory.\r\nInstantly freeze and CTD. Reopening MC and loading the world results in the same error:\r\nAn internal Server Crash referencing the JDT fuel canister:\r\n\r\nDescription: Ticking entity\r\njava.lang.RuntimeException: Invalid stack 1 justdirethings:fuel_canister for slot 1\r\n\r\nAttempted Fix Steps\r\nI tried to remove the item with NBT editing, but that resulted in further errors\r\nI removed JDT from my modlist and the world loaded like normal.  Saving and re-enabling JDT did not cause recurrence.\r\n\r\nI will try to help with any information I can, ask away.\n\n[comment by P3pp3rF1y (owner)]\nI fixed this issue a few days back the pack just needs to update sophisticatedcore to get the fix."
+}

@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TheIllusiveC4/Curios#500",
+ "url": "https://github.com/TheIllusiveC4/Curios/issues/500",
+ "title": "Curios issue #500: Curious error during sided_setup",
+ "source_type": "github_issue",
+ "repo": "TheIllusiveC4/Curios",
+ "state": "closed",
+ "created_at": "2025-03-25T19:53:46Z",
+ "fetched_at": "2026-10-28T08:05:51+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by ImNamzz]\nCurrently Forge 1.20.1\nI encounter this while loading with few mods, below is the log file:\n\n[crash-2025-03-26_02.46.51-fml.txt](https://github.com/user-attachments/files/19455692/crash-2025-03-26_02.46.51-fml.txt)\n\n[comment by TheIllusiveC4 (owner)]\nThis is a crash from the Tiered mod."
+}

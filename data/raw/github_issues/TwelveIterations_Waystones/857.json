@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TwelveIterations/Waystones#857",
+ "url": "https://github.com/TwelveIterations/Waystones/issues/857",
+ "title": "Waystones issue #857: Jade and Journeymap integration broken in 1.21",
+ "source_type": "github_issue",
+ "repo": "TwelveIterations/Waystones",
+ "state": "closed",
+ "created_at": "2024-06-22T18:45:27Z",
+ "fetched_at": "2026-10-28T08:09:51+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by BBoldt]\n### Minecraft Version\n\n1.21\n\n### Mod Loader\n\nForge\n\n### Mod Loader Version\n\nFabric 0.100.3\n\n### Mod Version\n\n21.0.2\n\n### Balm Version\n\n21.0.7\n\n### Describe the Issue\n\nI just noticed some errors in the log while my pack was loading. Using latest versions of Jade, Journeymap, waystones, and balm.\n\n### Logs\n\nhttps://gist.github.com/BBoldt/9b43a1b21b58459d0da873ceae403bcf\n\n### Do you use any performance-enhancing mods (e.g. OptiFine) or custom server distributions (e.g. SpongeForge)?\n\n_No response_\n\n[comment by BBoldt (none)]\nFull log: https://gist.github.com/BBoldt/23ee81331e52743bded5852c80ed4348\n\n[comment by BlayTheNinth (member)]\nJourneyMap should be fixed, not sure what the Jade issue was about since it seems to be fine on the latest version of Jade."
+}

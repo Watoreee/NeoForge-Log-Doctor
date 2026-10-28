@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:mrh0/createaddition#965",
+ "url": "https://github.com/mrh0/createaddition/issues/965",
+ "title": "createaddition issue #965: Retrieving the battery level caused the server to crash.",
+ "source_type": "github_issue",
+ "repo": "mrh0/createaddition",
+ "state": "closed",
+ "created_at": "2025-04-29T03:17:54Z",
+ "fetched_at": "2026-10-28T08:10:28+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by 3sss123]\n**Describe the bug**\nAfter the server is started, it crashes immediately when someone joins. According to the crash report, this is caused by a negative parameter value being passed when the modular battery outputs energy.\n\n**Additional context**\n- Mod version:1.2.5\n- Fabric  version:6.10\nCreate version:0.5.1-j-build.1631\n\n[crash-2025-04-29_10.33.29-server.txt](https://github.com/user-attachments/files/19951681/crash-2025-04-29_10.33.29-server.txt)\n\n[comment by mrh0 (owner)]\nThis version of the mod is no longer supported, please update"
+}

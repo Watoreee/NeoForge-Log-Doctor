@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:architectury/architectury-api#482",
+ "url": "https://github.com/architectury/architectury-api/issues/482",
+ "title": "architectury-api issue #482: 1.20.1 Server Crash",
+ "source_type": "github_issue",
+ "repo": "architectury/architectury-api",
+ "state": "closed",
+ "created_at": "2024-03-10T20:28:10Z",
+ "fetched_at": "2026-10-28T08:07:13+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by MokahTGS]\nGetting a crash loading our server.\r\n\r\nMinecraft 1.20.1\r\nForge: forge-1.20.1-47.2.17\r\nArchitectury: architectury-9.2.14-forge\r\n\r\nCrash Log: https://pastebin.com/yGsi4Wdf\n\n[comment by shedaniel (member)]\nSeems to be caused by mcpitanlib as it didnt register their eventbus\n\n[comment by Jab125 (member)]\n> Seems to be caused by mcpitanlib as it didnt register their eventbus\r\n\r\nThis appears to been an issue in a mod that uses Architectury API."
+}

@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TwelveIterations/Waystones#1207",
+ "url": "https://github.com/TwelveIterations/Waystones/issues/1207",
+ "title": "Waystones issue #1207: Compatibility Issue with Riding in Cobblemon",
+ "source_type": "github_issue",
+ "repo": "TwelveIterations/Waystones",
+ "state": "closed",
+ "created_at": "2026-07-19T05:14:41Z",
+ "fetched_at": "2026-10-28T08:09:41+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by OutOfOrderCandy]\n### Minecraft Version\n\n1.21.1\n\n### Mod Loader\n\nFabric\n\n### Describe the Issue\n\nVersion that is casing an issue : waystones-fabric-1.21.1-21.1.37.jar\n\nBalm version : balm-fabric-1.21.1-21.0.63\n\nFabric API : 0.116.14\nCobblemon : 1.7.3\n\nIf you try to use waystones while riding a pokemon, this leaves traces of the pokemon and sometimes causing crashes to server.\n\nhttps://imgur.com/a/mR9y5hl\n\nIt works fine on version before 21.1.37\n\n### Logs\n\n[crash-2026-07-18_17.40.27-server.txt](https://github.com/user-attachments/files/30160941/crash-2026-07-18_17.40.27-server.txt)\n\n[comment by BlayTheNinth (member)]\nShould be fixed in 21.1.38\n\n[comment by OutOfOrderCandy (none)]\nIt has been fixed. Thanks!"
+}

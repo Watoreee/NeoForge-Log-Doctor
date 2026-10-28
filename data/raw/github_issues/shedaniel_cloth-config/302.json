@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:shedaniel/cloth-config#302",
+ "url": "https://github.com/shedaniel/cloth-config/issues/302",
+ "title": "cloth-config issue #302: Cloth Config kept crashing after i put in my mod files",
+ "source_type": "github_issue",
+ "repo": "shedaniel/cloth-config",
+ "state": "closed",
+ "created_at": "2025-03-04T10:25:42Z",
+ "fetched_at": "2026-10-28T08:07:26+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by Farrelmeme]\nMy cloth-config vers 1.20.1 kept crashing my minecraft if put it in my minecraft folder.\n\nI've tried using every version from 136, 118, 106, and 99. Any idea how to fix it?\n\n[comment by Shagnana (none)]\nThis happens to me with Forge, to be specific\n\nUpdate: I tried every version available for 1.20.1 and it still crashes.\nHere is the error message:\n```\nThe game crashed: initializing game\nError: org.spongepowered.asm.mixin.transformer.throwables.MixinTransformerError: An unexpected critical error was encountered\n```\n\n[comment by shedaniel (owner)]\nCloth Config has basically no mixins, so your crash log is unrelated to CC"
+}

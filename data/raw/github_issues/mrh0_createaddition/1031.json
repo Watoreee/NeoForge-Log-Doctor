@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:mrh0/createaddition#1031",
+ "url": "https://github.com/mrh0/createaddition/issues/1031",
+ "title": "createaddition issue #1031: Game crashing when i use grappling whisk",
+ "source_type": "github_issue",
+ "repo": "mrh0/createaddition",
+ "state": "closed",
+ "created_at": "2025-07-18T04:06:19Z",
+ "fetched_at": "2026-10-28T08:10:27+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by wispeesooks]\n**Describe the bug**\nWhen using the Grappling Whisk on Valkyrien skies entity my game crashes.\n\n**To Reproduce**\nSteps to reproduce the behavior:\nHave a Whisk in hand\nClick on the boat/plane from valkyrien skies\nGame Crashes\n\n**Additional context**\n- Mod version: 1.2.5\n- Forge version: 47.4.0\n- Create version: 0.5.1.j\n\n[comment by mrh0 (owner)]\nGrappling Whisk? No such thing in this mod"
+}

@@ -1,0 +1,11 @@
+{
+ "doc_id": "gh-release:AppliedEnergistics/Applied-Energistics-2@neoforge/v19.2.18",
+ "url": "https://github.com/AppliedEnergistics/Applied-Energistics-2/releases/tag/neoforge/v19.2.18",
+ "title": "Applied-Energistics-2 release 19.2.18 for Minecraft 1.21.1",
+ "source_type": "github_release",
+ "repo": "AppliedEnergistics/Applied-Energistics-2",
+ "created_at": "2026-09-27T17:38:22Z",
+ "fetched_at": "2026-10-28T08:11:32+00:00",
+ "licence": "Release notes; repo licence NOASSERTION (custom or unrecognised licence; see the repo's LICENSE file)",
+ "text": "## What's Changed\r\n* Fix export bus texture (#8692) by @Mithi83 in https://github.com/AppliedEnergistics/Applied-Energistics-2/pull/8702\r\n* Fix Korean translation by @Mithi83 in https://github.com/AppliedEnergistics/Applied-Energistics-2/pull/8935\r\n* Fix: Re-check external container slot contents when splitting up a large extract operation to avoid duping by @Frostbite-time in https://github.com/AppliedEnergistics/Applied-Energistics-2/pull/8734\r\n* Fix jade compat of remove FE and Fluid tooltip by @Frostbite-time in https://github.com/AppliedEnergistics/Applied-Energistics-2/pull/8799\r\n* Remove neighbor updates from the Condenser caused by changes in the internal power level by @Vonr in https://github.com/AppliedEnergistics/Applied-Energistics-2/pull/8934\r\n* Use nicer number formatting for storage and co-processors in crafting CPU lists\r\n\r\n## New Contributors\r\n* @Frostbite-time made their first contribution in https://github.com/AppliedEnergistics/Applied-Energistics-2/pull/8734\r\n\r\n**Full Changelog**: https://github.com/AppliedEnergistics/Applied-Energistics-2/compare/neoforge/v19.2.17...neoforge/v19.2.18"
+}

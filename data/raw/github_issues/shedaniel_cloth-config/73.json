@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:shedaniel/cloth-config#73",
+ "url": "https://github.com/shedaniel/cloth-config/issues/73",
+ "title": "cloth-config issue #73: [Bug] Crash after entering the credits in Roughly Enough Items' settings ",
+ "source_type": "github_issue",
+ "repo": "shedaniel/cloth-config",
+ "state": "closed",
+ "created_at": "2021-01-05T12:24:18Z",
+ "fetched_at": "2026-10-28T08:07:38+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by zeabdullah]\nThe crash happened when I entered Roughly Enough Items (REI) `settings` and then going to the `credits`. The crash happened mid-way through the slide animation.\r\n\r\nHere's the pastebin: https://pastebin.com/bPvG5Nja\r\n\r\nI also posted the issue on the REI repo.\n\n[comment by greentea-cup (none)]\nIs this related to cloth config and not only to REI?\n\n[comment by zeabdullah (none)]\nMaybe it is, maybe it isn't. I don't know so you could be right. I wanted to post this issue here too in case it could be related to cloth config.\n\n[comment by shedaniel (owner)]\nCan you reproduce with latest REI?\n\n[comment by zeabdullah (none)]\nI remember it happening only once, and it didn't occur again.\r\n\r\nI think I wasn't supposed to open this issue now that I think about it...👉👈\n\n[comment by shedaniel (owner)]\nI'll close this, open a new one if it happens again haha"
+}

@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:embeddedt/ModernFix#428",
+ "url": "https://github.com/embeddedt/ModernFix/issues/428",
+ "title": "ModernFix issue #428: [Bug] Crash on Initialization Due to 'modernfix' in Conjunction with 'Just Enough Items (JEI)",
+ "source_type": "github_issue",
+ "repo": "embeddedt/ModernFix",
+ "state": "closed",
+ "created_at": "2024-07-03T14:22:09Z",
+ "fetched_at": "2026-10-28T08:02:59+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by Stanelbrow]\n### Bug Description\n\n**Minecraft Version: 1.21 fabric**\r\n\r\n**Mod Versions:**\r\n- Just Enough Items (JEI): [jei-1.21-fabric-19.0.0.16]\r\n- Modernfix: [modernfix-fabric-5.18.4+mc1.21]\r\n\r\nMinecraft crashes during the initialization phase when using the mods 'Just Enough Items (JEI)' and 'modernfix' together. The error seems related to a missing class provided by 'modernfix' that is required by 'JEI'.\n\n### Reproduction Steps\n\n1. Install the mods 'Just Enough Items (JEI)' and 'modernfix'.\r\n2. Launch Minecraft with these mods enabled.\n\n### Log File\n\n[crash-2024-07-03_09.21.13-client.txt](https://github.com/user-attachments/files/16086340/crash-2024-07-03_09.21.13-client.txt)\n\n[comment by Billetiado10 (none)]\nI have same error\n\n[comment by yellowstudiosGa (none)]\nAlso experiencing this issue\n\n[comment by embeddedt (owner)]\nWill be fixed in 5.18.5, sorry about that."
+}

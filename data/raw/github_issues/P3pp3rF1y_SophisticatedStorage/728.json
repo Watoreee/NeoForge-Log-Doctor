@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:P3pp3rF1y/SophisticatedStorage#728",
+ "url": "https://github.com/P3pp3rF1y/SophisticatedStorage/issues/728",
+ "title": "SophisticatedStorage issue #728: Dedicated Server Crash Neoforge 21.1.206 for 1.21.1",
+ "source_type": "github_issue",
+ "repo": "P3pp3rF1y/SophisticatedStorage",
+ "state": "closed",
+ "created_at": "2025-09-01T13:04:43Z",
+ "fetched_at": "2026-10-28T08:09:13+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by peachmimosa15]\nDescription: Mod loading failures have occurred; consult the issue messages for more details\n\nnet.neoforged.neoforge.logging.CrashReportExtender$ModLoadingCrashException: Mod loading has failed\n\nI updated my modpack today and sophisiticated storage is not happy. I just uploaded the latest version on modrinth for 7 minutes ago and still not working. \n\nsophisticatedstorage-1.21.1-1.5.0.1254.jar \n\n[crash-2025-09-01_08.59.59-fml.txt](https://github.com/user-attachments/files/22078851/crash-2025-09-01_08.59.59-fml.txt)\n\n[comment by P3pp3rF1y (owner)]\nYou need to update SophisticatedStorage to latest version as well. there was a change in core that required changes to both backpacks and storage and thus they both had new builds\n\n[comment by peachmimosa15 (none)]\nI did I had all three updated using the modrinth launcher... I just troubleshooted and reverted to older versions.\n\n[comment by P3pp3rF1y (owner)]\nin that crash log I can see version 1.21.1-1.5.0.1254 of Sophisticated Storage, but there's this newer one as well https://modrinth.com/mod/sophisticated-storage/version/1.21.1-1.5.1.1260\n\n[comment by peachmimosa15 (none)]\nThank you I updated my server today and it is working great! <3"
+}

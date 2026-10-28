@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:malte0811/FerriteCore#208",
+ "url": "https://github.com/malte0811/FerriteCore/issues/208",
+ "title": "FerriteCore issue #208: 1.21.10 Update",
+ "source_type": "github_issue",
+ "repo": "malte0811/FerriteCore",
+ "state": "closed",
+ "created_at": "2025-10-18T08:34:22Z",
+ "fetched_at": "2026-10-28T08:03:21+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (MIT) does not cover issue text",
+ "text": "[issue by Maxpro131]\nPlease update ferritecore to 1.21.10 🙏\n\n[comment by capyisslay (none)]\nThe 1.21.9 version also works with 1.21.10. It doesn't say it on the page, though\n\n[comment by Maxpro131 (none)]\n> The 1.21.9 version also works with 1.21.10. It doesn't say it on the page, though\n\nGood to know. I was just waiting for ferritecore update so I can update my modpack, but if it already works it's great\n\n[comment by capyisslay (none)]\nSame goes for MoreCulling, if you need it\n\n[comment by Maxpro131 (none)]\n> Same goes for MoreCulling, if you need it\n\nAbsolutely, thanks!\n\n[comment by meza (none)]\nWhen using automation to keep mods updated, it's really important to keep the correct versions in sync. Could you please mark the 1.21.9 version to support 1.21.10 on both Modrinth and CF? We've tested and it works.\n\n[comment by tleey (none)]\n> The 1.21.9 version also works with 1.21.10. It doesn't say it on the page, though\n\nonly partly, it loads the game but the moment I try to join a world, it crashes, but that might be just me\n\n[comment by Maxpro131 (none)]\n> > The 1.21.9 version also works with 1.21.10. It doesn't say it on the page, though\n> \n> only partly, it loads the game but the moment I try to join a world, it crashes, but that might be just me\n\nI didn't try on singleplayer, but multiplayer works\n\n[comment by capyisslay (none)]\nThe page was updated to say this\n\n<img width=\"695\" height=\"107\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/4649bda4-772b-4577-96a4-33f9cbff42bc\" />\n\n[comment by malte0811 (owner)]\nSorry, I somehow missed the issue. As @capyisslay noted, the releases on CF and MR are marked correctly now."
+}

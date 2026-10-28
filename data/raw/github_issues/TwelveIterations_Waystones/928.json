@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TwelveIterations/Waystones#928",
+ "url": "https://github.com/TwelveIterations/Waystones/issues/928",
+ "title": "Waystones issue #928: Failed to decode packet 'clientbound/minecraft:update_recipes'",
+ "source_type": "github_issue",
+ "repo": "TwelveIterations/Waystones",
+ "state": "closed",
+ "created_at": "2024-11-15T18:39:44Z",
+ "fetched_at": "2026-10-28T08:09:52+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by user849651]\n### Minecraft Version\n\nOther (specify below)\n\n### Mod Loader\n\nFabric\n\n### Mod Version\n\n21.0.8+fabric-1.21\n\n### Describe the Issue\n\nI'm running Fabric 1.21. I just added the following .jars to my mods folder:\r\n\r\n1. waystones-fabric-1.21-21.0.8.jar\r\n2. balm-fabric-1.21-21.0.14.jar\r\n\r\nI started up my server and no issues showed up in the console.\r\n\r\nHowever, when I try to connect to my server, I get this error:\r\n\r\n> Connection Lost\r\n> Internal exception io.netty.handler.codec.DecoderException Failed to decode packet 'clientbound/minecraft:update_recipes'\r\n\r\nI'm not sure what's wrong, please help.\n\n### Logs\n\n[disconnect-2024-11-10_16.12.54-client.txt](https://github.com/user-attachments/files/17779659/disconnect-2024-11-10_16.12.54-client.txt)\r\n\n\n### Do you use any performance-enhancing mods (e.g. OptiFine) or custom server distributions (e.g. SpongeForge or Arclight)?\n\n_No response_\n\n[comment by BlayTheNinth (member)]\nMinecraft 1.21 is no longer supported. Update to 1.21.1 instead."
+}

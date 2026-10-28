@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:mrh0/createaddition#708",
+ "url": "https://github.com/mrh0/createaddition/issues/708",
+ "title": "createaddition issue #708: Server crashes when moving around the world around areas that have electricity setups",
+ "source_type": "github_issue",
+ "repo": "mrh0/createaddition",
+ "state": "open",
+ "created_at": "2024-01-03T22:16:50Z",
+ "fetched_at": "2026-10-28T08:10:42+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (NOASSERTION) does not cover issue text",
+ "text": "[issue by GameBurrow]\n**Describe the bug**\r\nServer crashes when moving around the world around areas that have electricity setups. \r\n\r\nNot sure if the cause is Create: New Age or Create Crafts & Additions, but it looks like issue is both of them together.\r\n\r\n**To Reproduce**\r\nN/A\r\n\r\n**Additional context**\r\n[crash-2024-01-03_21.50.04-server.txt](https://github.com/mrh0/createaddition/files/13823966/crash-2024-01-03_21.50.04-server.txt)\r\n[crash-2024-01-03_21.42.48-server.txt](https://github.com/mrh0/createaddition/files/13823967/crash-2024-01-03_21.42.48-server.txt)\n\n[comment by GameBurrow (none)]\nIssue in Create: New Age repo https://gitlab.com/antarcticgardens/create-new-age/-/issues/34\n\n[comment by mrh0 (owner)]\nYeah not sure what causes this\n\n[comment by GameBurrow (none)]\nI did some asking around with players, the only craft&additions items they had in their electricity network is the battery, so that must be the item that is crashing.\r\n\r\nOne of the more technically knowledgebale players threw around the idea that the electricity network was trying to pull more from the battery than it can handle and that caused it. No idea if that can be the case or not."
+}

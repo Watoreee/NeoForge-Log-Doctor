@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:thedarkcolour/KotlinForForge#54",
+ "url": "https://github.com/thedarkcolour/KotlinForForge/issues/54",
+ "title": "KotlinForForge issue #54: [1.19.2] Startup crash with Croptopia - org.jetbrains.annotations",
+ "source_type": "github_issue",
+ "repo": "thedarkcolour/KotlinForForge",
+ "state": "closed",
+ "created_at": "2023-01-08T16:10:37Z",
+ "fetched_at": "2026-10-28T08:08:50+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-2.1) does not cover issue text",
+ "text": "[issue by Peca21]\nWhen I place Kotlin for forge and croptopia in the same modpack game crashes immediately on startup.\r\n\r\nLog: https://paste.ee/p/mMjgl\n\n[comment by Peca21 (none)]\nhttps://github.com/ExcessiveAmountsOfZombies/Croptopia/issues/487\n\n[comment by thedarkcolour (owner)]\nUsing Kotlin for Forge 3.9.1 should let you run the game.\n\n[comment by agentwolf88 (none)]\nSame\n\n[comment by thedarkcolour (owner)]\nI removed 3.9.2 from CurseForge and Modrinth. \r\nIf you have errors with Essential mod on world load or opening world\r\n`Internal Exception: java.lang.NoClassDefFoundError: org/jetbrains/annotations/Nullable`\r\nuse [Kotlin for Forge 3.8.0](https://modrinth.com/mod/kotlin-for-forge/version/3.9.1).\n\n[comment by starixed (none)]\nstill keeps crashing, ive resulted on not updating croptopia\n\n[comment by thedarkcolour (owner)]\nWhich version of KFF/Minecraft are you using?\n\n[comment by starixed (none)]\nminecraft 1.19.2\r\nive used KFF 3.8.0, and 3.7.1\r\n\r\nsometimes it seems to load but cannot enter world\n\n[comment by thedarkcolour (owner)]\nDoes 3.9.1 work for you?\n\n[comment by starixed (none)]\n3.9.1 does work however it will not let me enter any worlds, even new ones\n\n[comment by thedarkcolour (owner)]\nAre you using Essential?\n\n[comment by starixed (none)]\ni do not have \"Essential\" unless you mean like ftb essentials or inventory essentials\n\n[comment by thedarkcolour (owner)]\nCan you send the log for when you try to enter a new world but can't? @starixed"
+}

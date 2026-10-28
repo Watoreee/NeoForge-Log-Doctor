@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:architectury/architectury-api#735",
+ "url": "https://github.com/architectury/architectury-api/issues/735",
+ "title": "architectury-api issue #735: [Urgent] Mislabeled modrinth 1.21.1 neoforge mod",
+ "source_type": "github_issue",
+ "repo": "architectury/architectury-api",
+ "state": "closed",
+ "created_at": "2026-07-26T23:53:37Z",
+ "fetched_at": "2026-10-28T08:06:17+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by luis996]\nThe latest verison of Architecture, published in Modrinth, is mislabeled, and automatic mod managers WILL download it for 1.21.x instead of only 1.21, which will cause unexpected world crashes.\n\n[comment by st0x0ef (collaborator)]\nWell... it is compatible with 1.21/1.21.1 as labeled."
+}

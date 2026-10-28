@@ -105,8 +105,17 @@ also redact pasted logs before any LLM call or cache write, so both share one im
   case-sensitively, so an account `Asus` doesn't erase a GPU vendor `ASUS`.
 - `hs_err` environment identity lines (`USERNAME=`, `COMPUTERNAME=`, …) and e-mail addresses are also redacted.
 - `127.0.0.1` / `0.0.0.0` are kept: they aren't personal and help diagnose bind errors.
-- Known limits: a 4-part version string that looks like an IPv4 address is over-redacted to `<ip>`; names that
-  appear only in chat and are never captured or listed survive (stated in the report).
+- **IPv4 only in network context (human's request, before the first real run).** Mod versions are often 4-part
+  (`19.21.0.247`), and version_mismatch diagnoses depend on them, so an IPv4-shaped number is redacted only if:
+  - it has a `:port` after it, a `/` right before it, or a keyword like `connecting to` / `address` / `from`
+    right before it;
+  - or it is on a `server-ip` / server-address line;
+  - otherwise, it is in a private range (10/8, 172.16/12, 192.168/16, 169.254/16, 100.64/10), **unless** it is in
+    a version context (`-`, `_`, `@`, `+`, `v` or `version` before it; letters after it; or a `.jar` / `|` /
+    mod / loader line).
+  A test checks that real-format mod-list lines with 4-part versions (including a `10.x` one) come out unchanged.
+- Known limits: a public IP with no network context is kept (e.g. one pasted bare in chat); names that
+  appear only in chat and are never captured or listed survive (both stated in the report).
 
 **Self-check and counts-only reporting.** After redacting, the script re-scans each output for known names, user
 paths, IPs, tokens and e-mails, using the same matching rules, and exits non-zero on any leftover. The printed

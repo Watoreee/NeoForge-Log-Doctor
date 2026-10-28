@@ -87,6 +87,57 @@ def test_ipv4_addresses_are_redacted_but_versions_and_loopback_kept():
     assert result.counts["ipv4"] == 2
 
 
+def test_mod_list_four_part_versions_are_not_changed():
+    """version_mismatch diagnoses depend on these; none may become <ip> (including a 10.x one)."""
+    raw = (
+        "\t\tjei-1.21.1-neoforge-19.21.0.247.jar                |Just Enough Items             |jei"
+        "                           |19.21.0.247         |DONE      |Manifest: NOSIGNATURE\n"
+        "\t\twaystones-neoforge-1.21.1-21.1.4.0.jar             |Waystones                     |waystones"
+        "                     |21.1.4.0            |DONE      |Manifest: NOSIGNATURE\n"
+        "\t\texamplemod-10.2.0.4.jar                            |Example Mod                   |examplemod"
+        "                    |10.2.0.4            |DONE      |Manifest: NOSIGNATURE\n"
+        "[main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "
+        '"sophisticatedcore-1.21.1-1.2.9.104.jar" of type MOD\n'
+        "Mod examplemod requires geckolib 4.7.1.2 or above\n"
+        "examplemod v10.2.0.4 loaded\n"
+    )
+    result = redact_text(raw)
+    assert result.text == raw
+    assert "ipv4" not in result.counts
+
+
+@pytest.mark.parametrize(
+    "line",
+    [
+        "Connecting to 203.0.113.9, 25565",
+        "[Server thread/INFO]: Steve[/203.0.113.9:51234] logged in",
+        "server-ip=203.0.113.9",
+        "Disconnected from 203.0.113.9",
+        "remote address: 203.0.113.9",
+        "Pinging 192.168.0.12",  # private range, no other context
+        "joined via 10.0.0.7",
+    ],
+)
+def test_network_addresses_are_redacted(line):
+    result = redact_text(line)
+    assert "<ip>" in result.text and result.counts["ipv4"] == 1
+
+
+def test_public_dotted_number_without_network_context_is_kept():
+    assert redact_text("checksum block 203.0.113.9 ok").text == "checksum block 203.0.113.9 ok"
+
+
+def test_curseforge_instance_path_username_is_redacted():
+    raw = r"C:\Users\Alice\curseforge\minecraft\Instances\All the Mons - ATMons_Test\logs\latest.log"
+    expected = r"C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\logs\latest.log"
+    assert redact_text(raw).text == expected
+
+
+def test_name_ending_in_underscore_is_replaced_as_whole_token():
+    out = redact_text("<Alex_> hi\nAlex_ joined\nAlex_x stays", extra_names=["Alex_"]).text
+    assert out == "<<player>> hi\n<player> joined\nAlex_x stays"
+
+
 def test_ipv6_is_redacted_but_timestamps_are_not():
     out = redact_text("[12:00:00] connect /[2001:db8::8a2e:370:7334]:25565").text
     assert "2001:db8" not in out and "[12:00:00]" in out

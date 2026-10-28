@@ -34,7 +34,9 @@ _SESSION_TOKEN = re.compile(r"token:[A-Za-z0-9._-]{8,}(?::[0-9a-fA-F-]{32,36})?"
 _JWT = re.compile(r"\beyJ[A-Za-z0-9_-]{5,}\.[A-Za-z0-9_-]{5,}\.[A-Za-z0-9_-]{5,}")
 _ENV_IDENTITY = re.compile(r"(?m)^(\s*(?:USERNAME|USER|LOGNAME|COMPUTERNAME|HOSTNAME|USERDOMAIN)\s*=\s*)(\S.*)$")
 _EMAIL = re.compile(r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b")
-# Loopback / unspecified addresses are not personal, and keeping them helps diagnose bind errors.
+# IPv4-shaped candidates. Mod versions are often 4-part (1.2.3.4), so a candidate is only redacted
+# when its context says it's a network address (see _ipv4_replacement). Loopback / unspecified
+# addresses are never redacted: not personal, and useful for diagnosing bind errors.
 _IPV4 = re.compile(
     r"(?<![\w.])(?!(?:127\.0\.0\.1|0\.0\.0\.0)(?![\w.]))"
     r"(?:25[0-5]|2[0-4]\d|1?\d?\d)(?:\.(?:25[0-5]|2[0-4]\d|1?\d?\d)){3}(?![\w.])"
@@ -44,6 +46,14 @@ _IPV6 = re.compile(
     r"((?:[0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|(?:[0-9a-fA-F]{1,4}:){1,6}:(?:[0-9a-fA-F]{1,4}(?::[0-9a-fA-F]{1,4})*)?)"
     r"(?![\w:])"
 )
+_PORT_AFTER = re.compile(r":\d{1,5}(?!\d)")
+_NETWORK_KEYWORD_BEFORE = re.compile(
+    r"(?i)(?:connect(?:ing|ed)?\s+to|server[-_ ]?(?:ip|address)|address|host(?:name)?|\bip|\bfrom)[\s:=\"'\[(]*$"
+)
+_SERVER_ADDRESS_LINE = re.compile(r"(?i)server[-_ ]?(?:ip|address)")
+_VERSION_BEFORE = re.compile(r"(?i)(?:[-_@+]|\bv|version[\s:=]*)$")
+_VERSION_AFTER = re.compile(r"^[-+_]?[A-Za-z]")
+_VERSION_LINE = re.compile(r"(?i)\.jar\b|\||\b(?:mod|mods|version|loader|neoforge|forge|minecraft|requires?)\b")
 
 
 @dataclass
@@ -81,7 +91,7 @@ def redact_text(text: str, extra_names: list[str] | tuple[str, ...] = ()) -> Red
     text = _sub(_JWT, "<token>", text, counts, "token")
     text = _sub(_ENV_IDENTITY, lambda m: f"{m.group(1)}<redacted>", text, counts, "env_identity")
     text = _sub(_EMAIL, "<email>", text, counts, "email")
-    text = _sub(_IPV4, "<ip>", text, counts, "ipv4")
+    text = _redact_ipv4(text, counts)
     text = _sub(_IPV6, "<ip>", text, counts, "ipv6")
 
     # Player names: case-insensitive (Minecraft names are), whole-token only.
@@ -89,6 +99,52 @@ def redact_text(text: str, extra_names: list[str] | tuple[str, ...] = ()) -> Red
     # Account names: case-sensitive, so an account "Asus" doesn't also erase a GPU vendor "ASUS".
     text = _replace_names(accounts - players, "<user>", text, counts, "account_name", ignore_case=False)
     return RedactionResult(text=text, counts=counts, known_names=len(players | accounts))
+
+
+def _redact_ipv4(text: str, counts: Counter) -> str:
+    """Replace IPv4 candidates that are network addresses; leave version numbers alone."""
+
+    def replace(m: re.Match) -> str:
+        if not _ipv4_is_network_address(m):
+            return m.group(0)
+        counts["ipv4"] += 1
+        return "<ip>"
+
+    return _IPV4.sub(replace, text)
+
+
+def _ipv4_is_network_address(m: re.Match) -> bool:
+    """Network evidence wins, then version context, then the private-range fallback.
+
+    Network: a :port after it, "/" right before it, a keyword like "connecting to" / "address"
+    right before it, or a server-address line. Version: -, _, @, +, v or "version" right before it,
+    letters right after it (1.2.3.4-beta), or a mod-list / loader line. Otherwise only private
+    ranges (10/8, 172.16/12, 192.168/16, 169.254/16, 100.64/10) are treated as addresses.
+    """
+    text = m.string
+    line_start = text.rfind("\n", 0, m.start()) + 1
+    line_end = text.find("\n", m.end())
+    line = text[line_start : line_end if line_end != -1 else len(text)]
+    before = text[max(line_start, m.start() - 60) : m.start()]
+    after = text[m.end() : m.end() + 8]
+
+    if _PORT_AFTER.match(after) or before.endswith("/") or _NETWORK_KEYWORD_BEFORE.search(before):
+        return True
+    if _SERVER_ADDRESS_LINE.search(line):
+        return True
+    if _VERSION_BEFORE.search(before) or _VERSION_AFTER.match(after) or _VERSION_LINE.search(line):
+        return False
+    return _is_private_ipv4(m.group(0))
+
+
+def _is_private_ipv4(ip: str) -> bool:
+    a, b = (int(x) for x in ip.split(".")[:2])
+    return (
+        a == 10
+        or (a == 172 and 16 <= b <= 31)
+        or (a, b) in {(192, 168), (169, 254)}
+        or (a == 100 and 64 <= b <= 127)  # carrier-grade NAT
+    )
 
 
 def _replace_names(names: set[str], placeholder: str, text: str, counts: Counter, kind: str, ignore_case: bool) -> str:

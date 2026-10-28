@@ -200,3 +200,13 @@ maintainer reply (36 candidates checked); every other repo reached 30.
 
 **Index build cost (Day 2):** 60 embedding requests in total (58 for 1,852 chunks, then 2 to re-embed 51 chunks
 changed by corpus redaction), 0 retries, 0 rate-limit responses, ~31 min.
+
+**Incident (Day 2): a truncated path fragment was committed and pushed, then fixed forward.** Commits `479b301` /
+`8b9886a` contain a home-directory path cut down to the fragment `cont` in the public Waystones issue #1229. The 3,000-character cap cut a pasted server log
+mid-path, and the redactor then required a `/` after the name. It is almost certainly the `container` account, the
+default on Pterodactyl game-server hosts, not a person. Cause on our side: the pre-commit scan flagged it,
+but its exit status was lost in a shell pipe, so the commit went ahead. Fixes:
+- home paths cut off at the end of a line are now redacted (tested);
+- the fetcher redacts **before** truncating;
+- the scan's exit status gates the commit.
+History was not rewritten (no force-push).

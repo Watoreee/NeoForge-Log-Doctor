@@ -32,6 +32,19 @@ def test_user_paths_are_redacted(raw, expected):
     assert redact_text(raw).text == expected
 
 
+@pytest.mark.parametrize(
+    ("raw", "expected"),
+    [
+        ("Config at /home/cont\n[... truncated]", "Config at /home/<user>\n[... truncated]"),
+        ("cd /home/alice && ls", "cd /home/<user> && ls"),
+        ('"/Users/alice"', '"/Users/<user>"'),
+        ("C:\\Users\\Alice", "C:\\Users\\<user>"),
+    ],
+)
+def test_home_path_cut_off_or_without_trailing_separator_is_redacted(raw, expected):
+    assert redact_text(raw).text == expected
+
+
 def test_account_name_from_path_is_redacted_elsewhere_case_sensitively():
     raw = "C:\\Users\\Asus\\game\nuser.name=Asus\nGPU: ASUS GeForce"
     out = redact_text(raw).text

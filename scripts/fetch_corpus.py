@@ -183,8 +183,12 @@ def fetch_docs(gh: GitHub, licence: str) -> int:
 
 
 def clean_post(body: str | None) -> str:
-    """Drop issue-template HTML comments and cap the length (pasted logs can be 100k+ characters)."""
+    """Drop issue-template HTML comments, redact, then cap the length (pasted logs can be 100k+ characters).
+
+    Redacting before the cut matters: a cut can split a user path mid-name, so redaction no longer sees it.
+    """
     text = re.sub(r"<!--.*?-->", "", body or "", flags=re.DOTALL).strip()
+    text = redact_text(text).text
     if len(text) > MAX_POST_CHARS:
         text = text[:MAX_POST_CHARS].rstrip() + "\n[... truncated]"
     return text

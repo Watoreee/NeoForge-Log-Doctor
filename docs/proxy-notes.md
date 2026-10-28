@@ -18,7 +18,7 @@ Raw output: `docs/proxy-probe-results.json`. The proxy is LiteLLM in front of an
 | Context window? | 65,536 tokens (prompt + output) | Log text budget: 6k Gemma tokens (see below) |
 | `stream=True` works? | Yes | Not used (we stream events, not tokens) |
 | Latency? | Chat: ~0.1 s small, 2.4 s at 58k tokens. Embeddings: ~1 s per input | Fine for chat; corpus embedding is slow, so batch |
-| Rate limits? | 150 requests and 200,000 tokens per API key | Hard constraint: count, back off, cache, resume (below) |
+| Rate limits? | 150 requests and 200,000 tokens per API key, **per window of at most ~1 minute (measured)** | Hard constraint: count, back off, cache, resume (below) |
 
 ## Details
 
@@ -62,10 +62,24 @@ A needle at the start of the prompt was recalled at 58,338 server-counted prompt
 **Rate limits.**
 - Response headers: `x-ratelimit-api_key-limit-requests: 150` and `x-ratelimit-api_key-limit-tokens: 200000`.
 - A burst of 8 concurrent chat calls all succeeded (no 429).
-- **Window: not stated by the proxy and not yet confirmed. Assumed to be per minute (LiteLLM's usual rpm/tpm
-  default) until course staff confirm.** Evidence for a short window: remaining requests were back at 149 of 150
-  a few minutes after runs that had used 20+ requests. This does not prove a 1-minute window.
-- Until the window is confirmed, the limits are treated as hard constraints:
+- **Window: measured on 2026-10-28 (not stated by the proxy; course staff had not confirmed it).**
+  Method (`scripts/measure_rate_window.py`, exactly 3 tiny embedding calls, no other proxy traffic from this
+  machine meanwhile): read `x-ratelimit-api_key-remaining-requests` at t+0, t+67 s and t+667 s.
+
+  | Read (UTC) | Remaining requests (after this call) |
+  |---|---|
+  | 07:51:42 (t+0) | 149 / 150 |
+  | 07:52:49 (t+67 s) | 149 / 150 |
+  | 08:02:49 (t+667 s) | 149 / 150 |
+
+  If the window were longer than 67 s, the second read would show 148 (both calls still counted) and the third
+  147. It stayed at 149, so **a request leaves the window within 67 s: the window is at most ~1 minute.**
+  Earlier evidence shows calls do accumulate within a short span (remaining fell to 129 during a burst of probe
+  calls), so this fits **150 requests / 200k tokens per minute**. Not determined: whether the window is fixed or
+  rolling, and whether it is shorter than 60 s. Remaining tokens did not drop for embedding calls (as before).
+- The measurement used only 3 requests, so it cannot show the behaviour at exhaustion; a 429 is still possible
+  in bursts and is handled by backoff.
+- The limits are still treated as hard constraints:
   - `llm.py` counts requests and tokens per run (chat and embeddings separately) for the results file.
   - It honours `retry-after` on 429 errors, else exponential backoff.
   - Every paid response is written to the on-disk cache immediately, so a rerun of `run_eval.py` resumes

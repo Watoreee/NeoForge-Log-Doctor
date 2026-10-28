@@ -186,3 +186,17 @@ Building is resumable: each vector is cached per chunk (keyed by a hash of its t
 Only NeoForge majors 20–21 are recognised, so an old Forge version like `47.1.3` isn't misread. Null or
 unrecognised inputs come back as `unknown`; a newer Java than required is reported as `newer_than_required`, not
 an error.
+
+**`data/raw/` is committed.** `du -sh data/raw` = **3.4 MB** on Day 2 (529 JSON docs), which is "small (a few
+MB)" in PLAN 6.4. Committing it lets a grader rebuild chunks without the GitHub API. Also committed:
+`chunks.jsonl` (2.7 MB), `manifest.json` (0.3 MB), `embeddings.npy` (7.3 MB).
+
+**Corpus size: 1,850 chunks, above the ~1,500 target, kept on purpose.** Issue threads are already short (capping
+at 4 chunks would save only ~70), and the excess is in the NeoForge modder-API docs (721 chunks: loot tables,
+biome modifiers, recipes, models). Dropping docs by topic is a judgment for the human, and PLAN 6.4 says
+coverage of the pack's mods matters more than the count (range 500–3,000). Because the embedding cache is per
+chunk, dropping docs later costs no re-embedding. `shedaniel/cloth-config` yielded only 16 issues with a
+maintainer reply (36 candidates checked); every other repo reached 30.
+
+**Index build cost (Day 2):** 60 embedding requests in total (58 for 1,852 chunks, then 2 to re-embed 51 chunks
+changed by corpus redaction), 0 retries, 0 rate-limit responses, ~31 min.

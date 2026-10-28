@@ -126,6 +126,26 @@ the repo (enforced) and is only read.
 warnings into errors: null `relevant_doc_ids`, and a category with ≥2 scenario groups missing from dev or test.
 A category with a single scenario group can't be in both splits and is exempt.
 
+**`collect_run.py` (Day 2, the human runs it, I never do).** After each fault-injection launch it copies that run's
+logs into the raw folder and records the labels at the moment they're known, so labelling isn't reconstructed
+from memory later.
+- **Paths:** `CRASHDOC_INSTANCE` and `CRASHDOC_RAW_DIR` come from the environment (or `.env`); no path is in the
+  repo. It refuses a raw folder inside the repo, and does not create a missing one, since that's most likely a typo.
+- **Stdlib only.** The category list is read from `schemas.py` with `ast`, so the enum stays the one source of
+  truth without importing pydantic.
+- **Run numbers:** the highest existing `rNN` + 1, not just a count of folders. These are equal unless a folder was
+  deleted by hand; then counting would reuse a number that still exists. An existing folder is never overwritten.
+- **Folder names:** category and culprit are lowercased with hyphens (`r03_missing-dependency_jei`), so `_` only
+  separates the parts.
+- **Copying:** files are copied, not moved. Crash reports and `hs_err_pid*.log` are taken only if modified in the
+  last `--since-minutes` (default 15). `latest.log`/`debug.log` are always taken. A missing or older `latest.log`
+  prints a loud warning and asks before continuing (`--yes` skips the question).
+- **Labels:** `--culprit none` is stored as null with an empty `acceptable_culprits`, which matches the gold-label
+  rule. Otherwise the culprit is always first in the list. `--broke` is collapsed to one line. `runs.txt` replaces
+  `|` with `/`.
+- **notes.txt / runs.txt** are `.txt` files in the raw folder, so `redact_logs.py` also redacts them into
+  `data/staging/` together with the logs.
+
 ## Pack facts (Day 2, from the human)
 
 **Gold logs come from the human's test instance of All the Mons (ATMons)**, a CurseForge modpack, run through the

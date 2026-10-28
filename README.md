@@ -32,6 +32,8 @@ Configuration is read from environment variables only. `.env` is a local conveni
 | `GITHUB_TOKEN` | Optional, raises the GitHub API rate limit for corpus fetching |
 | `CRASHDOC_REPLAY=1` | Serve LLM + embedding calls only from the on-disk cache; a miss is an error |
 | `CRASHDOC_CACHE_DIR` | Override the cache location (default `eval/cache/`) |
+| `CRASHDOC_INSTANCE` | Game instance folder, read by `collect_run.py` |
+| `CRASHDOC_RAW_DIR` | Raw-log folder OUTSIDE the repo, written by `collect_run.py`, read by `redact_logs.py` |
 
 **TLS note:** if `pip install` fails with `CERTIFICATE_VERIFY_FAILED` (some networks re-sign HTTPS),
 use `pip install --use-feature=truststore -r requirements.txt` and `pip install --no-build-isolation -e .`.
@@ -49,6 +51,11 @@ python scripts/validate_labels.py         # check gold labels in data/gold/{dev,
 ## Preparing gold logs (raw logs never enter the repo)
 
 ```bash
+# After each fault-injection launch: copy that run's logs into the raw folder and record its labels.
+# Writes <raw>/r<NN>_<category>_<culprit>/ (latest.log, debug.log, crash reports and hs_err files from the
+# last --since-minutes, notes.txt) and appends a line to <raw>/runs.txt. Prompts for anything missing.
+python scripts/collect_run.py --category missing_dependency --culprit jei --broke "removed jei" [--also a,b] [--dry-run]
+
 # Raw logs stay in a folder OUTSIDE the repo. This writes redacted copies to data/staging/ (git-ignored):
 python scripts/redact_logs.py /path/outside/repo/raw_logs --names Name1,Name2
 ```

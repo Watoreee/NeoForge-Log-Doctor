@@ -11,6 +11,9 @@ Sources:
 Usage:
     python scripts/fetch_corpus.py [--issues-per-repo 30] [--releases-per-repo 5]
 
+GitHub text (issues, release notes) goes through crashdoc.redact before it is saved: users paste logs
+that contain their home paths, player names and launcher tokens. Docs pages are saved as-is.
+
 Each raw doc is one JSON file with url, title, source_type, fetched_at and licence/terms note.
 GITHUB_TOKEN (optional, from the environment / .env) raises the API limit from 60 to 5,000 requests/hour.
 """
@@ -28,6 +31,7 @@ from pathlib import Path
 import httpx
 
 from crashdoc.config import REPO_ROOT, get_settings, use_os_trust_store
+from crashdoc.redact import redact_text
 
 RAW_DIR = REPO_ROOT / "data" / "raw"
 API = "https://api.github.com"
@@ -108,6 +112,9 @@ def now_utc() -> str:
 
 
 def save(path: Path, doc: dict) -> None:
+    """Write one raw doc. GitHub text is redacted first: users paste logs with their paths and tokens."""
+    if doc["source_type"] != "neoforge_docs":
+        doc = {**doc, "text": redact_text(doc["text"]).text}
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(doc, ensure_ascii=False, indent=1), encoding="utf-8")
 
@@ -291,12 +298,24 @@ def repo_licence(gh: GitHub, repo: str) -> str:
     return f"{spdx}{note}"
 
 
+def redact_existing() -> int:
+    """Re-redact GitHub docs already on disk (idempotent), so older fetches get the same treatment."""
+    changed = 0
+    for path in RAW_DIR.glob("github_*/*/*.json"):
+        doc = json.loads(path.read_text(encoding="utf-8"))
+        if redact_text(doc["text"]).counts:
+            save(path, doc)
+            changed += 1
+    return changed
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Fetch the retrieval corpus into data/raw/.")
     parser.add_argument("--issues-per-repo", type=int, default=30)
     parser.add_argument("--releases-per-repo", type=int, default=5)
     args = parser.parse_args()
 
+    print(f"Re-redacted {redact_existing()} already-fetched GitHub doc(s)")
     use_os_trust_store()
     gh = GitHub(get_settings().github_token)
     if not get_settings().github_token:

@@ -55,6 +55,19 @@ python scripts/redact_logs.py /path/outside/repo/raw_logs --names Name1,Name2
 
 Read every file in `data/staging/`, then move it into `data/gold/{dev,test}/` or `data/demo/`.
 
+## Corpus and index
+
+The chunked corpus (`data/processed/chunks.jsonl`, `manifest.json`) and its embeddings (`embeddings.npy`) are
+committed, so a clean clone does not need to refetch. To rebuild:
+
+```bash
+python scripts/fetch_corpus.py            # NeoForge 1.21.1 docs + GitHub issues/releases for 15 mods -> data/raw/
+python scripts/build_index.py --chunks-only   # chunk -> chunks.jsonl + manifest.json, prints corpus stats
+python scripts/build_index.py             # + embeddings via the proxy (resumable; ~1 s per chunk)
+```
+
+Both scripts are resumable: rerunning skips what is already fetched or embedded.
+
 ## Check the proxy (Phase 0)
 
 ```bash

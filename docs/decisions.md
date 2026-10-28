@@ -153,7 +153,13 @@ COLLABORATOR, not the issue author, not a bot). Up to 30 per repo; at most 90 ca
 
 **Long threads are capped.** Each post is cut at 3,000 characters (a pasted full log would otherwise swamp the
 corpus), at most 12 comments, issue-template HTML comments removed, and at most 6 chunks per issue/release doc.
-Docs pages are not capped. Issue text is public GitHub content and is not redacted.
+Docs pages are not capped.
+
+**GitHub text in the corpus is redacted with the same redactor as gold logs.** Issue threads contain pasted user
+logs. On the first fetch, 14 of 461 GitHub docs had user-home paths (123), account names (5) or token-shaped strings
+(5, all signed `?jwt=` image links). The text is public on GitHub, but republishing personal paths and tokens in
+our repo isn't needed, so `fetch_corpus.py` redacts at save time. Content hashes in the manifest are of the
+redacted text.
 
 **Licence notes per doc in `manifest.json`:** docs: MIT (neoforged/Documentation); issues: "user-generated
 content under the GitHub Terms of Service; the repo licence does not cover issue text"; releases: the repo's SPDX
@@ -166,7 +172,8 @@ context. Chunk ids are `<doc_id>#<n>`; doc ids are readable (`gh-issue:mezz/Just
 
 **Embeddings are stored L2-normalised** (`embeddings.npy`, float32), so cosine similarity is a dot product.
 `embeddings_meta.json` records the model and the SHA-256 of `chunks.jsonl`, so a mismatch is detectable.
-Building is resumable: per-batch vectors go to git-ignored `data/processed/embed_batches/`.
+Building is resumable: each vector is cached per chunk (keyed by a hash of its text) in git-ignored
+`data/processed/embed_cache/`, so a restart, re-chunking or dropping docs only embeds what is new.
 
 ## compat_table.py (Day 2)
 

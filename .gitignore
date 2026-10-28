@@ -45,5 +45,5 @@ Thumbs.db
 # Claude Code local settings
 .claude/
 
-# Per-batch corpus embedding cache (resume only; embeddings.npy is committed)
-data/processed/embed_batches/
+# Per-chunk corpus embedding cache (resume only; embeddings.npy is committed)
+data/processed/embed_cache/

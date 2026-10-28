@@ -4,9 +4,10 @@ Usage:
     python scripts/build_index.py --chunks-only   # data/processed/chunks.jsonl + manifest.json
     python scripts/build_index.py                 # ... then embeddings.npy + embeddings_meta.json
 
-Embedding is resumable: each batch of EMBED_BATCH_SIZE vectors is saved to data/processed/embed_batches/
-(git-ignored) as soon as it returns, keyed by a hash of its texts. A rerun skips finished batches, so an
-interrupted build never repeats a paid call. Embeddings cost requests, not tokens (docs/proxy-notes.md).
+Embedding is resumable: chunks are sent in batches of EMBED_BATCH_SIZE, and each returned vector is saved
+at once to data/processed/embed_cache/ (git-ignored), keyed by a hash of its text. A rerun embeds only the
+chunks without a saved vector, so an interrupted build never repeats a paid call.
+Embeddings cost requests, not tokens (docs/proxy-notes.md).
 """
 
 from __future__ import annotations
@@ -28,7 +29,7 @@ from crashdoc.retrieval.chunking import chunk_doc, content_hash, index_text, loa
 
 RAW_DIR = REPO_ROOT / "data" / "raw"
 OUT_DIR = REPO_ROOT / "data" / "processed"
-BATCH_DIR = OUT_DIR / "embed_batches"
+CACHE_DIR = OUT_DIR / "embed_cache"
 
 
 def load_raw_docs(raw_dir: Path = RAW_DIR) -> list[dict]:
@@ -85,29 +86,30 @@ def load_chunks() -> list[dict]:
         return [json.loads(line) for line in f]
 
 
-def batch_key(texts: list[str]) -> str:
-    return hashlib.sha256(json.dumps([EMBED_MODEL, texts], ensure_ascii=False).encode("utf-8")).hexdigest()[:24]
+def text_key(text: str) -> str:
+    """Cache key for one chunk's vector: changes iff the model or the embedded text changes."""
+    return hashlib.sha256(json.dumps([EMBED_MODEL, text], ensure_ascii=False).encode("utf-8")).hexdigest()[:32]
 
 
 def embed_all(chunks: list[dict]) -> np.ndarray:
-    """Embed in batches; each finished batch is saved at once, and saved batches are reused."""
-    BATCH_DIR.mkdir(parents=True, exist_ok=True)
+    """Embed every chunk, reusing cached vectors; misses go out in batches and are saved per chunk.
+
+    Caching per chunk (not per batch) means re-chunking or dropping docs only embeds what is new.
+    """
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
     llm = LLM()
     texts = [index_text(c) for c in chunks]
-    parts = []
-    n_batches = (len(texts) + EMBED_BATCH_SIZE - 1) // EMBED_BATCH_SIZE
+    paths = [CACHE_DIR / f"{text_key(t)}.npy" for t in texts]
+    todo = [i for i, path in enumerate(paths) if not path.exists()]
+    print(f"{len(texts) - len(todo)} cached, {len(todo)} to embed", flush=True)
     t0 = time.time()
-    for b, start in enumerate(range(0, len(texts), EMBED_BATCH_SIZE)):
-        batch = texts[start : start + EMBED_BATCH_SIZE]
-        path = BATCH_DIR / f"{batch_key(batch)}.npy"
-        if path.exists():
-            parts.append(np.load(path))
-            continue
-        vectors = np.asarray(llm.embed(batch, use_cache=False), dtype=np.float32)
-        np.save(path, vectors)
-        parts.append(vectors)
-        print(f"batch {b + 1}/{n_batches} done ({time.time() - t0:.0f} s)", flush=True)
-    matrix = np.vstack(parts)
+    for start in range(0, len(todo), EMBED_BATCH_SIZE):
+        batch = todo[start : start + EMBED_BATCH_SIZE]
+        vectors = llm.embed([texts[i] for i in batch], use_cache=False)
+        for i, vector in zip(batch, vectors, strict=True):
+            np.save(paths[i], np.asarray(vector, dtype=np.float32))
+        print(f"embedded {start + len(batch)}/{len(todo)} ({time.time() - t0:.0f} s)", flush=True)
+    matrix = np.vstack([np.load(path) for path in paths])
     matrix /= np.linalg.norm(matrix, axis=1, keepdims=True)  # unit length: cosine = dot product
     print("usage:", json.dumps(llm.usage.summary()))
     return matrix

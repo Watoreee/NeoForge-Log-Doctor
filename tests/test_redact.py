@@ -164,9 +164,13 @@ def test_tokens_are_redacted(raw):
 
 def test_redacted_text_is_stable_on_a_second_pass():
     """Re-redacting output must find nothing new (redact_logs.py's leftover check relies on this)."""
-    raw = "--uuid 1234567890abcdef1234567890abcdef accessToken=abcDEF1234567890 C:\\Users\\Bob\\x 10.0.0.5"
+    raw = (
+        "--uuid 1234567890abcdef1234567890abcdef accessToken=abcDEF1234567890 C:\\Users\\Bob\\x 10.0.0.5\n"
+        "/home/carol/.minecraft/mods and /Users/dave/Library/x"
+    )
     once = redact_text(raw).text
     assert redact_text(once).counts == {}
+    assert "/home/<user>/" in once and "/Users/<user>/" in once
 
 
 def test_hs_err_environment_identity_is_redacted():

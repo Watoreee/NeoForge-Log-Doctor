@@ -23,7 +23,7 @@ _USERNAME_ARG = re.compile(r"--username[ =]([A-Za-z0-9_]{1,32})")
 
 # --- User folders. The captured folder name is also treated as a known name. ---
 _WIN_USER_PATH = re.compile(r"(?i)\b([a-z]:(?:\\{1,2}|/))Users(\\{1,2}|/)([^\\/:*?\"<>|\r\n]+?)(?=\\|/)")
-_NIX_USER_PATH = re.compile(r"(/home/|/Users/)([^/\s:]+)(?=/)")
+_NIX_USER_PATH = re.compile(r"(/home/|/Users/)([^/\s:<>]+)(?=/)")  # no <> so "<user>" isn't re-captured
 
 # --- Secrets / network identifiers ---
 _TOKEN_ARGS = re.compile(

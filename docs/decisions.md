@@ -43,8 +43,8 @@ tool call nor a diagnosis is handled like any other turn: it counts toward `max_
 
 ## Rate limits and budgets (set by the human, Day 1)
 
-**Rate limits are hard constraints until the window is confirmed.** The proxy allows 150 requests and 200k tokens
-per key; the window is unknown and assumed per minute. Embeddings cost requests but not tokens (measured;
+**Rate limits are hard constraints.** The proxy allows 150 requests and 200k tokens per key. The window was
+measured on Day 2 as at most ~1 minute (3 calls over 11 min; proxy-notes), so the eval budget is per-minute. Embeddings cost requests but not tokens (measured;
 proxy-notes). So:
 - `llm.py` counts every HTTP attempt (retries included) and chat tokens per run, in `Usage.summary()`. `run_eval.py`
   will write it into each results file.
@@ -125,3 +125,57 @@ the repo (enforced) and is only read.
 **`validate_labels.py --strict`** (Day 3 split freeze, Day 5 gate) replaces `--require-relevance`. It turns both
 warnings into errors: null `relevant_doc_ids`, and a category with ≥2 scenario groups missing from dev or test.
 A category with a single scenario group can't be in both splits and is exempt.
+
+## Pack facts (Day 2, from the human)
+
+**Gold logs come from the human's test instance of All the Mons (ATMons)**, a CurseForge modpack, run through the
+CurseForge app. **NeoForge 21.1.224, Minecraft 1.21.1, Java 21.** PLAN.md's "own NeoForge pack" (6.1) means this
+pack; the earlier pack name in PLAN.md is a leftover from a draft and is not used anywhere else. The project
+name stays "NeoForge Log Doctor".
+
+## Corpus (Day 2)
+
+**Sources** (`scripts/fetch_corpus.py`):
+- NeoForge docs, **1.21.1 version** (`versioned_docs/version-1.21.1` in `neoforged/Documentation`, MIT), plus the
+  unversioned **player-facing User Guide** (`user/docs`: install, launchers, client, server, FAQ), which is the most
+  relevant part for crash diagnosis. Developer-toolchain pages are left out.
+- GitHub issue threads for the human's 15 mods. Three repos were renamed and are fetched under their current
+  names: `CaffeineMC/sodium-fabric` → `CaffeineMC/sodium`, `shedaniel/ClothConfig` → `shedaniel/cloth-config`,
+  `glisco03/owo-lib` → `wisp-forest/owo-lib`.
+- GitHub release notes as changelogs, up to 5 recent ones per repo. Only some of the repos publish GitHub
+  releases, so changelog coverage is partial; mods whose changelogs live on CurseForge/Modrinth have none.
+- Cobblemon is out of scope (its issues are on GitLab); noted under limitations.
+
+**Issue selection rule (deterministic):** candidates are commented issues from two GitHub searches per repo
+(`"1.21"`, and `crash`), ranked by mentions 1.21 → looks crash-related (keyword list in the script) → most
+recently updated. An issue is **kept only if a maintainer replied** (comment `author_association` OWNER / MEMBER /
+COLLABORATOR, not the issue author, not a bot). Up to 30 per repo; at most 90 candidates checked per repo.
+
+**Long threads are capped.** Each post is cut at 3,000 characters (a pasted full log would otherwise swamp the
+corpus), at most 12 comments, issue-template HTML comments removed, and at most 6 chunks per issue/release doc.
+Docs pages are not capped. Issue text is public GitHub content and is not redacted.
+
+**Licence notes per doc in `manifest.json`:** docs: MIT (neoforged/Documentation); issues: "user-generated
+content under the GitHub Terms of Service; the repo licence does not cover issue text"; releases: the repo's SPDX
+licence id, where `NOASSERTION` means a custom or unrecognised licence file.
+
+**Chunking: 400 bge-m3 tokens, 50-token overlap**, each chunk an exact character slice of the source (via token
+offsets). BM25 and the embedder both see `title + "\n\n" + chunk text`, so a chunk keeps its mod / issue / page
+context. Chunk ids are `<doc_id>#<n>`; doc ids are readable (`gh-issue:mezz/JustEnoughItems#1234`,
+`neoforge-docs:docs/1.21.1/gettingstarted/versioning`). No chunking variants yet (PLAN 7.3 #5 is later and optional).
+
+**Embeddings are stored L2-normalised** (`embeddings.npy`, float32), so cosine similarity is a dot product.
+`embeddings_meta.json` records the model and the SHA-256 of `chunks.jsonl`, so a mismatch is detectable.
+Building is resumable: per-batch vectors go to git-ignored `data/processed/embed_batches/`.
+
+## compat_table.py (Day 2)
+
+**Rules, not a hand-typed list, from two NeoForge docs pages fetched 2026-10-28 (both in the corpus):**
+- *Versioning* (docs/1.21.1/gettingstarted/versioning): NeoForge `A.B.n` is for Minecraft `1.A.B`, so 21.1.224 is
+  for 1.21.1.
+- *User Guide* (user/docs): Minecraft 1.20.2–1.20.4 → Java 17; 1.20.5–"latest" → Java 21. Capped at 1.21.1
+  (our pack's version) because "latest" can't be trusted beyond the fetch date.
+
+Only NeoForge majors 20–21 are recognised, so an old Forge version like `47.1.3` isn't misread. Null or
+unrecognised inputs come back as `unknown`; a newer Java than required is reported as `newer_than_required`, not
+an error.

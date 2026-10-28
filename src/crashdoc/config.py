@@ -25,6 +25,11 @@ EMBED_BATCH_SIZE = 32  # 64 tested OK; 32 keeps each call ~30 s
 TOKENIZER_REPO = "BAAI/bge-m3"
 TOKENIZER_REVISION = "5617a9f61b028005a4858fdac845db406aefb181"
 
+# --- Chunking (docs/decisions.md) ---
+CHUNK_TOKENS = 400  # bge-m3 tokens per chunk
+CHUNK_OVERLAP = 50
+MAX_CHUNKS_PER_THREAD = 6  # cap for issue threads / release notes, so one huge thread can't dominate
+
 # --- Budgets (docs/decisions.md) ---
 MAX_INPUT_BYTES = 10 * 1024 * 1024  # larger pasted logs get HTTP 413
 LOG_TOKEN_BUDGET = 6_000  # max Gemma tokens of log text sent to the LLM
@@ -45,6 +50,7 @@ class Settings:
     base_url: str | None
     cache_dir: Path
     replay: bool  # CRASHDOC_REPLAY=1: serve only from cache, never call the proxy (PLAN 6.9)
+    github_token: str | None = None  # optional; only scripts/fetch_corpus.py uses it
 
     @property
     def proxy_configured(self) -> bool:
@@ -64,6 +70,7 @@ def load_settings() -> Settings:
         base_url=os.environ.get("OPENAI_BASE_URL", "").strip() or None,
         cache_dir=Path(cache_dir) if cache_dir else REPO_ROOT / "eval" / "cache",
         replay=_env_flag("CRASHDOC_REPLAY"),
+        github_token=os.environ.get("GITHUB_TOKEN", "").strip() or None,
     )
 
 

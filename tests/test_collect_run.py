@@ -89,8 +89,9 @@ def test_missing_arguments_are_prompted_for(setup, monkeypatch):
 
 
 def test_runs_are_numbered_in_order_and_named(setup):
-    _, raw = setup
+    instance, raw = setup
     run(*ARGS)
+    write(instance / "logs" / "latest.log", age_min=1, text="second launch\n")
     run("--category", "duplicate_mod", "--culprit", "create_addition", "--also", "", "--broke", "two jars")
     assert sorted(p.name for p in raw.iterdir() if p.is_dir()) == [
         "r01_missing-dependency_jei",
@@ -112,7 +113,7 @@ def test_existing_run_folder_is_never_overwritten(setup, monkeypatch):
     monkeypatch.setattr(collect_run, "next_run_number", lambda _raw: 1)
     run(*ARGS)
     with pytest.raises(FileExistsError):
-        run(*ARGS)
+        run(*ARGS, "--force")
 
 
 # ---------------------------------------------------------------- safety
@@ -201,6 +202,63 @@ def test_notes_and_runs_line_with_pipe_escaping(setup):
 def test_runs_header_is_written_once(setup):
     _, raw = setup
     run(*ARGS)
-    run(*ARGS)
+    run(*ARGS, "--force")
     lines = (raw / "runs.txt").read_text(encoding="utf-8").splitlines()
     assert lines.count(collect_run.RUNS_HEADER) == 1 and len(lines) == 3
+
+
+# ---------------------------------------------------------------- duplicate latest.log
+
+
+def test_duplicate_latest_log_is_refused_and_names_the_run(setup, capsys):
+    instance, raw = setup
+    assert run(*ARGS) == 0
+    capsys.readouterr()
+    assert run(*ARGS) == 1
+    assert "r01_missing-dependency_jei" in capsys.readouterr().out
+    assert sorted(p.name for p in raw.iterdir() if p.is_dir()) == ["r01_missing-dependency_jei"]
+    assert len((raw / "runs.txt").read_text(encoding="utf-8").splitlines()) == 2  # header + r01 only
+
+
+def test_duplicate_of_an_older_run_is_found(setup, capsys):
+    instance, raw = setup
+    write(instance / "logs" / "latest.log", age_min=1, text="first launch\n")
+    run(*ARGS)
+    write(instance / "logs" / "latest.log", age_min=1, text="second launch\n")
+    run(*ARGS)
+    write(instance / "logs" / "latest.log", age_min=1, text="first launch\n")
+    capsys.readouterr()
+    assert run(*ARGS) == 1
+    out = capsys.readouterr().out
+    assert "r01_missing-dependency_jei" in out and "r02" not in out
+
+
+def test_duplicate_latest_log_is_collected_with_force(setup, capsys):
+    instance, raw = setup
+    run(*ARGS)
+    assert run(*ARGS, "--force") == 0
+    assert (raw / "r02_missing-dependency_jei" / "latest.log").exists()
+    assert "r01_missing-dependency_jei" in capsys.readouterr().out
+
+
+def test_dry_run_also_reports_a_duplicate(setup, capsys):
+    _, raw = setup
+    run(*ARGS)
+    assert run(*ARGS, "--dry-run") == 1
+    assert "r01_missing-dependency_jei" in capsys.readouterr().out
+    assert not (raw / "r02_missing-dependency_jei").exists()
+
+
+def test_different_latest_log_is_not_a_duplicate(setup):
+    instance, raw = setup
+    run(*ARGS)
+    write(instance / "logs" / "latest.log", age_min=1, text="a new launch\n")
+    assert run(*ARGS) == 0
+    assert (raw / "r02_missing-dependency_jei" / "latest.log").exists()
+
+
+def test_non_run_folders_are_ignored_by_the_duplicate_check(setup):
+    instance, raw = setup
+    (raw / "scratch").mkdir()
+    (raw / "scratch" / "latest.log").write_bytes((instance / "logs" / "latest.log").read_bytes())
+    assert run(*ARGS) == 0

@@ -8,6 +8,8 @@ Usage (by hand, right after the game crashed or closed):
   folder, CRASHDOC_RAW_DIR the raw-log folder. The raw folder must be OUTSIDE the repo.
 - Files are COPIED (never moved) into <raw dir>/r<NN>_<category>_<culprit>/ with their original names.
   An existing run folder is never overwritten.
+- Refuses (exit 1) when logs/latest.log is byte-identical (SHA-256) to the latest.log of an earlier run
+  folder: the game was probably not relaunched since that run. --force collects it anyway.
 - Stdlib only, no network. The category list is read from src/crashdoc/schemas.py (one source of truth)
   with `ast`, so this script needs no third-party packages.
 """
@@ -16,6 +18,7 @@ from __future__ import annotations
 
 import argparse
 import ast
+import hashlib
 import os
 import re
 import shutil
@@ -162,6 +165,27 @@ def files_to_copy(instance: Path, since_ts: float) -> tuple[list[Path], bool]:
     return files, stale
 
 
+def sha256_file(path: Path) -> str:
+    h = hashlib.sha256()
+    with path.open("rb") as f:
+        for block in iter(lambda: f.read(1 << 20), b""):
+            h.update(block)
+    return h.hexdigest()
+
+
+def find_duplicate_run(latest: Path, raw_dir: Path) -> Path | None:
+    """The earliest run folder whose stored latest.log has the same SHA-256 as `latest`, or None."""
+    if not latest.is_file():
+        return None
+    digest = sha256_file(latest)
+    runs = sorted((int(m.group(1)), p) for p in raw_dir.iterdir() if p.is_dir() and (m := RUN_DIR.match(p.name)))
+    for _number, run_dir in runs:
+        stored = run_dir / "latest.log"
+        if stored.is_file() and sha256_file(stored) == digest:
+            return run_dir
+    return None
+
+
 def make_plan(args, instance: Path, raw_dir: Path, now: float) -> Plan:
     number = next_run_number(raw_dir)
     run_id = f"r{number:02d}"
@@ -244,6 +268,7 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--since-minutes", type=float, default=15)
     p.add_argument("--dry-run", action="store_true", help="print the plan and write nothing")
     p.add_argument("--yes", action="store_true", help="continue past the stale-latest.log warning without asking")
+    p.add_argument("--force", action="store_true", help="collect even if latest.log duplicates an earlier run's")
     return p
 
 
@@ -292,6 +317,14 @@ def main(argv: list[str] | None = None, now: float | None = None) -> int:
         if not (args.yes or args.dry_run) and input("Continue anyway? [y/N] ").strip().lower() != "y":
             print("Nothing written.")
             return 1
+
+    duplicate = find_duplicate_run(instance / "logs" / "latest.log", raw_dir)
+    if duplicate is not None:
+        print(f"logs/latest.log is identical (SHA-256) to the one already stored in {duplicate.name}/.")
+        if not args.force:
+            print("The game was probably not relaunched since that run. Nothing written (--force collects it anyway).")
+            return 1
+        print("--force given: collecting it anyway.")
 
     if args.dry_run:
         print_plan(plan, dry_run=True)

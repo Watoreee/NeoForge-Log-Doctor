@@ -230,3 +230,55 @@ but its exit status was lost in a shell pipe, so the commit went ahead. Fixes:
 - the fetcher redacts **before** truncating;
 - the scan's exit status gates the commit.
 History was not rewritten (no force-push).
+
+## Gold/demo contents and review method (Day 3)
+
+**Deviation from PLAN 6.2: `debug.log` files are not committed, so they are not read.** PLAN 6.2 says the human reads
+every committed gold/demo file. The `debug.log` files are 3–6 MB each and mostly repeated startup noise, so gold and
+demo items are the **crash report(s) + `latest.log` only**. `debug.log` stays in the git-ignored `data/staging/`
+folder (redacted, never moved to `data/gold/` or `data/demo/`).
+
+**Stale crash reports removed from staging.** Some raw run folders held crash reports from earlier runs. Staging keeps
+only the crash reports listed in that run's `files` column of `runs.txt` (demo: the one named in `notes.txt`).
+Deleted (15): r08 `15.44.58`; r09 `15.44.58`, `15.59.51`, `16.03.47`, `16.05.00`; r10 and r11 each `15.44.58`,
+`15.59.51`, `16.03.47`, `16.05.00`, `16.13.04`. The raw folder itself is untouched.
+
+**Review method (human).** Instead of reading every committed file line by line: (1) a find-in-files search of the
+committed gold/demo files for known identifiers (player name, uuid, xuid, clientId, account name, IPs); (2) a full
+read of every crash report and of the header (first part) of every `latest.log`. This is what the "read before
+committing" rule in PLAN 6.2 means here.
+
+**Redaction fixes found while preparing the gold set.** (a) ModLauncher's `args [--uuid, X, --xuid, N, ...]` list is
+comma-separated; the old `flag value` patterns matched nothing, so uuid/xuid/clientId/accessToken and `--username`
+all survived. (b) The player UUID also appears outside the args line (authlib timeouts: `sessionserver…/profile/<uuid>`,
+"Couldn't look up profile properties for <uuid>"), including in logs with no args line. The UUID is now captured from
+`--uuid` and replaced everywhere, and those two URL/message shapes are redacted generically. Tests added.
+
+## Categories and gold set (Day 3)
+
+**Dropped categories: `duplicate_mod` and `config_error`.** Fault injection did not give a usable log for either
+(human's decision), so they are removed from the report and the label set rather than left empty. Categories in use:
+`missing_dependency`, `version_mismatch`, `out_of_memory`, `mixin_conflict`. The enum in `schemas.py` still lists
+them. Run r07 was dropped as invalid.
+
+**Gold = crash report + `latest.log` per run, each its own gold log.** 19 runs gave 33 gold logs in 19 scenarios (one
+`scenario_id` per run), above PLAN's 24–30 target because a run's crash report and `latest.log` are counted
+separately. r10, r11, r13, r14 and r20 have no crash report (`latest.log` only). Log ids are `rNN_crash` /
+`rNN_latest`. Demo: d1, d2, d3, d6 keep their original file names under `data/demo/`.
+
+**Draft split (stratified by scenario, to be confirmed):** dev = r02, r13, r15, r18, r10 (8 logs, 5 scenarios);
+test = the other 14 scenarios (25 logs). `missing_dependency`, `version_mismatch` and `out_of_memory` have scenarios on
+both sides. `mixin_conflict` has only one scenario (r14), so it sits in test only.
+
+**Confirmed by the human (Day 3).** Acceptable lists for r02, r08, r12, r17 as drafted (cascades excluded). Rule (d2)
+for r04/r05 accepted. Split accepted as drafted, with r14 (`mixin_conflict`) in test only.
+
+**Culprit accuracy is reported twice: strict and lenient, for every condition including B1.** Strict = the predicted
+mod equals `culprit_mod_id`; lenient = it is in `acceptable_culprits`. Reason: the large acceptable lists (r08 has 12
+entries, r17 has 26) would otherwise hide "blames the victim" errors, where the model names a mod that only
+reported the problem instead of the mod that caused it. Lenient alone would score those as correct.
+
+**`data/demo/answers.json` (live defence only).** Built from the demo `notes.txt` files: demo id, culprit, category,
+acceptable list, what was broken. `run_eval.py` and all evaluation code must never read it; a test
+(`tests/test_demo_answers_unused.py`) fails if any file under `src/` or `scripts/` mentions it. Checked: no player
+name, uuid, path or token in it.

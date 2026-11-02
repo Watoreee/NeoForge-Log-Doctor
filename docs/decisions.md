@@ -373,3 +373,11 @@ re-redacted with the improved redactor (it now catches the comma-separated launc
 their chunks were re-embedded; two newer AE2 release notes were added because the repo published them since the first
 fetch. Existing docs were otherwise untouched. Fewer than 30 issues were kept for some new repos
 (IronFurnacesNeoForge 6, TrashCans 17, Konkrete 11, YUNGs-API 29): the maintainer-reply filter and the small trackers.
+
+**Pool depth cut to top-5 per condition, dev sheets first (human's decision; deviation from PLAN 6.7's top-10 and
+test-first order).** At top-10 the pool had 952 documents to judge (709 test, 243 dev), too many to judge carefully.
+At top-5 it has **532** (389 test, 143 dev), 17 to 44 per scenario. Consequences to state in the report: (1) pooling bias
+is larger: a relevant document ranked 6th to 10th by every pooled condition can only be found by hand; so recall@k at
+k >= 5 is measured against a shallower pool, and recall@5, the headline metric, is the least affected; (2) the dev
+sheets are numbered first (`01_` to `05_`), then test (`06_` to `19_`). The change is only the `--top` default and the
+split order in `scripts/export_relevance_pool.py`; the six conditions and `min_score=None` are unchanged.

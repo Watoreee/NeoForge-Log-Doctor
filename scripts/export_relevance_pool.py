@@ -1,13 +1,13 @@
 """Export the relevance pool for human judging (PLAN 6.7).
 
 Usage:
-    python scripts/export_relevance_pool.py [--out data/pool] [--top 10]
+    python scripts/export_relevance_pool.py [--out data/pool] [--top 5]
 
 For every gold log, run the six pooled retrieval conditions with NO cosine floor (min_score=None):
     hybrid (a) preprocessed log | hybrid (b) extracted fields | hybrid (c) oracle
     BM25 (a) | BM25 (b) | dense (b)
 take the top-N documents (deduplicated by doc_id) from each ranking, union them PER SCENARIO, and write one
-judging sheet per scenario to <out>/<scenario_id>.md (test scenarios are numbered first: 01_..., then dev).
+judging sheet per scenario to <out>/<scenario_id>.md (dev scenarios are numbered first: 01_..., then test).
 Also writes <out>/pool.json (machine-readable, incl. what extraction returned) and <out>/README.md.
 
 Needs the proxy (extraction + query embeddings); both are cached on disk, so a rerun costs nothing.
@@ -39,7 +39,7 @@ EXCERPT_CHARS = 600
 def load_gold() -> list[tuple[str, GoldLabel, Path]]:
     """(split, label, log path), test split first, then dev (PLAN 6.7 order)."""
     rows = []
-    for split in ("test", "dev"):
+    for split in ("dev", "test"):
         for label_path in sorted((GOLD / split).glob("*.json")):
             label = GoldLabel.model_validate(json.loads(label_path.read_text(encoding="utf-8")))
             log = next(p for p in label_path.parent.glob(f"{label_path.stem}.*") if p.suffix != ".json")
@@ -155,8 +155,8 @@ def sheet_markdown(num: int, sid: str, sc: dict) -> str:
         " mod with the"
         " same kind of error, or a docs page that explains this specific error message. Generic pages that are merely"
         " on-topic don't count.",
-        "Mark `[x]` if the document helps diagnose or fix THIS failure; leave `[ ]` if not. Pool = union of the top-10 documents of"  # noqa: E501
-        " six no-floor retrieval conditions, so a relevant document that none of them ranked in the top 10 is not here:"
+        "Mark `[x]` if the document helps diagnose or fix THIS failure; leave `[ ]` if not. Pool = union of the top-N documents of"  # noqa: E501
+        " six no-floor retrieval conditions, so a relevant document that none of them ranked in its top N is not here:"
         " add it by hand under *Added by hand* (and note how you found it).",
         "",
         "If nothing is relevant after one deliberate search of the corpus, fill in **Support search** below.",
@@ -187,7 +187,7 @@ def sheet_markdown(num: int, sid: str, sc: dict) -> str:
 def main() -> int:
     parser = argparse.ArgumentParser(description="Export the relevance pool for judging.")
     parser.add_argument("--out", type=Path, default=REPO_ROOT / "data" / "pool")
-    parser.add_argument("--top", type=int, default=10)
+    parser.add_argument("--top", type=int, default=5)
     args = parser.parse_args()
 
     llm, index = LLM(), Index.load()
@@ -206,7 +206,7 @@ def main() -> int:
     readme = [
         "# Relevance pool",
         "",
-        "One sheet per scenario, test scenarios first (PLAN 6.7). Judge each once.",
+        "One sheet per scenario, dev scenarios first, then test. Judge each once.",
         "",
         "| sheet | split | logs | docs to judge |",
         "|---|---|---|---|",

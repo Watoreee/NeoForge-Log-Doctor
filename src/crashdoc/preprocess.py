@@ -15,6 +15,9 @@ import re
 from dataclasses import asdict, dataclass, field
 from typing import Literal
 
+from crashdoc.config import LOG_TOKEN_BUDGET
+from crashdoc.tokens import estimate_llm_tokens
+
 LogFormat = Literal["crash_report", "latest_log", "debug_log", "generic", "rejected"]
 
 MAX_LINE = 2000  # characters of a line that regexes ever see
@@ -305,3 +308,133 @@ def _parse_system_line(line: str, stripped: str, facts: RawLogFacts) -> None:
         facts.java_version = j.group(1)
     elif stripped.startswith("JVM Flags:"):
         facts.max_heap_mb = _heap_mb(stripped)
+
+
+# --------------------------------------------------------------------------- truncation to the LLM budget
+
+SHORT_LOG_CHARS = 12_000  # about 3k tokens: always sent whole, no selection needed
+SELECTION_MARGIN = 250  # tokens held back so the assembled text, not just the sum of lines, fits the budget
+MAX_KEPT_LINE = 400  # characters kept per selected line
+FRAMES_PER_EXCEPTION = 3  # "at ..." lines kept after each exception line (PLAN 6.2: top N frames)
+
+_KEY_LINE = re.compile(
+    r"Requested by:|Missing or unsupported|pre-loading phase|Mixin prepare|OutOfMemoryError|Java heap space|"
+    r"GC overhead|is not a valid mod file|Failure message:|Currently, .* is not installed|Mod loading has failed|"
+    r"Unknown type|Failed to load Java class|Class could not be found"
+)
+_SYSTEM_LINE = re.compile(
+    r"^\s*(?:Minecraft Version:|Java Version:|JVM Flags:|Memory:|ModLauncher running|JVM identified|ModLauncher \d)"
+)
+
+
+@dataclass
+class Preprocessed:
+    """The log text that goes to the LLM / the (a) retrieval query, plus what produced it."""
+
+    text: str
+    facts: RawLogFacts
+    truncated: bool
+    omitted_lines: int = 0
+    tokens: int = 0
+
+
+def preprocess_log(text: str, budget: int = LOG_TOKEN_BUDGET) -> Preprocessed:
+    """Parse, then cut the log to `budget` Gemma tokens (PLAN 6.2).
+
+    Short logs pass through whole. Longer ones keep a one-line header (versions), then the exception chain with
+    its top frames, the FML dependency / loading-error lines, mixin and OOM lines, and other ERROR/FATAL lines,
+    **most informative first** and in their original order, until the budget is full. The mod list and
+    repeated startup noise are dropped. Because the useful lines come first, truncating this text again
+    (e.g. for an embedding input) still keeps the diagnosis lines.
+    """
+    facts = parse_log(text)
+    if facts.format == "rejected" or len(text) <= SHORT_LOG_CHARS:
+        return Preprocessed(text=text, facts=facts, truncated=False, tokens=estimate_llm_tokens(text))
+
+    lines = text.split("\n")
+    chosen = _select_lines(lines, facts)  # [(priority, index, text)]
+    header = _header(facts)
+    used = estimate_llm_tokens(header) + SELECTION_MARGIN  # room for newlines and the [...] gap markers
+    kept: list[tuple[int, str]] = []
+    for _priority, idx, line in sorted(chosen):  # most informative first, original order within a tier
+        cost = estimate_llm_tokens(line) + 1
+        if used + cost > budget:
+            break
+        used += cost
+        kept.append((idx, line))
+    kept.sort()
+    body, previous = [], -1
+    for idx, line in kept:
+        if previous != -1 and idx - previous > 1:
+            body.append("[...]")
+        body.append(line)
+        previous = idx
+    out = header + "\n" + "\n".join(body)
+    return Preprocessed(
+        text=out, facts=facts, truncated=True, omitted_lines=len(lines) - len(kept), tokens=estimate_llm_tokens(out)
+    )
+
+
+def _header(f: RawLogFacts) -> str:
+    parts = [
+        f"[{f.format}]",
+        f"minecraft {f.minecraft_version}",
+        f"neoforge {f.neoforge_version}",
+        f"java {f.java_version}",
+    ]  # noqa: E501
+    if f.mod_versions:
+        parts.append(f"{len(f.mod_versions)} mods loaded")
+    return "; ".join(parts)
+
+
+def _select_lines(lines: list[str], facts: RawLogFacts) -> list[tuple[int, int, str]]:
+    """(priority, line index, text). Priority 0 is the most informative. Linear, one pass."""
+    crash = facts.format == "crash_report"
+    chosen: list[tuple[int, int, str]] = []
+    frames_left = 0
+    in_mod_list = in_system = False
+    system_kept = 0
+    seen: set[str] = set()
+    for i, raw in enumerate(lines):
+        line = raw[:MAX_LINE].rstrip("\r")
+        stripped = line.strip()
+        if not stripped:
+            continue
+        if in_mod_list:  # the mod list (header, blank, rows) is dropped: it is huge and names no failure
+            if line.startswith("\t") or stripped.startswith("Name Version"):
+                continue
+            in_mod_list = False
+        if stripped == "Mod List:":
+            in_mod_list = True
+            continue
+        if line.startswith("-- System Details"):
+            in_system = True
+        m = _LOG_LINE.match(line)
+        level, body = (m.group(2), m.group(3)) if m else (None, stripped)
+        body = _THROWABLE_PREFIX.sub("", body.strip())
+
+        if _EXC_LINE.match(body):
+            frames_left, prio = FRAMES_PER_EXCEPTION, 0
+        elif body.startswith("at "):
+            if frames_left <= 0:
+                continue
+            frames_left, prio = frames_left - 1, 2
+        elif _KEY_LINE.search(line):
+            prio = 0
+        elif level in ("ERROR", "FATAL"):
+            prio = 1
+        elif "does not have required mod" in body:
+            prio = 4  # a KubeJS plugin skipped for an optional mod: often benign, so lowest priority
+        elif _SYSTEM_LINE.match(line):
+            if system_kept >= 8:
+                continue
+            system_kept, prio = system_kept + 1, 3
+        elif crash and not in_system:
+            prio = 1  # a crash report's body above "System Details" is small and names the failure
+        else:
+            continue
+        if body[:160] in seen and prio != 2:
+            continue
+        seen.add(body[:160])
+        chosen.append((prio, i, line[:MAX_KEPT_LINE]))
+    return chosen

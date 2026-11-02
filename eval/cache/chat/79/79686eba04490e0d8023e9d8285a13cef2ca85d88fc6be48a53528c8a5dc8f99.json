@@ -1,0 +1,12 @@
+{
+ "prompt_version": "extract-v2",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "{\n  \"exception_type\": null,\n  \"error_category\": \"missing_dependency\",\n  \"suspect_mod_ids\": [\n    \"rctapi\",\n    \"architectury\"\n  ],\n  \"mc_version\": \"1.21.1\",\n  \"loader_version\": \"21.1.224\",\n  \"java_version\": \"21.0.7\"\n}",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

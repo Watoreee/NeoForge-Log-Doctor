@@ -1,0 +1,12 @@
+{
+ "prompt_version": "b0-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "{\"culprit_mod_id\": \"theurgy_kubejs\", \"category\": \"missing_dependency\", \"explanation\": \"theurgy_kubejs requires theurgy, which is not installed in the mod list. Additionally, ars_nouveau requires geckolib, which is also missing.\"}",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "refusal": null,
+   "reasoning": null
+  }
+ }
+}

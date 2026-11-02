@@ -1,0 +1,12 @@
+{
+ "prompt_version": "b0-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "{\"culprit_mod_id\": \"sophisticatedcore\", \"category\": \"version_mismatch\", \"explanation\": \"SophisticatedCore requires a newer version of NeoForge (26.1.2.44-beta or above) than the installed version (21.1.224). It also has version mismatches with JEI and Minecraft itself.\"}",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "refusal": null,
+   "reasoning": null
+  }
+ }
+}

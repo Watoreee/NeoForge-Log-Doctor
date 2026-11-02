@@ -1,0 +1,12 @@
+{
+ "prompt_version": "extract-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "{\n  \"exception_type\": null,\n  \"error_category\": \"version_mismatch\",\n  \"suspect_mod_ids\": [\n    \"sophisticatedcore\"\n  ],\n  \"mc_version\": \"1.21.1\",\n  \"loader_version\": \"21.1.224\",\n  \"java_version\": \"21.0.7\"\n}",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

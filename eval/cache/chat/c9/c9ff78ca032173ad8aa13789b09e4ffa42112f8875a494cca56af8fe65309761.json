@@ -1,0 +1,12 @@
+{
+ "prompt_version": "b0-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "{\"culprit_mod_id\": \"aquaculture\", \"category\": \"version_mismatch\", \"explanation\": \"The mod aquaculture requires NeoForge 26.1.0.0 or above, but the current version is 21.1.224.\"}",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "refusal": null,
+   "reasoning": null
+  }
+ }
+}

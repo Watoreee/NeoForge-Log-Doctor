@@ -305,3 +305,50 @@ ERROR/FATAL lines (first 40, deduplicated), the mod list (id -> version), Minecr
 
 **Parser output is not the label.** The parser reports what the log says; it does not pick a culprit or a category.
 `scripts/check_parser.py` (CHECKPOINT 1) prints `culprit_in_facts` only as a sanity signal.
+
+**r06_crash dropped from gold (human's decision).** The crash report shows only a downstream
+`IllegalStateException: Registry is already frozen` and never names the culprit (`ironfurnaces`). A label is only
+valid if the log supports it, so `r06_latest` stays as the gold item for scenario r06 and the crash report was deleted
+(never committed). Gold is now **32 logs in 19 scenarios** (test: 24 logs, 14 scenarios; dev: 8 logs, 5 scenarios).
+Advice for users, to repeat in the README: *if a crash report doesn't name a mod, paste `latest.log` instead.*
+
+## Truncation, extraction, retrieval, baselines, pool (Day 3)
+
+**Corpus status (reported to the human).** 529 docs (436 GitHub issue threads / 25 release notes / 68 docs pages, per
+`manifest.json`; 15 issue repos, 30 each except `cloth-config` 16), 1,850 chunks (1,092 issue, 37 release, 721 NeoForge
+docs), `data/raw/` committed (3.4 MB), `chunks.jsonl`, `manifest.json`, `embeddings.npy` (bge-m3, 1024-d, normalised)
+committed, `data/processed` 26 MB in total including the git-ignored embed cache. The rate-limit window was measured on 2026-10-28
+(proxy-notes.md). The "Placebo/Balm/ResourcefulLib swap" was **not applied**: nothing in the repo, PLAN or notes records
+it, and the corpus is the 15 repos listed in `fetch_corpus.py`.
+
+**Truncation to the token budget (`preprocess_log`).** Logs of 12,000 characters or less are sent whole. Longer ones become
+a one-line header (versions) plus selected lines, most informative first and in original order: exception lines
+and their top 3 frames, FML dependency / loading-error / mixin / OOM / "Failure message" lines (tier 0), other ERROR/FATAL
+(tier 1), frames (2), version/system lines (3), KubeJS "does not have required mod" warnings (4, often benign). The mod list
+and startup noise are dropped. Selection stops at 6,000 Gemma tokens minus a 250-token margin, so the assembled text fits.
+Check on all 32 gold logs: the culprit id is still in the text for every one. Because diagnosis lines come first,
+cutting this text to 6,000 characters for the embedder keeps them.
+
+**Extraction (`extraction.py`).** Prompt for JSON, strip the fence, pydantic, one repair retry that feeds the error back,
+then regex-derived facts. Each suspect id must be a whole token in the whole log, else dropped and counted. **The prompt
+was tuned once on dev only (v1 -> v2):** v1 blamed the mods that need a missing mod (r02) and called a KubeJS failure `other`
+(r13). v2 adds general rules (victim vs missing mod, skipped jar, KubeJS), with no gold mod names. r13 still extracts the
+wrong mod: left as is, because overfitting 8 dev logs would hide the very error that the oracle condition (c) measures.
+A prompt change bumps `EXTRACT_PROMPT_VERSION`; prompt text is part of the cache key, so `E501` is ignored for the two
+files that hold prompts rather than reflowing them.
+
+**Retrieval (`retrieval/index.py`).** Dense (normalised cosine), BM25 (rank-bm25; ids like `cobblemon_battle_tower` also
+index their parts; a BM25 score of 0 is not a candidate), hybrid = RRF (k=60) over the survivors of the cosine floor.
+Top-k per retriever is 50 before the floor. `min_score=None` means no floor. BM25-only candidates removed by the floor are
+returned in `dropped_bm25_only` (PLAN 6.4). Queries: (a) preprocessed log, (b) template of exception type + suspect ids +
+category keywords, (c) oracle = (b) with gold `acceptable_culprits` and gold category (`retrieval/query.py`).
+
+**Baselines.** B1 is one fixed rule (`Suspected Mods`, else the mod named in the first FML loading error, else null), so it
+names the *reporting* mod; on missing-dependency logs that is the victim, and the strict metric exposes it. B0 is one LLM call
+on the preprocessed log. Both report strict and lenient culprit accuracy. `scripts/run_eval.py` refuses `--split test` without
+`--allow-test`. **No test-split numbers have been looked at**; B0/B1 were run on dev only.
+
+**Relevance pool (`scripts/export_relevance_pool.py`, `data/pool/`).** Six pooled conditions (hybrid a/b/c, BM25 a/b, dense b),
+all with `min_score=None`, top 10 documents per ranking, unioned per scenario; one markdown sheet per scenario, test scenarios
+first. Pooling bias applies (PLAN 6.7): a relevant document no condition ranked in the top 10 can only be added by hand.
+The pool was regenerated after the last truncation change, so it matches the final code.

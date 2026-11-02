@@ -1,0 +1,12 @@
+{
+ "prompt_version": "b0-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "{\"culprit_mod_id\": \"theurgy\", \"category\": \"missing_dependency\", \"explanation\": \"The mod 'theurgy_kubejs' requires 'theurgy' version 1.34.0 or higher, but it is not installed.\"}",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "refusal": null,
+   "reasoning": null
+  }
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "prompt_version": "b0-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "{\"culprit_mod_id\": \"kubejs\", \"category\": \"other\", \"explanation\": \"A script in ExtendedAE is referencing an unknown type 'kubejs:custom_infinity_cell' during startup.\"}",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "refusal": null,
+   "reasoning": null
+  }
+ }
+}

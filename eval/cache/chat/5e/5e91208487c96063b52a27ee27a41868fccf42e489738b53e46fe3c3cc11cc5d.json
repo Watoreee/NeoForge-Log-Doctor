@@ -1,0 +1,12 @@
+{
+ "prompt_version": "b0-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "{\"culprit_mod_id\": \"sophisticatedcore\", \"category\": \"version_mismatch\", \"explanation\": \"The mod sophisticatedcore requires a newer version of neoforge (26.1.2.44-beta or above) and minecraft (26.1.2 or above) than what is installed.\"}",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "refusal": null,
+   "reasoning": null
+  }
+ }
+}

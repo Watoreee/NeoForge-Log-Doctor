@@ -352,3 +352,24 @@ on the preprocessed log. Both report strict and lenient culprit accuracy. `scrip
 all with `min_score=None`, top 10 documents per ranking, unioned per scenario; one markdown sheet per scenario, test scenarios
 first. Pooling bias applies (PLAN 6.7): a relevant document no condition ranked in the top 10 can only be added by hand.
 The pool was regenerated after the last truncation change, so it matches the final code.
+
+## Corpus extended to cover the broken mods (Day 3)
+
+**The corpus now covers the culprits broken during collection (PLAN 6.4: corpus mods are chosen from the mods broken).**
+Seven repos were added to the original 15, which stay as distractors: `Qelifern/IronFurnacesNeoForge`,
+`SuperMartijn642/TrashCans`, `GlodBlock/ExtendedAE` (listed by the human as `GlodBlock/ExPatternProvider`, the old name;
+GitHub redirects it), `TeamMetallurgy/Aquaculture`, `YUNG-GANG/YUNGs-API` (was `yungnickyoung/YUNGs-API`; redirected),
+`Keksuccino/Konkrete`, `TwelveIterations/Balm`. **This was done before any relevance judgment and before any test-split
+result** (no test number has been computed or viewed; B0/B1 ran on dev only). The earlier note that "Placebo/Balm/
+ResourcefulLib" would be swapped in was never sent by the human and is void.
+
+**Culprits still not covered by the corpus:** `simpletms` (no tracker), `cobblemonraiddens` (no tracker),
+`sophisticatedcore` (no tracker; only `SophisticatedStorage` is in the corpus), `ftbquests` (not on GitHub),
+`cobblemon` (GitLab). Scenarios with these culprits are expected to end up with `support_search = "none_found"`
+(abstention recall).
+
+**Small side effects of re-running the fetch:** two existing GitHub docs (FerriteCore #189, KotlinForForge #85) were
+re-redacted with the improved redactor (it now catches the comma-separated launcher args), so their text changed and
+their chunks were re-embedded; two newer AE2 release notes were added because the repo published them since the first
+fetch. Existing docs were otherwise untouched. Fewer than 30 issues were kept for some new repos
+(IronFurnacesNeoForge 6, TrashCans 17, Konkrete 11, YUNGs-API 29): the maintainer-reply filter and the small trackers.

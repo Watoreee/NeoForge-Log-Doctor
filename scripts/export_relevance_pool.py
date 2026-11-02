@@ -151,6 +151,10 @@ def sheet_markdown(num: int, sid: str, sc: dict) -> str:
         f"- **Documents to judge:** {len(sc['docs'])}",
         "",
         "Judge the **document**, not the one chunk shown (open the URL if the excerpt does not settle it).",
+        "**Relevant** = someone with this exact crash would use it to diagnose or fix it: an issue about the same"
+        " mod with the"
+        " same kind of error, or a docs page that explains this specific error message. Generic pages that are merely"
+        " on-topic don't count.",
         "Mark `[x]` if the document helps diagnose or fix THIS failure; leave `[ ]` if not. Pool = union of the top-10 documents of"  # noqa: E501
         " six no-floor retrieval conditions, so a relevant document that none of them ranked in the top 10 is not here:"
         " add it by hand under *Added by hand* (and note how you found it).",

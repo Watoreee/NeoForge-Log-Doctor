@@ -41,6 +41,11 @@ equivalent message names: r04 (`NoClassDefFoundError` in `allthemons` for a `sim
 
 ## Relevance judging (PLAN 6.7)
 Judge the **document**, not the one chunk shown. If the shown chunk doesn't settle it, open the URL.
+
+**A document is relevant if someone with this exact crash would use it to diagnose or fix it: an issue about the same mod
+with the same kind of error, or a docs page that explains this specific error message. Generic pages that are merely
+on-topic don't count.**
+
 `relevant_doc_ids` stays `null` until judged.
 
 ## Metrics that use these labels

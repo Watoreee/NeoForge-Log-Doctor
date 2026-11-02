@@ -1,0 +1,16 @@
+{
+  "log_id": "r01_latest",
+  "scenario_id": "r01_missing_dependency_curios",
+  "source_file_type": "latest_log",
+  "culprit_mod_id": "curios",
+  "acceptable_culprits": [
+    "curios",
+    "allthearcanistgear",
+    "ars_nouveau",
+    "occultism"
+  ],
+  "category": "missing_dependency",
+  "relevant_doc_ids": null,
+  "support_search": null,
+  "notes": "disabled curios in CurseForge"
+}

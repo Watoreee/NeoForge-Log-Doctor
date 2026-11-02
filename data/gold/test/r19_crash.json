@@ -1,0 +1,13 @@
+{
+  "log_id": "r19_crash",
+  "scenario_id": "r19_version_mismatch_konkrete",
+  "source_file_type": "crash_report",
+  "culprit_mod_id": "konkrete",
+  "acceptable_culprits": [
+    "konkrete"
+  ],
+  "category": "version_mismatch",
+  "relevant_doc_ids": null,
+  "support_search": null,
+  "notes": "replaced Konkrete with the Minecraft 1.21.11 build (konkrete_neoforge_1.9.15_MC_1.21.11.jar) in a 1.21.1 pack (1.21.11 vs 1.21.1 is easy to misread)"
+}

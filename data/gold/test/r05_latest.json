@@ -1,0 +1,15 @@
+{
+  "log_id": "r05_latest",
+  "scenario_id": "r05_missing_dependency_kotlinforforge",
+  "source_file_type": "latest_log",
+  "culprit_mod_id": "kotlinforforge",
+  "acceptable_culprits": [
+    "kotlinforforge",
+    "cobbleworkers",
+    "torchmastercobblemoncompat"
+  ],
+  "category": "missing_dependency",
+  "relevant_doc_ids": null,
+  "support_search": null,
+  "notes": "disabled KotlinForForge in CurseForge; Cobblemon and its dependents then failed to load"
+}

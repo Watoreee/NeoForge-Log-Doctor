@@ -1,0 +1,13 @@
+{
+  "log_id": "r09_crash",
+  "scenario_id": "r09_version_mismatch_trashcans",
+  "source_file_type": "crash_report",
+  "culprit_mod_id": "trashcans",
+  "acceptable_culprits": [
+    "trashcans"
+  ],
+  "category": "version_mismatch",
+  "relevant_doc_ids": null,
+  "support_search": null,
+  "notes": "updated Trash Cans to the latest build (trashcans-1.1.2a-neoforge-mc26.3.jar), which targets Minecraft 26.x"
+}

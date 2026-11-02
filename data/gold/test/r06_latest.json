@@ -1,0 +1,13 @@
+{
+  "log_id": "r06_latest",
+  "scenario_id": "r06_version_mismatch_ironfurnaces",
+  "source_file_type": "latest_log",
+  "culprit_mod_id": "ironfurnaces",
+  "acceptable_culprits": [
+    "ironfurnaces"
+  ],
+  "category": "version_mismatch",
+  "relevant_doc_ids": null,
+  "support_search": null,
+  "notes": "updated Iron Furnaces to the 26.1 build (ironfurnaces-neoforge-26.1.2-4.4.2.jar) in a 1.21.1 pack"
+}

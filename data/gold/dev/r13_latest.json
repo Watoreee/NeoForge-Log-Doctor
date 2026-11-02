@@ -1,0 +1,13 @@
+{
+  "log_id": "r13_latest",
+  "scenario_id": "r13_missing_dependency_extendedae",
+  "source_file_type": "latest_log",
+  "culprit_mod_id": "extendedae",
+  "acceptable_culprits": [
+    "extendedae"
+  ],
+  "category": "missing_dependency",
+  "relevant_doc_ids": null,
+  "support_search": null,
+  "notes": "ExtendedAE and MEGA Cells were left auto-disabled after the AE2 run; the pack's KubeJS startup script ExtendedAE/InfinityCells.js failed with Unknown type 'kubejs:custom_infinity_cell'"
+}

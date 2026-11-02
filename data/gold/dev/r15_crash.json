@@ -1,0 +1,13 @@
+{
+  "log_id": "r15_crash",
+  "scenario_id": "r15_version_mismatch_aquaculture",
+  "source_file_type": "crash_report",
+  "culprit_mod_id": "aquaculture",
+  "acceptable_culprits": [
+    "aquaculture"
+  ],
+  "category": "version_mismatch",
+  "relevant_doc_ids": null,
+  "support_search": null,
+  "notes": "updated Aquaculture 2 to the 26.1 build (Aquaculture-26.1.2-2.9.3.jar) in a 1.21.1 pack; it requires neoforge 26.1.0.0 or above, pack has 21.1.224"
+}

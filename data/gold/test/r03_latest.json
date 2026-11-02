@@ -1,0 +1,16 @@
+{
+  "log_id": "r03_latest",
+  "scenario_id": "r03_missing_dependency_architectury",
+  "source_file_type": "latest_log",
+  "culprit_mod_id": "architectury",
+  "acceptable_culprits": [
+    "architectury",
+    "cobblemon_battle_tower",
+    "fightorflight",
+    "wild_battle_api"
+  ],
+  "category": "missing_dependency",
+  "relevant_doc_ids": null,
+  "support_search": null,
+  "notes": "disabled Architectury API in CurseForge; rctapi was auto-disabled as its dependent"
+}

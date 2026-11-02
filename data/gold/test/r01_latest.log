@@ -1,0 +1,1034 @@
+[17:37:04] [main/INFO]: ModLauncher running: args [--username, <player>, --version, neoforge-21.1.224, --gameDir, C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test, --assetsDir, C:\Users\<user>\curseforge\minecraft\Install\assets, --assetIndex, 17, --uuid, <token>, --accessToken, <token>, --clientId, <token>, --xuid, <token>, --userType, msa, --versionType, release, --width, 1024, --height, 768, --quickPlayPath, C:\Users\<user>\curseforge\minecraft\Install\quickPlay\java\1793183822061.json, --fml.neoForgeVersion, 21.1.224, --fml.fmlVersion, 4.0.42, --fml.mcVersion, 1.21.1, --fml.neoFormVersion, 20240808.144430, --launchTarget, forgeclient]
+[17:37:04] [main/INFO]: JVM identified as Microsoft OpenJDK 64-Bit Server VM 21.0.7+6-LTS
+[17:37:04] [main/INFO]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.7 by Microsoft; OS Windows 11 arch amd64 version 10.0
+[17:37:04] [main/WARN]: ****************************** Found dependency overrides ******************************
+[17:37:04] [main/WARN]: Dependency overrides for mod 'rgs': adding explicit AFTER ordering against 'rctmod'
+[17:37:04] [main/WARN]: ****************************************************************************************
+[17:37:29] [main/INFO]: Loading ImmediateWindowProvider fmlearlywindow
+[17:37:29] [main/INFO]: Trying GL version 4.6
+[17:37:29] [main/INFO]: Requested GL version 4.6 got version 4.6
+[17:37:30] [main/WARN]: Stream injection failed; legacy loggers may retain blocking behavior.
+[17:37:30] [main/INFO]: Launching CrashAssistantApp (CrashAssistant-neoforge-1.20.6-1.21.4-1.11.6.jar)
+[17:37:30] [pool-2-thread-1/INFO]: GL info: NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2 GL version 4.6.0 NVIDIA 621.01, NVIDIA Corporation
+[17:37:30] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/<user>/curseforge/minecraft/Install/libraries/net/fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/sponge-mixin-0.15.2+mixin.0.8.7.jar%23121!/ Service=ModLauncher Env=CLIENT
+[17:37:31] [main/WARN]: ****************************** Found dependency overrides ******************************
+[17:37:31] [main/WARN]: Dependency overrides for mod 'rgs': adding explicit AFTER ordering against 'rctmod'
+[17:37:31] [main/WARN]: ****************************************************************************************
+[17:37:31] [main/INFO]: Found mod file "client-1.21.1-20240808.144430-srg.jar" [locator: production client provider +net.neoforged:neoforge:21.1.224:client]
+[17:37:31] [main/INFO]: Found mod file "neoforge-21.1.224-universal.jar" [locator: PathBasedLocator[name=neoforge, paths=[C:\Users\<user>\curseforge\minecraft\Install\libraries\net\neoforged\neoforge\21.1.224\neoforge-21.1.224-universal.jar]], reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "[1.21.1] SecurityCraft v1.10.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "accelerated-decay-neoforge-21.0.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "accessories-neoforge-1.1.0-beta.53+1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "actuallyadditions-1.3.25+mc1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "additional_lights-neoforge-1.21-2.1.10.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "AdditionalEnchantedMiner-1.21.1-neoforge-21.1.152.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "AdvancedAE-1.6.11-1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "ae2ct-1.21.1-1.1.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "ae2importexportcard-1.21.1-1.4.3.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "ae2jeiintegration-1.2.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "AE2NetworkAnalyzer-1.21-2.1.5-neoforge.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "ae2wtlib-19.4.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "aeinfinitybooster-neoforge-1.21.1-1.0.0.54.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "aether-1.21.1-1.5.10-neoforge.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "AI-Improvements-1.21-0.5.3.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "AkashicTome-1.8-30.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "allthearcanistgear-1.21.1-21.3.2.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "allthecompressed-1.21.1-4.4.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "alltheleaks-1.1.7+1.21.1-neoforge.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "allthemodium-3.0.0_mc_1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "allthemons-0.0.46.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "alltheores-3.2.0_neoforge_1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "allthetweaks-1.21.1-2.9.2.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "almostunified-neoforge-1.21.1-1.4.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "amendments-1.21-2.0.15-neoforge.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "Apotheosis-1.21.1-8.5.2.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "ApothicAttributes-1.21.1-2.9.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "ApothicEnchanting-1.21.1-1.5.2.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "ApothicSpawners-1.21.1-1.3.4.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "appleskin-neoforge-mc1.21-3.0.9.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "Applied-Mekanistics-1.6.3.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "appliedenergistics2-19.2.17.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "AppliedFlux-1.21-2.1.4-neoforge.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "Aquaculture-1.21.1-2.7.19.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "architectury-13.0.8-neoforge.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "ars_creo-1.21.1-5.2.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "ars_elemancy-1.21.1-1.16.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "ars_elemental-1.21.1-0.7.9_beta.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "ars_nouveau-1.21.1-5.11.3.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "ars_ocultas-1.21.1-2.4.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "ars_polymorphia-1.0.3.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "ars_technica-1.21.1-2.7.6.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "ars_unification-1.2.18.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "arseng-2.1.1-beta.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "artifacts-neoforge-13.2.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "athena-neoforge-1.21-4.0.2.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "attributefix-neoforge-1.21.1-21.1.3.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "balm-neoforge-1.21.1-21.0.56.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "bellsandwhistles-0.4.7-1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "berrypouch-neoforge-1.21.1-0.5.4-beta.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "better-compatability-checker-neoforge-21.1.8.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "BetterAdvancements-NeoForge-1.21.1-0.4.3.21.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "blueflame-1.21.1-1.1.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "bookshelf-neoforge-1.21.1-21.1.81.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "botanypots-neoforge-1.21.1-21.1.41.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "botanypotsmystical-neoforge-1.21.1-21.1.11.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "botanytrees-neoforge-1.21.1-21.1.3.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "BrandonsCore-1.21.1-3.2.1.309.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "BridgingMod-2.6.2+1.21.1.neoforge-release.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "buildinggadgets2-1.3.9.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "bwncr-neoforge-1.21.1-3.20.3.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "caelus-neoforge-7.0.1+1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "camol-1.21.1-0.3.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "charginggadgets-1.14.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "chipped-neoforge-1.21.1-4.0.2.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "chisel-neoforge-2.0.0+mc1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "chromacarvings-1.21.1-0.2.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "cleanswing-1.9.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "cloth-config-15.0.140-neoforge.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "CloudGlass-1.21.1-1.0.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:31] [main/INFO]: Found mod file "Clumps-neoforge-1.21.1-19.0.0.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "CobbleFurnies-neoforge-1.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "cobblegengalore-1.21.1-0.2.8.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "cobbleloots-neoforge-2.3.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "cobblemon-battle-extras-neoforge-1.12.42.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "Cobblemon-neoforge-1.7.3+1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "Cobblemon-Utility+-neoforge-1.7.3.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "cobblemon_battle_tower-neoforge-1.10.19.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "cobblemonextrastructures-1.21.1-1.2.1-neoforge.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "cobblemonraiddens-neoforge-0.10.0+1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "cobblenav-neoforge-2.3.2.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "Cobblepedia-NeoForge-0.7.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "cobbleworkers-neoforge-1.8.0+1.7.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "cobweb-neoforge-1.21-1.4.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "CodeChickenLib-1.21.1-4.6.1.526.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "colorfulhearts-neoforge-1.21.1-10.5.9.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "colorwheel-neoforge-1.2.3+mc1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "colorwheel_patcher-neoforge-1.0.4+mc1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "comforts-neoforge-9.0.5+1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "commoncapabilities-1.21.1-neoforge-2.11.4.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "compactmachines-neoforge-7.0.81.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "complete-cobblemon-collection-myths-and-legends-compat-2.0.1 (1).jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "connectedglass-1.1.14-neoforge-mc1.21.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "connectivity-1.21.1-7.6.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "ConstructionSticks-1.21.1-1.3.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "Controlling-neoforge-1.21.1-19.0.5.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "cookingforblockheads-neoforge-1.21.1-21.1.20.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "cosmeticarmorreworked-1.21.1-v1-neoforge.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "crafting_on_a_stick-1.21.0.4.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "craftingtweaks-neoforge-1.21.1-21.1.7.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "crashutilities-9.0.4.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "create-1.21.1-6.0.9.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "create-dragons-plus-1.8.7.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "create-enchantment-industry-2.3.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "create_aquatic_ambitions-1.21.1-2.0.2.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "create_hypertube-0.4.0-NEOFORGE.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "createaddition-1.5.10.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "createcobblemonballsoverhaul-0.0.4.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "CreeperOverhaul-neoforge-1.21.1-4.0.6.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "cristellib-neoforge-1.21.1-3.0.3.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "cryonicconfig-neoforge-1.0.0+mc1.21.11.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "crystalix-3.0.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "CTM-1.21-1.2.1+3.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "Cucumber-1.21.1-8.0.15.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "cupboard-1.21-3.5.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "cyclopscore-1.21.1-neoforge-1.29.0-962.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "darkmodeeverywhere-1.21-1.3.5.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "deeperdarker-neoforge-1.21.1-1.3.5.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "defaultoptions-neoforge-1.21.1-21.1.5.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "deimos-1.21.1-neoforge-2.5.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "DimStorage-1.21.1-9.1.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "disenchanting_table-merged-1.21.1-5.0.2.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "Draconic-Evolution-1.21.1-3.1.4.632.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "drippyloadingscreen_neoforge_3.1.0_MC_1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "dummmmmmy-1.21-2.0.11-neoforge.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "DungeonsArise-1.21.1-2.1.68-release.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "dyenamics-1.21.1-3.4.2.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "dyenamicsandfriends-1.21.1-2.2.2.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "easy-villagers-neoforge-1.21.1-1.1.41.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "EdivadLib-1.21-3.0.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "elevatorid-neoforge-1.21.1-1.11.4.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "enchdesc-neoforge-1.21.1-21.1.9.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "enderio-8.2.5-beta.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "endermanoverhaul-neoforge-1.21.1-2.0.3.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "epitaphs-1.0.14_neoforge_1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "eternalstarlight-0.6.4+1.21.1+neoforge.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "EuphoriaPatcher-1.8.6-r5.7.1-neoforge.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "everythingcopper-1.21.1-2.4.5.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "expandedae-2.1.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "experiencelib-1.21.1-1.2.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "ExplorersCompass-1.21.1-3.0.3-neoforge.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "ExtendedAE-1.21-2.2.31-neoforge.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "ExtremeReactors2-1.21.1-2.4.28.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "ExtremeSoundMuffler-3.55_NeoForge-1.21.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "factory_blocks-neoforge-1.4.0+mc1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "fancymenu_neoforge_3.8.1_MC_1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "FarmersDelight-1.21.1-1.2.11.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "farmingforblockheads-neoforge-1.21.1-21.1.12.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "FastFurnace-1.21.1-9.0.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "FastSuite-1.21.1-6.0.7.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "FastWorkbench-1.21.1-9.1.3.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "ferritecore-7.0.3-neoforge.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "fightorflight-neoforge-0.10.7.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "fireproofboats-1.21.1-1.0.4.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "flickerfix-1.21.1-6.1.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "FluxNetworks-1.21.1-8.0.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "forbidden_arcanus-2.6.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "FramedBlocks-10.5.3.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "ftb-chunks-neoforge-2101.1.14.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [CrashAssistantApp process logger/INFO]: CrashAssistantApp process successfully started.
+[17:37:32] [main/INFO]: Found mod file "ftb-essentials-neoforge-2101.1.9.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "ftb-filter-system-neoforge-21.1.4.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "ftb-jei-extras-21.1.7.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "ftb-library-neoforge-2101.1.31.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "ftb-quests-neoforge-2101.1.24.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "ftb-ranks-neoforge-2101.1.3.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "ftb-teams-neoforge-2101.1.10.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "ftb-ultimine-neoforge-2101.1.13.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "ftb-xmod-compat-neoforge-21.1.8.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "ftbquestslangsplitter-1.0.5.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "fuelgoeshere-1.21.1-1.2.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "functionalstorage-1.21.1-1.5.5.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "fusion-1.2.12-neoforge-mc1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "fzzy_config-0.7.6+1.21+neoforge.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "geckolib-neoforge-1.21.1-4.8.4.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "generatorgalore-1.21.1-1.6.3.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "getittogetherdrops-neoforge-1.21.5-1.4.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "Glassential-renewed-1.21.1-3.4.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "globalpacks-neoforge-1.21.1-21.0.6.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "Glodium-1.21-2.2-neoforge.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "GravitationalModulatingAdditionalUnit-1.21.1-6.4.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "guideme-21.1.15.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "handcrafted-neoforge-1.21.1-4.0.3.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "hardenedarmadillos-1.21.1-0.2.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:32] [main/INFO]: Found mod file "heyberryshutup-1.21.0-2.0.4.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "HostileNeuralNetworks-1.21.1-6.3.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "imfast-NEOFORGE-1.0.2.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "ImmediatelyFast-NeoForge-1.6.10+1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "Immersive-Energistics-1.1.0-beta.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "ImmersiveEngineering-1.21.1-12.4.2-194.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "incontrol-1.21-10.2.6.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "industrial-foregoing-souls-1.21.1-1.10.7.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "industrialforegoing-1.21-3.6.38.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "integratedcrafting-1.21.1-neoforge-1.4.5-539.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "integrateddynamics-1.21.1-neoforge-1.32.3.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "integratedscripting-1.21.1-neoforge-1.0.21-339.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "integratedterminals-1.21.1-neoforge-1.6.28.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "integratedtunnels-1.21.1-neoforge-1.9.4-606.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "invtweaks-1.21.1-1.3.2.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "iris-neoforge-1.8.12+mc1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "ironfurnaces-neoforge-1.21.1-4.3.2.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "IronJetpacks-1.21.1-8.0.11.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "itemcollectors-1.1.10-neoforge-mc1.21.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "Jade-1.21.1-NeoForge-15.10.5.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "jearchaeology-1.21.1-1.2.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "jei-1.21.1-neoforge-19.27.0.340.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "journeymap-neoforge-1.21.1-6.0.0-beta.58.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "jumpboat-1.21.0-1.0.5.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "justdirethings-1.5.7.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "justenoughbreeding-neoforge-1.21-1.21.1-1.6.2.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "JustEnoughMekanismMultiblocks-1.21.1-7.14.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "JustEnoughProfessions-neoforge-1.21.1-4.0.4.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "justzoom_neoforge_2.1.0_MC_1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "keybindbundles-1.4.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "konkrete_neoforge_1.9.9_MC_1.21.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found library file "kotlinforforge-5.11.0-all.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "kubejs-neoforge-2101.7.2-build.348.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "kubejstweaks-1.0.6.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "laserbridges-1.21.1-neoforge-5.3.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "laserio-1.9.11.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "lionfishapi-2.6.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "lithostitched-1.6.5-neoforge-21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "little-big-redstone-1.5.2-beta-1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "lmft-1.1.1+1.21.9-neoforge.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "lootr-neoforge-1.21.1-1.11.37.118.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "luminax-1.3.1_neoforge_1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "mcjtylib-1.21-9.0.20.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "Measurements-neoforge-1.21.1-3.0.3.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "mega_showdown-neoforge-1.7.3+1.7.3+1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "megacells-4.10.2.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "Mekanism-1.21.1-10.7.18.84.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "mekanismcovers-1.3-BETA+1.21.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "MekanismGenerators-1.21.1-10.7.18.84.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "MekanismTools-1.21.1-10.7.18.84.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "mekanisticrouters-1.2.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "mekmm-1.21.1-1.3.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "melody_neoforge_1.0.10_MC_1.21.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "memorysettings-1.21-5.9.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "merequester-neoforge-1.21.1-1.4.2.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "mifa-neoforge-1.21.x-2.1.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "mininggadgets-1.18.6.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "mob_grinding_utils-1.1.10+mc1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "modelfix-1.21-1.10.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "modernfix-neoforge-5.26.1+mc1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "modonomicon-1.21.1-neoforge-1.120.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "modular-routers-13.2.4+mc1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "ModularBees-1.21.1-2.11-neoforge.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "monolib-neoforge-1.21.1-2.1.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "moonlight-1.21-2.29.29-neoforge.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "MoreCobblemonTweaks-neoforge-1.3.3.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "moredragoneggs-5.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "moreoverlays-1.24.2-mc1.21.1-neoforge.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "morered-1.21.1-6.0.0.3.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "MouseTweaks-neoforge-mc1.21-2.26.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "MysticalAgradditions-1.21.1-8.0.13.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "MysticalAgriculture-1.21.1-8.0.24.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "MysticalCustomization-1.21.1-6.0.2.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "NaturesAura-41.9.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "NaturesCompass-1.21.1-3.0.3-neoforge.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "NeoAuth-1.21.1-1.0.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "netherportalfix-neoforge-1.21.1-21.1.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "NoChatReports-NEOFORGE-1.21.1-v2.9.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "not_enough_glyphs-1.21.1-4.2.9.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "novillagerdm-1.21.1-6.0.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "Nullscape_1.21.x_v1.2.14.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "observable-5.4.4.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "occultism-1.21.1-neoforge-1.207.2.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "OctoLib-NEOFORGE-0.6.1+1.21.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "oracle_index-neoforge-1.1.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "oritech-neoforge-1.21.1-1.1.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "overlapless-1.21.1-1.2.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "overloadedarmorbar-neoforge-1.21-2.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "owo-lib-neoforge-0.12.15.5-beta.1+1.21.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "Patchouli-1.21.1-93-NEOFORGE.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "pipez-neoforge-1.21.1-1.2.19.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "PKGBadges-7.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "Placebo-1.21.1-9.9.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "player-animation-lib-forge-2.0.4+1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "pneumaticcraft-repressurized-8.2.19+mc1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "pocketstorage-1.2.5+1.21.1-b3.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "polyeng-0.4.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "polylib-2100.1.0-build.183-neoforge.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "polymorph-neoforge-1.1.0+1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "ponderjs-neoforge-1.21.1-2.4.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "potionsmaster-21.1.113-1.0.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "Powah-6.2.8.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "prickle-neoforge-1.21.1-21.1.11.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "productivebees-1.21.1-13.13.3.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "productivemetalworks-1.21.1-1.15.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "productivetrees-1.21.1-0.8.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "pylons-1.21.1-5.4.2.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "Radical Gyms  Structures - RGS.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "railcraft-reborn-1.21.1-1.2.10.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "rangedpumps-1.3.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "rctapi-neoforge-1.21.1-0.15.0-beta.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "rctmod-neoforge-1.21.1-0.17.7-beta.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "reap-neoforge-1.21.1-1.1.2.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "rebind_narrator-1.21.1-neoforge-2025.12.23.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "rechiseled-1.2.4-neoforge-mc1.21.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "rechiseled_chipped-2.0-1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "rechiseledcreate-1.1.0-neoforge-mc1.21.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "redstonepen-1.21-neoforge-1.11.42.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "reliquary-1.21.1-2.0.66.1363.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "repeatable_trial_vaults-neoforge-1.21-1.0.2.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "resourcefulconfig-neoforge-1.21-3.0.11.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "resourcefullib-neoforge-1.21-3.0.12.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "restrictions-1.21-7.0.3.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "rftoolsbase-1.21-6.0.10.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "rftoolsbuilder-1.21-7.0.4.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "rftoolspower-1.21-7.0.5.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "rftoolsstorage-1.21-6.0.4.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "rftoolsutility-1.21-7.0.11.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "rhino-2101.2.7-build.81.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "RootsClassic-1.21.1-1.5.7.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "sawmill-1.21-1.7.2-neoforge.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found library file "ScalableCatsForce-NeoForge-3.7.1-build-11-with-library.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "Searchables-neoforge-1.21.1-1.0.2.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "sgearmetalworks-1.21.1-1.4.6.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "shrink-2.0.1.47-neoforge.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "silent-gear-1.21.1-neoforge-4.1.5.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "silent-lib-1.21.1-neoforge-10.5.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "silentgems-1.21.1-neoforge-5.1.3.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "simple_weather-1.0.13-hotfix.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "SimpleBackups-1.21-4.0.29.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "simplemagnets-1.1.12c-neoforge-mc1.21.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "SimpleTMs-neoforge-2.3.3.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "simplylight-1.5.3+1.21.1-b4.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "SmartBrainLib-neoforge-1.21.1-1.16.11.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "smithingtemplateviewer-1.0.4.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:33] [main/INFO]: Found mod file "sodium-neoforge-0.6.13+mc1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "solcarrot-1.21.1-1.16.6.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "sophisticatedbackpacks-1.21.1-3.25.37.1646.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "sophisticatedbackpackscreateintegration-1.21.1-0.1.5.29.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "sophisticatedcore-1.21.1-1.4.19.1639.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "sophisticatedstorage-1.21.1-1.5.35.1599.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "sophisticatedstoragecreateintegration-1.21.1-0.1.14.98.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "sophisticatedstorageinmotion-1.21.1-0.10.27.208.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "soulplied_energistics-1.0.2.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "spark-1.10.124-neoforge.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "starbunclemania-1.21.1-1.5.6.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "stevescarts-1.21-1.2.18-neoforge.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "Super Factory Manager (SFM)-MC1.21.1-4.32.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "supermartijn642configlib-1.1.8-neoforge-mc1.21.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "supermartijn642corelib-1.1.21-neoforge-mc1.21.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "supplementaries-1.21-3.5.33-neoforge.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "sussysniffers-1.21.1-0.1.3.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "tempad-1.21.1-3.0.4-all.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "Terralith_1.21.x_v2.5.8.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "tesseract-api-neoforge-1.11.10-1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "the_bumblezone-7.13.1+1.21.1-neoforge.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "The_Undergarden-1.21.1-0.9.6.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "theurgy-1.21.1-neoforge-1.71.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "theurgy_kubejs-1.21.1-neoforge-1.5.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "tiab-neoforge-6.5.4.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "titanium-1.21-4.0.42.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "ToastControl-1.21.1-9.0.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "torchmaster-neoforge-1.21.1-21.1.9.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "torchmastercobblemoncompat-1.6-neoforge-1.0.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "trashcans-1.0.18c-neoforge-mc1.21.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "treetap-1.21.1-0.4.5.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "trophymanager-1.21.1-2.4.3.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "UndergroundVillages-neoforge-1.21.1-4.0.3.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "utilitarian-1.21.1-0.18.2.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "valhelsia_core-neoforge-1.21.1-1.1.5.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "waystones-neoforge-1.21.1-21.1.29.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "wild_battle_api-neoforge-1.1.2.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "wirelesschargers-1.0.9a-neoforge-mc1.21.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "WitherSkeletonTweaks-1.21.1-10.1.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "xnet-1.21-7.0.6.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "xtonesreworked-1.1.1-1.21.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "yeetusexperimentus-neoforge-87.0.0.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "YungsApi-1.21.1-NeoForge-5.1.6.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "YungsBetterDungeons-1.21.1-NeoForge-5.1.4.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "YungsBetterEndIsland-1.21.1-NeoForge-3.1.2.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "YungsBetterMineshafts-1.21.1-NeoForge-5.1.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "YungsBetterStrongholds-1.21.1-NeoForge-5.1.3.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "zamega-neoforge-1.7.1.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "ZeroCore2-1.21.1-2.4.21.jar" [locator: {mods folder locator at C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods}, reader: mod manifest]
+[17:37:34] [main/INFO]: Found mod file "crash_assistant-neoforge.jar" [parent: , locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/WARN]: Attempted to select a dependency jar for JarJar which was passed in as source: cloth_config. Using Mod File: C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods\cloth-config-15.0.140-neoforge.jar
+[17:37:35] [main/WARN]: Attempted to select a dependency jar for JarJar which was passed in as source: athena. Using Mod File: C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods\athena-neoforge-1.21-4.0.2.jar
+[17:37:35] [main/WARN]: Attempted to select a dependency jar for JarJar which was passed in as source: accessories. Using Mod File: C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods\accessories-neoforge-1.1.0-beta.53+1.21.1.jar
+[17:37:35] [main/WARN]: Attempted to select a dependency jar for JarJar which was passed in as source: resourcefullib. Using Mod File: C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\mods\resourcefullib-neoforge-1.21-3.0.12.jar
+[17:37:35] [main/INFO]: Found 101 dependencies adding them to mods collection
+[17:37:35] [main/INFO]: Found gamelibrary file "Quack-0.4.10.115.jar" [parent: CodeChickenLib-1.21.1-4.6.1.526.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found library file "jsoup-1.17.2.jar" [parent: oracle_index-neoforge-1.1.1.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found mod file "kuma-api-neoforge-21.0.7+1.21.jar" [parent: balm-neoforge-1.21.1-21.0.56.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found mod file "fabric-renderer-api-v1-3.4.0+acb05a3919.jar" [parent: iris-neoforge-1.8.12+mc1.21.1.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found library file "BlockModelSplitter-2.0.1.jar" [parent: ImmersiveEngineering-1.21.1-12.4.2-194.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found library file "api-0.31.1.jar" [parent: oracle_index-neoforge-1.1.1.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found mod file "AdditionalEntityAttributes-2.0.0+1.21.1-neoforge.jar" [parent: allthearcanistgear-1.21.1-21.3.2.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found mod file "sauce-1.21.1-0.0.29.73.jar" [parent: ars_elemancy-1.21.1-1.16.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found mod file "ponder-neoforge-1.0.81+mc1.21.1.jar" [parent: productivemetalworks-1.21.1-1.15.0.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found library file "yumi-commons-collections-1.0.0-beta.4.jar" [parent: lambdynamiclights-api-4.5.1+1.21.1-mojmap.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found mod file "com.enderio.endercore-8.2.5-beta.jar" [parent: enderio-8.2.5-beta.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found gamelibrary file "core-0.2.32.jar" [parent: compactmachines-neoforge-7.0.81.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found library file "netty-0.1.4.1.jar" [parent: owo-lib-neoforge-0.12.15.5-beta.1+1.21.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found library file "endec-0.1.8.1.jar" [parent: owo-lib-neoforge-0.12.15.5-beta.1+1.21.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found library file "kotlinx-coroutines-core-jvm-1.10.2.jar" [parent: kotlinforforge-5.11.0-all.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found mod file "fabric-block-view-api-v2-1.0.10+9afaaf8c19.jar" [parent: iris-neoforge-1.8.12+mc1.21.1.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found library file "yumi-commons-event-1.0.0-beta.4.jar" [parent: lambdynamiclights-api-4.5.1+1.21.1-mojmap.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found mod file "nuggets-neoforge-1.21.1-1.1.0.48.jar" [parent: ars_nouveau-1.21.1-5.11.3.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found library file "kotlin-stdlib-jdk7-2.3.0.jar" [parent: kotlinforforge-5.11.0-all.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found library file "kotlin-stdlib-jdk8-2.3.0.jar" [parent: kotlinforforge-5.11.0-all.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found gamelibrary file "DualCodecs-0.1.2.jar" [parent: ImmersiveEngineering-1.21.1-12.4.2-194.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found mod file "GrandPower-3.0.2.jar" [parent: oritech-neoforge-1.21.1-1.1.0.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found gamelibrary file "levels-0.2.32.jar" [parent: compactmachines-neoforge-7.0.81.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found library file "kotlinx-serialization-json-jvm-1.9.0.jar" [parent: kotlinforforge-5.11.0-all.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found library file "bytecodecs-1.1.2.jar" [parent: resourcefullib-neoforge-1.21-3.0.12.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found mod file "common-storage-lib-data-neoforge-1.21.1-0.0.7.jar" [parent: tempad-1.21.1-3.0.4-all.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found library file "exp4j-0.4.8.jar" [parent: oracle_index-neoforge-1.1.1.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found library file "snakeyaml-2.2.jar" [parent: OctoLib-NEOFORGE-0.6.1+1.21.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found gamelibrary file "mixinextras-neoforge-0.5.3.jar" [parent: neoforge-21.1.224-universal.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found library file "commonmark-ext-yaml-front-matter-0.27.1.jar" [parent: oracle_index-neoforge-1.1.1.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found library file "yumi-commons-core-1.0.0-beta.4.jar" [parent: lambdynamiclights-api-4.5.1+1.21.1-mojmap.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found mod file "olympus-neoforge-1.21-1.0.18.jar" [parent: tempad-1.21.1-3.0.4-all.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found library file "commonmark-ext-ins-0.27.1.jar" [parent: modonomicon-1.21.1-neoforge-1.120.1.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found mod file "com.enderio.enderio-modded-conduits-8.2.5-beta.jar" [parent: enderio-8.2.5-beta.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found library file "imageio-metadata-3.12.0.jar" [parent: yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found library file "jcpp-1.4.14.jar" [parent: iris-neoforge-1.8.12+mc1.21.1.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found library file "kotlin-stdlib-2.3.0.jar" [parent: kotlinforforge-5.11.0-all.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found library file "tokenizers-0.31.1.jar" [parent: oracle_index-neoforge-1.1.1.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found library file "tomlkt-jvm-0.3.7.jar" [parent: fzzy_config-0.7.6+1.21+neoforge.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found library file "MixinSquared-0.3.7-beta.1.jar" [parent: mixinsquared-neoforge-0.3.7-beta.1.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found library file "resourceful-cosmetics-4j-1.0.3.jar" [parent: CreeperOverhaul-neoforge-1.21.1-4.0.6.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found mod file "cumulus_menus-1.21.1-2.0.7-neoforge.jar" [parent: aether-1.21.1-1.5.10-neoforge.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found library file "commonmark-0.27.1.jar" [parent: oracle_index-neoforge-1.1.1.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found gamelibrary file "rendering-0.2.32.jar" [parent: compactmachines-neoforge-7.0.81.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found library file "langchain4j-1.0.0.jar" [parent: oracle_index-neoforge-1.1.1.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found library file "common-io-3.12.0.jar" [parent: yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found gamelibrary file "dev.compactmods.compactmachines.core-api-7.0.81.jar" [parent: compactmachines-neoforge-7.0.81.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found gamelibrary file "mixinsquared-forge-0.1.1.jar" [parent: supplementaries-1.21-3.5.33-neoforge.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found mod file "conditional-mixin-neoforge-0.6.4.jar" [parent: create-dragons-plus-1.8.7.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found mod file "fabric-rendering-data-attachment-v1-0.3.48+73761d2e19.jar" [parent: iris-neoforge-1.8.12+mc1.21.1.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found library file "imageio-webp-3.12.0.jar" [parent: yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found mod file "nitrogen_internals-1.21.1-1.1.25-neoforge.jar" [parent: aether-1.21.1-1.5.10-neoforge.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found library file "kotlinx-serialization-core-jvm-1.9.0.jar" [parent: kotlinforforge-5.11.0-all.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found gamelibrary file "Registrate-MC1.21-1.3.0+67.jar" [parent: create-1.21.1-6.0.9.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found library file "japng-0.5.3.jar" [parent: fancymenu_neoforge_3.8.1_MC_1.21.1.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found mod file "infiniverse-568341-5486311.jar" [parent: ars_nouveau-1.21.1-5.11.3.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found mod file "modder_name_lib-1.21.1-neoforge-2025.12.23.jar" [parent: rebind_narrator-1.21.1-neoforge-2025.12.23.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found mod file "journeymap-api-neoforge-2.0.0-1.21.1-SNAPSHOT.jar" [parent: journeymap-neoforge-1.21.1-6.0.0-beta.58.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found library file "imageio-core-3.12.0.jar" [parent: yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found library file "langchain4j-core-1.0.0.jar" [parent: oracle_index-neoforge-1.1.1.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found library file "commonmark-ext-gfm-strikethrough-0.27.1.jar" [parent: modonomicon-1.21.1-neoforge-1.120.1.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found library file "langchain4j-embeddings-all-minilm-l6-v2-q-1.0.0-beta5.jar" [parent: oracle_index-neoforge-1.1.1.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found library file "jankson-0.1.5.1.jar" [parent: owo-lib-neoforge-0.12.15.5-beta.1+1.21.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found mod file "de.mari_023.ae2wtlib_api-19.4.1.jar" [parent: ae2wtlib-19.4.1.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found library file "net.neoforged.neoforge-coremods-21.1.224.jar" [parent: neoforge-21.1.224-universal.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found mod file "productivelib-1.21.1-0.2.0.jar" [parent: productivetrees-1.21.1-0.8.1.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found library file "onnxruntime-1.20.0.jar" [parent: oracle_index-neoforge-1.1.1.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found mod file "common-networking-neoforge-1.0.20-1.21.1.jar" [parent: journeymap-neoforge-1.21.1-6.0.0-beta.58.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found gamelibrary file "ui-0.2.32.jar" [parent: compactmachines-neoforge-7.0.81.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found mod file "resourcefullibkt-neoforge-1.21-2.0.2.jar" [parent: tempad-1.21.1-3.0.4-all.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found library file "yabn-1.0.3.jar" [parent: resourcefullib-neoforge-1.21-3.0.12.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found library file "langchain4j-embeddings-1.0.0-beta5.jar" [parent: oracle_index-neoforge-1.1.1.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found gamelibrary file "mixinsquared-neoforge-0.3.7-beta.1.jar" [parent: allthetweaks-1.21.1-2.9.2.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found library file "net.caffeinemc.sodium-neoforge-0.6.13+mc1.21.1-service.jar" [parent: sodium-neoforge-0.6.13+mc1.21.1.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found library file "kotlinx-coroutines-jdk8-1.10.2.jar" [parent: kotlinforforge-5.11.0-all.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found gamelibrary file "GraphLib3-3.0.5.jar" [parent: enderio-8.2.5-beta.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found library file "animated-gif-lib-for-java-animated-gif-lib-1.7.jar" [parent: kubejs-neoforge-2101.7.2-build.348.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found library file "common-image-3.12.0.jar" [parent: yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found library file "jankson-1.2.3.jar" [parent: fzzy_config-0.7.6+1.21+neoforge.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found library file "gson-0.1.5.1.jar" [parent: owo-lib-neoforge-0.12.15.5-beta.1+1.21.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found library file "feather-0.1.8.jar" [parent: compactmachines-neoforge-7.0.81.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found mod file "fabric-api-base-0.4.42+d1308dedd1.jar" [parent: owo-lib-neoforge-0.12.15.5-beta.1+1.21.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found library file "pngj-2.1.0.jar" [parent: journeymap-neoforge-1.21.1-6.0.0-beta.58.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found library file "opennlp-tools-2.5.4.jar" [parent: oracle_index-neoforge-1.1.1.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found library file "thedarkcolour.kfflang-5.11.0.jar" [parent: kotlinforforge-5.11.0-all.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found mod file "spectrelib-neoforge-0.17.2+1.21.jar" [parent: comforts-neoforge-9.0.5+1.21.1.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found gamelibrary file "thedarkcolour.kfflib-5.11.0.jar" [parent: kotlinforforge-5.11.0-all.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found mod file "thedarkcolour.kffmod-5.11.0.jar" [parent: kotlinforforge-5.11.0-all.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found library file "gson-0.2.1.jar" [parent: yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found library file "kotlin-reflect-2.3.0.jar" [parent: kotlinforforge-5.11.0-all.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found mod file "flywheel-neoforge-1.21.1-1.0.6.jar" [parent: create-1.21.1-6.0.9.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found gamelibrary file "spatial-0.2.1.jar" [parent: compactmachines-neoforge-7.0.81.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found library file "glsl-transformer-2.0.1.jar" [parent: iris-neoforge-1.8.12+mc1.21.1.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found library file "jnanoid-2.0.0.jar" [parent: compactmachines-neoforge-7.0.81.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found library file "json-0.2.1.jar" [parent: yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found mod file "ae2addonlib-1.0.3-1.21.1.jar" [parent: AdvancedAE-1.6.11-1.21.1.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found mod file "lambdynamiclights-api-4.5.1+1.21.1-mojmap.jar" [parent: ars_nouveau-1.21.1-5.11.3.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found library file "Reflect-1.6.1+curseforge.jar" [parent: ImmediatelyFast-NeoForge-1.6.10+1.21.1.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found mod file "expandability-neoforge-12.0.0.jar" [parent: artifacts-neoforge-13.2.1.jar, locator: jarinjar, reader: mod manifest]
+[17:37:35] [main/INFO]: Found library file "tiny-java-server-1.0.0-build.33.jar" [parent: kubejs-neoforge-2101.7.2-build.348.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: Found library file "common-lang-3.12.0.jar" [parent: yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar, locator: jarinjar]
+[17:37:35] [main/INFO]: 
+     Mod List:
+		Name Version (Mod Id)
+
+		Accelerated Decay 21.0.0 (accelerateddecay)
+		Accessories 1.1.0-beta.53+1.21.1 (accessories)
+		Actually Additions 1.3.25 (actuallyadditions)
+		Additional Entity Attributes 2.0.0+1.21.1 (additionalentityattributes)
+		Additional Lights 2.1.10 (additional_lights)
+		Advanced AE 1.6.11-1.21.1 (advanced_ae)
+		AE2 Import Export Card 1.21.1-1.4.3 (ae2importexportcard)
+		AE2 JEI Integration 1.2.1 (ae2jeiintegration)
+		AE2:Crafting Tree 1.21.1-1.1.1 (ae2ct)
+		AE2AddonLib 1.0.3-1.21.1 (ae2addonlib)
+		AE2NetworkAnalyzer 1.21-2.1.5-neoforge (ae2netanalyser)
+		AE2WTLib 19.4.1 (ae2wtlib)
+		AE2WTLib API 19.4.1 (ae2wtlib_api)
+		AEInfinityBooster 1.21.1-1.0.0.54 (aeinfinitybooster)
+		AI-Improvements 0.5.3 (aiimprovements)
+		Akashic Tome 1.8-30 (akashictome)
+		All The Arcanist Gear 1.21.1-21.3.2 (allthearcanistgear)
+		All The Leaks 1.1.7+1.21.1-neoforge (alltheleaks)
+		All The Mons 0.0.46 (allthemons)
+		AllTheCompressed 4.4.0 (allthecompressed)
+		Allthemodium 3.0.0 (allthemodium)
+		AllTheOres 3.2.0 (alltheores)
+		AllTheTweaks 2.9.2 (allthetweaks)
+		AlmostUnified 1.21.1-1.4.1 (almostunified)
+		Amendments 1.21-2.0.15 (amendments)
+		Apotheosis 8.5.2 (apotheosis)
+		Apothic Attributes 2.9.1 (apothic_attributes)
+		Apothic Enchanting 1.5.2 (apothic_enchanting)
+		Apothic Spawners 1.3.4 (apothic_spawners)
+		AppleSkin 3.0.9+mc1.21 (appleskin)
+		Applied Energistics 2 19.2.17 (ae2)
+		Applied Mekanistics 1.6.3 (appmek)
+		AppliedFlux 1.21-2.1.4-neoforge (appflux)
+		Aquaculture 2 2.7.19 (aquaculture)
+		Architectury 13.0.8 (architectury)
+		Ars Creo 5.2.0 (ars_creo)
+		Ars Elemancy 1.16 (ars_elemancy)
+		Ars Elemental 0.7.9_beta (ars_elemental)
+		Ars Nouveau 5.11.3 (ars_nouveau)
+		Ars Ocultas 2.4.0 (ars_ocultas)
+		Ars Polymorphia 1.0.3 (ars_polymorphia)
+		Ars Technica 2.7.6 (ars_technica)
+		Ars Unification 1.2.18 (ars_unification)
+		Ars Énergistique 2.1.1-beta (arseng)
+		Artifacts 13.2.1 (artifacts)
+		Athena 4.0.2 (athena)
+		AttributeFix 21.1.3 (attributefix)
+		Bad Wither No Cookie Reloaded 3.20.3 (bwncr)
+		Balm 21.0.56 (balm)
+		Berry Pouch 0.5.4-beta (berrypouch)
+		Better Advancements 0.4.3.21 (betteradvancements)
+		Better Compatibility Checker 21.1.8 (bcc)
+		Blue Flame Burning 1.21.1-1.1.1 (blueflame)
+		Bookshelf 21.1.81 (bookshelf)
+		BotanyPots 21.1.41 (botanypots)
+		BotanyPots-Mystical 21.1.11 (botanypotsmystical)
+		BotanyTrees 21.1.3 (botanytrees)
+		Brandon's Core 3.2.1.309 (brandonscore)
+		Bridging Mod 2.6.2+1.21.1 (bridgingmod)
+		Building Gadgets 2 1.3.9 (buildinggadgets2)
+		Caelus API 7.0.1+1.21.1 (caelus)
+		Camol 1.21.1-0.3.0 (camol)
+		Charging Gadgets 1.14.1 (charginggadgets)
+		Chipped 4.0.2 (chipped)
+		Chisel Reborn 2.0.0+mc1.21.1 (chisel)
+		Chroma Carvings 1.21.1-0.2.0 (chromacarvings)
+		Clean Swing 1.9 (cleanswing)
+		Cloth Config v15 API 15.0.140 (cloth_config)
+		Cloud Glass 1.0.1 (cloudglass)
+		Clumps 19.0.0.1 (clumps)
+		CobbleFurnies 1.0 (cobblefurnies)
+		Cobblegen Galore 1.21.1-0.2.8 (cobblegengalore)
+		Cobbleloots: Loot Balls and More! 2.3.0 (cobbleloots)
+		Cobblemon 1.7.3+1.21.1 (cobblemon)
+		Cobblemon Battle Extras 1.12.42 (cobblemon_battle_extras)
+		Cobblemon Battle Tower 1.10.19 (cobblemon_battle_tower)
+		Cobblemon Fight or Flight 0.10.7 (fightorflight)
+		Cobblemon Raid Dens 0.10.0+1.21.1 (cobblemonraiddens)
+		Cobblemon Utility+ 1.7.3 (cobblemon_utility)
+		Cobblemon: Extra Structures 1.21.1-1.2.1 (cobblemonextrastructures)
+		Cobblemon:Mega Showdown 1.7.3+1.7.3+1.21.1 (mega_showdown)
+		Cobblenav 2.3.2 (cobblenav)
+		Cobblepedia 0.7.0 (cobblepedia)
+		Cobbleworkers 1.8.0+1.7.0 (cobbleworkers)
+		Cobweb 1.4.0 (cobweb)
+		CodeChicken Lib 4.6.1.526 (codechickenlib)
+		Colorful Hearts 10.5.9 (colorfulhearts)
+		Colorwheel 1.2.3+mc1.21.1 (colorwheel)
+		Colorwheel Patcher 1.0.4+mc1.21.1 (colorwheel_patcher)
+		Comforts 9.0.5+1.21.1 (comforts)
+		Common Networking 1.0.20-1.21.1 (commonnetworking)
+		Common Storage Lib: Data 0.0.7 (common_storage_lib_data)
+		CommonCapabilities 2.11.4 (commoncapabilities)
+		Compact Machines 7.0.81 (compactmachines)
+		Complete Cobblemon Collection 2.0.1 (mr_complete_cobblemoncollectionmythsandlegendscompat)
+		conditional mixin 0.6.4 (conditional_mixin)
+		Connected Glass 1.1.14 (connectedglass)
+		ConnectedTexturesMod 1.21-1.2.1+3 (ctm)
+		Connectivity Mod 7.6 (connectivity)
+		Construction Sticks 1.3.0 (constructionstick)
+		Controlling 19.0.5 (controlling)
+		Cooking for Blockheads 21.1.20 (cookingforblockheads)
+		CosmeticArmorReworked 1.21.1-v1-neoforge (cosmeticarmorreworked)
+		Crafting On A Stick 1.21.0.4 (crafting_on_a_stick)
+		Crafting Tweaks 21.1.7 (craftingtweaks)
+		Crash Assistant 1.11.6 (crash_assistant)
+		Crash Utilities 9.0.4 (crashutilities)
+		Create 6.0.9 (create)
+		Create Aquatic Ambitions 2.0.2 (create_aquatic_ambitions)
+		Create Cobblemon Balls Overhaul 0.0.4 (createmonballsoverhaul)
+		Create Crafts & Additions 1.5.10 (createaddition)
+		Create Hypertube 0.4.0 (create_hypertube)
+		Create: Bells & Whistles 0.4.7-1.21.1 (bellsandwhistles)
+		Create: Dragons Plus 1.8.7 (create_dragons_plus)
+		Create: Enchantment Industry 2.3.0 (create_enchantment_industry)
+		Creeper Overhaul 4.0.6 (creeperoverhaul)
+		Cristel Lib 3.0.3 (cristellib)
+		Cryonic Config 1.0.0+mc1.21.11 (cryonicconfig)
+		Crystalix 3.0.0 (crystalix)
+		Cucumber Library 8.0.15 (cucumber)
+		Cumulus 2.0.7 (cumulus_menus)
+		Cupboard mod 3.5 (cupboard)
+		Cyclops Core 1.29.0 (cyclopscore)
+		Dark Mode Everywhere 1.21-1.3.5 (darkmodeeverywhere)
+		Deeper and Darker 1.3.5 (deeperdarker)
+		Default Options 21.1.5 (defaultoptions)
+		Deimos 2.5 (deimos)
+		DimStorage 9.1.1 (dimstorage)
+		Dis-Enchanting Table 5.0.2 (disenchanting_table)
+		Draconic Evolution 3.1.4.632 (draconicevolution)
+		Drippy Loading Screen 3.1.0 (drippyloadingscreen)
+		Dyenamics 1.21.1-3.4.2 (dyenamics)
+		Dyenamics and Friends 1.21.1-2.2.2 (dyenamicsandfriends)
+		Easy Villagers 1.21.1-1.1.41 (easy_villagers)
+		EdivadLib 3.0.0 (edivadlib)
+		ElevatorMod 1.21.1-1.11.4 (elevatorid)
+		EnchantmentDescriptions 21.1.9 (enchdesc)
+		Ender Core 8.2.5-beta (endercore)
+		Ender IO 8.2.5-beta (enderio)
+		Ender IO - Modded Conduits 8.2.5-beta (enderio_modded_conduits)
+		Enderman Overhaul 2.0.3 (endermanoverhaul)
+		Epitaphs 1.0.14 (epitaphs)
+		Eternal Starlight 0.6.4+1.21.1+neoforge (eternal_starlight)
+		Euphoria Patcher 1.8.6-r5.7.1-neoforge (euphoria_patcher)
+		Everything is Copper 1.21.1-2.4.5 (everythingcopper)
+		ExpandAbility 12.0.0 (expandability)
+		Expanded AE 2.1.1 (expandedae)
+		ExperienceLib 1.2.1 (experiencelib)
+		Explorer's Compass 1.21.1-3.0.3-neoforge (explorerscompass)
+		ExtendedAE 1.21-2.2.31-neoforge (extendedae)
+		Extreme Reactors 1.21.1-2.4.28 (bigreactors)
+		Extreme Sound Muffler 3.55 (extremesoundmuffler)
+		Factory Blocks 1.4.0+mc1.21.1 (factory_blocks)
+		FancyMenu 3.8.1 (fancymenu)
+		Farmer's Delight 1.2.11 (farmersdelight)
+		Farming for Blockheads 21.1.12 (farmingforblockheads)
+		Fast Suite 6.0.7 (fastsuite)
+		Fast Workbench 9.1.3 (fastbench)
+		FastFurnace 9.0.1 (fastfurnace)
+		Ferrite Core 7.0.3 (ferritecore)
+		Fireproof Boats 1.21.1-1.0.4 (fireproofboats)
+		FlickerFix 6.1.0 (flickerfix)
+		Flux Networks 8.0.0 (fluxnetworks)
+		Flywheel 1.0.6 (flywheel)
+		Forbidden Arcanus 2.6.1 (forbidden_arcanus)
+		Forgified Fabric API Base 0.4.42+d1308dedd1 (fabric_api_base)
+		Forgified Fabric BlockView API (v2) 1.0.10+9afaaf8c19 (fabric_block_view_api_v2)
+		Forgified Fabric Renderer API (v1) 3.4.0+acb05a3919 (fabric_renderer_api_v1)
+		Forgified Fabric Rendering Data Attachment (v1) 0.3.48+73761d2e19 (fabric_rendering_data_attachment_v1)
+		FramedBlocks 10.5.3 (framedblocks)
+		FTB Chunks 2101.1.14 (ftbchunks)
+		FTB Essentials 2101.1.9 (ftbessentials)
+		FTB Filter System 21.1.4 (ftbfiltersystem)
+		FTB Jei Extras 21.1.7 (ftbjeiextras)
+		FTB Library 2101.1.31 (ftblibrary)
+		FTB Quests 2101.1.24 (ftbquests)
+		FTB Quests Lang Splitter 1.0.5 (ftbquestslangsplitter)
+		FTB Ranks 2101.1.3 (ftbranks)
+		FTB Teams 2101.1.10 (ftbteams)
+		FTB Ultimine 2101.1.13 (ftbultimine)
+		FTB XMod Compat 21.1.8 (ftbxmodcompat)
+		Fuel Goes Here 1.21.1-1.2.0 (fuelgoeshere)
+		Functional Storage 1.21.1-1.5.5 (functionalstorage)
+		Fusion 1.2.12 (fusion)
+		Fzzy Config 0.7.6+1.21+neoforge (fzzy_config)
+		GeckoLib 4 4.8.4 (geckolib)
+		Generator Galore 1.21.1-1.6.3 (generatorgalore)
+		Get It Together, Drops! 1.4 (getittogetherdrops)
+		Glassential-renewed 3.4.1 (glassential)
+		Global Packs 21.0.6 (globalpacks)
+		Glodium 1.21-2.2-neoforge (glodium)
+		Grand Power 3.0.2 (grandpower)
+		Gravitational Modulating Additional Unit 6.4 (gmut)
+		GuideME 21.1.15 (guideme)
+		Handcrafted 4.0.3 (handcrafted)
+		Hardened Armadillos 1.21.1-0.2.0 (hardenedarmadillos)
+		Hey Berry! SHUT UP 1.21.0-2.0.4 (heyberryshutup)
+		Hostile Neural Networks 6.3.0 (hostilenetworks)
+		I'm Fast 1.0.2 (imfast)
+		ImmediatelyFast 1.6.10+1.21.1 (immediatelyfast)
+		Immersive Energistics 1.1.0-beta (immeng)
+		Immersive Engineering 12.4.2-194 (immersiveengineering)
+		InControl 1.21-10.2.6 (incontrol)
+		Industrial Foregoing 1.21-3.6.38 (industrialforegoing)
+		Industrial Foregoing Souls 1.10.7 (industrialforegoingsouls)
+		Infiniverse 2.0.1.0 (infiniverse)
+		IntegratedCrafting 1.4.5 (integratedcrafting)
+		IntegratedDynamics 1.32.3 (integrateddynamics)
+		IntegratedScripting 1.0.21 (integratedscripting)
+		IntegratedTerminals 1.6.28 (integratedterminals)
+		IntegratedTunnels 1.9.4 (integratedtunnels)
+		Inventory Tweaks Refoxed 1.21.1-1.3.2 (invtweaks)
+		Iris 1.8.12-snapshot+mc1.21.1-local (iris)
+		Iron Furnaces 4.3.2 (ironfurnaces)
+		Iron Jetpacks 8.0.11 (ironjetpacks)
+		Item Collectors 1.1.10 (itemcollectors)
+		Jade 15.10.5+neoforge (jade)
+		Jonn's Trophies 1.21.1-2.4.3 (trophymanager)
+		Journeymap 1.21.1-6.0.0-beta.58 (journeymap)
+		JourneyMap API 2.0.0 (journeymap_api)
+		Jumpy Boats 1.21.0-1.0.5 (jumpboat)
+		Just Dire Things 1.5.7 (justdirethings)
+		Just Enough Archaeology 1.21.1-1.2.0 (jearchaeology)
+		Just Enough Breeding 1.6.2 (justenoughbreeding)
+		Just Enough Items 19.27.0.340 (jei)
+		Just Enough Mekanism Multiblocks 7.14 (jei_mekanism_multiblocks)
+		Just Enough Professions (JEP) 4.0.4 (justenoughprofessions)
+		Just Zoom 2.1.0 (justzoom)
+		KeyBind Bundles 1.4.0 (keybindbundles)
+		Konkrete 1.9.9 (konkrete)
+		Kotlin For Forge 5.11.0 (kotlinforforge)
+		KubeJS 2101.7.2-build.348 (kubejs)
+		KubeJS Tweaks 1.0.6 (kubejstweaks)
+		KumaAPI 21.0.7 (kuma_api)
+		LambDynamicLights (API) 4.5.1+1.21.1 (lambdynlights_api)
+		Laser Bridges & Doors 5.3 (laserbridges)
+		LaserIO 1.9.11 (laserio)
+		lionfishapi 2.6 (lionfishapi)
+		Lithostitched 1.6.5 (lithostitched)
+		Little Big Redstone 1.5.2-beta-1.21.1 (little_big_redstone)
+		Load My F***ing Tags 1.1.1+1.21.9 (lmft)
+		Lootr 1.21.1-1.11.37.118 (lootr)
+		Luminax 1.3.1 (luminax)
+		McJtyLib 1.21-9.0.20 (mcjtylib)
+		ME Requester 1.21.1-1.4.2 (merequester)
+		Measurements 3.0.3 (measurements)
+		MEGA Cells 4.10.2 (megacells)
+		Mekanism 10.7.18 (mekanism)
+		Mekanism Covers 1.3-BETA+1.21 (mekanismcovers)
+		Mekanism: Generators 10.7.18 (mekanismgenerators)
+		Mekanism: MoreMachine 1.3.1 (mekmm)
+		Mekanism: Tools 10.7.18 (mekanismtools)
+		Mekanistic Routers 1.2.0 (mekanisticrouters)
+		Melody 1.0.10 (melody)
+		memorysettings mod 5.9 (memorysettings)
+		Minecraft 1.21.1 (minecraft)
+		Mining Gadgets 1.18.6 (mininggadgets)
+		MmmMmmMmmMmm 1.21-2.0.11 (dummmmmmy)
+		Mob Grinding Utils 1.1.10+mc1.21.1 (mob_grinding_utils)
+		ModderNameLib 2025.12.23 (modder_name_lib)
+		Model Gap Fix 1.21-1.10 (modelfix)
+		ModernFix 5.26.1+mc1.21.1 (modernfix)
+		Modonomicon 1.120.1 (modonomicon)
+		Modular Routers 13.2.4 (modularrouters)
+		ModularBees 1.21.1-2.11-neoforge (modularbees)
+		MonoLib 2.1.0 (monolib)
+		Moonlight Lib 1.21-2.29.29 (moonlight)
+		More Dragon Eggs 5.0 (moredragoneggs)
+		More Industrial Foregoing Addons 2.1.0 (mifa)
+		More Overlays Updated 1.24.2 (moreoverlays)
+		More Red 6.0.0.3 (morered)
+		MoreCobblemonTweaks 1.3.3 (more_cobblemon_tweaks)
+		Mouse Tweaks 2.26.1 (mousetweaks)
+		Mystical Agradditions 8.0.13 (mysticalagradditions)
+		Mystical Agriculture 8.0.24 (mysticalagriculture)
+		Mystical Customization 6.0.2 (mysticalcustomization)
+		Nature's Compass 1.21.1-3.0.2-neoforge (naturescompass)
+		NaturesAura 41.9 (naturesaura)
+		NeoAuth 1.0.1 (neo_auth)
+		NeoForge 21.1.224 (neoforge)
+		NetherPortalFix 21.1.1 (netherportalfix)
+		Nitrogen 1.1.25 (nitrogen_internals)
+		No Chat Reports 1.21.1-v2.9.1 (nochatreports)
+		No Villager Death Messages 6.0.0 (novillagerdm)
+		Not Enough Glyphs 4.2.9 (not_enough_glyphs)
+		Nuggets 1.1.0.48 (nuggets)
+		Nullscape 1.2.14 (nullscape)
+		Observable 5.4.4 (observable)
+		Occultism 1.207.2 (occultism)
+		OctoLib 0.6.1 (octolib)
+		Olympus 1.0.18 (olympus)
+		Oracle Index 1.1.1 (oracle_index)
+		Oritech 1.1.0 (oritech)
+		Overlapless 1.21.1-1.2.0 (overlapless)
+		OverloadedArmorBar 2 (overloadedarmorbar)
+		oωo 0.12.15.5-beta.1+1.21 (owo)
+		Patchouli 1.21.1-93-NEOFORGE (patchouli)
+		Pipez 1.21.1-1.2.19 (pipez)
+		PKGBadges 7.0 (pkgbadges)
+		Placebo 9.9.1 (placebo)
+		Player Animator 2.0.4+1.21.1 (playeranimator)
+		PneumaticCraft: Repressurized 8.2.19 (pneumaticcraft)
+		Pocket Storage 1.2.5 (pocketstorage)
+		PolyLib 2100.1.0-build.183 (polylib)
+		Polymorph 1.1.0+1.21.1 (polymorph)
+		Polymorphic Energistics 0.4.1 (polyeng)
+		Ponder 1.0.81+mc1.21.1 (ponder)
+		PonderJS 1.21.1-2.4.0 (ponderjs)
+		PotionsMaster 1.0.1 (potionsmaster)
+		Powah 6.2.8 (powah)
+		PrickleMC 21.1.11 (prickle)
+		Productive Bees 1.21.1-13.13.3 (productivebees)
+		Productive Lib 1.21.1-0.2.0 (productivelib)
+		Productive Metalworks 1.21.1-1.15.0 (productivemetalworks)
+		Productive Trees 1.21.1-0.8.1 (productivetrees)
+		Pylons 5.4.2 (pylons)
+		QuarryPlus 21.1.152 (quarryplus)
+		Radical Cobblemon Trainers 0.17.7-beta (rctmod)
+		Radical Cobblemon Trainers API 0.15.0-beta (rctapi)
+		Radical Gyms & Structures - RGS 1.21 (rgs)
+		Railcraft Reborn 1.2.10 (railcraft)
+		Ranged Pumps 1.3.0 (rangedpumps)
+		Reap Mod 1.21.1-1.1.2 (reap)
+		Rebind Narrator 2025.12.23 (rebind_narrator)
+		Rechiseled 1.2.4 (rechiseled)
+		Rechiseled: Chipped 1.3 (rechiseled_chipped)
+		Rechiseled: Create 1.1.0 (rechiseledcreate)
+		Redstone Pen 1.11.42 (redstonepen)
+		Reliquary Reincarnations 2.0.66 (reliquary)
+		Repeatable Trial Vaults 1.0.2 (repeatable_trial_vaults)
+		Resourceful Lib 3.0.12 (resourcefullib)
+		Resourceful Lib Kotlin 2.0.2 (resourcefullibkt)
+		Resourcefulconfig 3.0.11 (resourcefulconfig)
+		Restrictions 1.21-7.0.3 (restrictions)
+		RFToolsBase 1.21-6.0.10 (rftoolsbase)
+		RFToolsBuilder 1.21-7.0.4 (rftoolsbuilder)
+		RFToolsPower 1.21-7.0.5 (rftoolspower)
+		RFToolsStorage 1.21-6.0.4 (rftoolsstorage)
+		RFToolsUtility 1.21-7.0.11 (rftoolsutility)
+		Rhino 2101.2.7-build.81 (rhino)
+		Roots Classic 1.21.1-1.5.7 (rootsclassic)
+		Sauce Library 0.0.29.73 (sauce)
+		Searchables 1.0.2 (searchables)
+		SecurityCraft 1.10.1 (securitycraft)
+		Shrink 2.0.1.47 (shrink)
+		Silent Gear 4.1.5 (silentgear)
+		Silent Gear Metalworks 1.21.1-1.4.6 (sgearmetalworks)
+		Silent Lib 10.5.1 (silentlib)
+		Silent's Gems 5.1.3 (silentgems)
+		Simple Backups 1.21-4.0.29 (simplebackups)
+		Simple Magnets 1.1.12+c (simplemagnets)
+		Simple Weather 1.0.13-hotfix (simple_weather)
+		SimpleTMs 2.3.3 (simpletms)
+		Simply Light 1.5.3 (simplylight)
+		SmartBrainLib 1.16.11 (smartbrainlib)
+		SmithingTemplateViewer 1.0.4 (smithingtemplateviewer)
+		Sodium 0.6.13+mc1.21.1 (sodium)
+		Sophisticated Backpacks 3.25.37 (sophisticatedbackpacks)
+		Sophisticated Backpacks Create Integration 0.1.5 (sophisticatedbackpackscreateintegration)
+		Sophisticated Core 1.4.19 (sophisticatedcore)
+		Sophisticated Storage 1.5.35 (sophisticatedstorage)
+		Sophisticated Storage Create Integration 0.1.14 (sophisticatedstoragecreateintegration)
+		Sophisticated Storage In Motion 0.10.27 (sophisticatedstorageinmotion)
+		Soulplied Energistics 1.0.2 (soulplied_energistics)
+		spark 1.10.124 (spark)
+		SpectreLib 0.17.2+1.21 (spectrelib)
+		Spice of Life: Carrot Edition 1.16.6 (solcarrot)
+		Starbunclemania 1.5.6 (starbunclemania)
+		StevesCarts2 1.2.18 (stevescarts)
+		Super Factory Manager (SFM) 4.32.0 (sfm)
+		SuperMartijn642's Config Library 1.1.8 (supermartijn642configlib)
+		SuperMartijn642's Core Lib 1.1.21 (supermartijn642corelib)
+		Supplementaries 1.21-3.5.32 (supplementaries)
+		Sussy Sniffers 1.21.1-0.1.3 (sussysniffers)
+		Tempad 3.0.4 (tempad)
+		Terralith 2.5.8 (terralith)
+		Tesseract API 1.11.10-1.21.1 (tesseract_api)
+		The Aether 1.5.10 (aether)
+		The Bumblezone 7.13.1+1.21.1-neoforge (the_bumblezone)
+		The Undergarden 0.9.6 (undergarden)
+		Theurgy 1.71.0 (theurgy)
+		Theurgy KubeJS 1.5.1 (theurgy_kubejs)
+		Time In A Bottle 6.5.4 (tiab)
+		Titanium 4.0.42 (titanium)
+		Toast Control 9.0.1 (toastcontrol)
+		Torchmaster 21.1.9 (torchmaster)
+		Torchmaster Cobblemon Compat 1.6-neoforge-1.0.0 (torchmastercobblemoncompat)
+		Trash Cans 1.0.18+c (trashcans)
+		Tree Tap 1.21.1-0.4.5 (treetap)
+		Underground Villages Mod 4.0.3 (underground_villages)
+		Universal Sawmill 1.21-1.7.1 (sawmill)
+		Utilitarian 1.21.1-0.18.2 (utilitarian)
+		Valhelsia Core 1.1.5 (valhelsia_core)
+		Waystones 21.1.29 (waystones)
+		When Dungeons Arise 2.1.68 (dungeons_arise)
+		Wild Battle API 1.1.2 (wild_battle_api)
+		Wireless Chargers 1.0.9+a (wirelesschargers)
+		Wither Skeleton Tweaks 10.1.1 (wstweaks)
+		XNet 1.21-7.0.6 (xnet)
+		XTones Reworked 1.1.1-1.21.1 (xtonesreworked)
+		Yeetus Experimentus 87.0.0 (yeetusexperimentus)
+		YetAnotherConfigLib 3.8.2+1.21.1-neoforge (yet_another_config_lib_v3)
+		YUNG's API 1.21.1-NeoForge-5.1.6 (yungsapi)
+		YUNG's Better Dungeons 1.21.1-NeoForge-5.1.4 (betterdungeons)
+		YUNG's Better End Island 1.21.1-NeoForge-3.1.2 (betterendisland)
+		YUNG's Better Mineshafts 1.21.1-NeoForge-5.1.1 (bettermineshafts)
+		YUNG's Better Strongholds 1.21.1-NeoForge-5.1.3 (betterstrongholds)
+		zamega 1.7.1 (zamega)
+		Zero CORE 2 1.21.1-2.4.21 (zerocore)
+[17:37:35] [main/ERROR]: Missing or unsupported mandatory dependencies:
+	Mod ID: 'curios', Requested by: 'ars_nouveau', Expected range: '[1.19-5.0.7.1,)', Actual version: '[MISSING]'
+	Mod ID: 'curios', Requested by: 'allthearcanistgear', Expected range: '[1.21-9.0.0,)', Actual version: '[MISSING]'
+	Mod ID: 'curios', Requested by: 'occultism', Expected range: '[9.5.1,)', Actual version: '[MISSING]'
+[17:37:36] [main/INFO]: Compatibility level set to JAVA_21
+[17:37:36] [main/INFO]: Launching target 'forgeclient' with arguments [--version, neoforge-21.1.224, --gameDir, C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test, --assetsDir, C:\Users\<user>\curseforge\minecraft\Install\assets, --uuid, <token>, --username, <player>, --assetIndex, 17, --accessToken, <token>, --clientId, <token>, --xuid, <token>, --userType, msa, --versionType, release, --width, 1024, --height, 768, --quickPlayPath, C:\Users\<user>\curseforge\minecraft\Install\quickPlay\java\1793183822061.json]
+[28Oct2026 17:37:38.339] [main/WARN] [oshi.driver.windows.perfmon.PerfmonDisabled/]: Invalid registry value type detected for PerfOS counters. Should be REG_DWORD. Ignoring: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\Disable Performance Counters.
+[28Oct2026 17:37:38.454] [pool-6-thread-1/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.3).
+[28Oct2026 17:37:38.672] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 229 Datafixer optimizations took 499 milliseconds
+[28Oct2026 17:37:44.379] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/<user>/curseforge/minecraft/Install/libraries/net/minecraft/client/1.21.1-20240808.144430/client-1.21.1-20240808.144430-srg.jar%23568!/assets/.mcassetsroot' uses unexpected schema
+[28Oct2026 17:37:44.380] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/<user>/curseforge/minecraft/Install/libraries/net/minecraft/client/1.21.1-20240808.144430/client-1.21.1-20240808.144430-srg.jar%23568!/data/.mcassetsroot' uses unexpected schema
+[28Oct2026 17:37:44.416] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[28Oct2026 17:37:44.430] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: <player>
+[28Oct2026 17:37:44.560] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.3+5
+[28Oct2026 17:37:44.849] [Render thread/FATAL] [net.neoforged.fml.ModLoader/CORE]: Error during pre-loading phase: Mod ars_nouveau requires curios 1.19-5.0.7.1 or above
+Currently, curios is not installed
+
+[28Oct2026 17:37:44.850] [Render thread/FATAL] [net.neoforged.fml.ModLoader/CORE]: Error during pre-loading phase: Mod allthearcanistgear requires curios 1.21-9.0.0 or above
+Currently, curios is not installed
+
+[28Oct2026 17:37:44.850] [Render thread/FATAL] [net.neoforged.fml.ModLoader/CORE]: Error during pre-loading phase: Mod occultism requires curios 9.5.1 or above
+Currently, curios is not installed
+
+[28Oct2026 17:37:45.744] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.sound.SoundEngineLoadEvent to a broken mod state
+[28Oct2026 17:37:45.935] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.RegisterColorHandlersEvent$Block to a broken mod state
+[28Oct2026 17:37:45.938] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.RegisterColorHandlersEvent$Item to a broken mod state
+[28Oct2026 17:37:45.953] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.RegisterMaterialAtlasesEvent to a broken mod state
+[28Oct2026 17:37:46.002] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.RegisterRenderBuffersEvent to a broken mod state
+[28Oct2026 17:37:46.093] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent to a broken mod state
+[28Oct2026 17:37:46.130] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.RenderLevelStageEvent$RegisterStageEvent to a broken mod state
+[28Oct2026 17:37:46.206] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent to a broken mod state
+[28Oct2026 17:37:46.207] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.RegisterSpriteSourceTypesEvent to a broken mod state
+[28Oct2026 17:37:46.238] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.RegisterMenuScreensEvent to a broken mod state
+[28Oct2026 17:37:46.238] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.RegisterClientReloadListenersEvent to a broken mod state
+[28Oct2026 17:37:46.238] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.EntityRenderersEvent$RegisterLayerDefinitions to a broken mod state
+[28Oct2026 17:37:46.238] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.EntityRenderersEvent$RegisterRenderers to a broken mod state
+[28Oct2026 17:37:46.239] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.RegisterClientTooltipComponentFactoriesEvent to a broken mod state
+[28Oct2026 17:37:46.241] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.RegisterEntitySpectatorShadersEvent to a broken mod state
+[28Oct2026 17:37:46.241] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent to a broken mod state
+[28Oct2026 17:37:46.244] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.RegisterRecipeBookCategoriesEvent to a broken mod state
+[28Oct2026 17:37:46.244] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.RegisterGuiLayersEvent to a broken mod state
+[28Oct2026 17:37:46.247] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.RegisterDimensionSpecialEffectsEvent to a broken mod state
+[28Oct2026 17:37:46.248] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.RegisterNamedRenderTypesEvent to a broken mod state
+[28Oct2026 17:37:46.249] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.RegisterColorHandlersEvent$ColorResolvers to a broken mod state
+[28Oct2026 17:37:46.250] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.RegisterItemDecorationsEvent to a broken mod state
+[28Oct2026 17:37:46.258] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.RegisterPresetEditorsEvent to a broken mod state
+[28Oct2026 17:37:46.259] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.gui.map.RegisterMapDecorationRenderersEvent to a broken mod state
+[28Oct2026 17:37:46.260] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.RegisterDimensionTransitionScreenEvent to a broken mod state
+[28Oct2026 17:37:46.272] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.RegisterJsonAnimationTypesEvent to a broken mod state
+[28Oct2026 17:37:46.368] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla
+[28Oct2026 17:37:46.406] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.ModelEvent$RegisterGeometryLoaders to a broken mod state
+[28Oct2026 17:37:46.507] [Worker-Main-13/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.1.05.hex, loading
+[28Oct2026 17:37:46.619] [Worker-Main-2/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_jp_patch-15.1.05.hex, loading
+[28Oct2026 17:37:47.547] [Worker-Main-14/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.ModelEvent$RegisterAdditional to a broken mod state
+[28Oct2026 17:37:48.166] [Worker-Main-14/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.ModelEvent$ModifyBakingResult to a broken mod state
+[28Oct2026 17:37:48.288] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
+[28Oct2026 17:37:48.289] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[28Oct2026 17:37:48.389] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Headphones (2- Arctis Nova 7)
+[28Oct2026 17:37:48.392] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[28Oct2026 17:37:48.392] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.sound.SoundEngineLoadEvent to a broken mod state
+[28Oct2026 17:37:48.559] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[28Oct2026 17:37:48.573] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.TextureAtlasStitchedEvent to a broken mod state
+[28Oct2026 17:37:48.574] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[28Oct2026 17:37:48.574] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.TextureAtlasStitchedEvent to a broken mod state
+[28Oct2026 17:37:48.574] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[28Oct2026 17:37:48.575] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.TextureAtlasStitchedEvent to a broken mod state
+[28Oct2026 17:37:48.575] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[28Oct2026 17:37:48.576] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.TextureAtlasStitchedEvent to a broken mod state
+[28Oct2026 17:37:48.576] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[28Oct2026 17:37:48.581] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.TextureAtlasStitchedEvent to a broken mod state
+[28Oct2026 17:37:48.582] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[28Oct2026 17:37:48.582] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.TextureAtlasStitchedEvent to a broken mod state
+[28Oct2026 17:37:48.582] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[28Oct2026 17:37:48.583] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.TextureAtlasStitchedEvent to a broken mod state
+[28Oct2026 17:37:48.583] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[28Oct2026 17:37:48.583] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.TextureAtlasStitchedEvent to a broken mod state
+[28Oct2026 17:37:48.583] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[28Oct2026 17:37:48.584] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.TextureAtlasStitchedEvent to a broken mod state
+[28Oct2026 17:37:48.584] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.ModelEvent$BakingCompleted to a broken mod state
+[28Oct2026 17:37:48.679] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[28Oct2026 17:37:48.682] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[28Oct2026 17:37:48.758] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[28Oct2026 17:37:48.759] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[28Oct2026 17:37:48.761] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[28Oct2026 17:37:48.763] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[28Oct2026 17:37:48.763] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[28Oct2026 17:37:48.769] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[28Oct2026 17:37:48.770] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[28Oct2026 17:37:48.773] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[28Oct2026 17:37:48.773] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[28Oct2026 17:37:48.774] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[28Oct2026 17:37:48.776] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[28Oct2026 17:37:48.780] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[28Oct2026 17:37:48.781] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[28Oct2026 17:37:48.782] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[28Oct2026 17:37:48.782] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[28Oct2026 17:37:48.786] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[28Oct2026 17:37:48.787] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[28Oct2026 17:37:48.787] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[28Oct2026 17:37:48.791] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[28Oct2026 17:37:48.792] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[28Oct2026 17:37:48.792] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.EntityRenderersEvent$AddLayers to a broken mod state
+[28Oct2026 17:37:48.793] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[28Oct2026 17:37:48.793] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.TextureAtlasStitchedEvent to a broken mod state
+[28Oct2026 17:37:48.794] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[28Oct2026 17:37:48.794] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.TextureAtlasStitchedEvent to a broken mod state
+[28Oct2026 17:37:48.794] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[28Oct2026 17:37:48.794] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.TextureAtlasStitchedEvent to a broken mod state
+[28Oct2026 17:37:48.794] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[28Oct2026 17:37:48.796] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.TextureAtlasStitchedEvent to a broken mod state
+[28Oct2026 17:37:48.796] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
+[28Oct2026 17:37:48.796] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.TextureAtlasStitchedEvent to a broken mod state
+[28Oct2026 17:37:48.823] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[28Oct2026 17:37:48.887] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.RegisterShadersEvent to a broken mod state
+[28Oct2026 17:37:49.017] [Render thread/ERROR] [net.minecraft.CrashReport/]: Negative index in crash report handler (0/28)
+[28Oct2026 17:37:49.026] [Render thread/FATAL] [net.neoforged.neoforge.client.loading.ClientModLoader/]: Crash report saved to C:\Users\<user>\curseforge\minecraft\Instances\All the Mons - ATMons_Test\crash-reports\crash-2026-10-28_17.37.49-fml.txt
+[28Oct2026 17:37:55.783] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!

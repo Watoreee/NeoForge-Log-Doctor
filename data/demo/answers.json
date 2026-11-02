@@ -1,0 +1,65 @@
+{
+  "_note": "For the live defence only. run_eval.py and all evaluation code must never read this file.",
+  "demos": [
+    {
+      "demo_id": "d1",
+      "folder": "d1_version-mismatch_accessories",
+      "files": [
+        "crash-2026-11-02_14.12.11-fml.txt",
+        "latest.log"
+      ],
+      "culprit_mod_id": "accessories",
+      "category": "version_mismatch",
+      "acceptable_culprits": [
+        "accessories",
+        "zamega",
+        "mega_showdown"
+      ],
+      "what_broke": "replaced Accessories with the 1.20.1 build (accessories-neoforge-1.0.0-beta.49+1.20.1.jar), which NeoForge skipped; the older Accessories bundled inside The Aether (1.1.0-beta.48+1.21.1) loaded instead, so zamega and mega_showdown reported it as too old (need beta.52+)"
+    },
+    {
+      "demo_id": "d2",
+      "folder": "d2_version-mismatch_balm",
+      "files": [
+        "crash-2026-11-02_14.21.32-fml.txt",
+        "latest.log"
+      ],
+      "culprit_mod_id": "balm",
+      "category": "version_mismatch",
+      "acceptable_culprits": [
+        "balm"
+      ],
+      "what_broke": "updated Balm to the Minecraft 26.2 build (balm-neoforge-26.2-26.2.0.9.jar) in a 1.21.1 pack; Balm and its bundled KumaAPI (kuma_api, jar-in-jar) both require minecraft 26.2 and neoforge 26.2.0.0-beta+"
+    },
+    {
+      "demo_id": "d3",
+      "folder": "d3_version-mismatch_cobblemon",
+      "files": [
+        "crash-2026-11-02_16.17.11-fml.txt",
+        "latest.log"
+      ],
+      "culprit_mod_id": "cobblemon",
+      "category": "version_mismatch",
+      "acceptable_culprits": [
+        "cobblemon"
+      ],
+      "what_broke": "replaced the Cobblemon NeoForge jar with the Fabric build (Cobblemon-fabric-1.8.4+1.21.1.jar); NeoForge skipped it as a Fabric mod, so 18 mods reported cobblemon as missing"
+    },
+    {
+      "demo_id": "d6",
+      "folder": "d6_missing-dependency_create",
+      "files": [
+        "crash-2026-11-02_16.37.51-fml.txt",
+        "latest.log"
+      ],
+      "culprit_mod_id": "create",
+      "category": "missing_dependency",
+      "acceptable_culprits": [
+        "create",
+        "create_aquatic_ambitions",
+        "bellsandwhistles"
+      ],
+      "what_broke": "disabled Create in CurseForge; most Create addons were auto-disabled, but create_aquatic_ambitions and bellsandwhistles stayed enabled and reported create as not installed"
+    }
+  ]
+}

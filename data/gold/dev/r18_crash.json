@@ -1,0 +1,13 @@
+{
+  "log_id": "r18_crash",
+  "scenario_id": "r18_version_mismatch_sophisticatedcore",
+  "source_file_type": "crash_report",
+  "culprit_mod_id": "sophisticatedcore",
+  "acceptable_culprits": [
+    "sophisticatedcore"
+  ],
+  "category": "version_mismatch",
+  "relevant_doc_ids": null,
+  "support_search": null,
+  "notes": "updated Sophisticated Core to the Minecraft 26.1.2 build (sophisticatedcore-26.1.2-1.5.24.2445.jar) in a 1.21.1 pack; its 'only supports jei 29.5.0.24' line is a side effect, not a JEI problem"
+}

@@ -1,0 +1,14 @@
+{
+  "log_id": "r04_crash",
+  "scenario_id": "r04_missing_dependency_simpletms",
+  "source_file_type": "crash_report",
+  "culprit_mod_id": "simpletms",
+  "acceptable_culprits": [
+    "simpletms",
+    "allthemons"
+  ],
+  "category": "missing_dependency",
+  "relevant_doc_ids": null,
+  "support_search": null,
+  "notes": "disabled cloth-config in CurseForge; cloth_config stayed loaded via fightorflight but simpletms was missing too"
+}

@@ -1,0 +1,14 @@
+{
+  "log_id": "r14_latest",
+  "scenario_id": "r14_mixin_conflict_cobblemonraiddens",
+  "source_file_type": "latest_log",
+  "culprit_mod_id": "cobblemonraiddens",
+  "acceptable_culprits": [
+    "cobblemonraiddens",
+    "owo"
+  ],
+  "category": "mixin_conflict",
+  "relevant_doc_ids": null,
+  "support_search": null,
+  "notes": "disabled owo-lib in CurseForge (its dependents, incl. Mega Showdown, were auto-disabled); Cobblemon Raid Dens' mixin plugin crashed with a NullPointerException in isModAndNewerThan while checking for a mod that was no longer loaded"
+}

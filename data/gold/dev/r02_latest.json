@@ -1,0 +1,14 @@
+{
+  "log_id": "r02_latest",
+  "scenario_id": "r02_missing_dependency_geckolib",
+  "source_file_type": "latest_log",
+  "culprit_mod_id": "geckolib",
+  "acceptable_culprits": [
+    "geckolib",
+    "ars_nouveau"
+  ],
+  "category": "missing_dependency",
+  "relevant_doc_ids": null,
+  "support_search": null,
+  "notes": "disabled geckolib in CurseForge; theurgy was auto-disabled as its dependent"
+}

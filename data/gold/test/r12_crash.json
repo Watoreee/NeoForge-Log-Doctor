@@ -1,0 +1,16 @@
+{
+  "log_id": "r12_crash",
+  "scenario_id": "r12_missing_dependency_ae2",
+  "source_file_type": "crash_report",
+  "culprit_mod_id": "ae2",
+  "acceptable_culprits": [
+    "ae2",
+    "ae2ct",
+    "ae2importexportcard",
+    "aeinfinitybooster"
+  ],
+  "category": "missing_dependency",
+  "relevant_doc_ids": null,
+  "support_search": null,
+  "notes": "disabled Applied Energistics 2 (ae2) in CurseForge; aeinfinitybooster, ae2ct and ae2importexportcard still required it"
+}

@@ -249,7 +249,7 @@ def test_script_redacts_a_folder_and_reports_counts_only(tmp_path):
 
 MODLAUNCHER_ARGS = (
     "[16:21:44] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args "
-    r"[--username, Fakeplayer_, --version, neoforge-21.1.224, --gameDir, C:\Users\Bob\curseforge\minecraft\Instances\Pack, "
+    r"[--username, Fakeplayer_, --version, neoforge-21.1.224, --gameDir, C:\Users\Bob\curseforge\minecraft\Instances\Pack, "  # noqa: E501
     "--assetIndex, 17, --uuid, 0123456789abcdef0123456789abcdef, --accessToken, ey0notajwtjustsecretvalue99, "
     "--clientId, ZmFrZWNsaWVudGlkZmFrZWNsaWVudGlkZmFrZWNsaWVudA, --xuid, 2535400000000001, "
     "--userType, msa, --versionType, release, --width, 1024]"
@@ -293,5 +293,5 @@ def test_player_uuid_is_redacted_outside_the_args_line_too():
 
 
 def test_authlib_profile_lookup_uuid_is_redacted_without_an_args_line():
-    raw = "YggdrasilMinecraftSessionService/]: Couldn't look up profile properties for 01234567-89ab-cdef-0123-456789abcdef"
+    raw = "YggdrasilMinecraftSessionService/]: Couldn't look up profile properties for 01234567-89ab-cdef-0123-456789abcdef"  # noqa: E501
     assert "01234567" not in redact_text(raw).text

@@ -222,7 +222,8 @@ def test_top_docs_deduplicates_by_doc_and_keeps_best_chunk():
 
 def test_real_index_loads_and_a_self_query_finds_itself():
     ix = Index.load()
-    assert len(ix.chunks) == len(ix.emb) == 1850
+    manifest = json.loads((REPO_ROOT / "data" / "processed" / "manifest.json").read_text(encoding="utf-8"))
+    assert len(ix.chunks) == len(ix.emb) == sum(d["n_chunks"] for d in manifest)
     top = ix.search("dense", query_vec=ix.emb[7], k=3).hits[0]
     assert top.chunk_id == ix.chunks[7]["chunk_id"] and top.cos > 0.99
 

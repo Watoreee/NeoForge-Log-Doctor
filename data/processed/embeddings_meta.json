@@ -1,8 +1,8 @@
 {
  "model": "bge-m3",
  "dim": 1024,
- "n_chunks": 1850,
+ "n_chunks": 2160,
  "normalized": true,
- "chunks_sha256": "fa0d9678f708a0ddbd42179c58e0bff491f828a3d8818264131c7da625db7d5f",
- "built_at": "2026-10-28T08:51:25+00:00"
+ "chunks_sha256": "a619bcc6710fd19bc3ebad3370f2cba0674fddf9ff51deed7b77884a631e6d8a",
+ "built_at": "2026-11-02T12:30:09+00:00"
 }

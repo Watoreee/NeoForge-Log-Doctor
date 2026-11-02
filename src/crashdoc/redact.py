@@ -19,7 +19,17 @@ _NAME_EDGE = r"A-Za-z0-9_"
 
 # --- Names we can capture from the log itself ---
 _SETTING_USER = re.compile(r"Setting user: ([A-Za-z0-9_]{1,32})")
-_USERNAME_ARG = re.compile(r"--username[ =]([A-Za-z0-9_]{1,32})")
+# Launcher args appear as "--username Bob" or, in ModLauncher's "args [...]" list, "--username, Bob,".
+_ARG_SEP = r"(?:[ =]|,\s*)"
+_USERNAME_ARG = re.compile(rf"--username{_ARG_SEP}([A-Za-z0-9_]{{1,32}})")
+
+# Player UUID: captured from the launcher args, then replaced everywhere (authlib timeouts print it in a
+# sessionserver URL), plus a generic pattern for such URLs when no args line is present.
+_UUID_ARG = re.compile(rf"(?i)--uuid{_ARG_SEP}([0-9a-f]{{32}}|[0-9a-f]{{8}}(?:-[0-9a-f]{{4}}){{3}}-[0-9a-f]{{12}})")
+_PROFILE_URL_UUID = re.compile(
+    r"(?i)(sessionserver\.mojang\.com/session/minecraft/(?:profile|hasJoined)/|profile properties for )"
+    r"([0-9a-f]{32}|[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12})"
+)
 
 # --- User folders. The captured folder name is also treated as a known name. ---
 # The name must be followed by a separator, or by the end of a line (a path cut off by truncation).
@@ -28,7 +38,7 @@ _NIX_USER_PATH = re.compile(r"(?m)(/home/|/Users/)([^/\s:<>\"']+)(?=/|$|\s|[\"'\
 
 # --- Secrets / network identifiers ---
 _TOKEN_ARGS = re.compile(
-    r"(?i)(--(?:accessToken|session|uuid|xuid|clientId)[ =])([^\s<]\S*)"
+    rf"(?i)(--(?:accessToken|session|uuid|xuid|clientId){_ARG_SEP})([^\s<,\]][^\s,\]]*)"
     r"|((?:accessToken|session_?id|clientToken|auth_?token)[\"']?\s*[:=]\s*[\"']?)([^\s\"',}<][^\s\"',}]*)"
 )
 _SESSION_TOKEN = re.compile(r"token:[A-Za-z0-9._-]{8,}(?::[0-9a-fA-F-]{32,36})?")
@@ -87,6 +97,10 @@ def redact_text(text: str, extra_names: list[str] | tuple[str, ...] = ()) -> Red
     # Paths first, so the account name inside a path becomes <user> rather than <player>.
     text = _sub(_WIN_USER_PATH, lambda m: f"{m.group(1)}Users{m.group(2)}<user>", text, counts, "path")
     text = _sub(_NIX_USER_PATH, lambda m: f"{m.group(1)}<user>", text, counts, "path")
+    for uuid in {u.replace("-", "").lower() for u in _UUID_ARG.findall(text)}:
+        dashed = "-".join((uuid[:8], uuid[8:12], uuid[12:16], uuid[16:20], uuid[20:]))
+        text = _sub(re.compile(f"(?i){uuid}|{dashed}"), "<token>", text, counts, "token")
+    text = _sub(_PROFILE_URL_UUID, lambda m: f"{m.group(1)}<token>", text, counts, "token")
     text = _sub(_TOKEN_ARGS, _redact_token_arg, text, counts, "token")
     text = _sub(_SESSION_TOKEN, "token:<token>", text, counts, "token")
     text = _sub(_JWT, "<token>", text, counts, "token")

@@ -46,9 +46,9 @@ def test_home_path_cut_off_or_without_trailing_separator_is_redacted(raw, expect
 
 
 def test_account_name_from_path_is_redacted_elsewhere_case_sensitively():
-    raw = "C:\\Users\\Asus\\game\nuser.name=Asus\nGPU: ASUS GeForce"
+    raw = "C:\\Users\\Bob\\game\nuser.name=Bob\nGPU: ASUS GeForce"
     out = redact_text(raw).text
-    assert "Asus" not in out.replace("ASUS", "")
+    assert "Bob" not in out.replace("ASUS", "")
     assert "user.name=<user>" in out
     assert "ASUS GeForce" in out  # different case: a GPU vendor, not the account
 
@@ -245,3 +245,53 @@ def test_script_redacts_a_folder_and_reports_counts_only(tmp_path):
     report = (dest / "redaction_report.json").read_text(encoding="utf-8")
     assert "Steve" not in report and "Steve" not in proc.stdout
     assert "1 non-log file(s) skipped" in proc.stdout
+
+
+MODLAUNCHER_ARGS = (
+    "[16:21:44] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args "
+    r"[--username, Fakeplayer_, --version, neoforge-21.1.224, --gameDir, C:\Users\Bob\curseforge\minecraft\Instances\Pack, "
+    "--assetIndex, 17, --uuid, 0123456789abcdef0123456789abcdef, --accessToken, ey0notajwtjustsecretvalue99, "
+    "--clientId, ZmFrZWNsaWVudGlkZmFrZWNsaWVudGlkZmFrZWNsaWVudA, --xuid, 2535400000000001, "
+    "--userType, msa, --versionType, release, --width, 1024]"
+)
+
+
+def test_modlauncher_args_line_is_redacted():
+    """A real ModLauncher args line is a comma-separated list, not 'flag value' pairs."""
+    result = redact_text(MODLAUNCHER_ARGS)
+    for secret in (
+        "0123456789abcdef0123456789abcdef",
+        "ey0notajwtjustsecretvalue99",
+        "ZmFrZWNsaWVudGlkZmFrZWNsaWVudGlkZmFrZWNsaWVudA",
+        "2535400000000001",
+        "Fakeplayer_",
+        "Bob",
+    ):
+        assert secret not in result.text
+    # Non-secret arguments survive, and the list structure is intact.
+    assert "--version, neoforge-21.1.224" in result.text and "--userType, msa" in result.text
+    assert result.text.rstrip().endswith("--width, 1024]")
+    assert result.counts["token"] == 4
+
+
+def test_names_option_redacts_extra_player_everywhere():
+    out = redact_text("<Fakeplayer_> hi\nFakeplayer_ joined the game", extra_names=["Fakeplayer_"]).text
+    assert "Fakeplayer_" not in out and "<player>" in out
+
+
+def test_player_uuid_is_redacted_outside_the_args_line_too():
+    """authlib timeouts print the player's UUID in a sessionserver URL, far from the launcher args."""
+    uuid = "0123456789abcdef0123456789abcdef"
+    raw = (
+        f"ModLauncher running: args [--username, Bob, --uuid, {uuid}, --userType, msa]\n"
+        f"MinecraftClientException: Failed to read from https://sessionserver.mojang.com/session/minecraft/profile/{uuid}?unsigned=false"
+    )
+    assert uuid not in redact_text(raw).text
+    only_url = "https://sessionserver.mojang.com/session/minecraft/profile/01234567-89ab-cdef-0123-456789abcdef?x=1"
+    assert "01234567" not in redact_text(only_url).text
+    assert "unsigned" not in redact_text(only_url).text or "?x=1" in redact_text(only_url).text
+
+
+def test_authlib_profile_lookup_uuid_is_redacted_without_an_args_line():
+    raw = "YggdrasilMinecraftSessionService/]: Couldn't look up profile properties for 01234567-89ab-cdef-0123-456789abcdef"
+    assert "01234567" not in redact_text(raw).text

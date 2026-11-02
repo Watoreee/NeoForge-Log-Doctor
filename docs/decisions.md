@@ -282,3 +282,26 @@ reported the problem instead of the mod that caused it. Lenient alone would scor
 acceptable list, what was broken. `run_eval.py` and all evaluation code must never read it; a test
 (`tests/test_demo_answers_unused.py`) fails if any file under `src/` or `scripts/` mentions it. Checked: no player
 name, uuid, path or token in it.
+
+## preprocess.py (Day 3)
+
+**Format detector + parsers, written against the real gold logs.** `detect_format` sniffs the first 4,000 lines:
+`---- Minecraft Crash Report ----` -> `crash_report`; 3+ timestamped log lines -> `latest_log` (or `debug_log` if a
+`/DEBUG]` line is present); an `hs_err` header or other text with log markers (timestamps, levels, `...Exception`) ->
+`generic`, flagged in the facts; no markers -> `rejected`. `hs_err` stays **unsupported** (no real example was
+collected), so it only gets the generic parse. Two timestamp styles occur in the same log (`[17:37:04]` early
+launcher, `[28Oct2026 17:37:44.849]` once the game is up); both are handled.
+
+**What `RawLogFacts` holds:** crash-report description, exception + `Caused by` chain, "Mod loading issue" blocks
+(mod id, file, failure message, version), `Suspected Mods` (none of the gold logs has one, tested on synthetic text only),
+FML `Missing or unsupported mandatory dependencies` lines (dependency, requested-by, expected, actual),
+"Error during pre-loading phase" messages, `is not a valid mod file` names, mods named in `Mixin prepare ... failed`,
+ERROR/FATAL lines (first 40, deduplicated), the mod list (id -> version), Minecraft / NeoForge / Java versions,
+`-Xmx`, and an out-of-memory flag. Exceptions inside redirected stack traces
+(`[java.lang.Throwable:printStackTrace:660]: Caused by: ...`) are found behind their log prefix.
+
+**Linear time.** One pass over the lines, anchored regexes, each line cut at 2,000 characters, every list capped. A 6 MB
+`debug.log` parses in about 150 ms; a synthetic 10.5 MB log in well under the 10 s test limit.
+
+**Parser output is not the label.** The parser reports what the log says; it does not pick a culprit or a category.
+`scripts/check_parser.py` (CHECKPOINT 1) prints `culprit_in_facts` only as a sanity signal.

@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:GlodBlock/ExtendedAE#605",
+ "url": "https://github.com/GlodBlock/ExtendedAE/issues/605",
+ "title": "ExtendedAE issue #605: [BUG] Tag Export bus not respecting filters",
+ "source_type": "github_issue",
+ "repo": "GlodBlock/ExtendedAE",
+ "state": "closed",
+ "created_at": "2026-04-14T23:35:44Z",
+ "fetched_at": "2026-11-02T12:21:19+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by PilaScat]\nI want to push only modded honeycombs block, not vanilla one, but every thing I try it doesn't work\n\n<img width=\"822\" height=\"892\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/6634cadf-034f-4089-9f92-b0dc21958e3a\" />\n\n<img width=\"806\" height=\"837\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/ee56a373-7030-4d9b-a0ff-e36bf092c8fa\" />\n\nThese are the two tags lists\nI don't know if it is a saving problem but I tried:\n\n<img width=\"336\" height=\"186\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/bcdb9e53-e277-4b2e-96e2-03aeeb6b5ed7\" />\n\n<img width=\"336\" height=\"222\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/c7a45828-ca0f-4116-96ba-c5e3b7a51f9a\" />\n\n<img width=\"335\" height=\"220\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/284bc3ca-e8d3-4999-9518-a1f02d65bc70\" />\n\nNo one works, it should\n\nI'm getting insane\n\nI'm on [1.21-2.2.28-neoforge](https://github.com/GlodBlock/ExtendedAE/releases/tag/1.21-2.2.28-neoforge)\nTried last version still present, for now I used the standard export with a fuzzy card\n\n[comment by GlodBlock (owner)]\nfixed"
+}

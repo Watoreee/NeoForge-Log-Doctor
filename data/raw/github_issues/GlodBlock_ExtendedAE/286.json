@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:GlodBlock/ExtendedAE#286",
+ "url": "https://github.com/GlodBlock/ExtendedAE/issues/286",
+ "title": "ExtendedAE issue #286: ME无限圆石元件过早创建AEItemKey，导致与修改物品默认组件的模组不兼容",
+ "source_type": "github_issue",
+ "repo": "GlodBlock/ExtendedAE",
+ "state": "closed",
+ "created_at": "2024-11-05T03:47:35Z",
+ "fetched_at": "2026-11-02T12:21:09+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by Phoupraw]\n我有一个模组将所有物品的最大堆叠数量乘1.5（不是mixin，而是neoforge提供的事件），但是`AEItemKey`在创建时会缓存所有组件的散列码以及最大堆叠数量，而ME无限元件在物品注册时就会创建`AEItemKey`，此时修改默认组件的事件还没有运行，等到运行完毕后ME无限元件内的`AEItemKey`与之后创建的`AEItemKey`不同（两者序列化后完全相同），导致输出总线无法提取圆石。\r\n\r\nMC 1.21.1\r\nExtendedAE 1.21-2.1.2-neoforge\n\n[comment by GlodBlock (owner)]\n那是什么mod\n\n[comment by Phoupraw (none)]\n是我自己写的模组😏没有发布。fabric模组，用信雅互联在neoforge上运行。\n\n[comment by GlodBlock (owner)]\n修了"
+}

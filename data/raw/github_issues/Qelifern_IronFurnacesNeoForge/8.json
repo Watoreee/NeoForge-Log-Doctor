@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:Qelifern/IronFurnacesNeoForge#8",
+ "url": "https://github.com/Qelifern/IronFurnacesNeoForge/issues/8",
+ "title": "IronFurnacesNeoForge issue #8: furnace consuming extreme amounts of coal [1.21] (bug?)",
+ "source_type": "github_issue",
+ "repo": "Qelifern/IronFurnacesNeoForge",
+ "state": "closed",
+ "created_at": "2024-08-14T16:23:47Z",
+ "fetched_at": "2026-11-02T12:18:44+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (Apache-2.0) does not cover issue text",
+ "text": "[issue by idsdsdv]\ni made two diamond furnaces on the newest version of iron furnaces for 1.21/1.21.1 and im noticing that a diamond furnace consumes upwards of TWO COAL to smelt a single iron piece?!?! That cannot be right. Also if you go far enough away coal fed to atleast diamond furnaces via hoppers will disappear sometimes. Lost a stack+ of coal that way\n\n[comment by Qelifern (owner)]\nunable to reproduce"
+}

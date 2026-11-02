@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TeamMetallurgy/Aquaculture#446",
+ "url": "https://github.com/TeamMetallurgy/Aquaculture/issues/446",
+ "title": "Aquaculture issue #446: [1.21] [Neoforge] Game Crashes when I try to Fish using modded Fishing Rod ",
+ "source_type": "github_issue",
+ "repo": "TeamMetallurgy/Aquaculture",
+ "state": "closed",
+ "created_at": "2024-06-29T02:37:18Z",
+ "fetched_at": "2026-11-02T12:21:30+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (none) does not cover issue text",
+ "text": "[issue by ffuentesm]\nAquaculture-1.21-2.7.2.jar \r\nNeoforge: 21.0.42\r\n\r\nCrashlog: https://pastebin.com/LptNpi3y\r\n\r\nI used an Iron Fishing Rod with a Gold Hook, and when I casted the line it crashed the game.\n\n[comment by thatkiddie (none)]\nHave a similar problem, a diamond fishing rod with a gold hook on 1.21, if that matters. Similar error code.\n\n[comment by GirafiStudios (collaborator)]\nFixed in Dev already. Waiting for a fix in NeoForge, related to an other issue.\r\nUse NeoForge version 21.0.38 for now, or grab the latest AQ2 build from my Jenkins :)\n\n[comment by ffuentesm (none)]\nYeah, can't really use .38 other mods I am using are coded for .40 and up. 😂\n\n[comment by GirafiStudios (collaborator)]\nUse the Jenkins build for now then :)\r\nhttps://jenkins.girafi.dk/job/Team%20Metallurgy%20Mods/job/Aquaculture/job/Aquaculture%202%201.21/\n\n[comment by GirafiStudios (collaborator)]\nAQ2 version 2.7.3 with the fix, is now available on CurseForge."
+}

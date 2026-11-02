@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:GlodBlock/ExtendedAE#260",
+ "url": "https://github.com/GlodBlock/ExtendedAE/issues/260",
+ "title": "ExtendedAE issue #260: [1.21.1] Kubejs Added Infinity Cell's Tooltips Crash the Client",
+ "source_type": "github_issue",
+ "repo": "GlodBlock/ExtendedAE",
+ "state": "closed",
+ "created_at": "2024-10-05T03:41:06Z",
+ "fetched_at": "2026-11-02T12:21:12+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by Drackion]\nMod Version: 2.1.0-Neoforge\r\nLib Version: 2.0-Neoforge\r\nPack: ATM 10 0.62\r\n\r\nExpected Behaviour:\r\nTo render the tooltips on Infinity Cells added via KJS without the client crashing.\r\n\r\nActual Behaviour:\r\nHovering over Infinity Cells added via KJS or searching in creative search crashes the client.\r\n\r\nLogs:\r\nhttps://mclo.gs/A44xcZo\n\n[comment by Drackion (none)]\nI have also discovered this issue also breaks Forbidden Arcanus's JEI Integration\n\n[comment by GlodBlock (owner)]\nthis is because 'minecraft:moss' isn't a valid item id\r\nhttps://github.com/AllTheMods/ATM-10/blob/main/kubejs/startup_scripts/ExtendedAE/InfinityCells.js#L23\r\ni think it should be 'minecraft:moss_block'\r\nit isn't extendedae's issue\n\n[comment by Drackion (none)]\nok thx"
+}

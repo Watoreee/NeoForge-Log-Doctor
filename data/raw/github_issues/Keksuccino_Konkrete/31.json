@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:Keksuccino/Konkrete#31",
+ "url": "https://github.com/Keksuccino/Konkrete/issues/31",
+ "title": "Konkrete issue #31: Enchantment Table crashes game",
+ "source_type": "github_issue",
+ "repo": "Keksuccino/Konkrete",
+ "state": "closed",
+ "created_at": "2026-05-30T06:49:37Z",
+ "fetched_at": "2026-11-02T12:22:41+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (Apache-2.0) does not cover issue text",
+ "text": "[issue by Spiderman31807]\nI didn't have this crash (i dont use this mod), but i looked at a crash report of somebody else on my server since im a modder, and from what i could tell the cause was your mod using a mixin that tried to access a field that was private in the class. Not sure why it does that when you could just @shadow the field but either way, should be a simple fix for you- heres the crash report they sent me!\n\n[message (1).txt](https://github.com/user-attachments/files/28417492/message.1.txt)\n\n[comment by Keksuccino (owner)]\n- The user is using MC 1.21.8, which I do not support anymore.\n- The log itself does not really point to it being caused by Konkrete, and I also don't really remember accessing that field in Konkrete tbh (could be wrong tho).\n- When I work with an AW/AT instead of `@Shadow`, it normally is for a good reason. I prefer shadow."
+}

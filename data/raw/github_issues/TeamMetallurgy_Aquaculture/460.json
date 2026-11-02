@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TeamMetallurgy/Aquaculture#460",
+ "url": "https://github.com/TeamMetallurgy/Aquaculture/issues/460",
+ "title": "Aquaculture issue #460: No Treasure Chests",
+ "source_type": "github_issue",
+ "repo": "TeamMetallurgy/Aquaculture",
+ "state": "closed",
+ "created_at": "2024-07-27T23:17:53Z",
+ "fetched_at": "2026-11-02T12:21:34+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (none) does not cover issue text",
+ "text": "[issue by MuteTiefling]\nVersion: Aquaculture-1.21-2.7.7\r\n\r\nTreasure boxes don't appear to be dropping. I've been fishing for a while now and have gotten one Neptune's Bounty, but not a single Box, Lockbox, or Treasure Chest. This seems at odds with prior experience in 1.16 where those treasure boxes were somewhat common.\n\n[comment by GirafiStudios (collaborator)]\nWould you happen to be fishing with a fishing rod with Luck of the Sea?\r\nBoxes, Lockboxes and Treasure Chests is actually considered junk, meaning if you're using Luck of the Sea, they're quite unlikely to appear much.\r\nTreasure Chests is however the rarest of the 3 :)\r\n\r\n![image](https://github.com/user-attachments/assets/8657f022-db5c-400d-aec0-475e46cb1fe4)\n\n[comment by MuteTiefling (none)]\nOdd, with the loot in the treasure chest I wouldn't consider it junk :D But I guess that's fair enough. I do have Luck of the Sea on there."
+}

@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TeamMetallurgy/Aquaculture#432",
+ "url": "https://github.com/TeamMetallurgy/Aquaculture/issues/432",
+ "title": "Aquaculture issue #432: Reducing or Removing fish spawns in a 1.20.1 Server",
+ "source_type": "github_issue",
+ "repo": "TeamMetallurgy/Aquaculture",
+ "state": "closed",
+ "created_at": "2024-02-19T20:21:38Z",
+ "fetched_at": "2026-11-02T12:21:41+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (none) does not cover issue text",
+ "text": "[issue by kmkm1234]\nThe server is currently lagging due to entities and mobs, it's not excessive but it does cause the server to crash overtime. We are looking into how to reduce spawns, is there a way to reduce or shut off the mob spawns in Aquaculture? We'd like to not restart the server and remove the mod.\n\n[comment by GirafiStudios (collaborator)]\nFish spawns can be altered by a datapack\r\nhttps://github.com/TeamMetallurgy/Aquaculture/tree/AQ2-1.20.1/src/main/resources/data/aquaculture/forge/biome_modifier\r\n\r\nMods like In Control by McJty can also be used to alter it."
+}

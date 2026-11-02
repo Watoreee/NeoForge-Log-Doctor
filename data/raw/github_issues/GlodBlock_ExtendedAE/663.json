@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:GlodBlock/ExtendedAE#663",
+ "url": "https://github.com/GlodBlock/ExtendedAE/issues/663",
+ "title": "ExtendedAE issue #663: Recent update breaks rendering of Just Hammers' highlighting of blocks breaking.",
+ "source_type": "github_issue",
+ "repo": "GlodBlock/ExtendedAE",
+ "state": "closed",
+ "created_at": "2026-09-15T05:45:49Z",
+ "fetched_at": "2026-11-02T12:20:59+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by truepurpledino]\nOn Neoforge 1.21.1, going from ExtendedAE 1.21-2.2.35 to 1.21-2.2.36 breaks the Just Hammers' highlighting of blocks getting broken.\nWith ExtendedAE 1.21-2.2.35 and Just Hammers 21.1.4 (latest) ([log](https://mclo.gs/PXkkTBM)):\n\n<img width=\"1920\" height=\"1080\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/14ab3ad9-edae-4e36-862f-bad509621ec8\" />\n\nWith ExtendedAE 1.21-2.2.36 and Just Hammers 21.1.4 (latest) ([log](https://mclo.gs/JQBbKQm)):\n\n<img width=\"1920\" height=\"1080\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/ca9f290e-15e4-4fd2-8be2-f6d7664cbd25\" />\n\n[This class](https://github.com/nanite/JustHammers/blob/mc/1.21.1/common/src/main/java/pro/mikey/justhammers/client/SelectionOutlineRender.java) from Just Hammers and render mixins modified in https://github.com/GlodBlock/ExtendedAE/commit/b5215366bb864433e11cc6bd6f63220866489ad1 might be relevant.\n\n[comment by GlodBlock (owner)]\nfixed"
+}

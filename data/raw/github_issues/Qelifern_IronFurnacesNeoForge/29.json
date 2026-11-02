@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:Qelifern/IronFurnacesNeoForge#29",
+ "url": "https://github.com/Qelifern/IronFurnacesNeoForge/issues/29",
+ "title": "IronFurnacesNeoForge issue #29: Ticking block entity crash",
+ "source_type": "github_issue",
+ "repo": "Qelifern/IronFurnacesNeoForge",
+ "state": "closed",
+ "created_at": "2025-07-22T19:14:23Z",
+ "fetched_at": "2026-11-02T12:18:43+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (Apache-2.0) does not cover issue text",
+ "text": "[issue by Seceroth]\nHello,\n\nAn Obsidian furnace is crashing my server. Had it set to auto input fuel from the left side, pulling from a chest. It has the furnace and blasting upgrades. Iron ingots were just arriving into the chest and then it crashed. Restarting the server does not the fix the issue. As soon as I load the chunk it's in, the same crash happens. Playing the FTB Evolution modpack (v1.20.0). \nIron Furnaces Version 1.21.1 - 4.3.0.\n\n[crash-2025-07-22_18.59.13-server.txt](https://github.com/user-attachments/files/21373802/crash-2025-07-22_18.59.13-server.txt)\n\nUpdate: Turns out there was also a poppy in the chest, might be relevant.\n\n[comment by Reaviik (none)]\nsame crash here\n\n[comment by Qelifern (owner)]\n4.3.1 fixes this, a quick fix as I dont have the time to do thorough testing, therefore letting issue be up if any further issues arise"
+}

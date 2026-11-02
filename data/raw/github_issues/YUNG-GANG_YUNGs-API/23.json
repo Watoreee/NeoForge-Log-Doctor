@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:YUNG-GANG/YUNGs-API#23",
+ "url": "https://github.com/YUNG-GANG/YUNGs-API/issues/23",
+ "title": "YUNGs-API issue #23: 1.18.2 Crash on load",
+ "source_type": "github_issue",
+ "repo": "YUNG-GANG/YUNGs-API",
+ "state": "closed",
+ "created_at": "2022-03-13T02:49:03Z",
+ "fetched_at": "2026-11-02T12:22:21+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by Merith-TK]\nhttps://mclo.gs/9Hi3Xvh < logs for my full modpack\r\nhttps://mclo.gs/wJJPurW < logs of just fabric API and Yungs API\r\n\r\nworking on updating my vanillia modpack to 1.18.2 (mispelling intentional), and currently yungsapi is the only thing throwing errors at this time\r\n\r\nrunning java 17\n\n[comment by yungnickyoung (member)]\n1.18.2 is not yet supported\n\n[comment by Merith-TK (none)]\nWell I would reccomend pinning this issue and leaving it open for people so they can see it at the top and not blindly open and issue lol"
+}

@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TwelveIterations/Balm#136",
+ "url": "https://github.com/TwelveIterations/Balm/issues/136",
+ "title": "Balm issue #136: Crash with Sinytra Connector & Surveystones",
+ "source_type": "github_issue",
+ "repo": "TwelveIterations/Balm",
+ "state": "closed",
+ "created_at": "2025-03-21T22:52:40Z",
+ "fetched_at": "2026-11-02T12:23:18+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (Apache-2.0) does not cover issue text",
+ "text": "[issue by dkarvik]\n### Minecraft Version\n\n1.20.1 (LTS)\n\n### Mod Loader\n\nForge\n\n### Describe the Issue\n\nSince 7.3.19 surveystones mod breaks on startup.  This seems to be an incompatibility with checking the modlist, which is perhaps done by waystones transitively?  Unclear.  The stack trace was enough for me to realise this was caused by Balm without me looking too much closer at it.\n\nSurveystones depends on sinytra, so I haven't removed it.  Given a balm change seems to have broken this I figured this was the place to start :) \n\n### Logs\n\nhttps://mclo.gs/E8KrSFr\n\n[comment by BlayTheNinth (member)]\nLooks like Sinytra loads Fabric mods before the Forge mod list is available. But since Balm is a Forge mod it expects it to be available by the time mods make calls to it.\n\nI may look into a workaround on Balm's side but this should be reported to Sinytra, this will just be a constant crash source if a Fabric mod calls any multiloader-mod's method that happens to use `isModLoaded()` or other lifecycle-related Forge methods."
+}

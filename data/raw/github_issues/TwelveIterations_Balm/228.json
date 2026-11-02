@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TwelveIterations/Balm#228",
+ "url": "https://github.com/TwelveIterations/Balm/issues/228",
+ "title": "Balm issue #228: 26.1 Neoforge 26.1.0.3-beta Server Side Crash On Start",
+ "source_type": "github_issue",
+ "repo": "TwelveIterations/Balm",
+ "state": "closed",
+ "created_at": "2026-03-26T12:27:12Z",
+ "fetched_at": "2026-11-02T12:23:12+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (Apache-2.0) does not cover issue text",
+ "text": "[issue by P3rf3ctXZer0]\n[12:24:46] [main/ERROR] [minecraft/Main]: Failed to start the minecraft server\nnet.neoforged.fml.ModLoadingException: Loading errors encountered:\n- Balm (balm) has failed to load correctly\njava.lang.NoClassDefFoundError: net/minecraft/client/gui/screens/Screen\n\nat net.neoforged.fml.ModLoader.waitForFuture(ModLoader.java:253) ~[loader-11.0.4.jar:11.0] {}\nat net.neoforged.fml.ModLoader.dispatchParallelTask(ModLoader.java:216) ~[loader-11.0.4.jar:11.0] {}\nat net.neoforged.fml.ModLoader.constructMods(ModLoader.java:124) ~[loader-11.0.4.jar:11.0] {}\nat net.neoforged.fml.ModLoader.gatherAndInitializeMods(ModLoader.java:101) ~[loader-11.0.4.jar:11.0] {}\nat TRANSFORMER/neoforge@26.1.0.3-beta/net.neoforged.neoforge.internal.CommonModLoader.begin(CommonModLoader.java:49) ~[neoforge-26.1.0.3-beta-universal.jar:?] {}\nat TRANSFORMER/neoforge@26.1.0.3-beta/net.neoforged.neoforge.server.loading.ServerModLoader.load(ServerModLoader.java:31) ~[neoforge-26.1.0.3-beta-universal.jar:?] {}\nat TRANSFORMER/minecraft@26.1/net.minecraft.server.Main.main(Main.java:114) [minecraft-server-patched-26.1.0.3-beta.jar:?] {}\nat net.neoforged.fml.startup.Server.main(Server.java:19) [loader-11.0.4.jar:11.0] {}\n[12:24:46] [main/INFO] [ne.ne.fm.lo.FMLLoader/]: Closing FML Loader 136d26a8\n[12:24:46] [main/INFO] [ne.ne.fm.ModLoader/]: Clearing ModLoader\nnet.neoforged.fml.startup.FatalStartupException: Couldn't find Minecraft server thread. Startup likely failed.\nat net.neoforged.fml.startup.Server.main(Server.java:23)\n\nCraftLands Server marked as offline...\nCraftLands ---------- Detected server process in a crashed state! ----------\nCraftLands Exit code: 1\nCraftLands Out of memory: false\nCraftLands Aborting automatic restart, last crash occurred less than 60 seconds ago.\n\n[comment by BlayTheNinth (member)]\nFixed in Balm 26.1.0.4"
+}

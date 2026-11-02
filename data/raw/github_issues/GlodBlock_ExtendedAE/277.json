@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:GlodBlock/ExtendedAE#277",
+ "url": "https://github.com/GlodBlock/ExtendedAE/issues/277",
+ "title": "ExtendedAE issue #277: 1.21 Applied Flux - output limit on induction card",
+ "source_type": "github_issue",
+ "repo": "GlodBlock/ExtendedAE",
+ "state": "closed",
+ "created_at": "2024-10-26T17:47:09Z",
+ "fetched_at": "2026-11-02T12:21:11+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by jinkhya]\nHello,\r\nI couldn't find the info anywhere so here I am :) I'm trying to use the induction card into a pattern provider which would power my Mekanism ultimate machine. If I put maximum energy upgrades on the mek machine it's fine, but otherwise the power isn't keeping up. Am I missing something or there's a threshold on those cards ? I thought maybe if I were using a higher tier of FE storage cells it'd push more power but that doesn't seem to affect it either.\r\nThanks in advance,\r\nJin\n\n[comment by gitBurmecia (none)]\nAlso noticing this on all my MI machines, they completely lost efficiency because the induction cards aren't pushing enough power. Appliedflux completely turns off when it senses the machine's power buffer is full, and doesn't turn back on again until a few ticks later, this causes it to be effectively useless for a majority of applications.\n\n[comment by GlodBlock (owner)]\nit should be fixed in the latest appflux"
+}

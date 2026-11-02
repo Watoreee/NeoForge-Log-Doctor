@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:GlodBlock/ExtendedAE#640",
+ "url": "https://github.com/GlodBlock/ExtendedAE/issues/640",
+ "title": "ExtendedAE issue #640: ME装罐器排空模式下，AE无法将物品发配至ME装罐器",
+ "source_type": "github_issue",
+ "repo": "GlodBlock/ExtendedAE",
+ "state": "closed",
+ "created_at": "2026-07-22T09:50:37Z",
+ "fetched_at": "2026-11-02T12:21:18+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by yeichong]\n1.21-2.2.32-neoforge\n手动放进装罐器的能工作，但是AE无法发配进去\n\n<img width=\"1200\" height=\"630\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/2b68d27e-3f4e-42dc-9e77-6fc10f007e79\" />\n\n<img width=\"671\" height=\"310\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/0ac772b6-1efe-4000-95a5-f492f5aaeeeb\" />\n\n[comment by HowXu (none)]\nhas reproduced, trying to.solve now\n\n[comment by HowXu (none)]\nSeems there is no need to work with code.\n\nI have checked the ME Canner.java, it is **implements IGridTickable, ICraftingMachine, IGenericInvHost**, means it has a group of features like Molecular Assembler.\n\nAnd here is the if else of pattern judgement\n\n```java\nelse if (this.mode == CanerMode.EMPTY) {\n                    if (inputs.length == 1 && patternDetails.getOutputs().size() == 2) {\n``` \n\nIt means, you should add one empty bucket in the output slot, and the empty bucket will be automatically pulled in ME network.\n\n<img width=\"496\" height=\"270\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/b4243530-e200-4b08-9cb6-230926655aa1\" />\n\nThen it works correctly.\n\nHowever, I think this should be displayed in the Guide Book, or it will easily cause misunderstanding.\n\n[comment by GlodBlock (owner)]\n需要在输出里写上空桶"
+}

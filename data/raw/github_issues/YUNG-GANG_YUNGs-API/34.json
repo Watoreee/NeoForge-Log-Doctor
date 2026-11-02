@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:YUNG-GANG/YUNGs-API#34",
+ "url": "https://github.com/YUNG-GANG/YUNGs-API/issues/34",
+ "title": "YUNGs-API issue #34: Relocate Reflections (and Javassist) or depend on it with include(\"org.reflections:...\")",
+ "source_type": "github_issue",
+ "repo": "YUNG-GANG/YUNGs-API",
+ "state": "closed",
+ "created_at": "2022-10-18T22:06:36Z",
+ "fetched_at": "2026-11-02T12:22:18+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by Cypher121]\nCauses conflict with [Light Overlay](https://modrinth.com/mod/light-overlay).\r\n\r\nIn general, when including code from other libraries without use of Fabric/Quilt's `include` JiJ configuration, the package should be changed to something unique to the mod.\r\n\r\nAs this API copies code from org.reflections:reflections without changing the package, it crashes alongside light overlay, which `include`s an older version of the same library lacking one of the used methods.\r\n\r\nChange the package to something like `com.yungnickyoung.minecraft.yungsapi.included.org.reflections` to fix. \r\n\r\nAlternatively, as this seems to be a fabric-only dependency, go the recommended route and include the actual jar to let Fabric do the version handling:\r\n\r\n```\r\ndependencies {\r\n    implementation(\"org.reflections:reflections:0.10.2\")\r\n    include(\"org.reflections:reflections:0.10.2\")\r\n}\r\n```\r\n\r\nSame applies to Javassist.\n\n[comment by yungnickyoung (member)]\nThanks, I totally forgot to address this. Will probably just move it to a fabric include like you said\n\n[comment by yungnickyoung (member)]\nFixed in the latest releases."
+}

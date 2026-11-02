@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:Keksuccino/Konkrete#20",
+ "url": "https://github.com/Keksuccino/Konkrete/issues/20",
+ "title": "Konkrete issue #20: crash due to unchecked fabric api internal implementation mixin",
+ "source_type": "github_issue",
+ "repo": "Keksuccino/Konkrete",
+ "state": "closed",
+ "created_at": "2024-03-25T12:43:56Z",
+ "fetched_at": "2026-11-02T12:22:43+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (Apache-2.0) does not cover issue text",
+ "text": "[issue by Linguardium]\nhttps://github.com/Keksuccino/Konkrete/blob/309c477fec7f9d58dafdb9a63e22b16b93cb804a/src/main/java/de/keksuccino/konkrete/mixin/mixins/client/MixinScreenEvents.java#L20\r\n\r\nhttps://mclo.gs/vQNMvfY\r\n\r\nShould mark the mixin as not required and null check.\r\n\r\nShould also mark tested fabric api versions in fabric.mod.json to prevent issues on versions where implementation may change since you call internal methods that may change even in minor patch releases of fapi\n\n[comment by Keksuccino (owner)]\n- You are using an **old version** of FancyMenu and Konkrete that had problems with this\r\n- That part of the API didn't change in like years, so it is unlikely they will start changing it frequently\r\n-  Without this Mixin, FancyMenu and some of my other mods would basically do nothing at all anymore, so a crash is better than making it optional\n\n[comment by Keksuccino (owner)]\nbtw: I'm fully aware this Mixin can cause issues, which is why it isn't present in the 1.20.4 version anymore. I'm also planning to backport this change, but this also requires me to update the mods that have Konkrete as dependency, so it does not have very high priority right now. \r\n\r\nThe latest versions of Konkrete and FancyMenu (which triggered the NullPointer most of the time) are using this Mixin in a less aggressive way, so crashes related to that Mixin are very rarely happening in these versions."
+}

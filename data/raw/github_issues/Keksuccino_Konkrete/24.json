@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:Keksuccino/Konkrete#24",
+ "url": "https://github.com/Keksuccino/Konkrete/issues/24",
+ "title": "Konkrete issue #24: Game keep crashing after installing konkrete",
+ "source_type": "github_issue",
+ "repo": "Keksuccino/Konkrete",
+ "state": "closed",
+ "created_at": "2025-10-08T14:56:16Z",
+ "fetched_at": "2026-11-02T12:22:41+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (Apache-2.0) does not cover issue text",
+ "text": "[issue by NR-5tudio]\nHey!\ni wanted to use `fancy menu` mod for `1.24.4 forge`\ni installed all the used mods\nsuch as `melody` and `konkrete`. but the game crashed i thought that the mod is the broken one so i removed it (i kept the `melody` and `konkrete`, but i deleted fancy mod for testing) and still crashing so i removed `melody` and still crashing but when i deleted `konkrete` it stops crashing\nim not sure what is the issue exactly but i do know that there is an issue, WHO KNOWS maybe im dum :D\nThank you :).\n\n[comment by Keksuccino (owner)]\nI can't do anything without the log.\nPlease send your `/logs/latest.log` AFTER the game crashed, thank you.\n\n[comment by NR-5tudio (none)]\nokie :D\nhere it is!\n\n[latest.log](https://github.com/user-attachments/files/22785409/latest.log)\n\nif im not wrong i think this is the log you asked for\n\n[comment by Keksuccino (owner)]\nYour whole instance looks kinda cursed tbh.\nIt looks like it fails to read lots of mixin-related stuff, which is bad.\n\nAlso you use OptiFine, which is not compatible with my mods. You should use [OptiFine alternatives](https://docs.fancymenu.net/en/optifine-alternatives), which are more stable and don't break tons of mods, like OF does 😅\n\nIn short: Konkrete for MC 1.21.4 works fine, so it crashing means there's something wrong on your end. Be it a mod conflict, mod loader shenanigans, your instance being broken or OF being a pile of garbage lmao\n\nI will close this for now, since it's more a support thing. If you need more help, please join my Discord (invite is on all my project pages). Thank you very much!"
+}

@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:SuperMartijn642/TrashCans#58",
+ "url": "https://github.com/SuperMartijn642/TrashCans/issues/58",
+ "title": "TrashCans issue #58: [Crash] AdvancedAE's Extended Export Bus too fast(?) for Item Trash Can",
+ "source_type": "github_issue",
+ "repo": "SuperMartijn642/TrashCans",
+ "state": "closed",
+ "created_at": "2026-09-23T19:50:18Z",
+ "fetched_at": "2026-11-02T12:18:57+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (none) does not cover issue text",
+ "text": "[issue by engdyn]\n### Minecraft version\n\n1.21.1\n\n### Mod Loader\n\nNeoForge\n\n### Trash Cans version\n\n1.1.0\n\n### Game environment\n\nClient\n\n### Steps to reproduce\n\n1. Attach an Extended Export But to an Item Trash Can\n2. Add 2+ Acceleration Cards to the export bus\n3. Add item to export\n4. Observe crash\n\nhttps://github.com/user-attachments/assets/f4630ce9-fcfa-4057-bc9f-ebf44e2218a3\n\n### Crash report (~/logs/latest.log)\n\nAll the Mons - 1.3.0 crashed. The logs have been uploaded to `paste.kostromdan.dev`:\n### [latest.log](<https://p.kdan.dev/0nred9u>)   |   [debug.log head](<https://p.kdan.dev/U8w5XtJ>) / [tail](<https://p.kdan.dev/ZUZ6oUC>) (~15MB & ~90k lines)   |   [crash-2026-09-23_16.51.16-server.txt](<https://p.kdan.dev/QZXyvGa>)   |   [PrismLauncher-0.log](<https://p.kdan.dev/3QQDgxa>)   |   KubeJS: [client.log](<https://p.kdan.dev/ByQ9tPa>) / [server.log](<https://p.kdan.dev/tMrU4Mi>) / [startup.log](<https://p.kdan.dev/QdLx0W0>)   |   [crash_assistant_app.log](<https://p.kdan.dev/HBcbufP>)   |   [modlist.txt](<https://p.kdan.dev/ASMHrxw>)\n\n### [Mod list changes](<https://p.kdan.dev/VS1eRZd>) on top of the modpack:\n```ansi\n5 added, 0 removed, 0 updated.\n```\n\n[comment by SuperMartijn642 (owner)]\nThis issue was due to Minecraft 1.21+ arbitrarily throwing an error when saving a stack with size greater than 99. Most likely something was inserting such a large stack into the trash can.\nIt should be fixed not in Trash Cans version 1.1.1.\nThank you for reporting the issue!\n\n[comment by engdyn (none)]\nJust tried it out and everything works now. Thank you!"
+}

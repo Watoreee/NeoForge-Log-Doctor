@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TeamMetallurgy/Aquaculture#344",
+ "url": "https://github.com/TeamMetallurgy/Aquaculture/issues/344",
+ "title": "Aquaculture issue #344: 1.19 Internal Exception",
+ "source_type": "github_issue",
+ "repo": "TeamMetallurgy/Aquaculture",
+ "state": "closed",
+ "created_at": "2022-07-16T00:03:14Z",
+ "fetched_at": "2026-11-02T12:21:49+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (none) does not cover issue text",
+ "text": "[issue by SmaackBZ62]\nHeyo! I'm trying to run Aquaculture 2 on an Apex server and am running into an issue that seems to have happened in the past and I tried the solution that was used there (downloading and using the jenkins23 jar file) to no avail, this is my first time submitting an issue on Github so let me know if I need to give any other info! I'm excited to try out the mod!\r\n\r\n ![image](https://user-images.githubusercontent.com/109389771/179325817-011a28e8-f485-4e67-aff9-2f8ddb8e1980.png)\n\n[comment by antiwesley (none)]\nWhile I'm not a person who works on this, if you can provide the error log, that will help them immensely. \r\nYou can find them in your .minecraft folder under \"crash-reports\". This also gives them information about your version of Minecraft, the server info, and etc..\n\n[comment by SmaackBZ62 (none)]\nWell, the weird thing is that the server is up and running but I (nor my friends) can connect to it, so there isn't a crash report to give, but let me know if there's any other details I should give\n\n[comment by GirafiStudios (collaborator)]\nAre you sure you´re running Forge on the server?\n\n[comment by SmaackBZ62 (none)]\nYes, if it helps any I'm using their preset version of Forge for 1.19 which is 41.0.94 and the ability to use a custom version of Forge isn't there anymore so I can only use .94\n\n[comment by GirafiStudios (collaborator)]\nAre you sure you´re using the same version of both Forge and Aquaculture on the server and the client?\n\n[comment by SmaackBZ62 (none)]\nSorry about the late reply but I didn't realize that you need to have both the client and the server modded to play modded servers (which kinda makes sense) but yeah! It's working! Thanks for the help!"
+}

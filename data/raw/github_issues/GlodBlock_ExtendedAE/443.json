@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:GlodBlock/ExtendedAE#443",
+ "url": "https://github.com/GlodBlock/ExtendedAE/issues/443",
+ "title": "ExtendedAE issue #443: tag export bus crashes world if it cannot parse",
+ "source_type": "github_issue",
+ "repo": "GlodBlock/ExtendedAE",
+ "state": "closed",
+ "created_at": "2025-05-30T20:10:18Z",
+ "fetched_at": "2026-11-02T12:21:06+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by FrSnt]\nMinecraft Version: 1.21.1\nMod Version: 2.2.8\n\nSeverity: Crashing\nNeoForge Version:21.1.148\n\n### Issue\n\nIf a tag export bus is misconfigured, containing `a | ()`, it crashes.\n\nThe world can no longer be reopened, so if there's any way I can recover it please tell me! I'll try reloading the server while frozen.\n\nCrashes on `tickGrid`, with error something like `binary operator | requires two fields`, crash log is attached.\n\nHappened to me on a server with actual tags, while writing the string I wrote `c:armor | (c:tools ^ ())` (without closing gui) stopped to do something else and the server crashed in the meanwhile.\n\nThen reproduced on local creative flat world, so I'll paste those steps below. The log is from the server though.\n\n\n### Reproduction Steps\n\nReproducible: create a creative world (flat, don't think it matters), and make this (top down view, grid):\n```\n  S\nC f B P\n  T\n```\n\nS for the storage server rack with some cells\nT for crafting terminal\nC for chest\nf for fluix cable\nB for the storage controller\nP for creative energy cube\n\nput a tag export bus between f and C, pointing to the chest. Put some stuff in storage from the terminal. Write in the tag export bus: `a | ()` and wait. On my end it crashes before I even close the GUI if I wait a while, but try closing the GUI otherwise. I don't know if it matters whether \"a\" matches anything in the storage.\n\nI think instead of deactivating the bus on unparsable strings, it throws giving this issue\n\n\n### Crash log\n\nhttps://mclo.gs/EqIzBdL\n\n[comment by GlodBlock (owner)]\nupdate ExtendedAE to the latest"
+}

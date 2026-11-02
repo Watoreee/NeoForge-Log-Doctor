@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:GlodBlock/ExtendedAE#680",
+ "url": "https://github.com/GlodBlock/ExtendedAE/issues/680",
+ "title": "ExtendedAE issue #680: crsah when viewing patterns on pattern viewing terminal 1.21.1",
+ "source_type": "github_issue",
+ "repo": "GlodBlock/ExtendedAE",
+ "state": "closed",
+ "created_at": "2026-10-05T04:09:10Z",
+ "fetched_at": "2026-11-02T12:20:57+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by Xplodin]\n[crash-2026-10-05_00.06.21-client.txt](https://github.com/user-attachments/files/33042118/crash-2026-10-05_00.06.21-client.txt)\n\n[comment by GlodBlock (owner)]\nIt is caused by CoFH Core"
+}

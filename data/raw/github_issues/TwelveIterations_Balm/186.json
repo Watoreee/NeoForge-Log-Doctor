@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TwelveIterations/Balm#186",
+ "url": "https://github.com/TwelveIterations/Balm/issues/186",
+ "title": "Balm issue #186: [1.21.1] Any version above 21.0.46 causes a crash saying \"Cannot get config value before config is loaded.\"",
+ "source_type": "github_issue",
+ "repo": "TwelveIterations/Balm",
+ "state": "closed",
+ "created_at": "2025-09-06T10:15:52Z",
+ "fetched_at": "2026-11-02T12:23:03+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (Apache-2.0) does not cover issue text",
+ "text": "[issue by MundM2007]\n### Minecraft Version\n\n1.21.1 (LTS)\n\n### Mod Loader\n\nNeoForge\n\n### Describe the Issue\n\nUpon updated my mods, the game crashes with the error `java.lang.IllegalStateException: Cannot get config value before config is loaded.`. I've tried to replicate this error with a limited number of mods. Though because of the unclear error message i didn't succeed. \n\n### Logs\n\n[latest.log](https://github.com/user-attachments/files/22186380/latest.log)\n[debug.log](https://github.com/user-attachments/files/22186381/debug.log)\n\n[comment by BlayTheNinth (member)]\nThis has nothing to do with Balm, it's caused by `mechanicals` failing to load some Create-related classes, which leads to a followup crash in \"Better Mods Button\" that obscured the original `mechanicals` cause.\n\n> [06Sept.2025 12:15:22.942] [modloading-sync-worker/ERROR] [net.neoforged.fml.ModContainer/LOADING]: Caught exception during event net.neoforged.neoforge.registries.RegisterEvent@2bc0c84f dispatch for modid mechanicals\njava.lang.NoClassDefFoundError: net/createmod/catnip/lang/Lang\n\n[comment by MundM2007 (none)]\nRemoving that mod does fix the issue. Thanks for the help and sorry for reporting. Though I'm still wondering why it only happens on balm versions above 21.0.46 and also occurs without Better Mods Button\n\n[comment by BlayTheNinth (member)]\n> Though I'm still wondering why it only happens on balm versions above 21.0.46 and also occurs without Better Mods Button\n\nImpossible to say without logs for that case, but probably for a similar reason it happened to Better Mods Button. Mods crashing during initialization can sometimes cause followup crashes in other mods that weren't prepared for the corrupted state the game is left in, since NeoForge doesn't shutdown the game instantly on these types of crashes."
+}

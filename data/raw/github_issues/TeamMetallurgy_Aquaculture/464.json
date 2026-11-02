@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TeamMetallurgy/Aquaculture#464",
+ "url": "https://github.com/TeamMetallurgy/Aquaculture/issues/464",
+ "title": "Aquaculture issue #464: [1.21]FishingOverhaul compatibility?",
+ "source_type": "github_issue",
+ "repo": "TeamMetallurgy/Aquaculture",
+ "state": "closed",
+ "created_at": "2024-08-02T13:07:56Z",
+ "fetched_at": "2026-11-02T12:21:34+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (none) does not cover issue text",
+ "text": "[issue by FrogThai]\nWhen I installed FishingOverhaul and this mod as well as I enable the weight configuration,I found that the fish I caught had no weight information.As soon as I removed FishingOverhaul,it became normal.So I'd like to know if you are willing to manage to find time to consider the compatibility between the two mods?Thank you very much.\r\nAquaculture 2 mod version1.21-2.7.8\r\nFishingOverhaul mod version1.21.0-1.0.0\r\nNeoforge version 21.0.148\n\n[comment by GirafiStudios (collaborator)]\nThere is no way to do that on Aquaculture's end unfortunately.\r\nFishing Overhaul is cancelling the ItemFishedEvent without any checks, meaning any other mod that uses that event will NOT have their code called. The priority of the event in Fishing Overhaul is event set to HIGHEST, meaning I can't even make sure our code is called before theirs.\r\nhttps://github.com/pitbox46/FishingOverhaul/blob/502d79da3e68f88f50851def17ec75eef0492d76/src/main/java/github/pitbox46/fishingoverhaul/FishingOverhaul.java#L52"
+}

@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:SuperMartijn642/TrashCans#52",
+ "url": "https://github.com/SuperMartijn642/TrashCans/issues/52",
+ "title": "TrashCans issue #52: [Crash] ... please see picture to understand",
+ "source_type": "github_issue",
+ "repo": "SuperMartijn642/TrashCans",
+ "state": "closed",
+ "created_at": "2025-07-01T09:53:38Z",
+ "fetched_at": "2026-11-02T12:19:03+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (none) does not cover issue text",
+ "text": "[issue by superblast1]\n**Version Info**\n- Minecraft, ...\n- Trash Cans, ...\n- Core lib, ...\n\n**Steps to Reproduce**\n...\n\n**Crash report (~/logs/latest.log)**\n...\n\nim not sure what to do as theres no logs but i installed a crash detector mod just thought you should know\n![Image](https://github.com/user-attachments/assets/973fb7b4-d8a5-4434-b727-34225ef42db8)\n\n[comment by SuperMartijn642 (owner)]\nNuclear Trash Can copies the code from Trash Cans without changing the package or class names. Since Nuclear Trash Can now contains classes at the same locations as Trash Cans, it conflicts.\nNothing I can do about this, please report the issue to them.\n\n[comment by Leclowndu93150 (none)]\nMy bad, i used to be a bad modder when i made it. I'll make a proper implementation"
+}

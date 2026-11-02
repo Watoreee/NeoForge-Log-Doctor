@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:YUNG-GANG/YUNGs-API#11",
+ "url": "https://github.com/YUNG-GANG/YUNGs-API/issues/11",
+ "title": "YUNGs-API issue #11: crash",
+ "source_type": "github_issue",
+ "repo": "YUNG-GANG/YUNGs-API",
+ "state": "closed",
+ "created_at": "2021-08-25T13:44:07Z",
+ "fetched_at": "2026-11-02T12:22:25+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by Giyuubutdiff]\nwhen i put yungs api forge 12 in my mods and launch tlauncher it crashes\n\n[comment by TelepathicGrunt (none)]\nTlauncher is a piracy software to play minecraft without paying for it. Most mod developers will not provide support for people using tlauncher because that launcher is against Mojang's terms of service and isn't legal. You should switch to using GDLauncher, MultiMC, or CurseForge's launcher for playing with mods as those are legal and safer to use. And more mod developers will be willing to help you out.\r\n\r\nIf the game still crashes using one of these other launchers, please provider the latest.log file as it will say why the game crashed and we can work from there.\n\n[comment by yungnickyoung (member)]\nI don't support pirated content. Please open another issue if the problem persists with a legitimate Minecraft launcher."
+}

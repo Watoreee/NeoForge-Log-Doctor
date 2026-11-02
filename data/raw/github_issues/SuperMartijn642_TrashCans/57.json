@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:SuperMartijn642/TrashCans#57",
+ "url": "https://github.com/SuperMartijn642/TrashCans/issues/57",
+ "title": "TrashCans issue #57: [Crash] Dragging JEI fluid to Fluid Trashcan Filter",
+ "source_type": "github_issue",
+ "repo": "SuperMartijn642/TrashCans",
+ "state": "closed",
+ "created_at": "2026-08-25T17:52:03Z",
+ "fetched_at": "2026-11-02T12:19:02+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (none) does not cover issue text",
+ "text": "[issue by Minimaxi28]\n### Minecraft version\n\n1.20.1\n\n### Mod Loader\n\nForge\n\n### Trash Cans version\n\n1.1.0\n\n### Game environment\n\nServer\n\n### Steps to reproduce\n\n- Download JEI and Trash Cans (+Core and Config Lib)\n- place down Fluid Trash Can\n- try to drag and drop water from JEI to the Trash Can's filter\n- lava also crashes and other fluids from other mods too\n\n### Crash report (~/logs/latest.log)\n\n[latest.log](https://github.com/user-attachments/files/31431224/latest.log)\n\n[comment by SuperMartijn642 (owner)]\nSeems in Minecraft 1.20.2, `FriendlyByteBuf#writeInt` was changed to return a `FriendlyByteBuf` instead of `ByteBuf`. As I compile against Minecraft 1.20.4, this meant the signature was incorrect on Minecraft 1.20.1 and thus it fails.\nThis happens when encoding any packet, just the for the JEI integration error went uncaught.\nI fixed it by explicitly casting to a `ByteBuf` and calling `ByteBuf#writeInt`.\n\nIt should be fixed in Trash Cans version 1.1.0a for Forge 1.20 - 1.20.4 and Fabric 1.20 - 1.20.4.\nThank you for reporting the issue!"
+}

@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:SuperMartijn642/TrashCans#19",
+ "url": "https://github.com/SuperMartijn642/TrashCans/issues/19",
+ "title": "TrashCans issue #19: [Crash] 1.19.2 Crash When Placing Fluid/Ultimate Trash Cans",
+ "source_type": "github_issue",
+ "repo": "SuperMartijn642/TrashCans",
+ "state": "closed",
+ "created_at": "2022-09-02T06:30:58Z",
+ "fetched_at": "2026-11-02T12:19:05+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (none) does not cover issue text",
+ "text": "[issue by enigmaquip]\n**Version Info**\r\n- Minecraft, 1.19.2\r\n- Trash Cans, 1.0.15a\r\n- Core lib, 1.0.19a\r\n\r\n**Steps to Reproduce**\r\nWith Mekanism installed, place down a trash can that handles Gasses (Fluid or Ultimate)\r\n\r\n**Crash report (~/logs/latest.log)**\r\nhttps://mclo.gs/y9yMjzQ\r\n\r\n```\r\njava.lang.NoSuchFieldError: GAS_HANDLER_CAPABILITY\r\n\tat com.supermartijn642.trashcans.compat.mekanism.MekanismCompatOn.getGasHandlerCapability(MekanismCompatOn.java:33) ~[trashcans-1.0.15a-forge-mc1.19.jar%23264!/:?] {re:classloading}\r\n```\r\nLooks like the capability was renamed to just `GAS_HANDLER`\r\n<https://github.com/mekanism/Mekanism/blob/1.19.x/src/main/java/mekanism/common/capabilities/Capabilities.java>\n\n[comment by SuperMartijn642 (owner)]\nWhoops, I was still using the 1.18 version of Mekanism to compile against until it released for 1.19.\r\nI fixed it now in Trash Cans 1.0.15b for 1.19.\r\n\r\nThank you for reporting the issue!"
+}

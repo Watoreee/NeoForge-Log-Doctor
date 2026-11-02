@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TeamMetallurgy/Aquaculture#447",
+ "url": "https://github.com/TeamMetallurgy/Aquaculture/issues/447",
+ "title": "Aquaculture issue #447: [1.21] [Neoforge] MIssing Fish Fillet recipes on JEI/EMI/REI",
+ "source_type": "github_issue",
+ "repo": "TeamMetallurgy/Aquaculture",
+ "state": "closed",
+ "created_at": "2024-06-29T03:00:35Z",
+ "fetched_at": "2026-11-02T12:21:31+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (none) does not cover issue text",
+ "text": "[issue by ffuentesm]\nAquaculture-1.21-2.7.2.jar\r\nNeoforge: 21.0.42\r\n\r\nI noticed that the Recipe for the fish fillet are missing\r\n![image](https://github.com/TeamMetallurgy/Aquaculture/assets/44974827/d3010c74-7a57-4228-aa06-f9a3e9557c3d)\n\n[comment by GirafiStudios (collaborator)]\nUnable to reproduce with JEI\r\n\r\n![image](https://github.com/TeamMetallurgy/Aquaculture/assets/6305377/ef1b1eac-11ae-4719-8613-6807e118ae2d)\n\n[comment by ffuentesm (none)]\n@GirafiStudios Is not the knife recipe, is the Knife + Fish = Fillet\r\nI wrote in the title the missing Fish Filet recipe. \r\nAs JEI only shows the knife repair craft instead of also having the knife + fish tab craft\n\n[comment by GirafiStudios (collaborator)]\nAlso not able to reproduce with JEI :) \r\n\r\n![image](https://github.com/TeamMetallurgy/Aquaculture/assets/6305377/3276ca01-2798-495d-b4b5-cd3314d54640)\n\n[comment by ffuentesm (none)]\nCould you try also with EMI + JEI installed? It's what I am using.\n\n[comment by GirafiStudios (collaborator)]\nIt does not work with EMI installed, no."
+}

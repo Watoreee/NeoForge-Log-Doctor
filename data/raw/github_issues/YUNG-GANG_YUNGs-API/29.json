@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:YUNG-GANG/YUNGs-API#29",
+ "url": "https://github.com/YUNG-GANG/YUNGs-API/issues/29",
+ "title": "YUNGs-API issue #29: Incompatibility with ServerCore",
+ "source_type": "github_issue",
+ "repo": "YUNG-GANG/YUNGs-API",
+ "state": "closed",
+ "created_at": "2022-04-07T21:24:31Z",
+ "fetched_at": "2026-11-02T12:22:19+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by ioanvl]\nHI, \r\n\r\nThere is an incompatibility with [Servercore](https://modrinth.com/mod/servercore)\r\n\r\nThe game crashes with the minimum mods installed (fabric_api + cloth + yungs_api + servercore) with error:\r\n`java.lang.RuntimeException: Could not execute entrypoint stage 'main' due to errors, provided by 'fabric-api-lookup-api-v1'!\r\nExit Code: -1`\r\n\r\nYUNG's API 2.0.7 - ServerCore 1.2.8 - Fabric Loader0.13.3/1.18.2\r\n\r\nBoth seem to try and modify similar paths\r\n[latest.log](https://github.com/yungnickyoung/YUNGs-API/files/8446588/latest.log)\r\n\r\nI've created a [mirror issue](https://github.com/Wesley1808/ServerCore/issues/24) on their git.\n\n[comment by yungnickyoung (member)]\nDuplicate of #26 . Should be fixed in v2.0.8. Please open another issue if the problem persists"
+}

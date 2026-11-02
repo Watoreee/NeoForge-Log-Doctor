@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:Keksuccino/Konkrete#16",
+ "url": "https://github.com/Keksuccino/Konkrete/issues/16",
+ "title": "Konkrete issue #16: Mixin Crash on load MC 1.20",
+ "source_type": "github_issue",
+ "repo": "Keksuccino/Konkrete",
+ "state": "closed",
+ "created_at": "2023-06-12T16:04:01Z",
+ "fetched_at": "2026-11-02T12:22:44+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (Apache-2.0) does not cover issue text",
+ "text": "[issue by Saereth]\nMC 1.20\r\nForge version: 46.0.14\r\n\r\nAttempting to load up FMM/Konkrete results in a crash, logfile is here:\r\n\r\nhttps://gist.github.com/Saereth/8208cf184a884749a028b0963326adbe\r\n\r\nIf you would like me to gather any additional information or run other tests let me know, thanks!\n\n[comment by Keksuccino (owner)]\nShould be fixed now! Thank you for telling me!"
+}

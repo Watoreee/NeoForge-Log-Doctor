@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TwelveIterations/Balm#154",
+ "url": "https://github.com/TwelveIterations/Balm/issues/154",
+ "title": "Balm issue #154: Adding Balm to new NeoForge server crashes server before it fully loads",
+ "source_type": "github_issue",
+ "repo": "TwelveIterations/Balm",
+ "state": "closed",
+ "created_at": "2025-03-28T18:07:43Z",
+ "fetched_at": "2026-11-02T12:23:01+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (Apache-2.0) does not cover issue text",
+ "text": "[issue by AshenTemper]\n### Minecraft Version\n\n1.21.5\n\n### Mod Loader\n\nNeoForge\n\n### Describe the Issue\n\nI'm trying to add Balm to a clean server as it is needed for Waystones mod (that I use on a previous server).\n\nCurrently, the only mod I have on there is `journeymap-neoforge-1.21.5-6.0.0-beta.43` and (of course) `neoforge-21.5.5-beta-installer`. The server loads and runs fine when I have those on there.\n\nWhen I shut down the server, add `balm-neoforge-1.21.5-21.5.5` to the mods folder, and restart the server, it crashes before it fully loads.\n\nLogs attached.\n\n### Logs\n\n[debug.log](https://github.com/user-attachments/files/19510339/debug.log)\n[latest.log](https://github.com/user-attachments/files/19510338/latest.log)\n\n[comment by BlayTheNinth (member)]\nTry using Java 21, I believe there is some issues with Java 24 and Minecraft mods.\n\n[comment by AshenTemper (none)]\nThat did the trick! Uninstalled 24, installed `jdk-21.0.5_windows-x64_bin`, added Balm (after making sure it started without it) and voila!\n\nThanks for the info and super fast response!"
+}

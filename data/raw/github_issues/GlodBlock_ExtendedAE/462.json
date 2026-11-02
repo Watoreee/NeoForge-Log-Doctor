@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:GlodBlock/ExtendedAE#462",
+ "url": "https://github.com/GlodBlock/ExtendedAE/issues/462",
+ "title": "ExtendedAE issue #462: {bug} some blocks crafts isn't appearing",
+ "source_type": "github_issue",
+ "repo": "GlodBlock/ExtendedAE",
+ "state": "closed",
+ "created_at": "2025-07-14T15:55:10Z",
+ "fetched_at": "2026-11-02T12:21:04+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by jpgamermine]\nMinecraft Version\n1.21.1\n\nMod Version\n1.21-2.2.12-neoforge\n\nDid you test the latest version?\nyes\n\nSeverity\nmid\n\nNeoForge Version\n21.1.172\n\nProblem\nmissing crafts: \nME Wireless Connector\nME Wireless Setup Kit\nME Extended Export Bus / import bus / Pattern Access Terminal\nME Active Formation Plane\nME Extended Drive\nExtended Molecular Assembler / Inscriber / charger\nCristal Fixer\nME Canner\nME Extended IO Port\nCircuit Slicer\nAssembler Matrix Pattern / Craft / Speed Cores\n\n[comment by GlodBlock (owner)]\nuse emi or jei extra\n\n[comment by jpgamermine (none)]\ni am using jei\r\n\r\nOn Wed, Jul 16, 2025 at 9:28 AM Yang Xizhi ***@***.***> wrote:\r\n\r\n> *GlodBlock* left a comment (GlodBlock/ExtendedAE#462)\r\n> <https://github.com/GlodBlock/ExtendedAE/issues/462#issuecomment-3078356051>\r\n>\r\n> use emi or jei extra\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/GlodBlock/ExtendedAE/issues/462#issuecomment-3078356051>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/BMTDFC734KANNXADTS66YOD3IZAQTAVCNFSM6AAAAACBPOOQNSVHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMZTANZYGM2TMMBVGE>\r\n> .\r\n> You are receiving this because you are subscribed to this thread.Message\r\n> ID: ***@***.***>\r\n>\n\n[comment by GlodBlock (owner)]\nhttps://www.curseforge.com/minecraft/mc-mods/ftb-jei-extras"
+}

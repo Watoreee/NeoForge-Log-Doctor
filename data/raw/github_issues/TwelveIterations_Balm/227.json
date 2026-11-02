@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TwelveIterations/Balm#227",
+ "url": "https://github.com/TwelveIterations/Balm/issues/227",
+ "title": "Balm issue #227: ClassNotFoundException: FabricPermissionsAPIIntegration when fabric-permissions-api is present on 26.1",
+ "source_type": "github_issue",
+ "repo": "TwelveIterations/Balm",
+ "state": "closed",
+ "created_at": "2026-03-25T16:17:28Z",
+ "fetched_at": "2026-11-02T12:23:10+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (Apache-2.0) does not cover issue text",
+ "text": "[issue by LegitMeme]\n### Minecraft Version\n\n26.1 (LTS)\n\n### Mod Loader\n\nFabric\n\n### Describe the Issue\n\nWhen fabric-permissions-api is present on MC 26.1 (in this case bundled by Fzzy Config), Balm attempts to load FabricPermissionsAPIIntegration but the class doesn't exist in Balm's own jar, causing a ClassNotFoundException and crashing on startup.\n\nSteps to reproduce:\n1. Install Balm 26.1.0.2 and Fzzy Config 0.7.6+26.1 together.\n2. Launch the game.\n\n### Logs\n\nLatest: https://mclo.gs/HVJabRm\nCrash report: https://mclo.gs/Jqx9OUD\n\n[comment by BlayTheNinth (member)]\nFixed in Balm 26.1.0.3\n\n[comment by TheKfcBandit (none)]\ni'm still having this issue but the conflict seems to be with the following mods: ServerCore, Async, Spark, Vanish, Fzzy Config, and literally anything that includes any version of fabric-permissions-api\nhttps://mclo.gs/0qBl8F1"
+}

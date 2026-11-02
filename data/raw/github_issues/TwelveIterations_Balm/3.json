@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TwelveIterations/Balm#3",
+ "url": "https://github.com/TwelveIterations/Balm/issues/3",
+ "title": "Balm issue #3: Crash upon start",
+ "source_type": "github_issue",
+ "repo": "TwelveIterations/Balm",
+ "state": "closed",
+ "created_at": "2021-11-18T18:56:35Z",
+ "fetched_at": "2026-11-02T12:23:14+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (Apache-2.0) does not cover issue text",
+ "text": "[issue by efffauw]\n### Minecraft Version\n\n1.17\n\n### Mod Loader\n\nFabric\n\n### Mod Loader Version\n\n0.11.7\n\n### Mod Version\n\n1.8.0\n\n### Describe the Issue\n\nGame crashed upon start. Downgrading the mod fixes it\n\n### Logs\n\nhttps://www.toptal.com/developers/hastebin/iliposutov.yaml\n\n[comment by BlayTheNinth (member)]\nWaystones version is outdated"
+}

@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:GlodBlock/ExtendedAE#638",
+ "url": "https://github.com/GlodBlock/ExtendedAE/issues/638",
+ "title": "ExtendedAE issue #638: [Bug] Error During Mod Loading",
+ "source_type": "github_issue",
+ "repo": "GlodBlock/ExtendedAE",
+ "state": "closed",
+ "created_at": "2026-07-22T05:02:19Z",
+ "fetched_at": "2026-11-02T12:20:59+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by Marioluigi7896]\nTrying to include ExtendedAE in a modpack with a bunch of other mods, however when including the mod AE2 fails to load, disabling the mod fixes the issue. The reported issue in the crashlog seems to be a duplicate resource key, unsure if this will end up being an AE2 issue but since it only appeared with this mod enabled I figured I'd report here first.\n``java.lang.IllegalStateException: Adding duplicate key 'ResourceKey[minecraft:menu / extendedae:ex_emc_import_bus]' to registry``\n\nMincraft Version: 1.21.1\nJava Version: 21.0.3, Eclipse Adoptium\nMod Version: 1.21-2.2.34\nNeoforge Version: 21.1.242\nAE2 version: 19.2.17\nCrash Log: \nhttps://gist.github.com/Marioluigi7896/eb11f3f9ae2d3f3d7851a1fe4eb1ce30\n\n[comment by muggleorwizard (none)]\nConfirmed, happening to me as well after updating NeoForge. \nhttps://gnomebot.dev/paste/mclogs/vOInh8p\n\nAs a note, this issue does not occur on NeoForge 21.1.236. It only occurs after updating past that version.\n\n[comment by GlodBlock (owner)]\nfixed"
+}

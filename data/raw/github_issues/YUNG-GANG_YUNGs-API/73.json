@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:YUNG-GANG/YUNGs-API#73",
+ "url": "https://github.com/YUNG-GANG/YUNGs-API/issues/73",
+ "title": "YUNGs-API issue #73: 1.20.6 work with 1.21? #1584",
+ "source_type": "github_issue",
+ "repo": "YUNG-GANG/YUNGs-API",
+ "state": "closed",
+ "created_at": "2024-07-25T20:03:15Z",
+ "fetched_at": "2026-11-02T12:22:04+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by Nhantaa]\nyou have created version 1.21, but is version 1.20.6 compatible with version 1.21?\n\n[comment by imeesa (none)]\nThe version for 1.20.6 won't run on 1.21, it just wasn't made for it.\n\n[comment by Nhantaa (none)]\n> The version for 1.20.6 won't run on 1.21, it just wasn't made for it.\r\n\r\nIn that case, why create version 1.21 before version 1.20.6? It makes no sense.\n\n[comment by imeesa (none)]\n> In that case, why create version 1.21 before version 1.20.6? It makes no sense.\r\nBecause more people want it.\n\n[comment by MimzyFang (none)]\n> > The version for 1.20.6 won't run on 1.21, it just wasn't made for it.\r\n> \r\n> In that case, why create version 1.21 before version 1.20.6? It makes no sense.\r\n\r\n1.21 was released 1 month after 1.20.6 so a lot of mods did not brother with updating to 1.20.6 and just skipped it\n\n[comment by HIM049 (none)]\nBut looks this mod with version 1.20.4 cannot working on 1.20.6? Because my server is crashed when try to load it.\n\n[comment by yungnickyoung (member)]\nSorry, my mods don't support 1.20.6 and we're not planning on porting to it due to time constraints."
+}

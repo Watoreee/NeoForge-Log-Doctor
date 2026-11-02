@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:YUNG-GANG/YUNGs-API#27",
+ "url": "https://github.com/YUNG-GANG/YUNGs-API/issues/27",
+ "title": "YUNGs-API issue #27: Bound must be positive game crashes when loading world 1.16.5 forge",
+ "source_type": "github_issue",
+ "repo": "YUNG-GANG/YUNGs-API",
+ "state": "closed",
+ "created_at": "2022-04-04T00:06:10Z",
+ "fetched_at": "2026-11-02T12:22:19+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by UwUsheep]\nhere is the crash\r\n[crash-2022-04-03_14.00.33-server.txt](https://github.com/yungnickyoung/YUNGs-API/files/8405898/crash-2022-04-03_14.00.33-server.txt)\n\n[comment by NixityNull (none)]\nI am having a similar issue that also seems to be effecting other structure mods.\r\n[crash-2022-04-30_13.21.52-server.txt](https://github.com/YUNG-GANG/YUNGs-API/files/8597536/crash-2022-04-30_13.21.52-server.txt)\n\n[comment by NixityNull (none)]\nI removed yung's api and all associated mods and it still crashed, so i don't believe this is necessarily the cause\n\n[comment by yungnickyoung (member)]\nIt's impossible to tell from these logs alone, but this often happens because structure mods offer settings for a minY and maxY. If you set the minY to be greater than the maxY (which makes no sense), this crash is commonly the result. Double check all your mod configs."
+}

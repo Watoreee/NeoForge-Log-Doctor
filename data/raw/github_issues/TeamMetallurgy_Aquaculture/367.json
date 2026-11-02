@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TeamMetallurgy/Aquaculture#367",
+ "url": "https://github.com/TeamMetallurgy/Aquaculture/issues/367",
+ "title": "Aquaculture issue #367: Crash ",
+ "source_type": "github_issue",
+ "repo": "TeamMetallurgy/Aquaculture",
+ "state": "closed",
+ "created_at": "2022-10-14T03:10:02Z",
+ "fetched_at": "2026-11-02T12:21:45+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (none) does not cover issue text",
+ "text": "[issue by ghost]\nhttps://paste.gg/p/anonymous/7c3c064e899545f8979c62646d08b84a\n\n[comment by GirafiStudios (collaborator)]\nChange the enchantment ids in the config, as it's clashing with another mods enchantment ids.\r\nCommon thing you had to do back in the day.\r\n\r\nAlso 1.7.10 have not been supported for over 5 years\n\n[comment by ghost (none)]\nSo 1.12.2 better in this term?\n\n[comment by GirafiStudios (collaborator)]\nYes, Enchantment IDs got removed in Forge later on & was automatically assigned, so there wouldn´t be any more conflicts :)\r\nBack in 1.6.4 and before, there were the same problem with items and blocks, so getting a modpack to run back in the day was quite difficult!\n\n[comment by ghost (none)]\nThis mod won't help? https://www.curseforge.com/minecraft/mc-mods/enchantment-id-extender\n\n[comment by GirafiStudios (collaborator)]\nOnly if you´ve run out of Enchantment IDs to use (256 normally). Otherwise you would still have to manually make sure no enchantment ids is conflicting. Normally mods would have a config to change the enchantment ids"
+}

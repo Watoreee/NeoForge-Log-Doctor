@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:Qelifern/IronFurnacesNeoForge#14",
+ "url": "https://github.com/Qelifern/IronFurnacesNeoForge/issues/14",
+ "title": "IronFurnacesNeoForge issue #14: Server crashes when the redstone comparator button is clicked",
+ "source_type": "github_issue",
+ "repo": "Qelifern/IronFurnacesNeoForge",
+ "state": "closed",
+ "created_at": "2024-10-30T17:47:50Z",
+ "fetched_at": "2026-11-02T12:18:47+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (Apache-2.0) does not cover issue text",
+ "text": "[issue by Naxomega]\nWhen I click the redstone comparator button, the server crashes, and crashes over and over again at each start.\r\nSteps : \r\nStart the server\r\nConnect to the server\r\nPlace a modded furnace\r\nClick the redstone comparator button\r\nServer crashes\r\nCrash Log [crash-2024-10-30_18.29.47-server.txt](https://github.com/user-attachments/files/17576935/crash-2024-10-30_18.29.47-server.txt)\r\nMy server is on Forge 1.18.2 (Windows 11 Computer)\n\n[comment by Qelifern (owner)]\nForge version is no longer in development"
+}

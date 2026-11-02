@@ -1,0 +1,11 @@
+{
+ "doc_id": "gh-release:GlodBlock/ExtendedAE@26.1-1.0.5-neoforge",
+ "url": "https://github.com/GlodBlock/ExtendedAE/releases/tag/26.1-1.0.5-neoforge",
+ "title": "ExtendedAE release 26.1-1.0.5-neoforge",
+ "source_type": "github_release",
+ "repo": "GlodBlock/ExtendedAE",
+ "created_at": "2026-10-11T12:01:07Z",
+ "fetched_at": "2026-11-02T12:21:20+00:00",
+ "licence": "Release notes; repo licence LGPL-3.0",
+ "text": "- Fix crash with the latest AE2\r\n- Port ME Vacuum Interface and network highlight\r\n- Port bugfixes from 1.21.1"
+}

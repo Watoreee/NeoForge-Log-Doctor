@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:SuperMartijn642/TrashCans#60",
+ "url": "https://github.com/SuperMartijn642/TrashCans/issues/60",
+ "title": "TrashCans issue #60: [Crash] Dragging JEI fluid to Fluid Trashcan Filter",
+ "source_type": "github_issue",
+ "repo": "SuperMartijn642/TrashCans",
+ "state": "closed",
+ "created_at": "2026-09-27T13:47:46Z",
+ "fetched_at": "2026-11-02T12:19:00+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (none) does not cover issue text",
+ "text": "[issue by Minimaxi28]\n### Minecraft version\n\n1.20.1\n\n### Mod Loader\n\nForge\n\n### Trash Cans version\n\n1.1.1\n\n### Game environment\n\nClient\n\n### Steps to reproduce\n\nIdentical to #57 \nUnfortunatly, it's still crashing\n\n- Download JEI and Trash Cans (+Core and Config Lib)\n- place down Fluid Trash Can\n- try to drag and drop water from JEI to the Trash Can's filter\n- lava also crashes and other fluids from other mods too\n\n### Crash report (~/logs/latest.log)\n\n[latest.log](https://github.com/user-attachments/files/32701359/latest.log)\n\n[crash-2026-09-27_15.45.37-client.txt](https://github.com/user-attachments/files/32701363/crash-2026-09-27_15.45.37-client.txt)\n\n[comment by Minimaxi28 (none)]\nJEI version : 15.62.0.216\n\n[comment by SuperMartijn642 (owner)]\nPretty much the same issue as #57, but for a different method. It seems `FriendlyByteBuf#writeNbt` signiture was changed from accepting a `CompoundTag` to any `Tag`.\nIt should be fixed in Trash Cans version 1.1.1a for Forge 1.20 - 1.20.4 and Fabric 1.20 - 1.20.4.\nThanks again for reporting the issue!"
+}

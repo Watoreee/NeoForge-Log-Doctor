@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TwelveIterations/Balm#35",
+ "url": "https://github.com/TwelveIterations/Balm/issues/35",
+ "title": "Balm issue #35: Crash mentioning balm mixin",
+ "source_type": "github_issue",
+ "repo": "TwelveIterations/Balm",
+ "state": "closed",
+ "created_at": "2022-09-18T09:46:05Z",
+ "fetched_at": "2026-11-02T12:23:16+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (Apache-2.0) does not cover issue text",
+ "text": "[issue by Atlantispy]\n### Minecraft Version\n\n1.18.x\n\n### Mod Loader\n\nForge\n\n### Mod Loader Version\n\n40.1.80\n\n### Mod Version\n\n3.2.0\n\n### Describe the Issue\n\nLoaded into pre-existing world.\r\nIn pause menu, and try to press button. \r\nGame freeze and crash..\r\n\r\nHave lots of mods so apologies if not Balm, just the crash report mentioned it.\n\n### Logs\n\nhttps://pastebin.com/s4PihEmr\n\n[comment by darthvader45 (none)]\nHad this happen on world creation too.\r\n\r\nhttps://paste.ee/p/JCgri\n\n[comment by BlayTheNinth (member)]\nThis has been fixed in Balm 3.2.1\n\n[comment by darthvader45 (none)]\nThank you."
+}

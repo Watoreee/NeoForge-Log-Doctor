@@ -1,0 +1,11 @@
+{
+ "doc_id": "gh-release:AppliedEnergistics/Applied-Energistics-2@forge/v15.4.12",
+ "url": "https://github.com/AppliedEnergistics/Applied-Energistics-2/releases/tag/forge/v15.4.12",
+ "title": "Applied-Energistics-2 release 15.4.12 for Forge on Minecraft 1.20.1",
+ "source_type": "github_release",
+ "repo": "AppliedEnergistics/Applied-Energistics-2",
+ "created_at": "2026-10-28T22:38:15Z",
+ "fetched_at": "2026-11-02T12:18:37+00:00",
+ "licence": "Release notes; repo licence NOASSERTION (custom or unrecognised licence; see the repo's LICENSE file)",
+ "text": "## What's Changed\n* Fix Simplified Chinese naming of light gray items by @JocuperDARY in https://github.com/AppliedEnergistics/Applied-Energistics-2/pull/9032\n* Copy the tag into AEItemKey's read-only stack instead of sharing it by @Savallator in https://github.com/AppliedEnergistics/Applied-Energistics-2/pull/9025\n\n## New Contributors\n* @JocuperDARY made their first contribution in https://github.com/AppliedEnergistics/Applied-Energistics-2/pull/9032\n* @Savallator made their first contribution in https://github.com/AppliedEnergistics/Applied-Energistics-2/pull/9025\n\n**Full Changelog**: https://github.com/AppliedEnergistics/Applied-Energistics-2/compare/forge/v15.4.11...forge/v15.4.12"
+}

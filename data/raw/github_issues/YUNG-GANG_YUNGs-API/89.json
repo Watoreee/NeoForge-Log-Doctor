@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:YUNG-GANG/YUNGs-API#89",
+ "url": "https://github.com/YUNG-GANG/YUNGs-API/issues/89",
+ "title": "YUNGs-API issue #89: [Crash] Cannot invoke \"it.unimi.dsi.fastutil.objects.ObjectListIterator.back(int)\" because the return value of \"com.yungnickyoung.minecraft.yungsapi.world.structure.terrainadaptation.beardifier.EnhancedBeardifierData.getEnhancedPieceIterator()\" is null",
+ "source_type": "github_issue",
+ "repo": "YUNG-GANG/YUNGs-API",
+ "state": "closed",
+ "created_at": "2025-04-17T21:42:20Z",
+ "fetched_at": "2026-11-02T12:22:00+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by pietro-lopes]\nPlayer reported this crash on our modpack:\n\nAll the Mods 10 - 2.44 crashed. The logs have been uploaded to `gnomebot.dev`:\n### [latest.log](<https://gnomebot.dev/paste/mclogs/ZqFxFxN>)   |   [debug.log head](<https://gnomebot.dev/paste/mclogs/XVMrYPE>) / [tail](<https://gnomebot.dev/paste/mclogs/MRQBZ63>) (~28k lines)   |   [crash-2025-04-17_14.12.31-server.txt](<https://gnomebot.dev/paste/mclogs/EsLFYUw>)   |   CurseForge: [launcher_log.txt head](<https://gnomebot.dev/paste/mclogs/PnORr9Q>) / [tail](<https://gnomebot.dev/paste/mclogs/dhhXYoY>) (~26k lines)   |   KubeJS: [client.log](<https://gnomebot.dev/paste/mclogs/FYmTISu>) / [server.log](<https://gnomebot.dev/paste/mclogs/V6N6foX>) / [startup.log](<https://gnomebot.dev/paste/mclogs/mc1buGr>)   |   [crash_assistant_app.log](<https://gnomebot.dev/paste/mclogs/TvN68Qb>)\n\n### Mod list changes beyond the modpack:\n```ansi\nAdded mods:\n\u001b[2;32mmarvel-2.1.0-pre4-1.21.1-neoforge.jar\u001b[0m\n```\n\n[comment by yungnickyoung (member)]\nCan't say I've ever seen this before. I think this means that a mod must be preventing my [BeardifierMixin ](https://github.com/YUNG-GANG/YUNGs-API/blob/36cc2c60e7a382fe844747c854ce7ae8a2c6a27b/Common/src/main/java/com/yungnickyoung/minecraft/yungsapi/mixin/BeardifierMixin.java#L37) from injecting my custom EnhancedBeardifier logic.\n\n[comment by yungnickyoung (member)]\nAh, yeah the Marvel mod injects at HEAD and cancels.. https://github.com/U1timateJ7/Marvel/blob/1.21.x/src/main/java/net/tintankgames/marvel/mixin/BeardifierMixin.java\n\n[comment by pietro-lopes (none)]\nhehe, classic inject cancel at head, thanks."
+}

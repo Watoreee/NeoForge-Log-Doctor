@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TeamMetallurgy/Aquaculture#347",
+ "url": "https://github.com/TeamMetallurgy/Aquaculture/issues/347",
+ "title": "Aquaculture issue #347: This mod is incompatible with 1.19 advent of ascension. ",
+ "source_type": "github_issue",
+ "repo": "TeamMetallurgy/Aquaculture",
+ "state": "closed",
+ "created_at": "2022-07-25T20:58:02Z",
+ "fetched_at": "2026-11-02T12:21:48+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (none) does not cover issue text",
+ "text": "[issue by Thisguyneedshelp]\nNot sure if its their fault or this mods fault but it says aquaculture2 sidesteps an event. Heres the crash log https://mclo.gs/oeIdc9x\n\n[comment by GirafiStudios (collaborator)]\nDoes this happen on startup?\n\n[comment by Thisguyneedshelp (none)]\nYes it shows the error as sidesteps event as if it hadnt loaded properly\n\n[comment by GirafiStudios (collaborator)]\nI was able to reproduce it on first launch with Advent of Ascension, but didn´t occur after that.\r\nThe crash was on Advent of Ascensions side for me though.\r\nhttps://gist.github.com/GirafiStudios/b2eb2e1d7d7b1e038d5df5f95af68a38\n\n[comment by Thisguyneedshelp (none)]\nits in a large modpack but i keep getting the same problem with only aqua it works otherwise\n\n[comment by GirafiStudios (collaborator)]\nCould you try if this fixes it for you? :)\r\nhttps://jenkins.girafi.dk/job/Team%20Metallurgy%20Mods/job/Aquaculture/job/Aquaculture%202%201.19/25/\n\n[comment by Thisguyneedshelp (none)]\nim unfamiliar with this website do i download only the bottom one or both\n\n[comment by GirafiStudios (collaborator)]\nThe bottom one. The one that does not say api :)\n\n[comment by Thisguyneedshelp (none)]\ni tried that first luckily and it worked thanks!!!\n\n[comment by GirafiStudios (collaborator)]\nPerfect! :)"
+}

@@ -1,0 +1,11 @@
+{
+ "doc_id": "gh-release:GlodBlock/ExtendedAE@1.20-1.4.20-forge",
+ "url": "https://github.com/GlodBlock/ExtendedAE/releases/tag/1.20-1.4.20-forge",
+ "title": "ExtendedAE release 1.20-1.4.20-forge",
+ "source_type": "github_release",
+ "repo": "GlodBlock/ExtendedAE",
+ "created_at": "2026-09-09T12:11:14Z",
+ "fetched_at": "2026-11-02T12:21:20+00:00",
+ "licence": "Release notes; repo licence LGPL-3.0",
+ "text": "- Fix random config loading crash\r\n- Add Wireless Extended Crafting Terminal hotkey"
+}

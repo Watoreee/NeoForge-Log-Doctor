@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:GlodBlock/ExtendedAE#686",
+ "url": "https://github.com/GlodBlock/ExtendedAE/issues/686",
+ "title": "ExtendedAE issue #686: [Feature Request] Backport Crystal Assembler to 1.20.1 Forge/Fabric",
+ "source_type": "github_issue",
+ "repo": "GlodBlock/ExtendedAE",
+ "state": "closed",
+ "created_at": "2026-10-20T05:52:06Z",
+ "fetched_at": "2026-11-02T12:21:16+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by AncientShotgun]\nAs the title states, it would be quite cool to have feature parity between 1.21 and 1.20.1 versions of this mod, at least in this aspect.\n\nI am currently preparing to do this myself in Eclipse IDE, but as I do not currently have a lot of free time and cannot determine an ETA on the pull request for the content, I thought it prudent to also request it as a feature to someone who has had more experience with the codebase.\n\nThis doesn't necessarily mean I would like Entro-related content backported; I already have a provisional crafting recipe for the Crystal Assembler in mind and would be glad to share it with the devs.\n\n[comment by GlodBlock (owner)]\nNo, 1.20 won't have content update anymore because I don't have enough time to backport everything to every legcay versions. Only bugfixs will be backported.\nBut this mod is LGPL, and you can fork it or make an addon to add it."
+}

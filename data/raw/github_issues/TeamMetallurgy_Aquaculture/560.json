@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TeamMetallurgy/Aquaculture#560",
+ "url": "https://github.com/TeamMetallurgy/Aquaculture/issues/560",
+ "title": "Aquaculture issue #560: My issues",
+ "source_type": "github_issue",
+ "repo": "TeamMetallurgy/Aquaculture",
+ "state": "closed",
+ "created_at": "2026-11-02T02:21:45Z",
+ "fetched_at": "2026-11-02T12:21:37+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (none) does not cover issue text",
+ "text": "[issue by Kekolada]\n- Can’t search for the item recipes in the crafting table \n- Crashes the game when trying to mount a fish in a fishmount\n\n[comment by GirafiStudios (collaborator)]\nWhat version are you on?\n\n[comment by GirafiStudios (collaborator)]\nCrash reproduced on 26.2 and 26.3. Will be fixed shortly.\n\nRecipes in the recipe book gets unlocked similiar to how it does for vanilla recipes. Once they're unlocked, they're searchable in the recipe book in the crafting table."
+}

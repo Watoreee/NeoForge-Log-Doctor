@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:GlodBlock/ExtendedAE#249",
+ "url": "https://github.com/GlodBlock/ExtendedAE/issues/249",
+ "title": "ExtendedAE issue #249: Oversized Interface Can Store Absurd Values of Fluids",
+ "source_type": "github_issue",
+ "repo": "GlodBlock/ExtendedAE",
+ "state": "closed",
+ "created_at": "2024-09-12T15:01:15Z",
+ "fetched_at": "2026-11-02T12:21:10+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by UnknownSerhan]\nSame issue as https://github.com/GlodBlock/ExtendedAE/issues/233, I can easily reproduce the issue by doing nothing extraordinary. I am just sending water to the interface and it accepts all of it. I can also configure the interface to store max integer value of fluids. This issue doesn't happen with any other interface, only oversized one. ExtendedAE config is untouched (the oversized interface multiplier is x16)\r\n\r\n![image](https://github.com/user-attachments/assets/60747fb9-bd44-481d-9aaa-0ecc8a542f25)\r\n\r\nNeoForge: 21.1.42\r\nExtendedAE: 1.21-2.0.3\r\n\r\nHere is a forced crash for more info: https://gist.github.com/UnknownSerhan/c0804c6decc187398a01522cdc0a84f3\n\n[comment by GlodBlock (owner)]\ni can't reproduce this issue. does this happen when only extendedae and ae installed?\n\n[comment by GlodBlock (owner)]\nit should has been fixed now"
+}

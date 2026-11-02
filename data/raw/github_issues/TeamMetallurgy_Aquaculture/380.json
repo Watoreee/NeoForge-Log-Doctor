@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TeamMetallurgy/Aquaculture#380",
+ "url": "https://github.com/TeamMetallurgy/Aquaculture/issues/380",
+ "title": "Aquaculture issue #380: The game crashes when picking up the Neptunium Fillet Knife.-1.19.2",
+ "source_type": "github_issue",
+ "repo": "TeamMetallurgy/Aquaculture",
+ "state": "closed",
+ "created_at": "2023-01-02T12:53:24Z",
+ "fetched_at": "2026-11-02T12:21:43+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (none) does not cover issue text",
+ "text": "[issue by JellyBubb1e]\n[crash-2023-01-02_20.40.10-server.txt](https://github.com/TeamMetallurgy/Aquaculture/files/10331685/crash-2023-01-02_20.40.10-server.txt)\n\n[comment by GirafiStudios (collaborator)]\nUnable to reproduce.\r\nCrash log is not providing any useful information either, as it´s not mentioning Aquaculture at all.\n\n[comment by Bronski (none)]\n@GirafiStudios \r\n\r\nI'm getting this now. When I mouse over the knife, it's light's out. I have to remove the mod, load without, then go back out and re-add the mod. The world is crash-on-load until I do that. I'm hoping the knife is the only problem. The bow and pickaxe seem safe.\r\n\r\nI added this mod to Luna Pixel's \"Better MC Forge 1.19.2\" v13 pack. My crash log looks like OPs:\r\n\r\nhttps://gist.githubusercontent.com/Bronski/10ae09c5229e51e62115107a1878c076/raw/9d65e0801d4d645eaef261cf5345e7a04aa2cb64/gistfile1.txt"
+}

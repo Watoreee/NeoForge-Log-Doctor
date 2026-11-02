@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TeamMetallurgy/Aquaculture#455",
+ "url": "https://github.com/TeamMetallurgy/Aquaculture/issues/455",
+ "title": "Aquaculture issue #455: [1.19.2] crash occurs after getting neptunium fillet knife",
+ "source_type": "github_issue",
+ "repo": "TeamMetallurgy/Aquaculture",
+ "state": "closed",
+ "created_at": "2024-07-20T21:46:08Z",
+ "fetched_at": "2026-11-02T12:21:40+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (none) does not cover issue text",
+ "text": "[issue by GodPestilence]\nafter getting the fillet knife from neptunes bounty, my game crashed and cannot successfully be relaunched\r\n![Screenshot 2024-07-20 164508](https://github.com/user-attachments/assets/e0ba7208-6801-4b6d-b903-0b8f897baafb)\r\ni know its the fillet knife, as this occurred right after pulling from the chests inventory.\n\n[comment by GirafiStudios (collaborator)]\nWhat Aquaculture 2 and Forge/NeoForge version are you on?\r\nAlso is this on a server?\n\n[comment by GodPestilence (none)]\n> What Aquaculture 2 and Forge/NeoForge version are you on? Also is this on a server?\r\nForge 1.19.2, not a server, singleplayer world\n\n[comment by GirafiStudios (collaborator)]\nWhat specific version of Forge and Aquaculture 2 are you using?\n\n[comment by GodPestilence (none)]\nForge 43.3.5, Aquaculture 2.4.17\n\n[comment by GirafiStudios (collaborator)]\nSame as https://github.com/TeamMetallurgy/Aquaculture/issues/400\r\n\r\nI was (& still am) unable to reproduce it. It's caused by some sort of mod incompatibility. Unless you're willing to put in the time & work to figure out what other mod is causing it, I'm afraid I can't do much."
+}

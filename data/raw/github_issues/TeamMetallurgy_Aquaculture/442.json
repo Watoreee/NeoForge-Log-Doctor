@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TeamMetallurgy/Aquaculture#442",
+ "url": "https://github.com/TeamMetallurgy/Aquaculture/issues/442",
+ "title": "Aquaculture issue #442: [1.21] [Neoforge] Stone knife broken recipe tag",
+ "source_type": "github_issue",
+ "repo": "TeamMetallurgy/Aquaculture",
+ "state": "closed",
+ "created_at": "2024-06-23T17:05:43Z",
+ "fetched_at": "2026-11-02T12:21:36+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (none) does not cover issue text",
+ "text": "[issue by ffuentesm]\nAquaculture 2.7.0\r\n\r\nThe neoforge:cobblestone tag does not exist in the neoforge library: [Here](https://github.com/neoforged/NeoForge/tree/1.21.x/src/generated/resources/data/neoforge/tags)\r\n \r\n![image](https://github.com/TeamMetallurgy/Aquaculture/assets/44974827/56ab68d8-69aa-4d5a-a959-1a2c6a05e119)\r\n\r\nI would suggest using the vanilla tag \"minecraft:stone_tool_material\" for this recipe. as it will allow Blackstone, cobblestone, and cobbled deepslate in the crafting. As it's what is used in Vanilla to make stone tools \r\n![image](https://github.com/TeamMetallurgy/Aquaculture/assets/44974827/aed57e5f-1094-427c-92f8-960940ae668d)\n\n[comment by GirafiStudios (collaborator)]\nThanks for reporting!\r\nThere were a lot of changes to tags since 1.20.4, apparently I missed this one. Good catch!"
+}

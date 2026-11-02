@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:GlodBlock/ExtendedAE#291",
+ "url": "https://github.com/GlodBlock/ExtendedAE/issues/291",
+ "title": "ExtendedAE issue #291: add kjs support for 1.20.1 (forge)",
+ "source_type": "github_issue",
+ "repo": "GlodBlock/ExtendedAE",
+ "state": "closed",
+ "created_at": "2024-11-15T04:23:57Z",
+ "fetched_at": "2026-11-02T12:21:07+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by hyperclocked333]\ntried using the example code from [the example code](https://github.com/GlodBlock/ExtendedAE/wiki/Custom-Infinity-Cell), kept getting this error\r\nfrom the looks of it seems to work fine and dandy for 1.21 players so i dont know what the issue could be\r\n\r\nyes i have all the modeling stuff installed\r\nyes nobody else in the issue tracker seems to have this error\r\n\r\n![image](https://github.com/user-attachments/assets/b45d1fef-da88-4763-99cb-19d65315acd0)\n\n[comment by hyperclocked333 (none)]\nupdate: i have found out there is no kjs integration for 1.20.1\r\nthat would be cool\n\n[comment by GlodBlock (owner)]\nyou don't need kjs to add infinity cell in 1.20.1. they can be added by extendedae's config.\n\n[comment by Bartgames03 (none)]\nCould you tell me how to do that? I am running version 1.20-1.1.11-forge. I just looked in the configs folder of my instance and couldn't find a config for extendedae. My appologies for the inconvinience."
+}

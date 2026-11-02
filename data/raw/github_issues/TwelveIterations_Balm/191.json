@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TwelveIterations/Balm#191",
+ "url": "https://github.com/TwelveIterations/Balm/issues/191",
+ "title": "Balm issue #191: incompatibility with jags  and sushi go crafting mod 1.21.1",
+ "source_type": "github_issue",
+ "repo": "TwelveIterations/Balm",
+ "state": "closed",
+ "created_at": "2025-09-28T19:46:12Z",
+ "fetched_at": "2026-11-02T12:23:04+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (Apache-2.0) does not cover issue text",
+ "text": "[issue by SrNadien]\n### Minecraft Version\n\n1.21.1 (LTS)\n\n### Mod Loader\n\nNeoForge\n\n### Describe the Issue\n\njava.lang.NullPointerException: Cannot invoke \"net.minecraft.client.KeyMapping.isUnbound()\" because \"this.mapping\" is null\n\n\n\n### Logs\n\n[crash-2025-09-28_15.34.46-client.txt](https://github.com/user-attachments/files/22584883/crash-2025-09-28_15.34.46-client.txt)\n\n[comment by BlayTheNinth (member)]\nFixed in Balm 21.0.52"
+}

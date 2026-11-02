@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TeamMetallurgy/Aquaculture#526",
+ "url": "https://github.com/TeamMetallurgy/Aquaculture/issues/526",
+ "title": "Aquaculture issue #526: fish spawn rates",
+ "source_type": "github_issue",
+ "repo": "TeamMetallurgy/Aquaculture",
+ "state": "closed",
+ "created_at": "2025-10-12T00:22:33Z",
+ "fetched_at": "2026-11-02T12:21:38+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (none) does not cover issue text",
+ "text": "[issue by AceAngelo98]\nWhatever new thing was tweaked upped the spawn rates of the fish and anytime I go near water my game crashes even if I am able to get to the kill entities command around the freezing and crashing they immediately respawn in an instant. trying to tweak the span rates myself isn't working out because I can't find where to do that so if this could be fixed I just want my cute turtles back man. another thing to add is that if I'm near a river and a pond it chooses to spawn 30-100 fish in that pond and leave the river empty.\n\n[comment by GirafiStudios (collaborator)]\nWhat Minecraft and Aquaculture 2 version are you on?\n\n[comment by AceAngelo98 (none)]\nminecraft version 1.20.1 and the latest version of 1.20.1 of Aquaculture 2 i also use the forge minecraft loader so the one i use for this specific pack is 47.4.0\n\n[comment by GirafiStudios (collaborator)]\nAny version using Minecraft Forge is now unsupported. We only support the Neoforge builds for 1.21+\n\nThe issue you're having is most likely caused by changes from another mod, as we do not mess with how many fish can spawn. We only utilize the vanilla way of spawning fish, which automatically caps it."
+}

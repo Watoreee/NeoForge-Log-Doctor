@@ -39,7 +39,7 @@ DOCS_REPO = "neoforged/Documentation"
 DOCS_VERSION = "1.21.1"
 DOCS_SITE = "https://docs.neoforged.net"
 
-# The pack's ~15 mods (human's choice, Day 2). Renamed repos are listed under their current name.
+# The pack's mods: 15 chosen on Day 2 plus 7 added on Day 3 (human).
 REPOS = [
     "Creators-of-Create/Create",
     "mezz/JustEnoughItems",
@@ -56,6 +56,15 @@ REPOS = [
     "TwelveIterations/Waystones",
     "mrh0/createaddition",
     "AppliedEnergistics/Applied-Energistics-2",
+    # Added Day 3, before any relevance judgment or test result: mods that were broken during log collection
+    # (PLAN 6.4: corpus mods are chosen from the mods broken). The 15 above stay as distractors.
+    "Qelifern/IronFurnacesNeoForge",
+    "SuperMartijn642/TrashCans",
+    "GlodBlock/ExtendedAE",  # was GlodBlock/ExPatternProvider
+    "TeamMetallurgy/Aquaculture",
+    "YUNG-GANG/YUNGs-API",  # was yungnickyoung/YUNGs-API
+    "Keksuccino/Konkrete",
+    "TwelveIterations/Balm",
 ]
 
 MAINTAINER_ROLES = {"OWNER", "MEMBER", "COLLABORATOR"}

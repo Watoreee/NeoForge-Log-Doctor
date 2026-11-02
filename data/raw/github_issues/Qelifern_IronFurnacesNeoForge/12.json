@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:Qelifern/IronFurnacesNeoForge#12",
+ "url": "https://github.com/Qelifern/IronFurnacesNeoForge/issues/12",
+ "title": "IronFurnacesNeoForge issue #12: Out of Memory Issue with Large Maximum Stack Sizes",
+ "source_type": "github_issue",
+ "repo": "Qelifern/IronFurnacesNeoForge",
+ "state": "closed",
+ "created_at": "2024-10-02T02:20:10Z",
+ "fetched_at": "2026-11-02T12:18:47+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (Apache-2.0) does not cover issue text",
+ "text": "[issue by IACTU]\nhttps://github.com/Qelifern/IronFurnacesNeoForge/blob/dc6b6d96dd766acf90698a87032e8078b21b80e8/src/main/java/ironfurnaces/tileentity/TileEntityInventory.java#L68\r\n\r\nI have another mod which greatly increases maximum stack sizes. However, with Iron Furnaces this line causes a massive list to be created which quickly crashes the game. What is the reasoning behind this implementation?\n\n[comment by Qelifern (owner)]\nThat line of code is wrong, will push an update soon.\n\n[comment by Jonathan404 (none)]\nI'm having the same problem on 1.20.1, everytime i place down a netherite furnace or place a augment on it, the game freezes for a few seconds, and when i placed a stack of 1000 sand, the game froze entirely and bricked my save so hard i had to uninstall the mod to get back in\n\n[comment by Qelifern (owner)]\nfixed"
+}

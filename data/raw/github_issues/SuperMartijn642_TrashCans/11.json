@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:SuperMartijn642/TrashCans#11",
+ "url": "https://github.com/SuperMartijn642/TrashCans/issues/11",
+ "title": "TrashCans issue #11: [Crash] with newest version of mod",
+ "source_type": "github_issue",
+ "repo": "SuperMartijn642/TrashCans",
+ "state": "closed",
+ "created_at": "2021-05-08T01:35:59Z",
+ "fetched_at": "2026-11-02T12:19:07+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (none) does not cover issue text",
+ "text": "[issue by Warbringer12]\n**Version Info**\r\n- Minecraft, 1.16.5\r\n- Trash Cans, 1.0.10-mc1.16.5\r\n\r\n**Steps to Reproduce**\r\n...1. launch minecraft\r\n\r\n**Crash report (~/logs/latest.log)**\r\n...\r\n[crash-2021-05-07_18.31.42-fml.txt](https://github.com/SuperMartijn642/TrashCans/files/6444927/crash-2021-05-07_18.31.42-fml.txt)\r\n\r\n[Uploading 2021-05-07-2.log…]()\n\n[comment by SuperMartijn642 (owner)]\nIt says you don't have the core lib installed, it is required for the newest version.\n\n[comment by luffykick (none)]\nSame issue as OP... but for clarity... your latest trashcans update \"trashcans-1.0.10-mc1.16.5\" is now requiring \"supermartijn642**corelib**-1.0.3-mc1.16.5\" \r\n\r\nMany of us have \"supermartijn642**configlib**-1.0.5a-mc1.16\" which is where the confusion comes in... its easy to confuse config with core without paying close attention.\r\n\r\nMight be a good idea to put that in bold on the Trashcans curseforge page to avoid confusion from OG fans.\n\n[comment by moon-st0ne (none)]\nwhy the hell does this mod require its own library mod now\n\n[comment by SuperMartijn642 (owner)]\nBecause I make like 14 mods for different 5 Minecraft versions and I don't want to have to repeat the same code constantly.\n\n[comment by SuperMartijn642 (owner)]\n@Warbringer12 I assume your problem is solved now. If not, just comment here and I'll reopen the issue."
+}

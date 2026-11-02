@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:GlodBlock/ExtendedAE#435",
+ "url": "https://github.com/GlodBlock/ExtendedAE/issues/435",
+ "title": "ExtendedAE issue #435: Crash right click wireless",
+ "source_type": "github_issue",
+ "repo": "GlodBlock/ExtendedAE",
+ "state": "closed",
+ "created_at": "2025-05-18T02:56:59Z",
+ "fetched_at": "2026-11-02T12:21:06+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by Pultex]\nMinecraft 1.21.1\nneoforge 21.1.148 part of ATM10\n\nJust update to you last release \ncrash still occurs after right click on wireless block connected with setup card\n\n[crash-2025-05-17_21.47.48-client.txt](https://github.com/user-attachments/files/20270384/crash-2025-05-17_21.47.48-client.txt)\n\n[comment by GlodBlock (owner)]\nfixed"
+}

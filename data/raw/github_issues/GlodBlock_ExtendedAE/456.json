@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:GlodBlock/ExtendedAE#456",
+ "url": "https://github.com/GlodBlock/ExtendedAE/issues/456",
+ "title": "ExtendedAE issue #456: Assembler Matrix refuses Substitutions",
+ "source_type": "github_issue",
+ "repo": "GlodBlock/ExtendedAE",
+ "state": "closed",
+ "created_at": "2025-06-27T01:50:10Z",
+ "fetched_at": "2026-11-02T12:21:05+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by MrAlex2go]\nPremis:\nWhen requesting \"Assembler Matrix Craft Core\", the system shows \"missing Items\" while completely ignoring that a Substitution is available.\n\nDetail:\nI have the Recipe for a \"Crafting Table\" set to \"Substitutions Enabled\", when I then request said \"Crafting Table\" the System tellls me that I am missing \"Oak Log\" for more \"Oak Planks\" while I also have a recipe for \"Dark Oak Planks\".\nThe System also tells me that other usable \"Planks\" are available, but it does not register that it can make more of the Substitution.\n\nVersion:\nExtendedAE-1.21-2.2.15-neoforge.jar\n\n[comment by GlodBlock (owner)]\nIt has nothing to do with ExtendedAE and substitutions mode. AE can't request different sub crafting tasks for the same item. \nEven you have patterns like this: B->A, C->B, D->B. AE won't use both C and D to craft B at the same time.\nYou can send this request to AE's github issue if you want such feature"
+}

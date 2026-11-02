@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TeamMetallurgy/Aquaculture#459",
+ "url": "https://github.com/TeamMetallurgy/Aquaculture/issues/459",
+ "title": "Aquaculture issue #459: [1.21] Fillet recipes are all missing in EMI",
+ "source_type": "github_issue",
+ "repo": "TeamMetallurgy/Aquaculture",
+ "state": "closed",
+ "created_at": "2024-07-27T22:28:07Z",
+ "fetched_at": "2026-11-02T12:21:29+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (none) does not cover issue text",
+ "text": "[issue by MuteTiefling]\nVersion: Aquaculture-1.21-2.7.7\r\n\r\nLatest log: [latest.log](https://github.com/user-attachments/files/16401625/latest.log)\r\n\r\nThere are no recipes for obtaining fish fillets\r\n![image](https://github.com/user-attachments/assets/4eb794e8-b987-41b4-964d-8ba2e49c8362)\n\n[comment by GirafiStudios (collaborator)]\nLooks like you're using EMI, if I'm not mistaken?\r\n\r\nThey show up just fine with just JEI installed, but EMI somehow breaks it. I'll have to look into if it's something on EMI side that breaks it, or if we have to add specific support for EMI.\n\n[comment by MuteTiefling (none)]\nYep, we are using EMI with JEI underneath. This allows EMI to pull from JEI for mods that don't support it directly. \r\n\r\nDirect support for EMI would be a nice addition, however.\n\n[comment by GirafiStudios (collaborator)]\nEMI Support added in https://github.com/TeamMetallurgy/Aquaculture/commit/81db864f6b5a942a50c8150bb71b1ef96fe06953 :)"
+}

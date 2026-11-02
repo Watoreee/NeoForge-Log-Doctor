@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:YUNG-GANG/YUNGs-API#61",
+ "url": "https://github.com/YUNG-GANG/YUNGs-API/issues/61",
+ "title": "YUNGs-API issue #61: chunk generation errors in 1.19.2",
+ "source_type": "github_issue",
+ "repo": "YUNG-GANG/YUNGs-API",
+ "state": "closed",
+ "created_at": "2024-01-07T04:12:32Z",
+ "fetched_at": "2026-11-02T12:22:10+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (LGPL-3.0) does not cover issue text",
+ "text": "[issue by Kinsypoo]\n[crash-2024-01-07_00.03.39-server.txt](https://github.com/YUNG-GANG/YUNGs-API/files/13852207/crash-2024-01-07_00.03.39-server.txt)\r\n\r\nive gotten this a few times any ideas on a reason? it always references yungs api seems to happen at random\n\n[comment by yungnickyoung (member)]\nNot too sure what's causing this. I'm pretty sure I'm calling a normal vanilla function in an expected place, so it's likely a compat issue with another mod. Do you have any server-side performance mods?\n\n[comment by Kinsypoo (none)]\nhey i stopped hosting the server i think i had a couple but i cant remember\r\nwhich ones sorry.\r\n\r\nOn Mon, Mar 18, 2024, 6:38 PM Nick Young ***@***.***> wrote:\r\n\r\n> Not too sure what's causing this. I'm pretty sure I'm calling a normal\r\n> vanilla function in an expected place, so it's likely a compat issue with\r\n> another mod. Do you have any server-side performance mods?\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/YUNG-GANG/YUNGs-API/issues/61#issuecomment-2005170613>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/AQQZZD5OISTFPZLJSUW3RTDYY5UGDAVCNFSM6AAAAABBQA54ZGVHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMZDAMBVGE3TANRRGM>\r\n> .\r\n> You are receiving this because you authored the thread.Message ID:\r\n> ***@***.***>\r\n>\n\n[comment by yungnickyoung (member)]\nClosing due to lack of info"
+}

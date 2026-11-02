@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TeamMetallurgy/Aquaculture#348",
+ "url": "https://github.com/TeamMetallurgy/Aquaculture/issues/348",
+ "title": "Aquaculture issue #348: \"Connection Lost\" error when use fishing pole",
+ "source_type": "github_issue",
+ "repo": "TeamMetallurgy/Aquaculture",
+ "state": "closed",
+ "created_at": "2022-08-01T21:33:59Z",
+ "fetched_at": "2026-11-02T12:21:47+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (none) does not cover issue text",
+ "text": "[issue by HinnoZ]\nI recently updated to the most recent 1.19 forge version (1.19-41.1.0) to attempt to fix the invisible fishing line bug on my server. Now, the game runs perfectly fine until I try to use the fishing pole, at which point the game crashes and I receive the message shown in the image. \r\n![aquaculture error](https://user-images.githubusercontent.com/110078519/182250237-eabb397c-4615-4863-b004-5c0055b0eeca.PNG)\n\n[comment by GirafiStudios (collaborator)]\nWeird question. Was the fishing pole created before you updated Forge, or after? :)\r\n\r\nIf it was created before, trying crafting a new one and see if it happens with that one as well.\n\n[comment by GirafiStudios (collaborator)]\nShould be fixed by Aquaclture 2.4.5"
+}

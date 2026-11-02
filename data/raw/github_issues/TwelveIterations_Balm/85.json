@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TwelveIterations/Balm#85",
+ "url": "https://github.com/TwelveIterations/Balm/issues/85",
+ "title": "Balm issue #85: Server crashes on startup",
+ "source_type": "github_issue",
+ "repo": "TwelveIterations/Balm",
+ "state": "closed",
+ "created_at": "2024-07-02T00:29:08Z",
+ "fetched_at": "2026-11-02T12:22:58+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (Apache-2.0) does not cover issue text",
+ "text": "[issue by ashton727]\n### Minecraft Version\n\n1.21\n\n### Mod Loader\n\nNeoForge\n\n### Mod Loader Version\n\n21.0.46\n\n### Mod Version\n\n21.0.11\n\n### Balm Version\n\n21.0.11\n\n### Describe the Issue\n\n1. Start neoforge 21.0.46 server with balm\r\n2. Observe crash\n\n### Logs\n\nhttps://pastebin.com/4asPjjkH\n\n### Do you use any performance-enhancing mods (e.g. OptiFine) or custom server distributions (e.g. SpongeForge)?\n\nno\n\n[comment by BlayTheNinth (member)]\nTry Java 21\n\n[comment by ashton727 (none)]\nThis version of Neoforge requires Java 22 I believe.\n\n[comment by BlayTheNinth (member)]\nMinecraft 1.21 uses Java 21 and the error you're getting is because Mixin cannot load the JRE 22 (file major version 66) classes.\n\n[comment by ashton727 (none)]\nRealized its been running on 21 the whole time. Still crashes on startup.\n\n[comment by BlayTheNinth (member)]\n> [01Jul2024 19:25:17.473] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 22.0.1+8-16\r\n[01Jul2024 19:25:17.475] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 11.0.3+main.0f24dec3 starting: java version 22.0.1 by Oracle Corporation; OS Windows 10 arch amd64 version 10.0"
+}

@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:TeamMetallurgy/Aquaculture#342",
+ "url": "https://github.com/TeamMetallurgy/Aquaculture/issues/342",
+ "title": "Aquaculture issue #342: Error message whenever I try loading my game",
+ "source_type": "github_issue",
+ "repo": "TeamMetallurgy/Aquaculture",
+ "state": "closed",
+ "created_at": "2022-07-09T02:48:25Z",
+ "fetched_at": "2026-11-02T12:21:50+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (none) does not cover issue text",
+ "text": "[issue by HICMGUN]\nThe game crashed whilst rendering overlay\r\nError: java.lang.NullPointerException: Registry Object not present: minecraft:empty\r\nExit Code: -1\r\n\r\nThis is the error that keeps coming up. This mod is one of the couple that causes it. The other two are U TEAM CORE and USEFUL BACKPACKS.\r\n\r\n[crash-2022-07-08_22.45.21-client.txt](https://github.com/TeamMetallurgy/Aquaculture/files/9075743/crash-2022-07-08_22.45.21-client.txt)\n\n[comment by GirafiStudios (collaborator)]\nPretty sure this is because you´re using an old version of Forge, please update to Forge version 41.0.63 (A lot of mods does not work with 41.0.64 yet, hence why I recommend 41.0.63)"
+}

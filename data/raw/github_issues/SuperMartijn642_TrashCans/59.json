@@ -1,0 +1,12 @@
+{
+ "doc_id": "gh-issue:SuperMartijn642/TrashCans#59",
+ "url": "https://github.com/SuperMartijn642/TrashCans/issues/59",
+ "title": "TrashCans issue #59: [Crash] Your title here",
+ "source_type": "github_issue",
+ "repo": "SuperMartijn642/TrashCans",
+ "state": "closed",
+ "created_at": "2026-09-25T12:02:08Z",
+ "fetched_at": "2026-11-02T12:19:00+00:00",
+ "licence": "GitHub issue thread: user-generated content under the GitHub Terms of Service; the repo licence (none) does not cover issue text",
+ "text": "[issue by Trko0045]\n### Minecraft version\n\n1.20.1\n\n### Mod Loader\n\nFabric\n\n### Trash Cans version\n\n 1.1.0a-fabr ic-mc1.20.4\n\n### Game environment\n\nClient\n\n### Steps to reproduce\n\nupdate the corelib of supermartin \njoin server, open trash and game crashes \n\n[crash-2026-09-25_13.56.10-client.txt](https://github.com/user-attachments/files/32651450/crash-2026-09-25_13.56.10-client.txt)\n\n### Crash report (~/logs/latest.log)\n\nCrashlog uploaded above\n\n[comment by SuperMartijn642 (owner)]\nIt should be fixed not in Trash Cans version 1.1.1.\nThank you for reporting the issue!"
+}

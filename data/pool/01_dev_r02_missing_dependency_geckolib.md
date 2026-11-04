@@ -45,7 +45,7 @@ If nothing is relevant after one deliberate search of the corpus, fill in **Supp
   - retrieved by: hybrid_b#2@r02l, hybrid_c#3@r02l, dense_b#5@r02l
   - excerpt: [issue by Tomatoe1] The error will show that Geckolib latest version 4.7.3 causes the Marvel mod to crash because of a missing model of the vibranium shield! I hope I did it right by including the error log, and I hope it's not too long either... ---- Minecraft Crash Report ---- // Daisy, daisy... Time: 2025-01-02 13:46:53 Description: Rendering overlay java.lang.IllegalArgumentException: No model for layer marvel:vibranium_shield#main at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.model.geom.EntityModelSet.bakeLayer(EntityModelSet.java:17) ~[client-1.21.1-20240808.144430-sr
 
-- [ ] **neoforge-docs:docs/1.21.1/gettingstarted/modfiles** (neoforge_docs, 3/6 conditions)
+- [x] **neoforge-docs:docs/1.21.1/gettingstarted/modfiles** (neoforge_docs, 3/6 conditions)
   - NeoForge docs: Mod Files
   - https://docs.neoforged.net/docs/1.21.1/gettingstarted/modfiles/
   - retrieved by: hybrid_b#5@r02c, hybrid_c#5@r02c, hybrid_c#4@r02l, bm25_b#2@r02l

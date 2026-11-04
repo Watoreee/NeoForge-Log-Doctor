@@ -15,13 +15,13 @@ If nothing is relevant after one deliberate search of the corpus, fill in **Supp
 
 ---
 
-- [ ] **gh-issue:thedarkcolour/KotlinForForge#160** (github_issue, 5/6 conditions)
+- [x] **gh-issue:thedarkcolour/KotlinForForge#160** (github_issue, 5/6 conditions)
   - KotlinForForge issue #160: new update causing mod not to load
   - https://github.com/thedarkcolour/KotlinForForge/issues/160
   - retrieved by: hybrid_a#3@r05c, hybrid_b#2@r05c, dense_b#1@r05c, hybrid_a#1@r05l, hybrid_b#2@r05l, hybrid_c#2@r05l, bm25_b#2@r05l, dense_b#2@r05l
   - excerpt: [issue by ThunderHacker11] When updating to Kotlin for forge 5.12 it does not load causing all dependent mods to fail to load, here is a sample of the crash -- Mod loading issue -- Details: Mod file: <No mod information provided> Failure message: Mod File mods\Cobblemon-neoforge-1.7.3+1.21.1.jar needs language provider kotlinforforge:5.3 or above to load We have found - Mod version: <No mod information provided> Mod issues URL: <No issues URL found> Exception message: <No associated exception found> NeoForge 1.21.1 NeoForge Version: 21.1.233 [comment by thedarkcolour (owner)] Does 5.
 
-- [ ] **gh-issue:thedarkcolour/KotlinForForge#85** (github_issue, 5/6 conditions)
+- [x] **gh-issue:thedarkcolour/KotlinForForge#85** (github_issue, 5/6 conditions)
   - KotlinForForge issue #85: kotlinforforge-4.6.2 requires language provider kotlinforforge:4.3
   - https://github.com/thedarkcolour/KotlinForForge/issues/85
   - retrieved by: hybrid_a#2@r05l, hybrid_b#4@r05l, hybrid_c#3@r05l, bm25_a#3@r05l, dense_b#5@r05l

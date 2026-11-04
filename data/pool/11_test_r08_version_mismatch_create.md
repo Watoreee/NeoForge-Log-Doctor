@@ -21,7 +21,7 @@ If nothing is relevant after one deliberate search of the corpus, fill in **Supp
   - retrieved by: hybrid_a#5@r08c, hybrid_c#1@r08c, hybrid_a#2@r08l, hybrid_c#1@r08l, bm25_a#4@r08l
   - excerpt: [issue by laji233] ### Bug Description If you launch the game once with both Create: Aeronautics and Sodium loaded, uninstalling Create: Aeronautics and restarting the game will cause the game to crash. ### Reproduction Steps 1.Neoforge 21.1.233 for Minecraft 1.21.1 2.Sodium 0.8.12 and Create Aeronautics 1.3.0 3.launch the game 4.exit the game 5.delete Create Aeronautics 6.restart the game ### Log File [latest.log](https://github.com/user-attachments/files/29452105/latest.log) ### Crash Report [crash-2026-06-29_13.26.29-client.txt](https://github.com/user-attachments/files/29452110/cras
 
-- [ ] **neoforge-docs:docs/1.21.1/gettingstarted/modfiles** (neoforge_docs, 3/6 conditions)
+- [x] **neoforge-docs:docs/1.21.1/gettingstarted/modfiles** (neoforge_docs, 3/6 conditions)
   - NeoForge docs: Mod Files
   - https://docs.neoforged.net/docs/1.21.1/gettingstarted/modfiles/
   - retrieved by: hybrid_b#1@r08l, bm25_b#1@r08l, dense_b#1@r08l

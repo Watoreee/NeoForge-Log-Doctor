@@ -11,7 +11,7 @@ Mark `[x]` if the document helps diagnose or fix THIS failure; leave `[ ]` if no
 
 If nothing is relevant after one deliberate search of the corpus, fill in **Support search** below.
 
-**Support search:** `none_found` / `uncertain` / (leave blank if any doc is relevant)  ->  
+**Support search:** `none_found` / `uncertain` / (leave blank if any doc is relevant)  ->  none_found
 
 ---
 

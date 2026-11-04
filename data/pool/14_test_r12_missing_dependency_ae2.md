@@ -27,7 +27,7 @@ If nothing is relevant after one deliberate search of the corpus, fill in **Supp
   - retrieved by: hybrid_b#1@r12c, hybrid_c#2@r12c, dense_b#3@r12c, hybrid_b#1@r12l, hybrid_c#2@r12l, dense_b#3@r12l
   - excerpt: [issue by DuckTyler90] ### Describe the bug TBH I'm not sure if i should post this here or the JEI github im ligit lost for words i went throw my 205 mod list trying to fix this issue disabling all the mods and found it as a JEI issue. whats happening is JEI is just not letting the recipes register or there failing to load only for inscriber that i found so far As i said i don't know if its how you integrated JEI in to Ae2 or its jei issue i tryed on modrinth loader and curse both are not working Info { NeoForge: 1.21.1 AE2 Version: 19.2.17 JEI Version: 19.51.0.417 } ### How to reproduc
 
-- [ ] **neoforge-docs:docs/1.21.1/gettingstarted/modfiles** (neoforge_docs, 3/6 conditions)
+- [x] **neoforge-docs:docs/1.21.1/gettingstarted/modfiles** (neoforge_docs, 3/6 conditions)
   - NeoForge docs: Mod Files
   - https://docs.neoforged.net/docs/1.21.1/gettingstarted/modfiles/
   - retrieved by: hybrid_b#3@r12c, hybrid_c#5@r12c, bm25_b#1@r12c, hybrid_b#3@r12l, hybrid_c#5@r12l, bm25_b#1@r12l

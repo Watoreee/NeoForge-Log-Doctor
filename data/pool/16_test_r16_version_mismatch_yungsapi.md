@@ -15,7 +15,7 @@ If nothing is relevant after one deliberate search of the corpus, fill in **Supp
 
 ---
 
-- [ ] **gh-issue:YUNG-GANG/YUNGs-API#5** (github_issue, 5/6 conditions)
+- [x] **gh-issue:YUNG-GANG/YUNGs-API#5** (github_issue, 5/6 conditions)
   - YUNGs-API issue #5: YungsAPI listed as not installed, but it is?
   - https://github.com/YUNG-GANG/YUNGs-API/issues/5
   - retrieved by: hybrid_a#5@r16c, hybrid_b#1@r16c, hybrid_c#1@r16c, bm25_b#4@r16c, dense_b#2@r16c, hybrid_a#2@r16l, hybrid_b#3@r16l, hybrid_c#3@r16l, dense_b#1@r16l
@@ -63,7 +63,7 @@ If nothing is relevant after one deliberate search of the corpus, fill in **Supp
   - retrieved by: hybrid_b#5@r16c, hybrid_b#2@r16l, bm25_b#5@r16l
   - excerpt: .transformer.MixinTransformer.transformClass(MixinTransformer.java:234) at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClassBytes(MixinTransformer.java:202) at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.getPostMixinClassByteArray(KnotClassDelegate.java:422) ... 11 more Caused by: org.spongepowered.asm.mixin.throwables.MixinApplyError: Mixin [yungsapi.mixins.json:accessor.CriteriaTriggersAccessor from mod yungsapi] from phase [DEFAULT] in config [yungsapi.mixins.json] FAILED during APPLY at org.spongepowered.asm.mixin.transformer.MixinProcessor.handleM
 
-- [ ] **neoforge-docs:docs/1.21.1/gettingstarted/modfiles** (neoforge_docs, 2/6 conditions)
+- [x] **neoforge-docs:docs/1.21.1/gettingstarted/modfiles** (neoforge_docs, 2/6 conditions)
   - NeoForge docs: Mod Files
   - https://docs.neoforged.net/docs/1.21.1/gettingstarted/modfiles/
   - retrieved by: hybrid_b#5@r16l, bm25_b#2@r16l

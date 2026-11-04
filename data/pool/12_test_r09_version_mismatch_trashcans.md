@@ -33,7 +33,7 @@ If nothing is relevant after one deliberate search of the corpus, fill in **Supp
   - retrieved by: hybrid_b#1@r09c, hybrid_c#1@r09c, bm25_b#1@r09c
   - excerpt: [issue by peachmimosa15] Description: Mod loading failures have occurred; consult the issue messages for more details net.neoforged.neoforge.logging.CrashReportExtender$ModLoadingCrashException: Mod loading has failed I updated my modpack today and sophisiticated storage is not happy. I just uploaded the latest version on modrinth for 7 minutes ago and still not working. sophisticatedstorage-1.21.1-1.5.0.1254.jar [crash-2025-09-01_08.59.59-fml.txt](https://github.com/user-attachments/files/22078851/crash-2025-09-01_08.59.59-fml.txt) [comment by P3pp3rF1y (owner)] You need to update Soph
 
-- [ ] **gh-issue:SuperMartijn642/TrashCans#38** (github_issue, 3/6 conditions)
+- [x] **gh-issue:SuperMartijn642/TrashCans#38** (github_issue, 3/6 conditions)
   - TrashCans issue #38: [Crash] Failing to find corelib dependency
   - https://github.com/SuperMartijn642/TrashCans/issues/38
   - retrieved by: dense_b#2@r09c, hybrid_b#1@r09l, bm25_b#1@r09l, dense_b#2@r09l
@@ -141,7 +141,7 @@ If nothing is relevant after one deliberate search of the corpus, fill in **Supp
   - retrieved by: bm25_a#3@r09l
   - excerpt: lyServiceDiscovery) Found 2 early service jars (out of 117) in 21ms [23:03:14] [main/INFO] (FMLLoader) Loading FML Early Services: [23:03:14] [main/INFO] (FMLLoader) - C:/Users/<user>/.gradle/caches/modules-2/files-2.1/net.neoforged.fancymodloader/earlydisplay/11.0.5/b2edeab4008c91772d61f8f98a5253a09a4e890d/earlydisplay-11.0.5.jar [23:03:14] [main/INFO] (FMLLoader) - C:/Users/<user>/.gradle/caches/modules-2/files-2.1/net.neoforged.fancymodloader/loader/11.0.5/3477e70d79fe8cd06962749f24e64f01edda3bb3/loader-11.0.5.jar [23:03:14] [main/INFO] (ImmediateWindowHandler) Loading ImmediateWindowProv
 
-- [ ] **neoforge-docs:docs/1.21.1/gettingstarted/modfiles** (neoforge_docs, 1/6 conditions)
+- [x] **neoforge-docs:docs/1.21.1/gettingstarted/modfiles** (neoforge_docs, 1/6 conditions)
   - NeoForge docs: Mod Files
   - https://docs.neoforged.net/docs/1.21.1/gettingstarted/modfiles/
   - retrieved by: bm25_b#3@r09l

@@ -27,13 +27,13 @@ If nothing is relevant after one deliberate search of the corpus, fill in **Supp
   - retrieved by: hybrid_b#1@r03c, hybrid_c#2@r03c, dense_b#4@r03c
   - excerpt: [issue by st0x0ef] Architectury doesn't load on neoforge since it try to use the ClientTickEvent CrashLog : ``` Caused by 0: java.lang.NoClassDefFoundError: net/neoforged/neoforge/event/TickEvent$ClientTickEvent at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[?:?] {} at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3578) ~[?:?] {} at java.base/java.lang.Class.getDeclaredMethods(Class.java:2676) ~[?:?] {} at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.register(EventBus.java:85) ~[bus-7.2.0.jar%2394!/:?] {} at TRANSFORMER/archi
 
-- [ ] **gh-issue:architectury/architectury-api#528** (github_issue, 3/6 conditions)
+- [x] **gh-issue:architectury/architectury-api#528** (github_issue, 3/6 conditions)
   - architectury-api issue #528: Error: java.lang.IllegalStateException: Mod 'architectury' is not available!
   - https://github.com/architectury/architectury-api/issues/528
   - retrieved by: dense_b#1@r03c, hybrid_b#1@r03l, hybrid_c#4@r03l, dense_b#2@r03l
   - excerpt: to dig into it a bit and sadly "Mo´ Structures" was the mod using that configfile and causing the crash. It´s a bit dissapointing not to be able to use the mod (liked it very much) but at least i can play again. Again, thank you very much for your patience and helping me out :-) [comment by SirTwsted (none)] ![Screenshot_308](https://github.com/user-attachments/assets/285348a0-af89-42a0-ad0a-6fa574b0772e) [crash-2024-07-19_08.55.05-client.txt](https://github.com/user-attachments/files/16312649/crash-2024-07-19_08.55.05-client.txt) Using MC v1.21 and on NEOForge v21.0.109 . [comme
 
-- [ ] **gh-issue:architectury/architectury-api#664** (github_issue, 3/6 conditions)
+- [x] **gh-issue:architectury/architectury-api#664** (github_issue, 3/6 conditions)
   - architectury-api issue #664: java.lang.IllegalStateException: Mod 'architectury' is not available!
   - https://github.com/architectury/architectury-api/issues/664
   - retrieved by: dense_b#3@r03c, hybrid_a#3@r03l, hybrid_b#3@r03l, dense_b#1@r03l
@@ -99,7 +99,7 @@ If nothing is relevant after one deliberate search of the corpus, fill in **Supp
   - retrieved by: hybrid_a#4@r03l, bm25_a#3@r03l
   - excerpt: [issue by Official-V-Zer0] ### Bug Description So I am working on a new pack after encountering this issue once before, And Sodium extra and Reese's settings needed the most recent update so you see. No supplementaries. Funnily used to run fine kinda with the alphas quote the crashlog: java.lang.RuntimeException: Sodium mod config not found at TRANSFORMER/sodium@0.8.12-beta.1+mc1.21.1/net.caffeinemc.mods.sodium.client.config.ConfigManager.registerConfigs(ConfigManager.java:119) ~[net.caffeinemc.sodium-neoforge-0.8.12-beta.1+mc1.21.1-mod.jar%23337!/:?] {re:mixin,re:classloading} ###
 
-- [ ] **neoforge-docs:docs/1.21.1/gettingstarted/modfiles** (neoforge_docs, 2/6 conditions)
+- [x] **neoforge-docs:docs/1.21.1/gettingstarted/modfiles** (neoforge_docs, 2/6 conditions)
   - NeoForge docs: Mod Files
   - https://docs.neoforged.net/docs/1.21.1/gettingstarted/modfiles/
   - retrieved by: hybrid_b#5@r03l, bm25_b#3@r03l
@@ -123,7 +123,7 @@ If nothing is relevant after one deliberate search of the corpus, fill in **Supp
   - retrieved by: bm25_b#2@r03c
   - excerpt: [issue by LeapordLady639] ### Minecraft Version Other (specify below) ### Mod Loader NeoForge ### Describe the Issue I'm trying to launch a 1.21.4 modpack and it's saying that "Waystones (waystones) has failed to load correctly" before reaching the title page and all I can do from there is open the mod folder, open the log file, open the crash report, or quit the game. Given what the crash report says I looked at Balm's config file and does indeed contain no configurations, but I don't know what to do about that. I also looked at Waystone's config file and there doesn't seem to be any pro
 
-- [ ] **gh-issue:architectury/architectury-api#542** (github_issue, 1/6 conditions)
+- [x] **gh-issue:architectury/architectury-api#542** (github_issue, 1/6 conditions)
   - architectury-api issue #542: "Architectury is not available" with the latest mod version
   - https://github.com/architectury/architectury-api/issues/542
   - retrieved by: dense_b#2@r03c

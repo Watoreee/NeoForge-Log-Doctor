@@ -63,13 +63,13 @@ If nothing is relevant after one deliberate search of the corpus, fill in **Supp
   - retrieved by: hybrid_a#5@r17c, hybrid_b#3@r17c, bm25_b#3@r17c
   - excerpt: [issue by peachmimosa15] Description: Mod loading failures have occurred; consult the issue messages for more details net.neoforged.neoforge.logging.CrashReportExtender$ModLoadingCrashException: Mod loading has failed I updated my modpack today and sophisiticated storage is not happy. I just uploaded the latest version on modrinth for 7 minutes ago and still not working. sophisticatedstorage-1.21.1-1.5.0.1254.jar [crash-2025-09-01_08.59.59-fml.txt](https://github.com/user-attachments/files/22078851/crash-2025-09-01_08.59.59-fml.txt) [comment by P3pp3rF1y (owner)] You need to update Soph
 
-- [ ] **gh-issue:architectury/architectury-api#528** (github_issue, 2/6 conditions)
+- [x] **gh-issue:architectury/architectury-api#528** (github_issue, 2/6 conditions)
   - architectury-api issue #528: Error: java.lang.IllegalStateException: Mod 'architectury' is not available!
   - https://github.com/architectury/architectury-api/issues/528
   - retrieved by: dense_b#1@r17c, hybrid_b#4@r17l, dense_b#2@r17l
   - excerpt: found. So I am a bit confused. [comment by RockinOstrich (none)] When I use NeoForge 21.1.31, it's fine, but if I try updating it to Neoforge 21.1.32+, I get that crash report (the one SirTwsted got), and that's the only thing I've changed. Any suggestions? I know you mentioned above about omegaconfig, but I don't know how to read or interpret a crash report: [crash-2024-10-21_20.18.46-client.txt](https://github.com/user-attachments/files/17468161/crash-2024-10-21_20.18.46-client.txt) [comment by Redfan2 (none)] > > omegaconfig > > @Jab125 > > I don't understand. I typed omegaconfig
 
-- [ ] **gh-issue:architectury/architectury-api#664** (github_issue, 2/6 conditions)
+- [x] **gh-issue:architectury/architectury-api#664** (github_issue, 2/6 conditions)
   - architectury-api issue #664: java.lang.IllegalStateException: Mod 'architectury' is not available!
   - https://github.com/architectury/architectury-api/issues/664
   - retrieved by: dense_b#5@r17c, hybrid_a#1@r17l, dense_b#1@r17l
@@ -81,7 +81,7 @@ If nothing is relevant after one deliberate search of the corpus, fill in **Supp
   - retrieved by: bm25_b#5@r17c, bm25_a#1@r17l
   - excerpt: event net.neoforged.neoforge.client.event.sound.SoundEngineLoadEvent to a broken mod state [28Apr2024 18:58:29.349] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.RegisterColorHandlersEvent$Block to a broken mod state [28Apr2024 18:58:29.350] [Render thread/ERROR] [net.neoforged.fml.ModLoader/]: Cowardly refusing to send event net.neoforged.neoforge.client.event.RegisterColorHandlersEvent$Item to a broke [... truncated] [comment by thedarkcolour (owner)] Good catch. I love reflection! [comment by bms-1984 (none)] Ye
 
-- [ ] **neoforge-docs:docs/1.21.1/gettingstarted/modfiles** (neoforge_docs, 2/6 conditions)
+- [x] **neoforge-docs:docs/1.21.1/gettingstarted/modfiles** (neoforge_docs, 2/6 conditions)
   - NeoForge docs: Mod Files
   - https://docs.neoforged.net/docs/1.21.1/gettingstarted/modfiles/
   - retrieved by: hybrid_b#2@r17l, bm25_b#3@r17l
@@ -117,7 +117,7 @@ If nothing is relevant after one deliberate search of the corpus, fill in **Supp
   - retrieved by: hybrid_a#2@r17c
   - excerpt: [issue by pavel1992x] ### Description When using infinite storage in the logistics system of this mod, a temporary freeze occurs. ### Game Log https://mclo.gs/6peAUUQ ### Debug Information <details> <summary>Client Info</summary> ``` Create: Mod Version: 6.0.10 Mod Git Commit: ac0c444d9828da3453ae8cc65338e8de063286fb Ponder Version: 1.0.82+mc1.21.1 NeoForge Version: 21.1.228 Minecraft Version: 1.21.1 Graphics: Flywheel Version: 1.0.6 Flywheel Backend: flywheel:indirect OpenGL Renderer: AMD Radeon RX 6700 OpenGL Version: 4.6.0 Core Profile Context 26.5.1.260407 Graphics Mode: f
 
-- [ ] **gh-issue:architectury/architectury-api#542** (github_issue, 1/6 conditions)
+- [x] **gh-issue:architectury/architectury-api#542** (github_issue, 1/6 conditions)
   - architectury-api issue #542: "Architectury is not available" with the latest mod version
   - https://github.com/architectury/architectury-api/issues/542
   - retrieved by: dense_b#2@r17c, dense_b#4@r17l

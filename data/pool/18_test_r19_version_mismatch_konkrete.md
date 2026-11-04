@@ -51,7 +51,7 @@ If nothing is relevant after one deliberate search of the corpus, fill in **Supp
   - retrieved by: hybrid_b#5@r19l, hybrid_c#5@r19l, dense_b#1@r19l
   - excerpt: import Tabs from '@theme/Tabs'; import TabItem from '@theme/TabItem'; # NeoForge User Guide Whether you are a regular player, pack developer or server administrator, this guide is intended to help you through the process of preparing your computer to run NeoForge, as well as answer some frequently asked questions. The guide mainly aims to help you install NeoForge using the official Minecraft launcher provided by Mojang. There are also a number of third-party launchers that mostly automate this process for you, some of which are mentioned in the article on [third-party launchers][launchers]
 
-- [ ] **gh-issue:Keksuccino/Konkrete#22** (github_issue, 3/6 conditions)
+- [x] **gh-issue:Keksuccino/Konkrete#22** (github_issue, 3/6 conditions)
   - Konkrete issue #22: Crash
   - https://github.com/Keksuccino/Konkrete/issues/22
   - retrieved by: hybrid_b#2@r19l, hybrid_c#2@r19l, dense_b#2@r19l

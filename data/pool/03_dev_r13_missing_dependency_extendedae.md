@@ -39,7 +39,7 @@ If nothing is relevant after one deliberate search of the corpus, fill in **Supp
   - retrieved by: hybrid_b#2@r13l, bm25_b#2@r13l
   - excerpt: knot//net.minecraft.client.main.Main.main(Main.java:250) at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:514) at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72) at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) at java.base/java.lang.reflect.Method.invoke(Unknown Source) at com.modrinth.theseus.MinecraftLaunch.relaunch(MinecraftLaunch.java:63) at com.modrinth.theseus.MinecraftLaunch.main(MinecraftLaunch.java:28) C
 
-- [ ] **gh-issue:GlodBlock/ExtendedAE#422** (github_issue, 1/6 conditions)
+- [x] **gh-issue:GlodBlock/ExtendedAE#422** (github_issue, 1/6 conditions)
   - ExtendedAE issue #422: kubejs error with extended ae
   - https://github.com/GlodBlock/ExtendedAE/issues/422
   - retrieved by: hybrid_c#1@r13l
@@ -147,7 +147,7 @@ If nothing is relevant after one deliberate search of the corpus, fill in **Supp
   - retrieved by: bm25_a#5@r13l
   - excerpt: [issue by jrn907-lab] ### Description they are invisible once turned into a physics object ### Game Log USERNAME}\AppData\Roaming\ModrinthApp\profiles\Create_ Plane and Simple\dynamic-resource-pack-cache\amendments-generated_pack in 13.41 ms [17:56:09] [Worker-ResourceReload-0/INFO] [Moonlight/]: Regenerating Dynamic CLIENT_RESOURCES Resources Provider [moonlight:dynamic_resources], requested by strategy REGEN_ON_EVERY_RELOAD [17:56:09] [Worker-ResourceReload-0/INFO] [Moonlight/]: Generated runtime CLIENT_RESOURCES for pack moonlight:dynamic_resources in 629.7 ?s [17:56:09] [Worker-Resource
 
-- [ ] **gh-issue:GlodBlock/ExtendedAE#291** (github_issue, 1/6 conditions)
+- [x] **gh-issue:GlodBlock/ExtendedAE#291** (github_issue, 1/6 conditions)
   - ExtendedAE issue #291: add kjs support for 1.20.1 (forge)
   - https://github.com/GlodBlock/ExtendedAE/issues/291
   - retrieved by: hybrid_c#5@r13l

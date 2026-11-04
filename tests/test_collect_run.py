@@ -262,3 +262,64 @@ def test_non_run_folders_are_ignored_by_the_duplicate_check(setup):
     (raw / "scratch").mkdir()
     (raw / "scratch" / "latest.log").write_bytes((instance / "logs" / "latest.log").read_bytes())
     assert run(*ARGS) == 0
+
+
+# ---------------------------------------------------------------- crash reports after the previous run; mods/ warnings
+
+
+def test_crash_reports_are_copied_only_if_modified_after_the_previous_run(setup):
+    instance, raw = setup
+    run(*ARGS)  # run 1 at NOW; no crash reports yet
+    from datetime import datetime
+
+    prev = datetime.fromtimestamp(NOW).timestamp()
+    old, new = instance / "crash-reports" / "crash-old.txt", instance / "crash-reports" / "crash-new.txt"
+    write(old, age_min=0)
+    os.utime(old, (prev, prev))  # exactly at the previous run's time: not after it
+    write(new, age_min=0)
+    os.utime(new, (prev + 60, prev + 60))
+    collect_run.main([*ARGS, "--force"], now=NOW + 120)  # --force: the synthetic latest.log is a duplicate
+    copied = sorted(p.name for p in next(raw.glob("r02_*")).iterdir())
+    assert "crash-new.txt" in copied and "crash-old.txt" not in copied
+
+
+def test_crash_reports_use_the_minutes_window_when_runs_txt_has_no_timestamp(setup):
+    instance, raw = setup
+    (raw / "runs.txt").write_text("run_id | timestamp\nr01 | dropped |  |  |  |  |\n", encoding="utf-8")
+    write(instance / "crash-reports" / "crash-fresh.txt", age_min=5)
+    write(instance / "crash-reports" / "crash-stale.txt", age_min=60)
+    assert collect_run.previous_run_timestamp(raw) is None
+    run(*ARGS)
+    copied = sorted(p.name for p in next(raw.glob("r0*_*")).iterdir())
+    assert "crash-fresh.txt" in copied and "crash-stale.txt" not in copied
+
+
+def test_previous_run_timestamp_is_the_latest_recorded(tmp_path):
+    (tmp_path / "runs.txt").write_text(
+        "h\nr01 | a | b | c | f | w | 2026-11-01T10:00:00\nr02 | a | b | c | f | w | 2026-11-01T12:30:00\n"
+        "r03 | dropped |  |  |  |  |\n",
+        encoding="utf-8",
+    )
+    from datetime import datetime
+
+    assert collect_run.previous_run_timestamp(tmp_path) == datetime.fromisoformat("2026-11-01T12:30:00").timestamp()
+
+
+def test_warns_about_disabled_and_fabric_jars_in_mods(setup, capsys):
+    instance, _ = setup
+    (instance / "mods").mkdir()
+    (instance / "mods" / "curios-1.0.jar.disabled").write_text("x")
+    (instance / "mods" / "architectury-fabric-22.0.5.jar").write_text("x")
+    (instance / "mods" / "create-1.21.1.jar").write_text("x")
+    run(*ARGS, "--dry-run")
+    out = capsys.readouterr().out
+    assert "1 *.disabled" in out and "curios-1.0.jar.disabled" in out
+    assert "1 Fabric jar" in out and "architectury-fabric-22.0.5.jar" in out and "create-1.21.1" not in out
+
+
+def test_no_mods_warning_for_a_clean_mods_folder(setup, capsys):
+    instance, _ = setup
+    (instance / "mods").mkdir()
+    (instance / "mods" / "create-1.21.1.jar").write_text("x")
+    run(*ARGS, "--dry-run")
+    assert "WARNING: mods/" not in capsys.readouterr().out

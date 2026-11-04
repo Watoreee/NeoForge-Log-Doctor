@@ -154,13 +154,55 @@ def recent_files(paths, since_ts: float) -> list[Path]:
     return sorted(p for p in paths if p.is_file() and p.stat().st_mtime >= since_ts)
 
 
-def files_to_copy(instance: Path, since_ts: float) -> tuple[list[Path], bool]:
-    """latest.log, debug.log, recent crash reports and recent hs_err files. Also: is latest.log stale?"""
+def previous_run_timestamp(raw_dir: Path) -> float | None:
+    """Epoch seconds of the most recent run recorded in runs.txt (last column), or None if there is none.
+
+    Rows without a timestamp (a dropped run) are skipped. Timestamps are local time, as collect_run writes them.
+    """
+    runs = raw_dir / "runs.txt"
+    if not runs.is_file():
+        return None
+    stamps = []
+    for line in runs.read_text(encoding="utf-8").splitlines()[1:]:
+        last = line.rsplit("|", 1)[-1].strip()
+        try:
+            stamps.append(datetime.fromisoformat(last).timestamp())
+        except ValueError:
+            continue
+    return max(stamps, default=None)
+
+
+def mods_warnings(instance: Path) -> list[str]:
+    """Things in mods/ that usually mean the pack is not in the state the label assumes."""
+    mods = instance / "mods"
+    if not mods.is_dir():
+        return []
+    out = []
+    disabled = sorted(p.name for p in mods.glob("*.disabled"))
+    fabric = sorted(p.name for p in mods.glob("*-fabric*.jar"))
+    if disabled:
+        out.append(f"mods/ contains {len(disabled)} *.disabled file(s): {', '.join(disabled[:5])}")
+    if fabric:
+        out.append(f"mods/ contains {len(fabric)} Fabric jar(s) (*-fabric*.jar): {', '.join(fabric[:5])}")
+    return out
+
+
+def files_to_copy(instance: Path, since_ts: float, crash_since_ts: float | None = None) -> tuple[list[Path], bool]:
+    """latest.log, debug.log, crash reports and hs_err files. Also: is latest.log stale?
+
+    Crash reports and hs_err files are copied only if modified AFTER `crash_since_ts` (the previous run's
+    timestamp in runs.txt); without one they fall back to the `since_ts` window.
+    """
     logs = instance / "logs"
     latest = logs / "latest.log"
     files = [p for p in (latest, logs / "debug.log") if p.is_file()]
-    files += recent_files((instance / "crash-reports").glob("*.txt"), since_ts)
-    files += recent_files(instance.glob("hs_err_pid*.log"), since_ts)
+    if crash_since_ts is None:
+        crash = recent_files((instance / "crash-reports").glob("*.txt"), since_ts)
+        crash += recent_files(instance.glob("hs_err_pid*.log"), since_ts)
+    else:  # strictly after the previous run, so the previous run's own crash report is not collected again
+        candidates = [*(instance / "crash-reports").glob("*.txt"), *instance.glob("hs_err_pid*.log")]
+        crash = sorted(p for p in candidates if p.is_file() and p.stat().st_mtime > crash_since_ts)
+    files += crash
     stale = not latest.is_file() or latest.stat().st_mtime < since_ts
     return files, stale
 
@@ -191,7 +233,7 @@ def make_plan(args, instance: Path, raw_dir: Path, now: float) -> Plan:
     run_id = f"r{number:02d}"
     culprit_part = args.culprit or "none"
     run_dir = raw_dir / f"{run_id}_{slug(args.category)}_{slug(culprit_part)}"
-    files, stale = files_to_copy(instance, now - args.since_minutes * 60)
+    files, stale = files_to_copy(instance, now - args.since_minutes * 60, previous_run_timestamp(raw_dir))
     return Plan(run_id, run_dir, args.category, args.culprit, args.acceptable, args.broke, files, stale)
 
 
@@ -309,6 +351,8 @@ def main(argv: list[str] | None = None, now: float | None = None) -> int:
     if not instance.is_dir():
         raise SystemExit("CRASHDOC_INSTANCE does not exist or is not a folder.")
 
+    for warning in mods_warnings(instance):
+        print(f"WARNING: {warning}")
     resolve_args(args, load_categories())
     plan = make_plan(args, instance, raw_dir, now)
 

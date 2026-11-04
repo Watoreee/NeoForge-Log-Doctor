@@ -73,3 +73,21 @@ def summarize(rows: list[Row], has_category: bool = True) -> dict:
     if has_category:
         out["category"] = f"{sum(r.category for r in rows)}/{n}"
     return out
+
+
+# --------------------------------------------------------------------------- retrieval metrics (document level)
+
+
+def recall_at_k(ranked_doc_ids: list[str], relevant: list[str], k: int = 5) -> float:
+    """Fraction of the relevant documents that appear in the top k. `ranked_doc_ids` is already one entry per doc."""
+    rel = set(relevant)
+    return len(rel & set(ranked_doc_ids[:k])) / len(rel)
+
+
+def reciprocal_rank(ranked_doc_ids: list[str], relevant: list[str]) -> float:
+    """1 / rank of the first relevant document, 0 if none is ranked."""
+    rel = set(relevant)
+    for rank, doc_id in enumerate(ranked_doc_ids, start=1):
+        if doc_id in rel:
+            return 1.0 / rank
+    return 0.0

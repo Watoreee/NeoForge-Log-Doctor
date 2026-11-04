@@ -4,13 +4,12 @@
   "source_file_type": "crash_report",
   "culprit_mod_id": "curios",
   "acceptable_culprits": [
-    "curios",
-    "allthearcanistgear",
-    "ars_nouveau",
-    "occultism"
+    "curios"
   ],
   "category": "missing_dependency",
-  "relevant_doc_ids": null,
+  "relevant_doc_ids": [
+    "neoforge-docs:docs/1.21.1/gettingstarted/modfiles"
+  ],
   "support_search": null,
   "notes": "disabled curios in CurseForge"
 }

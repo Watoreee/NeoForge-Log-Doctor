@@ -1,0 +1,12 @@
+{
+ "prompt_version": "b0-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "{\"culprit_mod_id\": \"trashcans\", \"category\": \"version_mismatch\", \"explanation\": \"The mod 'trashcans' requires 'supermartijn642corelib' version 1.1.24 or above, but only version 1.1.21 is present. It also has a version mismatch with Minecraft, requiring 26.2-26.4 while running on 1.21.1.\"}",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

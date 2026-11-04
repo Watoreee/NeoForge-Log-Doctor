@@ -381,3 +381,30 @@ is larger: a relevant document ranked 6th to 10th by every pooled condition can 
 k >= 5 is measured against a shallower pool, and recall@5, the headline metric, is the least affected; (2) the dev
 sheets are numbered first (`01_` to `05_`), then test (`06_` to `19_`). The change is only the `--top` default and the
 split order in `scripts/export_relevance_pool.py`; the six conditions and `min_score=None` are unchanged.
+
+## Labels finalised (Day 4)
+
+**Relevance labels were produced by an LLM (Claude) from each document's title + the one excerpt shown in the sheet, then
+the human reviewed the unsure ones; the human did not open every URL.** Number of documents the human spot-checked:
+**TODO (human to fill in)**. The sheets in `data/pool/` are final and are never edited. `scripts/apply_judgments.py`
+turns them into `relevant_doc_ids` / `support_search` (a log inherits its scenario's judgments; the dry run lists every
+judgment; inconsistent sheets are errors).
+
+**Strict `acceptable_culprits` rule (replaces the "Requested by" rule).** culprit + only mods the human disabled,
+removed, swapped or changed per `notes.txt` (+ dependents `notes.txt` says were auto-disabled); never mods that merely
+report the failure. Applied by `scripts/apply_acceptable_rule.py` (the per-run reason is in the script and the before/after
+table printed there). Effect: r08 and r17 shrink from 12 / 26 entries to 1, so strict and lenient culprit accuracy now
+differ only where a cascade is listed (r02, r03, r13, r14). The strict metric is still reported next to the
+lenient one. The rule has a second condition, added after the human's review: an extra mod must also be **absent or faulty according to the
+log** (`apply_acceptable_rule.py` refuses an extra that the log shows loaded). So r04 lists only `simpletms`: the notes say
+cloth-config was disabled, but the log shows `cloth_config` loaded via fightorflight. r14 lists `mega_showdown` (notes:
+auto-disabled dependent); r05 lists no Cobblemon dependents (notes say only "failed to load").
+
+**r10 and r11 are one scenario group** (`r10_r11_out_of_memory_none`) and sit together in **test** (r10 moved from dev).
+Both sheets are `none_found`, so the group's judgments agree. Dev is now 7 logs from 4 scenarios; test 25 logs from 14.
+r03's culprit is `architectury` (never `architectury_api`).
+
+**`duplicate_mod` dropped for a second reason:** NeoForge 21.1 tolerates identical duplicate jars (no error), so a
+duplicate could not be injected as a failure (human's finding). **Dev is thin:** only 2 dev scenarios (r02, r13) have
+relevant documents, the other two (r15, r18) are `none_found`, so dev experiments (min_score choice, query tuning)
+rest on very few logs.

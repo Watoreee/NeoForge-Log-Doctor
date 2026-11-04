@@ -4,11 +4,10 @@
   "source_file_type": "latest_log",
   "culprit_mod_id": "simpletms",
   "acceptable_culprits": [
-    "simpletms",
-    "allthemons"
+    "simpletms"
   ],
   "category": "missing_dependency",
-  "relevant_doc_ids": null,
-  "support_search": null,
+  "relevant_doc_ids": [],
+  "support_search": "none_found",
   "notes": "disabled cloth-config in CurseForge; cloth_config stayed loaded via fightorflight but simpletms was missing too"
 }

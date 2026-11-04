@@ -1,11 +1,11 @@
 {
   "log_id": "r11_latest",
-  "scenario_id": "r11_out_of_memory_none",
+  "scenario_id": "r10_r11_out_of_memory_none",
   "source_file_type": "latest_log",
   "culprit_mod_id": null,
   "acceptable_culprits": [],
   "category": "out_of_memory",
-  "relevant_doc_ids": null,
-  "support_search": null,
+  "relevant_doc_ids": [],
+  "support_search": "none_found",
   "notes": "set the pack's max RAM to 1000 MB; ran out of memory during mod loading"
 }

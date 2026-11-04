@@ -4,13 +4,12 @@
   "source_file_type": "crash_report",
   "culprit_mod_id": "ae2",
   "acceptable_culprits": [
-    "ae2",
-    "ae2ct",
-    "ae2importexportcard",
-    "aeinfinitybooster"
+    "ae2"
   ],
   "category": "missing_dependency",
-  "relevant_doc_ids": null,
+  "relevant_doc_ids": [
+    "neoforge-docs:docs/1.21.1/gettingstarted/modfiles"
+  ],
   "support_search": null,
   "notes": "disabled Applied Energistics 2 (ae2) in CurseForge; aeinfinitybooster, ae2ct and ae2importexportcard still required it"
 }

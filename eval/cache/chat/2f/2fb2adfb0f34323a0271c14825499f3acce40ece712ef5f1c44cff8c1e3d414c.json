@@ -1,0 +1,12 @@
+{
+ "prompt_version": "b0-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "{\"culprit_mod_id\": \"ironfurnaces\", \"category\": \"version_mismatch\", \"explanation\": \"The log indicates that 'ironfurnaces-neoforge-26.1.2-4.4.2.jar' is not a valid mod file, suggesting an issue with the mod's compatibility or structure for the current loader.\"}",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

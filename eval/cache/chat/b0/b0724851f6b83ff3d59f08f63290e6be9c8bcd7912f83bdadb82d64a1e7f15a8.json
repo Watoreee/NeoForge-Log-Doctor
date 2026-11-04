@@ -1,0 +1,12 @@
+{
+ "prompt_version": "b0-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "{\"culprit_mod_id\": null, \"category\": \"out_of_memory\", \"explanation\": \"The crash was caused by an OutOfMemoryError, indicating the Java heap space was exhausted during mod loading.\"}",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

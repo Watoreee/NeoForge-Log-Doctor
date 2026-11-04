@@ -1,0 +1,198 @@
+{
+  "split": "dev",
+  "git_sha": "72aa629",
+  "utc": "2026-11-04T09:29:12+00:00",
+  "summary": {
+    "B0": {
+      "n_logs": 7,
+      "n_scenarios": 4,
+      "culprit_strict": "4/7",
+      "culprit_lenient": "5/7",
+      "culprit_strict_rate": 0.571,
+      "culprit_lenient_rate": 0.714,
+      "category": "6/7"
+    },
+    "B1": {
+      "n_logs": 7,
+      "n_scenarios": 4,
+      "culprit_strict": "4/7",
+      "culprit_lenient": "4/7",
+      "culprit_strict_rate": 0.571,
+      "culprit_lenient_rate": 0.571
+    }
+  },
+  "per_log": {
+    "B0": [
+      {
+        "log_id": "r02_crash",
+        "scenario_id": "r02_missing_dependency_geckolib",
+        "pred_culprit": "theurgy_kubejs",
+        "pred_category": "missing_dependency",
+        "strict": false,
+        "lenient": false,
+        "category": true,
+        "gold_culprit": "geckolib",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r02_latest",
+        "scenario_id": "r02_missing_dependency_geckolib",
+        "pred_culprit": "theurgy",
+        "pred_category": "missing_dependency",
+        "strict": false,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "geckolib",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r13_latest",
+        "scenario_id": "r13_missing_dependency_extendedae",
+        "pred_culprit": "kubejs",
+        "pred_category": "other",
+        "strict": false,
+        "lenient": false,
+        "category": false,
+        "gold_culprit": "extendedae",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r15_crash",
+        "scenario_id": "r15_version_mismatch_aquaculture",
+        "pred_culprit": "aquaculture",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "aquaculture",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r15_latest",
+        "scenario_id": "r15_version_mismatch_aquaculture",
+        "pred_culprit": "aquaculture",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "aquaculture",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r18_crash",
+        "scenario_id": "r18_version_mismatch_sophisticatedcore",
+        "pred_culprit": "sophisticatedcore",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "sophisticatedcore",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r18_latest",
+        "scenario_id": "r18_version_mismatch_sophisticatedcore",
+        "pred_culprit": "sophisticatedcore",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "sophisticatedcore",
+        "gold_category": "version_mismatch"
+      }
+    ],
+    "B1": [
+      {
+        "log_id": "r02_crash",
+        "scenario_id": "r02_missing_dependency_geckolib",
+        "pred_culprit": "theurgy_kubejs",
+        "pred_category": null,
+        "strict": false,
+        "lenient": false,
+        "category": false,
+        "gold_culprit": "geckolib",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r02_latest",
+        "scenario_id": "r02_missing_dependency_geckolib",
+        "pred_culprit": "theurgy_kubejs",
+        "pred_category": null,
+        "strict": false,
+        "lenient": false,
+        "category": false,
+        "gold_culprit": "geckolib",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r13_latest",
+        "scenario_id": "r13_missing_dependency_extendedae",
+        "pred_culprit": null,
+        "pred_category": null,
+        "strict": false,
+        "lenient": false,
+        "category": false,
+        "gold_culprit": "extendedae",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r15_crash",
+        "scenario_id": "r15_version_mismatch_aquaculture",
+        "pred_culprit": "aquaculture",
+        "pred_category": null,
+        "strict": true,
+        "lenient": true,
+        "category": false,
+        "gold_culprit": "aquaculture",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r15_latest",
+        "scenario_id": "r15_version_mismatch_aquaculture",
+        "pred_culprit": "aquaculture",
+        "pred_category": null,
+        "strict": true,
+        "lenient": true,
+        "category": false,
+        "gold_culprit": "aquaculture",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r18_crash",
+        "scenario_id": "r18_version_mismatch_sophisticatedcore",
+        "pred_culprit": "sophisticatedcore",
+        "pred_category": null,
+        "strict": true,
+        "lenient": true,
+        "category": false,
+        "gold_culprit": "sophisticatedcore",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r18_latest",
+        "scenario_id": "r18_version_mismatch_sophisticatedcore",
+        "pred_culprit": "sophisticatedcore",
+        "pred_category": null,
+        "strict": true,
+        "lenient": true,
+        "category": false,
+        "gold_culprit": "sophisticatedcore",
+        "gold_category": "version_mismatch"
+      }
+    ]
+  },
+  "usage": {
+    "chat_requests": 0,
+    "chat_cache_hits": 7,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "embed_requests": 0,
+    "embed_inputs_sent": 0,
+    "embed_cache_hits": 0,
+    "embed_reported_usage_chars": 0,
+    "retries": 0,
+    "rate_limited": 0,
+    "total_requests": 0,
+    "total_chat_tokens": 0
+  }
+}

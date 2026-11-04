@@ -7,7 +7,7 @@
     "aquaculture"
   ],
   "category": "version_mismatch",
-  "relevant_doc_ids": null,
-  "support_search": null,
+  "relevant_doc_ids": [],
+  "support_search": "none_found",
   "notes": "updated Aquaculture 2 to the 26.1 build (Aquaculture-26.1.2-2.9.3.jar) in a 1.21.1 pack; it requires neoforge 26.1.0.0 or above, pack has 21.1.224"
 }

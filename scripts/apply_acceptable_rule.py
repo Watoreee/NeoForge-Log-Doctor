@@ -19,6 +19,8 @@ import json
 import sys
 from pathlib import Path
 
+from crashdoc.preprocess import parse_log
+
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
 # run -> (acceptable list, reason from notes.txt)
@@ -33,8 +35,8 @@ RULE: dict[str, tuple[list[str], str]] = {
         "disabled Architectury API; rctapi auto-disabled as its dependent (notes). other requirers only report",
     ),
     "r04": (
-        ["simpletms", "cloth_config"],
-        "disabled cloth-config (notes), which took simpletms with it; allthemons only reports (NoClassDefFoundError)",
+        ["simpletms"],
+        "notes: cloth-config disabled, but the log shows cloth_config LOADED (via fightorflight): only simpletms is absent; allthemons only reports",
     ),
     "r05": (
         ["kotlinforforge"],
@@ -60,6 +62,25 @@ RULE: dict[str, tuple[list[str], str]] = {
 }
 
 
+ABSENCE = ("not installed", "[MISSING]", "not a valid mod file", "absent mods", "is not loaded", "could not be found",
+           "ClassNotFoundException", "NoClassDefFoundError")
+
+
+def log_evidence(extra: str, texts: list[str]) -> str | None:
+    """Why the log shows `extra` as absent/faulty: not in any loaded-mod list, or named on an absence line. None = no."""
+    for text in texts:
+        facts = parse_log(text)
+        if not facts.mod_versions:
+            continue
+        if extra not in facts.mod_versions:
+            return "not in the log's loaded-mod list"
+    for text in texts:
+        for line in text.splitlines():
+            if extra in line and any(sig in line for sig in ABSENCE):
+                return "named on an absence line"
+    return None
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--write", action="store_true")
@@ -72,6 +93,10 @@ def main() -> int:
         culprit = None if not after else after[0]
         if culprit != data["culprit_mod_id"]:
             sys.exit(f"{path.stem}: culprit would change {data['culprit_mod_id']!r} -> {culprit!r}; not allowed here")
+        texts = [p.read_text(encoding="utf-8") for p in path.parent.glob(f"{path.stem}.*") if p.suffix != ".json"]
+        for extra in after[1:]:
+            if log_evidence(extra, texts) is None:
+                sys.exit(f"{path.stem}: {extra!r} is in the rule but the log shows it loaded/healthy; refusing")
         before = data["acceptable_culprits"]
         short = lambda xs: (",".join(xs[:5]) + (f",+{len(xs) - 5}" if len(xs) > 5 else "")) or "[]"  # noqa: E731
         if before != after:

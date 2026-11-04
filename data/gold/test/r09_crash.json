@@ -7,7 +7,10 @@
     "trashcans"
   ],
   "category": "version_mismatch",
-  "relevant_doc_ids": null,
+  "relevant_doc_ids": [
+    "gh-issue:SuperMartijn642/TrashCans#38",
+    "neoforge-docs:docs/1.21.1/gettingstarted/modfiles"
+  ],
   "support_search": null,
   "notes": "updated Trash Cans to the latest build (trashcans-1.1.2a-neoforge-mc26.3.jar), which targets Minecraft 26.x"
 }

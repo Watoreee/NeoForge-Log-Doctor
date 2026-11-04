@@ -7,7 +7,7 @@
     "ironfurnaces"
   ],
   "category": "version_mismatch",
-  "relevant_doc_ids": null,
-  "support_search": null,
+  "relevant_doc_ids": [],
+  "support_search": "none_found",
   "notes": "updated Iron Furnaces to the 26.1 build (ironfurnaces-neoforge-26.1.2-4.4.2.jar) in a 1.21.1 pack"
 }

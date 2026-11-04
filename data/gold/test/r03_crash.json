@@ -5,12 +5,15 @@
   "culprit_mod_id": "architectury",
   "acceptable_culprits": [
     "architectury",
-    "cobblemon_battle_tower",
-    "fightorflight",
-    "wild_battle_api"
+    "rctapi"
   ],
   "category": "missing_dependency",
-  "relevant_doc_ids": null,
+  "relevant_doc_ids": [
+    "gh-issue:architectury/architectury-api#528",
+    "gh-issue:architectury/architectury-api#664",
+    "neoforge-docs:docs/1.21.1/gettingstarted/modfiles",
+    "gh-issue:architectury/architectury-api#542"
+  ],
   "support_search": null,
   "notes": "disabled Architectury API in CurseForge; rctapi was auto-disabled as its dependent"
 }

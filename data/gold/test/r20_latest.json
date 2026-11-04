@@ -7,7 +7,7 @@
     "ftbquests"
   ],
   "category": "missing_dependency",
-  "relevant_doc_ids": null,
-  "support_search": null,
+  "relevant_doc_ids": [],
+  "support_search": "none_found",
   "notes": "disabled FTB Quests in CurseForge; the pack's KubeJS startup script cobblemon_quests.js (line 39) failed loading dev.ftb.mods.ftbquests.api.FTBQuestsAPI: class could not be found"
 }

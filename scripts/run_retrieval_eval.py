@@ -146,7 +146,7 @@ def main() -> int:
             "mrr_mean": mean(list(rrk.values())),
         }
         print(
-            f"{cond:10} {summary[cond]['recall@5_mean']!s:>9} {summary[cond]['hit@5']:>7} {summary[cond]['mrr_mean']!s:>7}"
+            f"{cond:10} {summary[cond]['recall@5_mean']!s:>9} {summary[cond]['hit@5']:>7} {summary[cond]['mrr_mean']!s:>7}"  # noqa: E501
         )  # noqa: E501
     scenario_of = {k: v["label"].scenario_id for k, v in judged.items()}
     boot = {}

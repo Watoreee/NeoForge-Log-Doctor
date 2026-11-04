@@ -4,14 +4,13 @@
   "source_file_type": "crash_report",
   "culprit_mod_id": "yungsapi",
   "acceptable_culprits": [
-    "yungsapi",
-    "betterdungeons",
-    "betterendisland",
-    "bettermineshafts",
-    "betterstrongholds"
+    "yungsapi"
   ],
   "category": "version_mismatch",
-  "relevant_doc_ids": null,
+  "relevant_doc_ids": [
+    "gh-issue:YUNG-GANG/YUNGs-API#5",
+    "neoforge-docs:docs/1.21.1/gettingstarted/modfiles"
+  ],
   "support_search": null,
   "notes": "downgraded YUNG's API to the 1.20.4 build (YungsApi-1.20.4-NeoForge-4.4.3.jar); NeoForge 21.1 skipped the jar as being for Forge or an older NeoForge, so betterstrongholds, bettermineshafts, betterdungeons and betterendisland reported yungsapi as not installed"
 }

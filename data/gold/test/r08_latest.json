@@ -4,21 +4,12 @@
   "source_file_type": "latest_log",
   "culprit_mod_id": "create",
   "acceptable_culprits": [
-    "create",
-    "ars_creo",
-    "ars_technica",
-    "bellsandwhistles",
-    "create_aquatic_ambitions",
-    "create_dragons_plus",
-    "create_enchantment_industry",
-    "create_hypertube",
-    "createaddition",
-    "framedblocks",
-    "sophisticatedbackpackscreateintegration",
-    "sophisticatedstoragecreateintegration"
+    "create"
   ],
   "category": "version_mismatch",
-  "relevant_doc_ids": null,
+  "relevant_doc_ids": [
+    "neoforge-docs:docs/1.21.1/gettingstarted/modfiles"
+  ],
   "support_search": null,
   "notes": "downgraded Create to 6.0.0 (create-1.21.1-6.0.0.jar); 11 mods require a newer Create"
 }

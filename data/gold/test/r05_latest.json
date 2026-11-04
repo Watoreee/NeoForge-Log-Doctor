@@ -4,12 +4,13 @@
   "source_file_type": "latest_log",
   "culprit_mod_id": "kotlinforforge",
   "acceptable_culprits": [
-    "kotlinforforge",
-    "cobbleworkers",
-    "torchmastercobblemoncompat"
+    "kotlinforforge"
   ],
   "category": "missing_dependency",
-  "relevant_doc_ids": null,
+  "relevant_doc_ids": [
+    "gh-issue:thedarkcolour/KotlinForForge#160",
+    "gh-issue:thedarkcolour/KotlinForForge#85"
+  ],
   "support_search": null,
   "notes": "disabled KotlinForForge in CurseForge; Cobblemon and its dependents then failed to load"
 }

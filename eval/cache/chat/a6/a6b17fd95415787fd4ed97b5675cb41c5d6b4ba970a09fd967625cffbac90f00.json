@@ -1,0 +1,12 @@
+{
+ "prompt_version": "b0-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "{\"culprit_mod_id\": \"konkrete\", \"category\": \"version_mismatch\", \"explanation\": \"The mod 'konkrete' requires a newer version of NeoForge (21.11.13-beta or above) and Minecraft (1.21.11 or above) than what is currently installed.\"}",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

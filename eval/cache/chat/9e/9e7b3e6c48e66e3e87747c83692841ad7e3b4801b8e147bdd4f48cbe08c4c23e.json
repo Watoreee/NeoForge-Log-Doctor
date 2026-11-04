@@ -1,0 +1,12 @@
+{
+ "prompt_version": "b0-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "{\"culprit_mod_id\": \"allthemons\", \"category\": \"missing_dependency\", \"explanation\": \"The mod 'allthemons' is trying to reference a class from 'dragomordor/simpletms/block/entity/SimpleTMsBlockEntities' which is not found, indicating a missing dependency.\"}",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

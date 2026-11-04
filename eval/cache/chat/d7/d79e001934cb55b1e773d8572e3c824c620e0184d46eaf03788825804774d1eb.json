@@ -1,0 +1,12 @@
+{
+ "prompt_version": "b0-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "{\"culprit_mod_id\": \"yungsapi\", \"category\": \"missing_dependency\", \"explanation\": \"Several mods require 'yungsapi' as a mandatory dependency, but it was not found in the installation.\"}",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

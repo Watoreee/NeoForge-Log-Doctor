@@ -4,35 +4,15 @@
   "source_file_type": "latest_log",
   "culprit_mod_id": "architectury",
   "acceptable_culprits": [
-    "architectury",
-    "accelerateddecay",
-    "chisel",
-    "cobblefurnies",
-    "cobblemon_battle_tower",
-    "factory_blocks",
-    "fightorflight",
-    "ftbchunks",
-    "ftbfiltersystem",
-    "ftblibrary",
-    "ftbranks",
-    "ftbteams",
-    "ftbultimine",
-    "ftbxmodcompat",
-    "mega_showdown",
-    "more_cobblemon_tweaks",
-    "observable",
-    "octolib",
-    "oracle_index",
-    "oritech",
-    "polylib",
-    "rctapi",
-    "shrink",
-    "simpletms",
-    "wild_battle_api",
-    "zamega"
+    "architectury"
   ],
   "category": "version_mismatch",
-  "relevant_doc_ids": null,
+  "relevant_doc_ids": [
+    "gh-issue:architectury/architectury-api#528",
+    "gh-issue:architectury/architectury-api#664",
+    "neoforge-docs:docs/1.21.1/gettingstarted/modfiles",
+    "gh-issue:architectury/architectury-api#542"
+  ],
   "support_search": null,
   "notes": "replaced Architectury API with the Fabric build (architectury-fabric-22.0.5.jar); NeoForge skipped it as a Fabric mod, so 25 mods reported architectury as not installed"
 }

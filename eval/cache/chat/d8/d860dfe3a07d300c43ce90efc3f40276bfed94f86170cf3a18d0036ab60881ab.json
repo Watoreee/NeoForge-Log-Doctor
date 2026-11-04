@@ -1,0 +1,12 @@
+{
+ "prompt_version": "b0-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "{\"culprit_mod_id\": \"create\", \"category\": \"version_mismatch\", \"explanation\": \"Multiple mods require a specific version of 'create' (e.g., 6.0.8 or 6.0.9), but the installed version is 6.0.0, causing dependency failures.\"}",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

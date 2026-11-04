@@ -1,0 +1,12 @@
+{
+ "prompt_version": "b0-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "{\"culprit_mod_id\": \"curios\", \"category\": \"missing_dependency\", \"explanation\": \"Multiple mods (ars_nouveau, allthearcanistgear, occultism) require the 'curios' mod, but it is not installed.\"}",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

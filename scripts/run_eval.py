@@ -21,9 +21,12 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT))  # for the top-level `eval` package
 
+from crashdoc.agent.loop import run_agent  # noqa: E402
 from crashdoc.baselines import b0_predict, b1_predict  # noqa: E402
 from crashdoc.llm import LLM  # noqa: E402
 from crashdoc.preprocess import preprocess_log  # noqa: E402
+from crashdoc.rag import rag1  # noqa: E402
+from crashdoc.retrieval.index import Index  # noqa: E402
 from crashdoc.schemas import GoldLabel  # noqa: E402
 from eval.metrics import score, summarize  # noqa: E402
 
@@ -49,7 +52,7 @@ def git_sha() -> str:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--split", choices=("dev", "test"), required=True)
-    parser.add_argument("--conditions", default="B0,B1")
+    parser.add_argument("--conditions", default="B0,B1", help="any of B0,B1,RAG1,FULL")
     parser.add_argument("--allow-test", action="store_true")
     args = parser.parse_args()
     if args.split == "test" and not args.allow_test:
@@ -57,6 +60,7 @@ def main() -> int:
     conditions = [c.strip().upper() for c in args.conditions.split(",") if c.strip()]
 
     llm = LLM()
+    index = Index.load() if {"RAG1", "FULL"} & set(conditions) else None
     data = load_split(args.split)
     per_log: dict[str, list[dict]] = {c: [] for c in conditions}
     rows: dict[str, list] = {c: [] for c in conditions}
@@ -68,15 +72,37 @@ def main() -> int:
             elif cond == "B0":
                 r = b0_predict(llm, pre, text)
                 culprit, category = r.culprit, r.category
+            elif cond in ("RAG1", "FULL"):
+                res = (rag1 if cond == "RAG1" else run_agent)(llm, index, pre, text)
+                culprit, category = res.diagnosis.culprit_mod_id, res.diagnosis.category.value
+                extra = {
+                    "source": res.source,
+                    "confidence": res.diagnosis.confidence,
+                    "explanation": res.diagnosis.explanation,
+                    "citations": res.diagnosis.citations,
+                    "citations_total": res.citations_total,
+                    "citations_dropped": res.citations_dropped,
+                    "culprit_dropped": res.culprit_dropped,
+                    "retrieved_doc_ids": res.retrieved_doc_ids,
+                    "tool_calls": [st["name"] for st in res.steps],
+                    "cited_excerpts": {d: res.evidence.get(d, "") for d in res.diagnosis.citations},
+                }
             else:
-                sys.exit(f"Unknown condition {cond!r} (B0, B1 here; RAG-1 / Full come later)")
+                sys.exit(f"Unknown condition {cond!r} (B0, B1, RAG1, FULL)")
             row = score(label.log_id, culprit, category, label)
             rows[cond].append(row)
-            per_log[cond].append(
-                {**row.__dict__, "gold_culprit": label.culprit_mod_id, "gold_category": label.category.value}
-            )
+            record = {**row.__dict__, "gold_culprit": label.culprit_mod_id, "gold_category": label.category.value}
+            per_log[cond].append({**record, **(extra if cond in ("RAG1", "FULL") else {})})
 
     summary = {c: summarize(rows[c], has_category=c != "B1") for c in conditions}
+    for c in conditions:
+        if c in ("RAG1", "FULL"):  # citation validity: cited ids the backend dropped (not in the retrieved set)
+            total = sum(r["citations_total"] for r in per_log[c])
+            dropped = sum(r["citations_dropped"] for r in per_log[c])
+            summary[c]["citations"] = f"{total - dropped}/{total} valid" if total else "0/0 (nothing cited)"
+            summary[c]["logs_with_a_citation"] = f"{sum(bool(r['citations']) for r in per_log[c])}/{len(per_log[c])}"
+            summary[c]["fallback_logs"] = f"{sum(r['source'] == 'fallback' for r in per_log[c])}/{len(per_log[c])}"
+            summary[c]["tool_calls"] = sum(len(r.get("tool_calls", [])) for r in per_log[c])
     out = {
         "split": args.split,
         "git_sha": git_sha(),
@@ -94,6 +120,12 @@ def main() -> int:
             f"{cond}: {s['n_logs']} logs from {s['n_scenarios']} scenarios | culprit strict {s['culprit_strict']}, "
             f"lenient {s['culprit_lenient']}"
             + (f" | category {s['category']}" if "category" in s else " | category n/a")
+            + (
+                f" | citations {s['citations']}, logs with a citation {s['logs_with_a_citation']}, "
+                f"fallback {s['fallback_logs']}, tool calls {s['tool_calls']}"
+                if "citations" in s
+                else ""
+            )
         )
     print(f"results: {path.relative_to(REPO_ROOT)}")
     return 0

@@ -8,6 +8,7 @@ Conditions (all ranked with NO floor, min_score=None; chunks are collapsed to do
     hybrid_a  hybrid, preprocessed log as the query          bm25_a  = B2 (BM25 only, preprocessed log)
     hybrid_b  hybrid, extracted-fields query                 bm25_b, dense_b  retriever comparison at query (b)
     hybrid_c  hybrid, oracle query (gold culprits + category; exception type kept from extraction)
+    hybrid_c2 hybrid, oracle2: gold culprit_mod_id + gold category + the parser's regex exception type (no LLM output)
 Recall@5 and MRR are computed only on logs with non-empty relevant_doc_ids. Logs with support_search = "none_found"
 are reported separately under abstention (the floor is applied to hybrid_b, the deployed retrieval); "uncertain" logs
 are counted and excluded. Never reads data/demo. Test needs --allow-test (tune on dev, confirm once on test).
@@ -32,12 +33,12 @@ from crashdoc.extraction import extract_facts  # noqa: E402
 from crashdoc.llm import LLM  # noqa: E402
 from crashdoc.preprocess import preprocess_log  # noqa: E402
 from crashdoc.retrieval.index import Index, top_docs  # noqa: E402
-from crashdoc.retrieval.query import build_query, embedding_input, oracle_facts  # noqa: E402
+from crashdoc.retrieval.query import build_query, embedding_input, oracle2_facts, oracle_facts  # noqa: E402
 from crashdoc.schemas import GoldLabel  # noqa: E402
 from eval.bootstrap import paired_bootstrap  # noqa: E402
 from eval.metrics import recall_at_k, reciprocal_rank  # noqa: E402
 
-CONDITIONS = ("hybrid_a", "hybrid_b", "hybrid_c", "bm25_a", "bm25_b", "dense_b")
+CONDITIONS = ("hybrid_a", "hybrid_b", "hybrid_c", "hybrid_c2", "bm25_a", "bm25_b", "dense_b")
 GRID = [0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70]
 K = 5
 DEPTH = 1000  # documents kept per ranking (effectively all candidates)
@@ -55,7 +56,12 @@ def load_split(split: str) -> list[tuple[GoldLabel, str]]:
 def rank_conditions(index: Index, llm: LLM, label: GoldLabel, text: str) -> tuple[dict, dict]:
     pre = preprocess_log(text)
     facts_b = extract_facts(llm, pre, text).facts
-    q = {"a": pre.text, "b": build_query(facts_b), "c": build_query(oracle_facts(facts_b, label))}
+    q = {
+        "a": pre.text,
+        "b": build_query(facts_b),
+        "c": build_query(oracle_facts(facts_b, label)),
+        "c2": build_query(oracle2_facts(pre.facts, label)),
+    }
     inputs = list(dict.fromkeys(embedding_input(x) for x in q.values() if x.strip()))
     vectors = dict(zip(inputs, llm.embed(inputs), strict=True))
 
@@ -66,6 +72,7 @@ def rank_conditions(index: Index, llm: LLM, label: GoldLabel, text: str) -> tupl
         "hybrid_a": ("hybrid", "a"),
         "hybrid_b": ("hybrid", "b"),
         "hybrid_c": ("hybrid", "c"),
+        "hybrid_c2": ("hybrid", "c2"),
         "bm25_a": ("bm25", "a"),
         "bm25_b": ("bm25", "b"),
         "dense_b": ("dense", "b"),
@@ -154,6 +161,7 @@ def main() -> int:
         boot = {
             "b_minus_a": paired_bootstrap(scenario_of, rc["hybrid_a"], rc["hybrid_b"]),
             "c_minus_b": paired_bootstrap(scenario_of, rc["hybrid_b"], rc["hybrid_c"]),
+            "c2_minus_b": paired_bootstrap(scenario_of, rc["hybrid_b"], rc["hybrid_c2"]),
         }
         for name, b in boot.items():
             print(
@@ -165,7 +173,7 @@ def main() -> int:
     for k, v in judged.items():
         print(
             f"  {k:12} {v['label'].scenario_id[:30]:30} a={rc['hybrid_a'][k]:.2f} b={rc['hybrid_b'][k]:.2f} "
-            f"c={rc['hybrid_c'][k]:.2f} B2(bm25_a)={rc['bm25_a'][k]:.2f}"
+            f"c={rc['hybrid_c'][k]:.2f} c2={rc['hybrid_c2'][k]:.2f} B2(bm25_a)={rc['bm25_a'][k]:.2f}"
         )
 
     abstain = {}

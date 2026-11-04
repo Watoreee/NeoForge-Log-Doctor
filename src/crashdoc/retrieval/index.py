@@ -72,12 +72,16 @@ class Index:
             raise ValueError("chunks and embeddings are out of step: rebuild the index")
         self.chunks = chunks
         self.emb = embeddings.astype(np.float32, copy=False)
+        self._by_id = {c["chunk_id"]: c for c in chunks}
         self.bm25 = BM25Okapi([tokenize(index_text(c)) for c in chunks])
 
     @classmethod
     def load(cls, processed_dir: Path = REPO_ROOT / "data" / "processed") -> Index:
         lines = (processed_dir / "chunks.jsonl").read_text(encoding="utf-8").splitlines()
         return cls([json.loads(line) for line in lines], np.load(processed_dir / "embeddings.npy"))
+
+    def chunk(self, chunk_id: str) -> dict:
+        return self._by_id[chunk_id]
 
     # ------------------------------------------------------------------ rankers
 

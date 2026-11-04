@@ -8,6 +8,7 @@
 from __future__ import annotations
 
 from crashdoc.extraction import LogFacts
+from crashdoc.preprocess import RawLogFacts
 from crashdoc.schemas import Category, GoldLabel
 
 # A small fixed keyword map per category (PLAN 6.5): plain words that docs and issues use for that failure.
@@ -33,6 +34,22 @@ def oracle_facts(extracted: LogFacts, gold: GoldLabel) -> LogFacts:
     """(c): gold culprit list and category replace the extracted ones; the exception type is kept."""
     return extracted.model_copy(
         update={"suspect_mod_ids": list(gold.acceptable_culprits), "error_category": Category(gold.category)}
+    )
+
+
+def oracle2_facts(raw: RawLogFacts, gold: GoldLabel) -> LogFacts:
+    """(c2): gold culprit (the single `culprit_mod_id`) + gold category + the parser's regex-derived exception type.
+
+    Unlike (c), no LLM output is used at all, so the only thing that separates (c2) from the deployed (b) is extraction
+    accuracy on culprit, category and exception type.
+    """
+    return LogFacts(
+        exception_type=raw.exceptions[0].type if raw.exceptions else None,
+        error_category=Category(gold.category),
+        suspect_mod_ids=[gold.culprit_mod_id] if gold.culprit_mod_id else [],
+        mc_version=raw.minecraft_version,
+        loader_version=raw.neoforge_version,
+        java_version=raw.java_version,
     )
 
 

@@ -62,8 +62,16 @@ RULE: dict[str, tuple[list[str], str]] = {
 }
 
 
-ABSENCE = ("not installed", "[MISSING]", "not a valid mod file", "absent mods", "is not loaded", "could not be found",
-           "ClassNotFoundException", "NoClassDefFoundError")
+ABSENCE = (
+    "not installed",
+    "[MISSING]",
+    "not a valid mod file",
+    "absent mods",
+    "is not loaded",
+    "could not be found",
+    "ClassNotFoundException",
+    "NoClassDefFoundError",
+)
 
 
 def log_evidence(extra: str, texts: list[str]) -> str | None:

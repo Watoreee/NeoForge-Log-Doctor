@@ -22,6 +22,7 @@ class Category(StrEnum):
     OTHER = "other"
 
 
+Confidence = Literal["low", "medium", "high"]
 SourceFileType = Literal["crash_report", "latest_log", "debug_log", "hs_err"]
 SupportSearch = Literal["none_found", "uncertain"]
 
@@ -66,3 +67,16 @@ class GoldLabel(BaseModel):
     @property
     def relevance_judged(self) -> bool:
         return self.relevant_doc_ids is not None
+
+
+class Diagnosis(BaseModel):
+    """The final answer (PLAN 6.6). `citations` are doc_ids; the backend keeps only ids that were actually retrieved."""
+
+    model_config = ConfigDict(extra="ignore")
+
+    culprit_mod_id: str | None = None
+    category: Category
+    explanation: str
+    fix_steps: list[str] = []
+    citations: list[str] = []
+    confidence: Confidence = "low"

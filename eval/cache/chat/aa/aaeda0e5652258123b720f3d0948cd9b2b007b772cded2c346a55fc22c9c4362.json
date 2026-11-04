@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"dragomordor\",\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"The crash log indicates that the mod 'All The Mons' failed to load because it could not find a required class from the 'dragomordor' mod. This suggests that 'dragomordor' is either missing from your modpack or is an outdated version that is incompatible with your current setup.\",\n  \"fix_steps\": [\n    \"Verify that the 'dragomordor' mod is installed in your mods folder.\",\n    \"Ensure that the version of 'dragomordor' matches the required version for 'All The Mons' and is compatible with Minecraft 1.21.1 and NeoForge 21.1.224.\",\n    \"If the mod is present, try updating both 'dragomordor' and 'All The Mons' to their latest versions.\"\n  ],\n  \"citations\": [],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

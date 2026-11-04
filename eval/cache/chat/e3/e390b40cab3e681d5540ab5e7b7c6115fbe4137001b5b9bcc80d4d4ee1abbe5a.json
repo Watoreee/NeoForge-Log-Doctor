@@ -1,0 +1,12 @@
+{
+ "prompt_version": "rag1-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "{\n  \"culprit_mod_id\": \"ae2\",\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"Several mods in your pack, including aeinfinitybooster, ae2ct, and ae2importexportcard, require Applied Energistics 2 (ae2) to function. The crash log clearly indicates that ae2 is missing from your installation, which prevents these dependent mods from loading correctly.\",\n  \"fix_steps\": [\n    \"Locate the Applied Energistics 2 (ae2) mod file.\",\n    \"Ensure the version of ae2 matches the requirements of the other mods (e.g., 19.1.2-beta or newer for aeinfinitybooster).\",\n    \"Place the correct ae2 jar file into your mods folder.\"\n  ],\n  \"citations\": [\n    \"neoforge-docs:docs/1.21.1/gettingstarted/modfiles\"\n  ],\n  \"confidence\": \"high\"\n}",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

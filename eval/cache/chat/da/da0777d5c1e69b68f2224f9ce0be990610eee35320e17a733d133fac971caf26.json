@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "{\n  \"action\": \"tool\",\n  \"tool\": \"search_docs\",\n  \"args\": {\n    \"query\": \"java.lang.OutOfMemoryError Minecraft NeoForge\",\n    \"k\": 6\n  }\n}",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

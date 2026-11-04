@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"create\",\n  \"category\": \"version_mismatch\",\n  \"explanation\": \"The crash is caused by dependency conflicts where several mods require a newer version of 'create' than the one you have installed (6.0.0). For example, 'bellsandwhistles' requires at least 6.0.2, and others require even newer versions like 6.0.9. You must update 'create' to meet the requirements of all dependent mods.\",\n  \"fix_steps\": [\n    \"Check the required version ranges for all mods that depend on 'create' (e.g., bellsandwhistles, ars_technica).\",\n    \"Update the 'create' mod to the latest version compatible with Minecraft 1.21.1 and NeoForge 21.1.224.\",\n    \"Verify that all other dependent mods are also updated to versions compatible with the new 'create' version.\"\n  ],\n  \"citations\": [\n    \"gh-issue:mrh0/createaddition#897\"\n  ],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "prompt_version": "rag1-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "{\n  \"culprit_mod_id\": \"cobblemon\",\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"Several mods are failing to load because they require the 'cobblemon' mod, but it is either missing or not installed in your modpack. Additionally, some mods require specific versions of 'kotlinforforge' which is also not present or compatible.\",\n  \"fix_steps\": [\n    \"Ensure the 'cobblemon' mod is installed and is compatible with Minecraft 1.21.1 and NeoForge.\",\n    \"Install the required 'kotlinforforge' dependency for the mods that are complaining about it.\",\n    \"Verify that all mods are the correct version for your specific Minecraft and NeoForge setup.\"\n  ],\n  \"citations\": [\n    \"gh-issue:thedarkcolour/KotlinForForge#160\"\n  ],\n  \"confidence\": \"high\"\n}",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

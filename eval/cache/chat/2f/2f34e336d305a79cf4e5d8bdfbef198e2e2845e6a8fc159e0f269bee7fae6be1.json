@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"yungsapi\",\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"The crash is caused because several mods (betterstrongholds, bettermineshafts, betterdungeons, betterendisland) require 'yungsapi' to run, but it is not present in your mod list. This is a classic missing dependency error, and the required version is specified in the log.\",\n  \"fix_steps\": [\n    \"Download the 'yungsapi' mod file compatible with Minecraft 1.21.1 and NeoForge.\",\n    \"Place the downloaded 'yungsapi' JAR file into your game's mods folder.\",\n    \"Restart Minecraft to allow the game to load all required dependencies.\"\n  ],\n  \"citations\": [\n    \"gh-issue:YUNG-GANG/YUNGs-API#84\"\n  ],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "refusal": null,
+   "reasoning": null
+  }
+ }
+}

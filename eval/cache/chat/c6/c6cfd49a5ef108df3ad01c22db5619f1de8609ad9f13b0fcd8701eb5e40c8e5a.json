@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"create\",\n  \"category\": \"version_mismatch\",\n  \"explanation\": \"The crash is caused by multiple mods requiring a specific, newer version of the 'create' mod than the one currently installed (6.0.0). Several mods, including 'ars_technica' and 'bellsandwhistles', explicitly state they need a version of 'create' that is higher than 6.0.0. You must update 'create' to satisfy the dependency requirements of all your other mods.\",\n  \"fix_steps\": [\n    \"Check the required version of 'create' for all mods listed in the crash report (e.g., 6.0.9 for ars_creo).\",\n    \"Update the 'create' mod file in your mods folder to the latest version compatible with Minecraft 1.21.1 and NeoForge.\",\n    \"Verify that all dependent mods are also updated to versions compatible with the new 'create' version.\"\n  ],\n  \"citations\": [\n    \"gh-issue:mrh0/createaddition#897\"\n  ],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

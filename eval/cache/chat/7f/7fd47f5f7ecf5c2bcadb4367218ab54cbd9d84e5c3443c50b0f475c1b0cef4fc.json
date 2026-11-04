@@ -1,0 +1,12 @@
+{
+ "prompt_version": "rag1-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"architectury\",\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"Several mods in your pack require the 'architectury' library to function, but it is not installed or is not accessible to the game. This dependency is crucial for many mods to load correctly during startup. You need to ensure the correct version of the Architectury API is present in your mods folder.\",\n  \"fix_steps\": [\n    \"Identify the required version of 'architectury' based on the mods that are failing (e.g., cobblefurnies needs >= 13.0.8).\",\n    \"Download the correct 'architectury' mod file for Minecraft 1.21.1 and NeoForge.\",\n    \"Place the downloaded 'architectury' jar file into your mods folder.\"\n  ],\n  \"citations\": [\n    \"gh-issue:architectury/architectury-api#528\"\n  ],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "refusal": null,
+   "reasoning": null
+  }
+ }
+}

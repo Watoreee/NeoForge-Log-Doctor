@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"aquaculture\",\n  \"category\": \"version_mismatch\",\n  \"explanation\": \"The 'aquaculture' mod is explicitly reporting a version mismatch. It requires NeoForge version 26.1.0.0 or newer, but your current installation is using NeoForge 21.1.224. This incompatibility is causing the mod loading failure.\",\n  \"fix_steps\": [\n    \"Check the mod's official download page for a version of Aquaculture that supports NeoForge 21.1.224 or Minecraft 1.21.1.\",\n    \"Alternatively, update your entire modpack to use a newer version of NeoForge that meets the mod's requirements.\"\n  ],\n  \"citations\": [\n    \"gh-issue:TeamMetallurgy/Aquaculture#350\"\n  ],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "refusal": null,
+   "reasoning": null
+  }
+ }
+}

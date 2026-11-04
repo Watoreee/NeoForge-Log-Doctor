@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"theurgy\",\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"The crash is caused by missing dependencies for two mods. Specifically, 'theurgy_kubejs' requires the 'theurgy' mod, and 'ars_nouveau' requires 'geckolib'. Since the log indicates these required mods are not installed, the game cannot load them.\",\n  \"fix_steps\": [\n    \"Install the 'theurgy' mod version compatible with Minecraft 1.21.1 and NeoForge.\",\n    \"Install the 'geckolib' mod version compatible with Minecraft 1.21.1 and NeoForge.\"\n  ],\n  \"citations\": [],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "refusal": null,
+   "reasoning": null
+  }
+ }
+}

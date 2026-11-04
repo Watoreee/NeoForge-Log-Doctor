@@ -1,0 +1,2085 @@
+{
+  "split": "test",
+  "git_sha": "482c723",
+  "utc": "2026-11-04T10:11:59+00:00",
+  "summary": {
+    "B0": {
+      "n_logs": 25,
+      "n_scenarios": 14,
+      "culprit_strict": "17/25",
+      "culprit_lenient": "19/25",
+      "culprit_strict_rate": 0.68,
+      "culprit_lenient_rate": 0.76,
+      "category": "20/25"
+    },
+    "B1": {
+      "n_logs": 25,
+      "n_scenarios": 14,
+      "culprit_strict": "7/25",
+      "culprit_lenient": "7/25",
+      "culprit_strict_rate": 0.28,
+      "culprit_lenient_rate": 0.28
+    },
+    "RAG1": {
+      "n_logs": 25,
+      "n_scenarios": 14,
+      "culprit_strict": "18/25",
+      "culprit_lenient": "18/25",
+      "culprit_strict_rate": 0.72,
+      "culprit_lenient_rate": 0.72,
+      "category": "20/25",
+      "citations": "14/14 valid",
+      "logs_with_a_citation": "14/25",
+      "fallback_logs": "0/25",
+      "tool_calls": 0
+    },
+    "FULL": {
+      "n_logs": 25,
+      "n_scenarios": 14,
+      "culprit_strict": "19/25",
+      "culprit_lenient": "20/25",
+      "culprit_strict_rate": 0.76,
+      "culprit_lenient_rate": 0.8,
+      "category": "20/25",
+      "citations": "14/15 valid",
+      "logs_with_a_citation": "14/25",
+      "fallback_logs": "0/25",
+      "tool_calls": 26
+    }
+  },
+  "per_log": {
+    "B0": [
+      {
+        "log_id": "r01_crash",
+        "scenario_id": "r01_missing_dependency_curios",
+        "pred_culprit": "curios",
+        "pred_category": "missing_dependency",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "curios",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r01_latest",
+        "scenario_id": "r01_missing_dependency_curios",
+        "pred_culprit": "curios",
+        "pred_category": "missing_dependency",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "curios",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r03_crash",
+        "scenario_id": "r03_missing_dependency_architectury",
+        "pred_culprit": "rctapi",
+        "pred_category": "missing_dependency",
+        "strict": false,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "architectury",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r03_latest",
+        "scenario_id": "r03_missing_dependency_architectury",
+        "pred_culprit": "rctapi",
+        "pred_category": "missing_dependency",
+        "strict": false,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "architectury",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r04_crash",
+        "scenario_id": "r04_missing_dependency_simpletms",
+        "pred_culprit": "allthemons",
+        "pred_category": "missing_dependency",
+        "strict": false,
+        "lenient": false,
+        "category": true,
+        "gold_culprit": "simpletms",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r04_latest",
+        "scenario_id": "r04_missing_dependency_simpletms",
+        "pred_culprit": "allthemons",
+        "pred_category": "missing_dependency",
+        "strict": false,
+        "lenient": false,
+        "category": true,
+        "gold_culprit": "simpletms",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r05_crash",
+        "scenario_id": "r05_missing_dependency_kotlinforforge",
+        "pred_culprit": "wild_battle_api",
+        "pred_category": "missing_dependency",
+        "strict": false,
+        "lenient": false,
+        "category": true,
+        "gold_culprit": "kotlinforforge",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r05_latest",
+        "scenario_id": "r05_missing_dependency_kotlinforforge",
+        "pred_culprit": "cobblemon",
+        "pred_category": "missing_dependency",
+        "strict": false,
+        "lenient": false,
+        "category": true,
+        "gold_culprit": "kotlinforforge",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r06_latest",
+        "scenario_id": "r06_version_mismatch_ironfurnaces",
+        "pred_culprit": "ironfurnaces",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "ironfurnaces",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r08_crash",
+        "scenario_id": "r08_version_mismatch_create",
+        "pred_culprit": "create",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "create",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r08_latest",
+        "scenario_id": "r08_version_mismatch_create",
+        "pred_culprit": "create",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "create",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r09_crash",
+        "scenario_id": "r09_version_mismatch_trashcans",
+        "pred_culprit": "trashcans",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "trashcans",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r09_latest",
+        "scenario_id": "r09_version_mismatch_trashcans",
+        "pred_culprit": "supermartijn642corelib",
+        "pred_category": "missing_dependency",
+        "strict": false,
+        "lenient": false,
+        "category": false,
+        "gold_culprit": "trashcans",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r10_latest",
+        "scenario_id": "r10_r11_out_of_memory_none",
+        "pred_culprit": null,
+        "pred_category": "out_of_memory",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": null,
+        "gold_category": "out_of_memory"
+      },
+      {
+        "log_id": "r11_latest",
+        "scenario_id": "r10_r11_out_of_memory_none",
+        "pred_culprit": null,
+        "pred_category": "out_of_memory",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": null,
+        "gold_category": "out_of_memory"
+      },
+      {
+        "log_id": "r12_crash",
+        "scenario_id": "r12_missing_dependency_ae2",
+        "pred_culprit": null,
+        "pred_category": "missing_dependency",
+        "strict": false,
+        "lenient": false,
+        "category": true,
+        "gold_culprit": "ae2",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r12_latest",
+        "scenario_id": "r12_missing_dependency_ae2",
+        "pred_culprit": "ae2",
+        "pred_category": "missing_dependency",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "ae2",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r14_latest",
+        "scenario_id": "r14_mixin_conflict_cobblemonraiddens",
+        "pred_culprit": "cobblemonraiddens",
+        "pred_category": "mixin_conflict",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "cobblemonraiddens",
+        "gold_category": "mixin_conflict"
+      },
+      {
+        "log_id": "r16_crash",
+        "scenario_id": "r16_version_mismatch_yungsapi",
+        "pred_culprit": "yungsapi",
+        "pred_category": "missing_dependency",
+        "strict": true,
+        "lenient": true,
+        "category": false,
+        "gold_culprit": "yungsapi",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r16_latest",
+        "scenario_id": "r16_version_mismatch_yungsapi",
+        "pred_culprit": "yungsapi",
+        "pred_category": "missing_dependency",
+        "strict": true,
+        "lenient": true,
+        "category": false,
+        "gold_culprit": "yungsapi",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r17_crash",
+        "scenario_id": "r17_version_mismatch_architectury",
+        "pred_culprit": "architectury",
+        "pred_category": "missing_dependency",
+        "strict": true,
+        "lenient": true,
+        "category": false,
+        "gold_culprit": "architectury",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r17_latest",
+        "scenario_id": "r17_version_mismatch_architectury",
+        "pred_culprit": "architectury",
+        "pred_category": "missing_dependency",
+        "strict": true,
+        "lenient": true,
+        "category": false,
+        "gold_culprit": "architectury",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r19_crash",
+        "scenario_id": "r19_version_mismatch_konkrete",
+        "pred_culprit": "konkrete",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "konkrete",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r19_latest",
+        "scenario_id": "r19_version_mismatch_konkrete",
+        "pred_culprit": "konkrete",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "konkrete",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r20_latest",
+        "scenario_id": "r20_missing_dependency_ftbquests",
+        "pred_culprit": "ftbquests",
+        "pred_category": "missing_dependency",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "ftbquests",
+        "gold_category": "missing_dependency"
+      }
+    ],
+    "B1": [
+      {
+        "log_id": "r01_crash",
+        "scenario_id": "r01_missing_dependency_curios",
+        "pred_culprit": "ars_nouveau",
+        "pred_category": null,
+        "strict": false,
+        "lenient": false,
+        "category": false,
+        "gold_culprit": "curios",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r01_latest",
+        "scenario_id": "r01_missing_dependency_curios",
+        "pred_culprit": "ars_nouveau",
+        "pred_category": null,
+        "strict": false,
+        "lenient": false,
+        "category": false,
+        "gold_culprit": "curios",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r03_crash",
+        "scenario_id": "r03_missing_dependency_architectury",
+        "pred_culprit": "cobblemon_battle_tower",
+        "pred_category": null,
+        "strict": false,
+        "lenient": false,
+        "category": false,
+        "gold_culprit": "architectury",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r03_latest",
+        "scenario_id": "r03_missing_dependency_architectury",
+        "pred_culprit": "cobblemon_battle_tower",
+        "pred_category": null,
+        "strict": false,
+        "lenient": false,
+        "category": false,
+        "gold_culprit": "architectury",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r04_crash",
+        "scenario_id": "r04_missing_dependency_simpletms",
+        "pred_culprit": "allthemons",
+        "pred_category": null,
+        "strict": false,
+        "lenient": false,
+        "category": false,
+        "gold_culprit": "simpletms",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r04_latest",
+        "scenario_id": "r04_missing_dependency_simpletms",
+        "pred_culprit": null,
+        "pred_category": null,
+        "strict": false,
+        "lenient": false,
+        "category": false,
+        "gold_culprit": "simpletms",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r05_crash",
+        "scenario_id": "r05_missing_dependency_kotlinforforge",
+        "pred_culprit": "file",
+        "pred_category": null,
+        "strict": false,
+        "lenient": false,
+        "category": false,
+        "gold_culprit": "kotlinforforge",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r05_latest",
+        "scenario_id": "r05_missing_dependency_kotlinforforge",
+        "pred_culprit": "file",
+        "pred_category": null,
+        "strict": false,
+        "lenient": false,
+        "category": false,
+        "gold_culprit": "kotlinforforge",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r06_latest",
+        "scenario_id": "r06_version_mismatch_ironfurnaces",
+        "pred_culprit": "ironfurnaces",
+        "pred_category": null,
+        "strict": true,
+        "lenient": true,
+        "category": false,
+        "gold_culprit": "ironfurnaces",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r08_crash",
+        "scenario_id": "r08_version_mismatch_create",
+        "pred_culprit": "bellsandwhistles",
+        "pred_category": null,
+        "strict": false,
+        "lenient": false,
+        "category": false,
+        "gold_culprit": "create",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r08_latest",
+        "scenario_id": "r08_version_mismatch_create",
+        "pred_culprit": "bellsandwhistles",
+        "pred_category": null,
+        "strict": false,
+        "lenient": false,
+        "category": false,
+        "gold_culprit": "create",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r09_crash",
+        "scenario_id": "r09_version_mismatch_trashcans",
+        "pred_culprit": "trashcans",
+        "pred_category": null,
+        "strict": true,
+        "lenient": true,
+        "category": false,
+        "gold_culprit": "trashcans",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r09_latest",
+        "scenario_id": "r09_version_mismatch_trashcans",
+        "pred_culprit": "trashcans",
+        "pred_category": null,
+        "strict": true,
+        "lenient": true,
+        "category": false,
+        "gold_culprit": "trashcans",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r10_latest",
+        "scenario_id": "r10_r11_out_of_memory_none",
+        "pred_culprit": null,
+        "pred_category": null,
+        "strict": true,
+        "lenient": true,
+        "category": false,
+        "gold_culprit": null,
+        "gold_category": "out_of_memory"
+      },
+      {
+        "log_id": "r11_latest",
+        "scenario_id": "r10_r11_out_of_memory_none",
+        "pred_culprit": null,
+        "pred_category": null,
+        "strict": true,
+        "lenient": true,
+        "category": false,
+        "gold_culprit": null,
+        "gold_category": "out_of_memory"
+      },
+      {
+        "log_id": "r12_crash",
+        "scenario_id": "r12_missing_dependency_ae2",
+        "pred_culprit": "aeinfinitybooster",
+        "pred_category": null,
+        "strict": false,
+        "lenient": false,
+        "category": false,
+        "gold_culprit": "ae2",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r12_latest",
+        "scenario_id": "r12_missing_dependency_ae2",
+        "pred_culprit": "aeinfinitybooster",
+        "pred_category": null,
+        "strict": false,
+        "lenient": false,
+        "category": false,
+        "gold_culprit": "ae2",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r14_latest",
+        "scenario_id": "r14_mixin_conflict_cobblemonraiddens",
+        "pred_culprit": null,
+        "pred_category": null,
+        "strict": false,
+        "lenient": false,
+        "category": false,
+        "gold_culprit": "cobblemonraiddens",
+        "gold_category": "mixin_conflict"
+      },
+      {
+        "log_id": "r16_crash",
+        "scenario_id": "r16_version_mismatch_yungsapi",
+        "pred_culprit": "betterstrongholds",
+        "pred_category": null,
+        "strict": false,
+        "lenient": false,
+        "category": false,
+        "gold_culprit": "yungsapi",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r16_latest",
+        "scenario_id": "r16_version_mismatch_yungsapi",
+        "pred_culprit": "betterstrongholds",
+        "pred_category": null,
+        "strict": false,
+        "lenient": false,
+        "category": false,
+        "gold_culprit": "yungsapi",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r17_crash",
+        "scenario_id": "r17_version_mismatch_architectury",
+        "pred_culprit": "cobblefurnies",
+        "pred_category": null,
+        "strict": false,
+        "lenient": false,
+        "category": false,
+        "gold_culprit": "architectury",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r17_latest",
+        "scenario_id": "r17_version_mismatch_architectury",
+        "pred_culprit": "cobblefurnies",
+        "pred_category": null,
+        "strict": false,
+        "lenient": false,
+        "category": false,
+        "gold_culprit": "architectury",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r19_crash",
+        "scenario_id": "r19_version_mismatch_konkrete",
+        "pred_culprit": "konkrete",
+        "pred_category": null,
+        "strict": true,
+        "lenient": true,
+        "category": false,
+        "gold_culprit": "konkrete",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r19_latest",
+        "scenario_id": "r19_version_mismatch_konkrete",
+        "pred_culprit": "konkrete",
+        "pred_category": null,
+        "strict": true,
+        "lenient": true,
+        "category": false,
+        "gold_culprit": "konkrete",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r20_latest",
+        "scenario_id": "r20_missing_dependency_ftbquests",
+        "pred_culprit": null,
+        "pred_category": null,
+        "strict": false,
+        "lenient": false,
+        "category": false,
+        "gold_culprit": "ftbquests",
+        "gold_category": "missing_dependency"
+      }
+    ],
+    "RAG1": [
+      {
+        "log_id": "r01_crash",
+        "scenario_id": "r01_missing_dependency_curios",
+        "pred_culprit": "curios",
+        "pred_category": "missing_dependency",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "curios",
+        "gold_category": "missing_dependency",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "Several mods in your modpack (ars_nouveau, allthearcanistgear, and occultism) require the 'curios' mod to function correctly. The crash report clearly states that 'curios' is not installed, which is causing the game to fail during mod loading.",
+        "citations": [
+          "neoforge-docs:docs/1.21.1/gettingstarted/modfiles"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:P3pp3rF1y/SophisticatedStorage#728",
+          "neoforge-docs:docs/1.21.1/gettingstarted/modfiles",
+          "gh-issue:TheIllusiveC4/Curios#502",
+          "gh-issue:TheIllusiveC4/Curios#619"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {
+          "neoforge-docs:docs/1.21.1/gettingstarted/modfiles": "mixin configuration file. | `config=\"examplemod.mixins.json\"` | ### Dependency Configurations Mods can specify their dependencies, which are checked by NeoForge before loading the mods. These configurations are created using the [array of tables][array] `[[dependencies.<modid>]]`, where `modid` is the identifier of the mod that consumes the dependency. | Property | Type | Default | Description | Example | |----------------|---------|----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+        }
+      },
+      {
+        "log_id": "r01_latest",
+        "scenario_id": "r01_missing_dependency_curios",
+        "pred_culprit": "curios",
+        "pred_category": "missing_dependency",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "curios",
+        "gold_category": "missing_dependency",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "Several mods in your pack, including ars_nouveau, allthearcanistgear, and occultism, require the 'curios' mod to function correctly. The crash log clearly indicates that 'curios' is either missing or not installed in your current setup. You need to ensure the correct version of the curios mod is present for Minecraft 1.21.1.",
+        "citations": [
+          "gh-issue:TheIllusiveC4/Curios#507"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:TheIllusiveC4/Curios#159",
+          "gh-issue:TheIllusiveC4/Curios#477",
+          "gh-issue:TheIllusiveC4/Curios#502",
+          "gh-issue:TheIllusiveC4/Curios#507"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {
+          "gh-issue:TheIllusiveC4/Curios#507": "[issue by Vadewolf] ### Minecraft Version 1.21.1 ### What happened? i updated curios to 9.4.2 - 1.21.1 and my game would crash repeatedly but it would say a different mod caused the crash yet i downgraded back to 9.4.1 and the game loads so info needed please [crash-2025-04-09_10.05.01-client.txt](https://github.com/user-attachments/files/19671603/crash-2025-04-09_10.05.01-client.txt) [crash-2025-04-09_10.04.07-client.txt](https://github.com/user-attachments/files/19671604/crash-2025-04-09_10.04.07-client.txt) ### Relevant Log Outputs _No response_ [comment by TheIllusiveC4 (owner)] Unfortunately, I'm not able to reproduce this error. The game loads fine with me, even with Cobblemon installe"
+        }
+      },
+      {
+        "log_id": "r03_crash",
+        "scenario_id": "r03_missing_dependency_architectury",
+        "pred_culprit": null,
+        "pred_category": "missing_dependency",
+        "strict": false,
+        "lenient": false,
+        "category": true,
+        "gold_culprit": "architectury",
+        "gold_category": "missing_dependency",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "Several mods in your instance are failing to load because they require other libraries (dependencies) that are not installed. Specifically, 'cobblemon_battle_tower' needs 'rctapi', and 'fightorflight' and 'wild_battle_api' both need 'architectury'.",
+        "citations": [],
+        "citations_total": 0,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:architectury/architectury-api#497",
+          "gh-issue:thedarkcolour/KotlinForForge#103",
+          "gh-issue:architectury/architectury-api#719",
+          "gh-issue:architectury/architectury-api#531"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {}
+      },
+      {
+        "log_id": "r03_latest",
+        "scenario_id": "r03_missing_dependency_architectury",
+        "pred_culprit": null,
+        "pred_category": "missing_dependency",
+        "strict": false,
+        "lenient": false,
+        "category": true,
+        "gold_culprit": "architectury",
+        "gold_category": "missing_dependency",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The crash is caused because several mods, including cobblemon_battle_tower, fightorflight, and wild_battle_api, require specific dependency mods (rctapi and architectury) that are not present in your modpack. These dependencies must be installed for the dependent mods to function correctly.",
+        "citations": [
+          "gh-issue:architectury/architectury-api#664"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:architectury/architectury-api#528",
+          "gh-issue:architectury/architectury-api#531",
+          "gh-issue:architectury/architectury-api#664",
+          "gh-issue:architectury/architectury-api#748"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {
+          "gh-issue:architectury/architectury-api#664": "[issue by KellTayLieLor] I keep getting this error whenever I try to build a modpack. I am using Cursforge with Neoforge as my launcher. I am on 1.21.1. I first got the error on an already established modpack after a few mods were updated. This honestly happens fairly often and it is so frustrating. I literally cannot play modded minecraft without this mod because it is a dependency for so many others. I've been looking through the logs, debug, and crash reports to try and find out which mod is the main culprit here but I am struggling. I am not a programmer and I don't know how to code so if anyone can help me out I would REALLY appreciate it! Thanks! Also...yeah, I know I have a lot of mod"
+        }
+      },
+      {
+        "log_id": "r04_crash",
+        "scenario_id": "r04_missing_dependency_simpletms",
+        "pred_culprit": "allthemons",
+        "pred_category": "missing_dependency",
+        "strict": false,
+        "lenient": false,
+        "category": true,
+        "gold_culprit": "simpletms",
+        "gold_category": "missing_dependency",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The mod 'allthemons' is trying to use a class called 'SimpleTMsBlockEntities' which it cannot find during loading. This indicates that a required dependency mod, which contains this class, is either missing from your mods folder or is not compatible with your current setup.",
+        "citations": [],
+        "citations_total": 0,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:embeddedt/ModernFix#535",
+          "gh-issue:TwelveIterations/Balm#56",
+          "gh-issue:TwelveIterations/Balm#27",
+          "gh-issue:malte0811/FerriteCore#189"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {}
+      },
+      {
+        "log_id": "r04_latest",
+        "scenario_id": "r04_missing_dependency_simpletms",
+        "pred_culprit": "dragomordor",
+        "pred_category": "missing_dependency",
+        "strict": false,
+        "lenient": false,
+        "category": true,
+        "gold_culprit": "simpletms",
+        "gold_category": "missing_dependency",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The crash log indicates a `ClassNotFoundException` for a class belonging to the 'dragomordor' mod. This means that another mod is trying to use functionality from dragomordor, but the mod itself is either missing or failed to load correctly. This is a classic missing dependency issue.",
+        "citations": [
+          "neoforge-docs:docs/1.21.1/gettingstarted/modfiles"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:TwelveIterations/Balm#56",
+          "gh-issue:TwelveIterations/Balm#27",
+          "neoforge-docs:docs/1.21.1/gettingstarted/modfiles",
+          "gh-issue:TwelveIterations/Waystones#1118"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {
+          "neoforge-docs:docs/1.21.1/gettingstarted/modfiles": "mixin configuration file. | `config=\"examplemod.mixins.json\"` | ### Dependency Configurations Mods can specify their dependencies, which are checked by NeoForge before loading the mods. These configurations are created using the [array of tables][array] `[[dependencies.<modid>]]`, where `modid` is the identifier of the mod that consumes the dependency. | Property | Type | Default | Description | Example | |----------------|---------|----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+        }
+      },
+      {
+        "log_id": "r05_crash",
+        "scenario_id": "r05_missing_dependency_kotlinforforge",
+        "pred_culprit": "cobblemon",
+        "pred_category": "missing_dependency",
+        "strict": false,
+        "lenient": false,
+        "category": true,
+        "gold_culprit": "kotlinforforge",
+        "gold_category": "missing_dependency",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "Several mods in your pack require Cobblemon to be installed to function correctly. Specifically, wild_battle_api, cobblemon_utility, and fightorflight all list Cobblemon as a required dependency. You must ensure that the correct version of Cobblemon is present in your mods folder.",
+        "citations": [
+          "gh-issue:thedarkcolour/KotlinForForge#160"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:thedarkcolour/KotlinForForge#75",
+          "gh-issue:thedarkcolour/KotlinForForge#160",
+          "gh-issue:thedarkcolour/KotlinForForge#18",
+          "gh-issue:thedarkcolour/KotlinForForge#65"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {
+          "gh-issue:thedarkcolour/KotlinForForge#160": "[issue by ThunderHacker11] When updating to Kotlin for forge 5.12 it does not load causing all dependent mods to fail to load, here is a sample of the crash -- Mod loading issue -- Details: Mod file: <No mod information provided> Failure message: Mod File mods\\Cobblemon-neoforge-1.7.3+1.21.1.jar needs language provider kotlinforforge:5.3 or above to load We have found - Mod version: <No mod information provided> Mod issues URL: <No issues URL found> Exception message: <No associated exception found> NeoForge 1.21.1 NeoForge Version: 21.1.233 [comment by thedarkcolour (owner)] Does 5.11.0 work fine? Also, you're going to need to upload your debug.log file so I can see what's going on [comment"
+        }
+      },
+      {
+        "log_id": "r05_latest",
+        "scenario_id": "r05_missing_dependency_kotlinforforge",
+        "pred_culprit": "cobblemon",
+        "pred_category": "missing_dependency",
+        "strict": false,
+        "lenient": false,
+        "category": true,
+        "gold_culprit": "kotlinforforge",
+        "gold_category": "missing_dependency",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "Several mods are failing to load because they require the 'cobblemon' mod, but it is either missing or not installed in your modpack. Additionally, some mods require specific versions of 'kotlinforforge' which is also not present or compatible.",
+        "citations": [
+          "gh-issue:thedarkcolour/KotlinForForge#160"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:thedarkcolour/KotlinForForge#75",
+          "gh-issue:thedarkcolour/KotlinForForge#160",
+          "gh-issue:thedarkcolour/KotlinForForge#65",
+          "gh-issue:thedarkcolour/KotlinForForge#85"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {
+          "gh-issue:thedarkcolour/KotlinForForge#160": "[issue by ThunderHacker11] When updating to Kotlin for forge 5.12 it does not load causing all dependent mods to fail to load, here is a sample of the crash -- Mod loading issue -- Details: Mod file: <No mod information provided> Failure message: Mod File mods\\Cobblemon-neoforge-1.7.3+1.21.1.jar needs language provider kotlinforforge:5.3 or above to load We have found - Mod version: <No mod information provided> Mod issues URL: <No issues URL found> Exception message: <No associated exception found> NeoForge 1.21.1 NeoForge Version: 21.1.233 [comment by thedarkcolour (owner)] Does 5.11.0 work fine? Also, you're going to need to upload your debug.log file so I can see what's going on [comment"
+        }
+      },
+      {
+        "log_id": "r06_latest",
+        "scenario_id": "r06_version_mismatch_ironfurnaces",
+        "pred_culprit": "ironfurnaces",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "ironfurnaces",
+        "gold_category": "version_mismatch",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The game failed to load the 'ironfurnaces' mod because the file it found was not recognized as a valid mod file by NeoForge. This usually means the mod version you have does not match the Minecraft or NeoForge version you are running. The log specifically points to an 'InvalidModFileException' for this mod.",
+        "citations": [],
+        "citations_total": 0,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:Qelifern/IronFurnacesNeoForge#56",
+          "gh-issue:malte0811/FerriteCore#211",
+          "gh-issue:architectury/architectury-api#719",
+          "gh-issue:Qelifern/IronFurnacesNeoForge#12"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {}
+      },
+      {
+        "log_id": "r08_crash",
+        "scenario_id": "r08_version_mismatch_create",
+        "pred_culprit": "create",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "create",
+        "gold_category": "version_mismatch",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "Several mods in your pack require a newer version of the Create mod than what you currently have installed (Create 6.0.0). For example, ars_technica requires Create 6.0.8 or above. You need to update your Create mod to meet the minimum version requirements of all the dependent mods.",
+        "citations": [],
+        "citations_total": 0,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:Creators-of-Create/Create#10508",
+          "gh-issue:thedarkcolour/KotlinForForge#122",
+          "gh-issue:architectury/architectury-api#719",
+          "gh-issue:mezz/JustEnoughItems#4450"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {}
+      },
+      {
+        "log_id": "r08_latest",
+        "scenario_id": "r08_version_mismatch_create",
+        "pred_culprit": "create",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "create",
+        "gold_category": "version_mismatch",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "Several mods in your pack require a specific, newer version of the 'create' mod, but the version currently installed is too old (6.0.0). This dependency mismatch prevents the game from loading correctly during the pre-loading phase. You need to update 'create' to meet the minimum version requirements of all dependent mods.",
+        "citations": [],
+        "citations_total": 0,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "neoforge-docs:docs/1.21.1/gettingstarted/modfiles",
+          "gh-issue:TwelveIterations/Balm#203",
+          "gh-issue:TwelveIterations/Balm#27",
+          "gh-issue:TwelveIterations/Balm#56"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {}
+      },
+      {
+        "log_id": "r09_crash",
+        "scenario_id": "r09_version_mismatch_trashcans",
+        "pred_culprit": "trashcans",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "trashcans",
+        "gold_category": "version_mismatch",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The 'trashcans' mod is failing to load because it has dependency requirements that do not match your current game setup. Specifically, it requires 'supermartijn642corelib' version 1.1.24 or newer, but you have version 1.1.21. Additionally, the mod expects Minecraft version 26.2 or above, while you are running 1.21.1.",
+        "citations": [
+          "gh-issue:SuperMartijn642/TrashCans#37"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:P3pp3rF1y/SophisticatedStorage#728",
+          "gh-issue:SuperMartijn642/TrashCans#37",
+          "gh-issue:bernie-g/geckolib#508",
+          "gh-issue:thedarkcolour/KotlinForForge#98"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {
+          "gh-issue:SuperMartijn642/TrashCans#37": "martijn642.core.gui.WidgetContainerScreen.m_88315_(WidgetContainerScreen.java:136) ~[supermartijn642corelib-1.1.12a-forge-mc1.20.jar%23721!/:?] {re:classloading} at net.minecraft.client.gui.screens.Screen.m_280264_(Screen.java:109) ~[client-1.20.1-20230612.114412-srg.jar%23748!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistclean [... truncated] [comment by SuperMartijn642 (owner)] Makes you wonder how no one has reported this until now... Anyways, it's fixed now in Trash Cans version 1.0.18b for Forge 1.20. Thank you for reporting the issue!"
+        }
+      },
+      {
+        "log_id": "r09_latest",
+        "scenario_id": "r09_version_mismatch_trashcans",
+        "pred_culprit": "supermartijn642corelib",
+        "pred_category": "missing_dependency",
+        "strict": false,
+        "lenient": false,
+        "category": false,
+        "gold_culprit": "trashcans",
+        "gold_category": "version_mismatch",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The mod 'trashcans' requires 'supermartijn642corelib' to function correctly, but the version installed (1.1.21) is too old for the version of 'trashcans' you are running. Additionally, 'trashcans' is expecting a newer version of Minecraft than what is currently loaded.",
+        "citations": [
+          "gh-issue:SuperMartijn642/TrashCans#38"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:SuperMartijn642/TrashCans#38",
+          "gh-issue:SuperMartijn642/TrashCans#37",
+          "gh-issue:SuperMartijn642/TrashCans#61",
+          "gh-issue:SuperMartijn642/TrashCans#11"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {
+          "gh-issue:SuperMartijn642/TrashCans#38": "[issue by jackhexed] Minecraft 1.18.2 Trashcans 1.0.18-forge-mc1.18 Corelib 1.1.15-forge-mc1.18 **Steps to Reproduce** Install the trashcans mod (through curseforge client, which automatically installs dependencies) and launch the game. **Crash report (~/logs/latest.log)** [latest.log](https://github.com/SuperMartijn642/TrashCans/files/13370809/latest.log) [comment by SuperMartijn642 (owner)] The CurseForge launcher sometimes doesn't download dependency files correctly. Please delete the core lib file from your mods folder and download it manually from the website [comment by jackhexed (none)] This worked, thank you <3"
+        }
+      },
+      {
+        "log_id": "r10_latest",
+        "scenario_id": "r10_r11_out_of_memory_none",
+        "pred_culprit": null,
+        "pred_category": "out_of_memory",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": null,
+        "gold_category": "out_of_memory",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The crash log clearly indicates an `java.lang.OutOfMemoryError: Java heap space`. This means the game ran out of available memory allocated to the Java Virtual Machine (JVM) while trying to load or process data. The numerous texture generation errors from 'Moonlight' are symptoms of this memory exhaustion.",
+        "citations": [],
+        "citations_total": 0,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:TwelveIterations/Balm#211",
+          "gh-issue:Creators-of-Create/Create#10533",
+          "gh-issue:mezz/JustEnoughItems#4351",
+          "gh-issue:YUNG-GANG/YUNGs-API#12"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {}
+      },
+      {
+        "log_id": "r11_latest",
+        "scenario_id": "r10_r11_out_of_memory_none",
+        "pred_culprit": null,
+        "pred_category": "out_of_memory",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": null,
+        "gold_category": "out_of_memory",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The crash log indicates a Java heap space error, which means the game ran out of available memory while trying to process events. This is not caused by a specific mod conflict but by insufficient RAM allocated to the game instance. The error occurred during the registration phase for the 'chipped' mod.",
+        "citations": [],
+        "citations_total": 0,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:TwelveIterations/Balm#211",
+          "gh-issue:Creators-of-Create/Create#10533",
+          "gh-issue:mezz/JustEnoughItems#4351",
+          "gh-issue:YUNG-GANG/YUNGs-API#12"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {}
+      },
+      {
+        "log_id": "r12_crash",
+        "scenario_id": "r12_missing_dependency_ae2",
+        "pred_culprit": "ae2",
+        "pred_category": "missing_dependency",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "ae2",
+        "gold_category": "missing_dependency",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "Several mods in your modpack, including aeinfinitybooster, ae2ct, and ae2importexportcard, require the mod 'ae2' (Applied Energistics 2) to function. The crash log clearly states that 'ae2' is not installed, which is causing these dependent mods to fail during the loading process.",
+        "citations": [
+          "neoforge-docs:docs/1.21.1/gettingstarted/modfiles"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:AppliedEnergistics/Applied-Energistics-2#8961",
+          "gh-issue:AppliedEnergistics/Applied-Energistics-2#8922",
+          "neoforge-docs:docs/1.21.1/gettingstarted/modfiles",
+          "gh-issue:AppliedEnergistics/Applied-Energistics-2#8978"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {
+          "neoforge-docs:docs/1.21.1/gettingstarted/modfiles": "mixin configuration file. | `config=\"examplemod.mixins.json\"` | ### Dependency Configurations Mods can specify their dependencies, which are checked by NeoForge before loading the mods. These configurations are created using the [array of tables][array] `[[dependencies.<modid>]]`, where `modid` is the identifier of the mod that consumes the dependency. | Property | Type | Default | Description | Example | |----------------|---------|----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+        }
+      },
+      {
+        "log_id": "r12_latest",
+        "scenario_id": "r12_missing_dependency_ae2",
+        "pred_culprit": "ae2",
+        "pred_category": "missing_dependency",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "ae2",
+        "gold_category": "missing_dependency",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "Several mods in your pack, including aeinfinitybooster, ae2ct, and ae2importexportcard, require Applied Energistics 2 (ae2) to function. The crash log clearly indicates that ae2 is missing from your installation, which prevents these dependent mods from loading correctly.",
+        "citations": [
+          "neoforge-docs:docs/1.21.1/gettingstarted/modfiles"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:AppliedEnergistics/Applied-Energistics-2#8961",
+          "gh-issue:AppliedEnergistics/Applied-Energistics-2#8922",
+          "neoforge-docs:docs/1.21.1/gettingstarted/modfiles",
+          "gh-issue:AppliedEnergistics/Applied-Energistics-2#8978"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {
+          "neoforge-docs:docs/1.21.1/gettingstarted/modfiles": "mixin configuration file. | `config=\"examplemod.mixins.json\"` | ### Dependency Configurations Mods can specify their dependencies, which are checked by NeoForge before loading the mods. These configurations are created using the [array of tables][array] `[[dependencies.<modid>]]`, where `modid` is the identifier of the mod that consumes the dependency. | Property | Type | Default | Description | Example | |----------------|---------|----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+        }
+      },
+      {
+        "log_id": "r14_latest",
+        "scenario_id": "r14_mixin_conflict_cobblemonraiddens",
+        "pred_culprit": "cobblemonraiddens",
+        "pred_category": "mixin_conflict",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "cobblemonraiddens",
+        "gold_category": "mixin_conflict",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The crash is caused by a NullPointerException occurring during the mixin preparation phase for the 'cobblemonraiddens' mod. This specific error suggests that the mod's mixin is trying to access mod information that is not available at the time of loading. This is often an incompatibility issue between the mod and the current NeoForge environment or other loaded mods.",
+        "citations": [],
+        "citations_total": 0,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:embeddedt/ModernFix#542",
+          "gh-issue:bernie-g/geckolib#823",
+          "gh-issue:embeddedt/ModernFix#608",
+          "gh-issue:TheIllusiveC4/Curios#502"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {}
+      },
+      {
+        "log_id": "r16_crash",
+        "scenario_id": "r16_version_mismatch_yungsapi",
+        "pred_culprit": "yungsapi",
+        "pred_category": "missing_dependency",
+        "strict": true,
+        "lenient": true,
+        "category": false,
+        "gold_culprit": "yungsapi",
+        "gold_category": "version_mismatch",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "Several mods, including betterstrongholds, bettermineshafts, betterdungeons, and betterendisland, require the YungsApi mod to function. The crash log clearly indicates that YungsApi is either missing or an incompatible version is present, causing these dependent mods to fail loading.",
+        "citations": [
+          "gh-issue:YUNG-GANG/YUNGs-API#5"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:YUNG-GANG/YUNGs-API#5",
+          "gh-issue:YUNG-GANG/YUNGs-API#8",
+          "gh-issue:P3pp3rF1y/SophisticatedStorage#728",
+          "gh-issue:bernie-g/geckolib#508"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {
+          "gh-issue:YUNG-GANG/YUNGs-API#5": "[issue by khorvo77] MultiMC version: 0.6.12-1530 Forge 36.1.0 Minecraft 1.16.5 Crash report: ---- Minecraft Crash Report ---- // Daisy, daisy... Time: 5/15/21 8:40 PM Description: Mod loading error has occurred java.lang.Exception: Mod Loading has failed at net.minecraftforge.fml.CrashReportExtender.dumpModLoadingCrashReport(CrashReportExtender.java:85) ~[forge:?] {re:classloading} at net.minecraftforge.fml.client.ClientModLoader.completeModLoading(ClientModLoader.java:188) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A} at net.minecraft.client.Minecraft.lambda$null$1(Minecraft.java:508) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A} at net.minecraft.util.Util.f"
+        }
+      },
+      {
+        "log_id": "r16_latest",
+        "scenario_id": "r16_version_mismatch_yungsapi",
+        "pred_culprit": "yungsapi",
+        "pred_category": "missing_dependency",
+        "strict": true,
+        "lenient": true,
+        "category": false,
+        "gold_culprit": "yungsapi",
+        "gold_category": "version_mismatch",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "Several mods in your pack, including betterstrongholds, bettermineshafts, betterdungeons, and betterendisland, require the 'yungsapi' mod to function. The crash log clearly indicates that this dependency is missing from your installation.",
+        "citations": [
+          "gh-issue:YUNG-GANG/YUNGs-API#5"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:YUNG-GANG/YUNGs-API#8",
+          "gh-issue:YUNG-GANG/YUNGs-API#62",
+          "gh-issue:YUNG-GANG/YUNGs-API#5",
+          "gh-issue:YUNG-GANG/YUNGs-API#34"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {
+          "gh-issue:YUNG-GANG/YUNGs-API#5": "e(Unknown Source) ~[?:1.8.0_271] {} at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_271] {} at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_271] {} at net.minecraftforge.fml.loading.FMLClientLaunchProvider.lambda$launchService$0(FMLClientLaunchProvider.java:51) ~[forge-1.16.5-36.1.18-launcher.jar:36.1] {} at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.0.9.jar:?] {} at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.0.9.jar:?] {} at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-8.0.9.jar:?] {} "
+        }
+      },
+      {
+        "log_id": "r17_crash",
+        "scenario_id": "r17_version_mismatch_architectury",
+        "pred_culprit": "architectury",
+        "pred_category": "missing_dependency",
+        "strict": true,
+        "lenient": true,
+        "category": false,
+        "gold_culprit": "architectury",
+        "gold_category": "version_mismatch",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "Several mods in your pack require the 'architectury' library to function, but it is either missing or an incompatible version is present. The log shows multiple mods failing because they cannot find the required 'architectury' dependency. You need to ensure the correct version of Architectury API is installed for all your mods.",
+        "citations": [
+          "gh-issue:thedarkcolour/KotlinForForge#103"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:architectury/architectury-api#497",
+          "gh-issue:thedarkcolour/KotlinForForge#103",
+          "gh-issue:P3pp3rF1y/SophisticatedStorage#728",
+          "gh-issue:architectury/architectury-api#719"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {
+          "gh-issue:thedarkcolour/KotlinForForge#103": "t figure out whether the issue is with KFF or Architectury so making [an issue for Architectury too](https://github.com/architectury/architectury-api/issues/543). Architectury Enabled Platforms: Fabric, NeoForge Minecraft Version: 1.21 Architectury API Version: 13.0.4 NeoForge Version: 21.0.86-beta KotlinForForge Version: 5.4.0 [comment by thedarkcolour (owner)] This is a bug in Loom. It doesn't happen in plain ModDevGradle/NeoGradle. That being said, have you tried excluding KFF's transitive dependency on FancyModLoader? Has group: `net.neoforged.fancymodloader` and name: `loader`. [comment by FlashHUN (none)] Excluding it solved the issue, thank you! [comment by double-pi (none)] @FlashHUN"
+        }
+      },
+      {
+        "log_id": "r17_latest",
+        "scenario_id": "r17_version_mismatch_architectury",
+        "pred_culprit": "architectury",
+        "pred_category": "missing_dependency",
+        "strict": true,
+        "lenient": true,
+        "category": false,
+        "gold_culprit": "architectury",
+        "gold_category": "version_mismatch",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "Several mods in your pack require the 'architectury' library to function, but it is not installed or is not accessible to the game. This dependency is crucial for many mods to load correctly during startup. You need to ensure the correct version of the Architectury API is present in your mods folder.",
+        "citations": [
+          "gh-issue:architectury/architectury-api#528"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:architectury/architectury-api#531",
+          "neoforge-docs:docs/1.21.1/gettingstarted/modfiles",
+          "gh-issue:thedarkcolour/KotlinForForge#103",
+          "gh-issue:architectury/architectury-api#528"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {
+          "gh-issue:architectury/architectury-api#528": "found. So I am a bit confused. [comment by RockinOstrich (none)] When I use NeoForge 21.1.31, it's fine, but if I try updating it to Neoforge 21.1.32+, I get that crash report (the one SirTwsted got), and that's the only thing I've changed. Any suggestions? I know you mentioned above about omegaconfig, but I don't know how to read or interpret a crash report: [crash-2024-10-21_20.18.46-client.txt](https://github.com/user-attachments/files/17468161/crash-2024-10-21_20.18.46-client.txt) [comment by Redfan2 (none)] > > omegaconfig > > @Jab125 > > I don't understand. I typed omegaconfig in the search bar of the folder and nothing comes up. Please explain in a little more detail so I can understa"
+        }
+      },
+      {
+        "log_id": "r19_crash",
+        "scenario_id": "r19_version_mismatch_konkrete",
+        "pred_culprit": "konkrete",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "konkrete",
+        "gold_category": "version_mismatch",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The mod 'konkrete' is incompatible with your current Minecraft and NeoForge versions. It explicitly requires a newer version of NeoForge (21.11.13-beta or above) and Minecraft (1.21.11 or above) than what you are running.",
+        "citations": [],
+        "citations_total": 0,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:thedarkcolour/KotlinForForge#98",
+          "gh-issue:P3pp3rF1y/SophisticatedStorage#728",
+          "gh-issue:bernie-g/geckolib#508",
+          "gh-issue:thedarkcolour/KotlinForForge#18"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {}
+      },
+      {
+        "log_id": "r19_latest",
+        "scenario_id": "r19_version_mismatch_konkrete",
+        "pred_culprit": "konkrete",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "konkrete",
+        "gold_category": "version_mismatch",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The mod 'konkrete' requires a newer version of both NeoForge and Minecraft than what you currently have installed. Specifically, it expects NeoForge version 21.11.13-beta or newer, and Minecraft version 1.21.11 or newer. Your current setup is using NeoForge 21.1.224 and Minecraft 1.21.1.",
+        "citations": [],
+        "citations_total": 0,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:Keksuccino/Konkrete#8",
+          "gh-issue:Keksuccino/Konkrete#22",
+          "gh-issue:architectury/architectury-api#719",
+          "gh-issue:CaffeineMC/sodium#3771"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {}
+      },
+      {
+        "log_id": "r20_latest",
+        "scenario_id": "r20_missing_dependency_ftbquests",
+        "pred_culprit": "ftbquests",
+        "pred_category": "missing_dependency",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "ftbquests",
+        "gold_category": "missing_dependency",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The mod 'cobblemon_quests' is trying to use a class from the 'ftbquests' mod, but it cannot find it during startup. This indicates that the FTB Quests mod is either missing from your modpack or is not compatible with your current Minecraft/NeoForge version.",
+        "citations": [],
+        "citations_total": 0,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:TwelveIterations/Waystones#1118",
+          "neoforge-docs:docs/1.21.1/gettingstarted/modfiles",
+          "gh-issue:TwelveIterations/Balm#27",
+          "gh-issue:malte0811/FerriteCore#189"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {}
+      }
+    ],
+    "FULL": [
+      {
+        "log_id": "r01_crash",
+        "scenario_id": "r01_missing_dependency_curios",
+        "pred_culprit": "curios",
+        "pred_category": "missing_dependency",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "curios",
+        "gold_category": "missing_dependency",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The crash is occurring because several mods (Ars Nouveau, All The Arcanist Gear, and Occultism) explicitly require the 'Curios' mod to be present in your modpack. The log shows that 'Curios' is currently missing, which prevents these dependent mods from loading correctly.",
+        "citations": [
+          "gh-issue:TheIllusiveC4/Curios#473"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:TheIllusiveC4/Curios#473",
+          "gh-issue:TheIllusiveC4/Curios#159",
+          "gh-issue:TheIllusiveC4/Curios#454"
+        ],
+        "tool_calls": [
+          "search_docs"
+        ],
+        "cited_excerpts": {
+          "gh-issue:TheIllusiveC4/Curios#473": "[issue by shoezons] i noticed that Curios is very not happy whenever Ars Nouveau is installed. i don't fully know whats causing it to happen. i need both mods since they are crucial for my modpack. here is the crash log if anyone could help me out with this. would be greatly appreciated. [latest.log](https://github.com/user-attachments/files/18428962/latest.log) [comment by TheIllusiveC4 (owner)] Duplicate of https://github.com/TheIllusiveC4/Curios/issues/344 This is not an issue with Ars Nouveau, but with the Tiered mod."
+        }
+      },
+      {
+        "log_id": "r01_latest",
+        "scenario_id": "r01_missing_dependency_curios",
+        "pred_culprit": "curios",
+        "pred_category": "missing_dependency",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "curios",
+        "gold_category": "missing_dependency",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The crash log clearly shows that several mods (ars_nouveau, allthearcanistgear, and occultism) are reporting that the 'curios' mod is missing. This is a mandatory dependency, meaning the game cannot start because the required mod is not installed in your mods folder.",
+        "citations": [
+          "gh-issue:TheIllusiveC4/Curios#473"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:TheIllusiveC4/Curios#473",
+          "neoforge-docs:docs/1.21.1/gettingstarted/modfiles",
+          "gh-issue:TheIllusiveC4/Curios#478",
+          "gh-issue:TheIllusiveC4/Curios#502",
+          "gh-issue:TheIllusiveC4/Curios#159"
+        ],
+        "tool_calls": [
+          "search_docs"
+        ],
+        "cited_excerpts": {
+          "gh-issue:TheIllusiveC4/Curios#473": "[issue by shoezons] i noticed that Curios is very not happy whenever Ars Nouveau is installed. i don't fully know whats causing it to happen. i need both mods since they are crucial for my modpack. here is the crash log if anyone could help me out with this. would be greatly appreciated. [latest.log](https://github.com/user-attachments/files/18428962/latest.log) [comment by TheIllusiveC4 (owner)] Duplicate of https://github.com/TheIllusiveC4/Curios/issues/344 This is not an issue with Ars Nouveau, but with the Tiered mod."
+        }
+      },
+      {
+        "log_id": "r03_crash",
+        "scenario_id": "r03_missing_dependency_architectury",
+        "pred_culprit": "rctapi",
+        "pred_category": "missing_dependency",
+        "strict": false,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "architectury",
+        "gold_category": "missing_dependency",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The crash is due to missing required dependencies for several mods. Specifically, 'cobblemon_battle_tower' requires 'rctapi', and 'fightorflight' and 'wild_battle_api' require 'architectury'. You need to install these missing API mods for the game to load correctly.",
+        "citations": [
+          "gh-issue:thedarkcolour/KotlinForForge#75"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:thedarkcolour/KotlinForForge#75",
+          "gh-issue:TwelveIterations/Waystones#1207",
+          "gh-issue:CaffeineMC/sodium#3743"
+        ],
+        "tool_calls": [
+          "search_docs"
+        ],
+        "cited_excerpts": {
+          "gh-issue:thedarkcolour/KotlinForForge#75": "[issue by BartholomewIII] Trying to install cobblemon which requires KFF. Everytime I install any version of KFF the game crashes with exit code 2. It loads just fine without KFF installed but says that I need to install KFF for the cobblemon mod to work. [comment by thedarkcolour (owner)] You're missing Architectury API. [comment by BartholomewIII (none)] This fixed it thanks."
+        }
+      },
+      {
+        "log_id": "r03_latest",
+        "scenario_id": "r03_missing_dependency_architectury",
+        "pred_culprit": null,
+        "pred_category": "missing_dependency",
+        "strict": false,
+        "lenient": false,
+        "category": true,
+        "gold_culprit": "architectury",
+        "gold_category": "missing_dependency",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The crash is caused by missing mandatory dependencies for several mods. 'cobblemon_battle_tower' requires 'rctapi', and 'fightorflight' and 'wild_battle_api' require 'architectury'. These dependencies must be installed for the game to load correctly.",
+        "citations": [
+          "gh-issue:thedarkcolour/KotlinForForge#75"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:thedarkcolour/KotlinForForge#75",
+          "gh-issue:TwelveIterations/Waystones#905",
+          "gh-issue:embeddedt/ModernFix#693"
+        ],
+        "tool_calls": [
+          "search_docs"
+        ],
+        "cited_excerpts": {
+          "gh-issue:thedarkcolour/KotlinForForge#75": "[issue by BartholomewIII] Trying to install cobblemon which requires KFF. Everytime I install any version of KFF the game crashes with exit code 2. It loads just fine without KFF installed but says that I need to install KFF for the cobblemon mod to work. [comment by thedarkcolour (owner)] You're missing Architectury API. [comment by BartholomewIII (none)] This fixed it thanks."
+        }
+      },
+      {
+        "log_id": "r04_crash",
+        "scenario_id": "r04_missing_dependency_simpletms",
+        "pred_culprit": "simpletms",
+        "pred_category": "missing_dependency",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "simpletms",
+        "gold_category": "missing_dependency",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The mod 'allthemons' is crashing because it cannot find a required class, `SimpleTMsBlockEntities`, which belongs to the mod 'simpletms'. This is a classic missing dependency error, meaning 'simpletms' is not installed or is incompatible with your current Minecraft/NeoForge setup.",
+        "citations": [],
+        "citations_total": 0,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:embeddedt/ModernFix#535",
+          "neoforge-docs:docs/1.21.1/blockentities/index",
+          "neoforge-docs:docs/1.21.1/resources/server/loottables/index",
+          "neoforge-docs:docs/1.21.1/blockentities/ber",
+          "gh-issue:architectury/architectury-api#719"
+        ],
+        "tool_calls": [
+          "search_docs"
+        ],
+        "cited_excerpts": {}
+      },
+      {
+        "log_id": "r04_latest",
+        "scenario_id": "r04_missing_dependency_simpletms",
+        "pred_culprit": "dragomordor",
+        "pred_category": "missing_dependency",
+        "strict": false,
+        "lenient": false,
+        "category": true,
+        "gold_culprit": "simpletms",
+        "gold_category": "missing_dependency",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The crash log shows a `ClassNotFoundException` for a class belonging to the 'dragomordor' mod, which is being referenced by 'All The Mons'. This means that 'All The Mons' requires 'dragomordor' to be present and loaded, but it cannot find it in your current installation.",
+        "citations": [],
+        "citations_total": 0,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "neoforge-docs:docs/1.21.1/blockentities/index",
+          "neoforge-docs:docs/1.21.1/resources/server/loottables/index",
+          "gh-issue:TwelveIterations/Waystones#905",
+          "neoforge-docs:docs/1.21.1/blockentities/ber",
+          "gh-issue:embeddedt/ModernFix#536"
+        ],
+        "tool_calls": [
+          "search_docs"
+        ],
+        "cited_excerpts": {}
+      },
+      {
+        "log_id": "r05_crash",
+        "scenario_id": "r05_missing_dependency_kotlinforforge",
+        "pred_culprit": "cobblemon",
+        "pred_category": "missing_dependency",
+        "strict": false,
+        "lenient": false,
+        "category": true,
+        "gold_culprit": "kotlinforforge",
+        "gold_category": "missing_dependency",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The primary issue is that several mods (wild_battle_api, cobblemon_utility, fightorflight) explicitly state they require Cobblemon to be installed, but it is missing from your mod list. Additionally, two other mods are reporting issues because they require a specific version of the Kotlin language provider, which is likely related to Cobblemon's dependencies.",
+        "citations": [
+          "gh-issue:TwelveIterations/Waystones#1207"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:thedarkcolour/KotlinForForge#75",
+          "gh-issue:thedarkcolour/KotlinForForge#65",
+          "gh-issue:TwelveIterations/Waystones#1207"
+        ],
+        "tool_calls": [
+          "search_docs"
+        ],
+        "cited_excerpts": {
+          "gh-issue:TwelveIterations/Waystones#1207": "[issue by OutOfOrderCandy] ### Minecraft Version 1.21.1 ### Mod Loader Fabric ### Describe the Issue Version that is casing an issue : waystones-fabric-1.21.1-21.1.37.jar Balm version : balm-fabric-1.21.1-21.0.63 Fabric API : 0.116.14 Cobblemon : 1.7.3 If you try to use waystones while riding a pokemon, this leaves traces of the pokemon and sometimes causing crashes to server. https://imgur.com/a/mR9y5hl It works fine on version before 21.1.37 ### Logs [crash-2026-07-18_17.40.27-server.txt](https://github.com/user-attachments/files/30160941/crash-2026-07-18_17.40.27-server.txt) [comment by BlayTheNinth (member)] Should be fixed in 21.1.38 [comment by OutOfOrderCandy (none)] It has been fixed"
+        }
+      },
+      {
+        "log_id": "r05_latest",
+        "scenario_id": "r05_missing_dependency_kotlinforforge",
+        "pred_culprit": "cobblemon",
+        "pred_category": "missing_dependency",
+        "strict": false,
+        "lenient": false,
+        "category": true,
+        "gold_culprit": "kotlinforforge",
+        "gold_category": "missing_dependency",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The crash is caused by multiple missing dependencies. Specifically, several mods require the 'cobblemon' mod, which is not installed. Furthermore, other mods are failing to load because the 'kotlinforforge' language provider is missing or an incorrect version is present. You must install 'cobblemon' and ensure 'kotlinforforge' is correctly added to your mod list.",
+        "citations": [
+          "gh-issue:thedarkcolour/KotlinForForge#160"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:thedarkcolour/KotlinForForge#160",
+          "gh-issue:thedarkcolour/KotlinForForge#85",
+          "gh-issue:thedarkcolour/KotlinForForge#98",
+          "gh-issue:thedarkcolour/KotlinForForge#106",
+          "gh-issue:thedarkcolour/KotlinForForge#89"
+        ],
+        "tool_calls": [
+          "search_docs"
+        ],
+        "cited_excerpts": {
+          "gh-issue:thedarkcolour/KotlinForForge#160": "[issue by ThunderHacker11] When updating to Kotlin for forge 5.12 it does not load causing all dependent mods to fail to load, here is a sample of the crash -- Mod loading issue -- Details: Mod file: <No mod information provided> Failure message: Mod File mods\\Cobblemon-neoforge-1.7.3+1.21.1.jar needs language provider kotlinforforge:5.3 or above to load We have found - Mod version: <No mod information provided> Mod issues URL: <No issues URL found> Exception message: <No associated exception found> NeoForge 1.21.1 NeoForge Version: 21.1.233 [comment by thedarkcolour (owner)] Does 5.11.0 work fine? Also, you're going to need to upload your debug.log file so I can see what's going on [comment"
+        }
+      },
+      {
+        "log_id": "r06_latest",
+        "scenario_id": "r06_version_mismatch_ironfurnaces",
+        "pred_culprit": "ironfurnaces",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "ironfurnaces",
+        "gold_category": "version_mismatch",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The error 'Missing ModLoader in file' for ironfurnaces indicates that the mod JAR file is corrupted or, more likely, it is not compiled for the correct NeoForge version you are running (1.21.1). The mod loader cannot recognize the file as a valid mod.",
+        "citations": [],
+        "citations_total": 0,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:architectury/architectury-api#719",
+          "gh-issue:malte0811/FerriteCore#189",
+          "gh-issue:thedarkcolour/KotlinForForge#96",
+          "gh-issue:thedarkcolour/KotlinForForge#161",
+          "gh-issue:GlodBlock/ExtendedAE#341"
+        ],
+        "tool_calls": [
+          "search_docs"
+        ],
+        "cited_excerpts": {}
+      },
+      {
+        "log_id": "r08_crash",
+        "scenario_id": "r08_version_mismatch_create",
+        "pred_culprit": "create",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "create",
+        "gold_category": "version_mismatch",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The crash is caused by multiple mods requiring a specific, newer version of the 'create' mod than the one currently installed (6.0.0). Several mods, including 'ars_technica' and 'bellsandwhistles', explicitly state they need a version of 'create' that is higher than 6.0.0. You must update 'create' to satisfy the dependency requirements of all your other mods.",
+        "citations": [
+          "gh-issue:mrh0/createaddition#897"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:mrh0/createaddition#897",
+          "gh-issue:CaffeineMC/sodium#3743",
+          "gh-issue:P3pp3rF1y/SophisticatedStorage#728"
+        ],
+        "tool_calls": [
+          "search_docs"
+        ],
+        "cited_excerpts": {
+          "gh-issue:mrh0/createaddition#897": "[issue by EhBrokenToaster] **Describe the bug** A clear and concise description of what the bug is. Encountered an error when booting, 1 Mod has errors loading and the game points to createadditions. Says it requires 6.0.1 or above and the next version down doesn't support 6.0.0 either as it requires an even older version of Create, that then requires flywheel, of which wont run with create being version 6.0. I've been attempting to make a giant conglomeration mod pack to put on a server with a few buddies to stream and most mods aren't currently updated to 6.0.1 as of yet. Removing the mod doesn't seem to change much but crashing before it loads, this issue may or may not be related to your"
+        }
+      },
+      {
+        "log_id": "r08_latest",
+        "scenario_id": "r08_version_mismatch_create",
+        "pred_culprit": "create",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "create",
+        "gold_category": "version_mismatch",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The crash is caused by dependency conflicts where several mods require a newer version of 'create' than the one you have installed (6.0.0). For example, 'bellsandwhistles' requires at least 6.0.2, and others require even newer versions like 6.0.9. You must update 'create' to meet the requirements of all dependent mods.",
+        "citations": [
+          "gh-issue:mrh0/createaddition#897"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "neoforge-docs:docs/1.21.1/gettingstarted/modfiles",
+          "gh-issue:TwelveIterations/Waystones#905",
+          "gh-issue:mrh0/createaddition#897"
+        ],
+        "tool_calls": [
+          "search_docs"
+        ],
+        "cited_excerpts": {
+          "gh-issue:mrh0/createaddition#897": "hub.com/user-attachments/files/19062281/latest.log) **To Reproduce** Steps to reproduce the behavior: Boot the game, with all the mods **Additional context** - Mod version: 1.20.1-1.2.5/1.3.0 - Forge version: 47.3.33 - Create version: 1.20.1-6.0.0 [comment by crazykiddo (none)] Same issue using Create 1.20.1-6.0.1 confirmed [comment by mrh0 (owner)] Cc&a 1.3.0 and Create 6.0.1 is correct, make sure you have the correct versions installed, you crash-log says you have create 6.0.0 [comment by Avi-E-Koenig (none)] any fix planned anytime soon? miss that mod ;("
+        }
+      },
+      {
+        "log_id": "r09_crash",
+        "scenario_id": "r09_version_mismatch_trashcans",
+        "pred_culprit": "trashcans",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "trashcans",
+        "gold_category": "version_mismatch",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The 'trashcans' mod is failing to load due to dependency and version mismatches. It requires 'supermartijn642corelib' version 1.1.24 or newer, but your game is using 1.1.21. Additionally, the mod has a specific Minecraft version requirement (26.2-26.4) that conflicts with your current Minecraft 1.21.1.",
+        "citations": [
+          "gh-issue:SuperMartijn642/TrashCans#38"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:SuperMartijn642/TrashCans#38",
+          "gh-issue:SuperMartijn642/TrashCans#37",
+          "gh-issue:SuperMartijn642/TrashCans#59"
+        ],
+        "tool_calls": [
+          "search_docs"
+        ],
+        "cited_excerpts": {
+          "gh-issue:SuperMartijn642/TrashCans#38": "[issue by jackhexed] Minecraft 1.18.2 Trashcans 1.0.18-forge-mc1.18 Corelib 1.1.15-forge-mc1.18 **Steps to Reproduce** Install the trashcans mod (through curseforge client, which automatically installs dependencies) and launch the game. **Crash report (~/logs/latest.log)** [latest.log](https://github.com/SuperMartijn642/TrashCans/files/13370809/latest.log) [comment by SuperMartijn642 (owner)] The CurseForge launcher sometimes doesn't download dependency files correctly. Please delete the core lib file from your mods folder and download it manually from the website [comment by jackhexed (none)] This worked, thank you <3"
+        }
+      },
+      {
+        "log_id": "r09_latest",
+        "scenario_id": "r09_version_mismatch_trashcans",
+        "pred_culprit": "supermartijn642corelib",
+        "pred_category": "missing_dependency",
+        "strict": false,
+        "lenient": false,
+        "category": false,
+        "gold_culprit": "trashcans",
+        "gold_category": "version_mismatch",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The crash is caused because the mod 'trashcans' requires a specific version of 'supermartijn642corelib' that is not met by your current installation. The log shows 'trashcans' expects a version between 1.1.24 and 1.2.0, but you have 1.1.21. You also have a Minecraft version mismatch, as 'trashcans' expects a different Minecraft version than 1.21.1.",
+        "citations": [],
+        "citations_total": 1,
+        "citations_dropped": 1,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:SuperMartijn642/TrashCans#38",
+          "gh-issue:SuperMartijn642/TrashCans#37",
+          "gh-issue:SuperMartijn642/TrashCans#59",
+          "gh-issue:SuperMartijn642/TrashCans#11",
+          "gh-issue:SuperMartijn642/TrashCans#13"
+        ],
+        "tool_calls": [
+          "search_docs"
+        ],
+        "cited_excerpts": {}
+      },
+      {
+        "log_id": "r10_latest",
+        "scenario_id": "r10_r11_out_of_memory_none",
+        "pred_culprit": null,
+        "pred_category": "out_of_memory",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": null,
+        "gold_category": "out_of_memory",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The log clearly shows a 'java.lang.OutOfMemoryError: Java heap space' at the end of the process. This means the game ran out of the memory allocated to it, which is a system configuration issue rather than a bug in a specific mod.",
+        "citations": [],
+        "citations_total": 0,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:thedarkcolour/KotlinForForge#106",
+          "gh-issue:embeddedt/ModernFix#583",
+          "gh-issue:thedarkcolour/KotlinForForge#98"
+        ],
+        "tool_calls": [
+          "search_docs"
+        ],
+        "cited_excerpts": {}
+      },
+      {
+        "log_id": "r11_latest",
+        "scenario_id": "r10_r11_out_of_memory_none",
+        "pred_culprit": null,
+        "pred_category": "out_of_memory",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": null,
+        "gold_category": "out_of_memory",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The crash log clearly indicates a `java.lang.OutOfMemoryError: Java heap space`, which means the game ran out of memory while loading mods. This is not caused by a specific mod conflict but by the amount of RAM allocated to the game instance.",
+        "citations": [],
+        "citations_total": 0,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:thedarkcolour/KotlinForForge#106",
+          "gh-issue:thedarkcolour/KotlinForForge#98",
+          "gh-issue:embeddedt/ModernFix#583",
+          "gh-issue:TwelveIterations/Balm#228",
+          "gh-issue:CaffeineMC/sodium#3771",
+          "gh-issue:mezz/JustEnoughItems#4003"
+        ],
+        "tool_calls": [
+          "search_docs",
+          "search_docs"
+        ],
+        "cited_excerpts": {}
+      },
+      {
+        "log_id": "r12_crash",
+        "scenario_id": "r12_missing_dependency_ae2",
+        "pred_culprit": "ae2",
+        "pred_category": "missing_dependency",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "ae2",
+        "gold_category": "missing_dependency",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The crash report indicates that several mods (aeinfinitybooster, ae2ct, ae2importexportcard) are failing to load because they depend on the 'ae2' mod, but 'ae2' is not present in your mod folder. You need to install the required 'ae2' mod for your Minecraft 1.21.1 setup.",
+        "citations": [],
+        "citations_total": 0,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:CaffeineMC/sodium#3743",
+          "gh-issue:AppliedEnergistics/Applied-Energistics-2#8922",
+          "gh-issue:AppliedEnergistics/Applied-Energistics-2#8978"
+        ],
+        "tool_calls": [
+          "search_docs"
+        ],
+        "cited_excerpts": {}
+      },
+      {
+        "log_id": "r12_latest",
+        "scenario_id": "r12_missing_dependency_ae2",
+        "pred_culprit": "ae2",
+        "pred_category": "missing_dependency",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "ae2",
+        "gold_category": "missing_dependency",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The crash is caused because several mods (aeinfinitybooster, ae2ct, ae2importexportcard) explicitly require the mod 'ae2' to be present, but it is missing from your modpack. This is a classic missing dependency error, preventing the game from initializing correctly.",
+        "citations": [
+          "gh-issue:AppliedEnergistics/Applied-Energistics-2#8922"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:AppliedEnergistics/Applied-Energistics-2#8922",
+          "gh-issue:embeddedt/ModernFix#608",
+          "gh-issue:GlodBlock/ExtendedAE#550",
+          "gh-issue:AppliedEnergistics/Applied-Energistics-2#8978",
+          "gh-issue:AppliedEnergistics/Applied-Energistics-2#8928"
+        ],
+        "tool_calls": [
+          "search_docs"
+        ],
+        "cited_excerpts": {
+          "gh-issue:AppliedEnergistics/Applied-Energistics-2#8922": "[issue by goldswim] ### Describe the bug Hello, Version: Minecraft 1.21.1 NeoForge 21.1.234 Applied Energistics 2 19.2.17 ExpandedAE 2.1.1 ExtendedAE 2.2.33 AdvancedAE 1.6.11 Here's the log causing the disconnect: Screen is missing required image: toolbox at appeng.client.gui.implementations.PatternProviderScreen.handler$jal000$expandedae$init ### How to reproduce the bug it happens when i try to access any pattern provider's UI by right-clicking it. ### Expected behavior Display pattern provider's UI ### Additional details _No response_ ### Which minecraft version are you using? 1.21 ### On which mod loaders does it happen? NeoForge ### Crash log [03Jul2026 18:08:20.551] [Render thread/ERRO"
+        }
+      },
+      {
+        "log_id": "r14_latest",
+        "scenario_id": "r14_mixin_conflict_cobblemonraiddens",
+        "pred_culprit": "cobblemonraiddens",
+        "pred_category": "mixin_conflict",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "cobblemonraiddens",
+        "gold_category": "mixin_conflict",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The crash is a MixinApplyError caused by a NullPointerException within 'cobblemonraiddens' during initialization. The error indicates that the mod is trying to access mod information via 'ModFileInfo.getMods()' when the necessary 'info' object is null. This strongly suggests an incompatibility between 'cobblemonraiddens' and the current NeoForge 1.21.1 environment, likely due to an outdated or buggy mod version.",
+        "citations": [],
+        "citations_total": 0,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:TwelveIterations/Waystones#1007",
+          "gh-issue:Creators-of-Create/Create#10344",
+          "gh-issue:TwelveIterations/Balm#28",
+          "gh-issue:bernie-g/geckolib#713",
+          "gh-issue:embeddedt/ModernFix#693"
+        ],
+        "tool_calls": [
+          "search_docs"
+        ],
+        "cited_excerpts": {}
+      },
+      {
+        "log_id": "r16_crash",
+        "scenario_id": "r16_version_mismatch_yungsapi",
+        "pred_culprit": "yungsapi",
+        "pred_category": "missing_dependency",
+        "strict": true,
+        "lenient": true,
+        "category": false,
+        "gold_culprit": "yungsapi",
+        "gold_category": "version_mismatch",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The crash is caused because several YUNGs mods (like betterstrongholds) explicitly require YungsApi to be present and at a specific version to load. The log indicates that YungsApi is currently not installed or is an incompatible version for the other mods.",
+        "citations": [
+          "gh-issue:YUNG-GANG/YUNGs-API#84"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:YUNG-GANG/YUNGs-API#84",
+          "gh-issue:YUNG-GANG/YUNGs-API#5",
+          "gh-issue:YUNG-GANG/YUNGs-API#19"
+        ],
+        "tool_calls": [
+          "search_docs"
+        ],
+        "cited_excerpts": {
+          "gh-issue:YUNG-GANG/YUNGs-API#84": "[issue by Periam] After installing the latest version of the api, the game crashed when loading word. Name Version (Mod Id) Just Enough Items 19.21.0.247 (jei) Minecraft 1.21.1 (minecraft) NeoForge 21.1.128 (neoforge) Villages & Pillages 1.0.2 (villagesandpillages) YUNG's API 1.21.1-NeoForge-5.1.4 (yungsapi) [latest.log](https://github.com/user-attachments/files/19078429/latest.log) [crash-2025-03-04_19.23.48-client.txt](https://github.com/user-attachments/files/19078432/crash-2025-03-04_19.23.48-client.txt) [comment by yungnickyoung (member)] Hey, this is a known compat issue with Villages & Pillages that will hopefully be fixed in the next couple of days. In the meantime you can just downg"
+        }
+      },
+      {
+        "log_id": "r16_latest",
+        "scenario_id": "r16_version_mismatch_yungsapi",
+        "pred_culprit": "yungsapi",
+        "pred_category": "missing_dependency",
+        "strict": true,
+        "lenient": true,
+        "category": false,
+        "gold_culprit": "yungsapi",
+        "gold_category": "version_mismatch",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The crash is caused because several mods (betterstrongholds, bettermineshafts, betterdungeons, betterendisland) require 'yungsapi' to run, but it is not present in your mod list. This is a classic missing dependency error, and the required version is specified in the log.",
+        "citations": [
+          "gh-issue:YUNG-GANG/YUNGs-API#84"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:YUNG-GANG/YUNGs-API#84",
+          "gh-issue:YUNG-GANG/YUNGs-API#5",
+          "gh-issue:wisp-forest/owo-lib#405"
+        ],
+        "tool_calls": [
+          "search_docs"
+        ],
+        "cited_excerpts": {
+          "gh-issue:YUNG-GANG/YUNGs-API#84": "[issue by Periam] After installing the latest version of the api, the game crashed when loading word. Name Version (Mod Id) Just Enough Items 19.21.0.247 (jei) Minecraft 1.21.1 (minecraft) NeoForge 21.1.128 (neoforge) Villages & Pillages 1.0.2 (villagesandpillages) YUNG's API 1.21.1-NeoForge-5.1.4 (yungsapi) [latest.log](https://github.com/user-attachments/files/19078429/latest.log) [crash-2025-03-04_19.23.48-client.txt](https://github.com/user-attachments/files/19078432/crash-2025-03-04_19.23.48-client.txt) [comment by yungnickyoung (member)] Hey, this is a known compat issue with Villages & Pillages that will hopefully be fixed in the next couple of days. In the meantime you can just downg"
+        }
+      },
+      {
+        "log_id": "r17_crash",
+        "scenario_id": "r17_version_mismatch_architectury",
+        "pred_culprit": "architectury",
+        "pred_category": "missing_dependency",
+        "strict": true,
+        "lenient": true,
+        "category": false,
+        "gold_culprit": "architectury",
+        "gold_category": "version_mismatch",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The crash is caused by several mods requiring the 'architectury' library, but it is not present or is the wrong version for your setup. The logs clearly indicate that mods like cobblefurnies and mega_showdown are failing because they cannot find the required 'architectury' dependency. You must install the correct version of Architectury for Minecraft 1.21.1 and NeoForge.",
+        "citations": [
+          "gh-issue:architectury/architectury-api#531"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:architectury/architectury-api#531",
+          "gh-issue:thedarkcolour/KotlinForForge#103",
+          "gh-issue:architectury/architectury-api#719"
+        ],
+        "tool_calls": [
+          "search_docs"
+        ],
+        "cited_excerpts": {
+          "gh-issue:architectury/architectury-api#531": "agerImpl$1.registerS2C(NetworkManagerImpl.java:70) ~[architectury-13.0.3-neoforge.jar%23242!/:?] {re:classloading} at TRANSFORMER/architectury@13.0.3/dev.architectury.impl.NetworkAggregator.registerS2CReceiver(NetworkAggregator.java:119) ~[architectury-13.0.3-neoforge.jar%23242!/:?] {re:classloading} at TRANSFORMER/architectury@13.0.3/dev.architectury.impl.NetworkAggregator.registerReceiver(NetworkAggregator.java:91) ~[architectury-13.0.3-neoforge.jar%23242!/:?] {re:classloading} at TRANSFORMER/architectury@13.0.3/dev.architectury.networking.NetworkManager.registerReceiver(NetworkManager.java:102) ~[architectury-13.0.3-neoforge.jar%23242!/:?] {re:mixin,re:classloading} at TRANSFORMER/archite"
+        }
+      },
+      {
+        "log_id": "r17_latest",
+        "scenario_id": "r17_version_mismatch_architectury",
+        "pred_culprit": "architectury",
+        "pred_category": "missing_dependency",
+        "strict": true,
+        "lenient": true,
+        "category": false,
+        "gold_culprit": "architectury",
+        "gold_category": "version_mismatch",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The crash log clearly indicates that multiple mods require 'architectury' as a mandatory dependency, but it is not found in your mod list. This is a missing dependency error, meaning you need to add the 'architectury' library mod to your game.",
+        "citations": [
+          "gh-issue:architectury/architectury-api#531"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:architectury/architectury-api#531",
+          "gh-issue:thedarkcolour/KotlinForForge#103",
+          "gh-issue:architectury/architectury-api#719"
+        ],
+        "tool_calls": [
+          "search_docs"
+        ],
+        "cited_excerpts": {
+          "gh-issue:architectury/architectury-api#531": "agerImpl$1.registerS2C(NetworkManagerImpl.java:70) ~[architectury-13.0.3-neoforge.jar%23242!/:?] {re:classloading} at TRANSFORMER/architectury@13.0.3/dev.architectury.impl.NetworkAggregator.registerS2CReceiver(NetworkAggregator.java:119) ~[architectury-13.0.3-neoforge.jar%23242!/:?] {re:classloading} at TRANSFORMER/architectury@13.0.3/dev.architectury.impl.NetworkAggregator.registerReceiver(NetworkAggregator.java:91) ~[architectury-13.0.3-neoforge.jar%23242!/:?] {re:classloading} at TRANSFORMER/architectury@13.0.3/dev.architectury.networking.NetworkManager.registerReceiver(NetworkManager.java:102) ~[architectury-13.0.3-neoforge.jar%23242!/:?] {re:mixin,re:classloading} at TRANSFORMER/archite"
+        }
+      },
+      {
+        "log_id": "r19_crash",
+        "scenario_id": "r19_version_mismatch_konkrete",
+        "pred_culprit": "konkrete",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "konkrete",
+        "gold_category": "version_mismatch",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The mod 'konkrete' is explicitly reporting that it requires a newer version of NeoForge (21.11.13-beta or above) and Minecraft (1.21.11 or above) than what is currently installed. This is a direct version incompatibility issue.",
+        "citations": [],
+        "citations_total": 0,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:architectury/architectury-api#531",
+          "gh-issue:CaffeineMC/sodium#3743",
+          "gh-issue:architectury/architectury-api#674"
+        ],
+        "tool_calls": [
+          "search_docs"
+        ],
+        "cited_excerpts": {}
+      },
+      {
+        "log_id": "r19_latest",
+        "scenario_id": "r19_version_mismatch_konkrete",
+        "pred_culprit": "konkrete",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "konkrete",
+        "gold_category": "version_mismatch",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The mod 'konkrete' is incompatible with your current Minecraft and NeoForge versions. It explicitly requires a newer version of NeoForge (21.11.13-beta or higher) and a newer version of Minecraft (1.21.11 or higher) than what you are running. This mismatch prevents the mod from loading correctly.",
+        "citations": [],
+        "citations_total": 0,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:architectury/architectury-api#531",
+          "gh-issue:CaffeineMC/sodium#3743",
+          "gh-issue:architectury/architectury-api#674",
+          "gh-issue:architectury/architectury-api#719",
+          "gh-issue:Keksuccino/Konkrete#2"
+        ],
+        "tool_calls": [
+          "search_docs"
+        ],
+        "cited_excerpts": {}
+      },
+      {
+        "log_id": "r20_latest",
+        "scenario_id": "r20_missing_dependency_ftbquests",
+        "pred_culprit": "ftbquests",
+        "pred_category": "missing_dependency",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "ftbquests",
+        "gold_category": "missing_dependency",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The error indicates that the KubeJS script is trying to access a class from FTB Quests ('dev.ftb.mods.ftbquests.api.FTBQuestsAPI'), but the Java runtime cannot find it. This is a classic missing dependency error, meaning the FTB Quests mod itself is not present or not loaded in your modpack.",
+        "citations": [],
+        "citations_total": 0,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:TwelveIterations/Waystones#1118",
+          "gh-issue:TwelveIterations/Balm#227",
+          "gh-issue:thedarkcolour/KotlinForForge#108",
+          "gh-issue:architectury/architectury-api#320",
+          "gh-issue:thedarkcolour/KotlinForForge#89"
+        ],
+        "tool_calls": [
+          "search_docs"
+        ],
+        "cited_excerpts": {}
+      }
+    ]
+  },
+  "usage": {
+    "chat_requests": 101,
+    "chat_cache_hits": 75,
+    "prompt_tokens": 450174,
+    "completion_tokens": 17757,
+    "embed_requests": 24,
+    "embed_inputs_sent": 22,
+    "embed_cache_hits": 28,
+    "embed_reported_usage_chars": 1781,
+    "retries": 2,
+    "rate_limited": 2,
+    "total_requests": 125,
+    "total_chat_tokens": 467931
+  }
+}

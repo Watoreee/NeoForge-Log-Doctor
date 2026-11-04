@@ -408,3 +408,60 @@ r03's culprit is `architectury` (never `architectury_api`).
 duplicate could not be injected as a failure (human's finding). **Dev is thin:** only 2 dev scenarios (r02, r13) have
 relevant documents, the other two (r15, r18) are `none_found`, so dev experiments (min_score choice, query tuning)
 rest on very few logs.
+
+## Label correction, oracle (c2), RAG-1, agent, API (Day 4)
+
+**Labels were corrected after the first test run, and no number changed.** The first test run (B0/B1 and retrieval, with
+r04's list `simpletms, cloth_config`) was followed by the human's review: the log shows `cloth_config` loaded via
+fightorflight, so r04 lists only `simpletms`, and `apply_acceptable_rule.py` now refuses an extra the log shows healthy.
+The test split was therefore run **twice** (retrieval) and B0/B1 twice; the second run is the reported one. Before -> after:
+
+| Condition (test) | before | after |
+|---|---|---|
+| B0 culprit strict / lenient / category | 17/25 / 19/25 / 20/25 | 17/25 / 19/25 / 20/25 |
+| B1 culprit strict / lenient | 7/25 / 7/25 | 7/25 / 7/25 |
+| hybrid (a) / (b) / (c) recall@5 | 0.167 / 0.597 / 0.458 | 0.167 / 0.597 / 0.458 |
+| hybrid (c2) recall@5 | not run | 0.458 |
+
+Nothing moved because r04 has no relevant documents (`none_found`) and neither model named `cloth_config`. Commands:
+`python scripts/run_eval.py --split test --allow-test --conditions B0,B1[,RAG1,FULL]`,
+`python scripts/run_retrieval_eval.py --split test --allow-test --min-score 0.45`.
+
+**r14 is still `mixin_conflict`, pending the human's decision.** The log shows one mixin plugin
+(`CobblemonRaidDensNeoForgeMixinPlugin.isModAndNewerThan`) throwing a NullPointerException while preparing the
+`msd.BattlePokemonStateMixin` (the Mega Showdown compat mixin) because Mega Showdown was disabled; no two mixins
+conflict. Proposed: `other`.
+
+**Oracle (c2).** (c) = LLM-extracted `exception_type` + gold `acceptable_culprits` + gold category keywords. (c2) = gold
+`culprit_mod_id` + gold category + the parser's regex exception type (no LLM output). Reported side by side; neither is an
+upper bound (test: both score below (b)). Note the (b) query itself uses the LLM exception type, not a regex one.
+
+**Cosine floor `min_score = 0.45`.** Chosen on dev as the middle of the specificity plateau (0.30-0.60), per PLAN 7.3. It
+does not discriminate: on dev the `none_found` logs have *higher* max cosine (0.675-0.747) than logs with relevant docs
+(0.617-0.698), so abstention recall is 0 until a floor that also kills specificity. At 0.45 the system effectively never
+abstains (test abstention recall 0/7). The honest reading is that a similarity floor does not detect "the corpus has
+nothing", and the report should say so.
+
+**RAG-1 (`rag.py`).** extraction -> query (b) -> hybrid retrieval with the floor, top 4 documents (best chunk, 700 chars)
+-> one Diagnosis call at temperature 0. Citations are doc_ids and may only be ones retrieved; the others are dropped and
+counted; with no usable document the diagnosis is still produced with empty citations and confidence `low`. A culprit
+that is not a whole token of the log is nulled. One repair retry, then a regex fallback (never observed in the runs).
+
+**Agent: JSON text protocol, not native tool calling.** Measured on this proxy: with the real long prompt and the JSON
+answer format the model made **0 native tool calls on 7/7 dev logs**, and `tool_choice="required"` returned an empty tool
+call (`finish_reason=tool_calls`, no calls, ~195 tokens spent). A minimal prompt did call the tool, so the failure is
+specific to the long prompt. Each turn is one JSON object (`{"action":"tool",...}` or `{"action":"final",...}`); the
+allow-list, pydantic argument models, untrusted-data delimiters and max_steps=5 with a forced final call are unchanged. A
+final answer before any search gets one nudge to call `search_docs`, then is accepted. Prompt `agent-v4` was tuned on
+dev only (v1-v3 were native-protocol attempts). Tools: `search_docs` (hybrid + floor), `get_mod_info` (what this log says
+about a mod), `check_compat` (the static NeoForge/Java table). Retrieved set = union of all `search_docs` results.
+
+**API/UI.** `POST /diagnose` takes `{"log": ...}` (limit 200 KB -> 413; empty or no log markers -> 422), redacts the log
+first, and streams SSE events `facts`, `tool_call`, `tool_result`, `final`, `error` (structured events only). `GET
+/health`. `web/index.html` reads the stream with `fetch` + `ReadableStream` and a small parser (`web/sse.js`, tested under
+node); model text is inserted with `textContent` only. A test with a real uvicorn server checks the events arrive spread
+over time, not in one burst. The page was not exercised in a real browser in this environment.
+
+**Not done (cut list):** (d) the rule-based citation gate, the retriever comparison beyond what `run_retrieval_eval.py`
+prints, the chunking experiment, the tool-call panel, a `sweep.py`, and the replay-mode test of `run_eval.py`.
+Groundedness is for the human: `scripts/export_groundedness_sheet.py` writes `data/groundedness/test_FULL.md`.

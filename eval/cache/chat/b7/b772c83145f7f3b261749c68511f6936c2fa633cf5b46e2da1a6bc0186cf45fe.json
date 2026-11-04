@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "{\n  \"culprit_mod_id\": null,\n  \"category\": \"out_of_memory\",\n  \"explanation\": \"The crash was caused by an OutOfMemoryError, meaning the Java Virtual Machine ran out of available heap space while trying to load mods. This is not caused by a specific mod conflict but by insufficient memory allocated to the game.\",\n  \"fix_steps\": [\n    \"Increase the allocated RAM for your Minecraft instance (e.g., in your launcher settings).\",\n    \"If increasing RAM doesn't help, try reducing the number of mods you are running.\"\n  ],\n  \"citations\": [],\n  \"confidence\": \"high\"\n}",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"action\": \"tool\",\n  \"tool\": \"search_docs\",\n  \"args\": {\n    \"query\": \"Missing ModLoader in file ironfurnaces-neoforge-26.1.2-4.4.2.jar\",\n    \"k\": 5\n  }\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

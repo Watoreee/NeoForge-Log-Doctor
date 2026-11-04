@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"ae2\",\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"Several mods in your modpack, including aeinfinitybooster, ae2ct, and ae2importexportcard, require the mod 'ae2' to function correctly. The crash log clearly indicates that 'ae2' is missing from your installation, which prevents the game from loading properly.\",\n  \"fix_steps\": [\n    \"Locate the mod file for 'ae2' compatible with Minecraft 1.21.1 and NeoForge.\",\n    \"Place the 'ae2' mod file into your mods folder.\",\n    \"Ensure all required dependencies are present before launching the game.\"\n  ],\n  \"citations\": [],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

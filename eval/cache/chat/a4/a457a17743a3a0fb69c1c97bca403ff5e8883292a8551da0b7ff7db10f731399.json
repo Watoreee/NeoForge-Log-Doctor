@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"theurgy\",\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"The crash is caused because two mods, 'theurgy_kubejs' and 'ars_nouveau', are trying to load but cannot find their required dependencies. Specifically, 'theurgy_kubejs' requires the 'theurgy' mod, and 'ars_nouveau' requires the 'geckolib' mod, neither of which is installed.\",\n  \"fix_steps\": [\n    \"Ensure you have installed the 'theurgy' mod for Minecraft 1.21.1.\",\n    \"Ensure you have installed the 'geckolib' mod for Minecraft 1.21.1.\",\n    \"Verify that the versions of these required mods match the versions expected by 'theurgy_kubejs' and 'ars_nouveau'.\"\n  ],\n  \"citations\": [],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "refusal": null,
+   "reasoning": null
+  }
+ }
+}

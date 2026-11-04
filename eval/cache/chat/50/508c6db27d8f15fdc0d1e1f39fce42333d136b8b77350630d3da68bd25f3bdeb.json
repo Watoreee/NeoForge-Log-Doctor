@@ -1,0 +1,12 @@
+{
+ "prompt_version": "rag1-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"create\",\n  \"category\": \"version_mismatch\",\n  \"explanation\": \"Several mods in your pack require a newer version of the Create mod than what you currently have installed (Create 6.0.0). For example, ars_technica requires Create 6.0.8 or above. You need to update your Create mod to meet the minimum version requirements of all the dependent mods.\",\n  \"fix_steps\": [\n    \"Identify the required version of Create from the crash log for each dependent mod.\",\n    \"Update your 'create' mod to the latest version that satisfies all listed requirements (e.g., 6.0.9 or higher).\",\n    \"Ensure all other dependent mods are also updated to versions compatible with the new Create version.\"\n  ],\n  \"citations\": [],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

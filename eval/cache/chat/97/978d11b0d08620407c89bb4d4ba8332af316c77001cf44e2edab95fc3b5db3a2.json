@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"curios\",\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"The crash is occurring because several mods (Ars Nouveau, All The Arcanist Gear, and Occultism) explicitly require the 'Curios' mod to be present in your modpack. The log shows that 'Curios' is currently missing, which prevents these dependent mods from loading correctly.\",\n  \"fix_steps\": [\n    \"Download the version of the Curios mod compatible with Minecraft 1.21.1 and NeoForge.\",\n    \"Place the Curios mod JAR file into your mods folder.\",\n    \"Restart Minecraft.\"\n  ],\n  \"citations\": [\n    \"gh-issue:TheIllusiveC4/Curios#473\"\n  ],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

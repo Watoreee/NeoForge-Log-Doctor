@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "{\n  \"culprit_mod_id\": null,\n  \"category\": \"out_of_memory\",\n  \"explanation\": \"The crash log clearly indicates a `java.lang.OutOfMemoryError: Java heap space`, which means the game ran out of memory while loading mods. This is not caused by a specific mod conflict but by the amount of RAM allocated to the game instance.\",\n  \"fix_steps\": [\n    \"Increase the amount of RAM allocated to your Minecraft launcher profile.\",\n    \"If increasing RAM does not resolve the issue, consider reducing the total number of mods in your modpack.\"\n  ],\n  \"citations\": [],\n  \"confidence\": \"high\"\n}",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

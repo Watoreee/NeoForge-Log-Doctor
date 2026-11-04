@@ -1,0 +1,12 @@
+{
+ "prompt_version": "rag1-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"sophisticatedcore\",\n  \"category\": \"version_mismatch\",\n  \"explanation\": \"The mod 'sophisticatedcore' is incompatible with your current setup due to version mismatches. It requires a newer version of NeoForge (26.1.2.44-beta or above) than what you are running (21.1.224). Additionally, it requires a newer version of JEI than the one you have installed.\",\n  \"fix_steps\": [\n    \"Update 'sophisticatedcore' to a version compatible with Minecraft 1.21.1 and NeoForge 21.1.224.\",\n    \"Update 'sophisticatedcore' to a version that supports your current JEI version, or update JEI to meet sophisticatedcore's requirements.\"\n  ],\n  \"citations\": [\n    \"gh-issue:P3pp3rF1y/SophisticatedStorage#728\"\n  ],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

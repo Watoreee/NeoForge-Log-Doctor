@@ -1,0 +1,12 @@
+{
+ "prompt_version": "rag1-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": null,\n  \"category\": \"out_of_memory\",\n  \"explanation\": \"The crash log indicates a Java heap space error, which means the game ran out of available memory while trying to process events. This is not caused by a specific mod conflict but by insufficient RAM allocated to the game instance. The error occurred during the registration phase for the 'chipped' mod.\",\n  \"fix_steps\": [\n    \"Increase the Java heap size allocated to Minecraft (e.g., by editing the launcher profile arguments).\",\n    \"Close other memory-intensive applications while running the game.\",\n    \"If the issue persists, consider reducing the number of mods in your modpack.\"\n  ],\n  \"citations\": [],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "prompt_version": "rag1-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"ftbquests\",\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"The mod 'cobblemon_quests' is trying to use a class from the 'ftbquests' mod, but it cannot find it during startup. This indicates that the FTB Quests mod is either missing from your modpack or is not compatible with your current Minecraft/NeoForge version.\",\n  \"fix_steps\": [\n    \"Ensure that the FTB Quests mod is installed in your mods folder.\",\n    \"Verify that the version of FTB Quests matches your Minecraft 1.21.1 and NeoForge 21.1.224 versions.\",\n    \"If the mod is present, try updating or reinstalling both 'cobblemon_quests' and 'ftbquests'.\"\n  ],\n  \"citations\": [],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "refusal": null,
+   "reasoning": null
+  }
+ }
+}

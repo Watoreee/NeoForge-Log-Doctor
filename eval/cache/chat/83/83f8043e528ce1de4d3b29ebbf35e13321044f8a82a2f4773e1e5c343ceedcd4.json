@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"cobblemon\",\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"Several mods in your instance require Cobblemon to function, but it is not installed. Specifically, wild_battle_api, cobblemon_utility, and fightorflight all depend on Cobblemon being present. Additionally, two other mods require specific versions of the Kotlin language provider, which might also be missing or outdated.\",\n  \"fix_steps\": [\n    \"Install the Cobblemon mod for Minecraft 1.21.1 and NeoForge.\",\n    \"Ensure you have the required Kotlin language provider mods installed if the errors persist.\",\n    \"Verify that all mods are compatible with Minecraft 1.21.1 and NeoForge.\"\n  ],\n  \"citations\": [],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"architectury\",\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"The crash log clearly indicates that multiple mods require 'architectury' as a mandatory dependency, but it is not found in your mod list. This is a missing dependency error, meaning you need to add the 'architectury' library mod to your game.\",\n  \"fix_steps\": [\n    \"Determine the exact version of 'architectury' compatible with Minecraft 1.21.1 and NeoForge 21.1.224.\",\n    \"Download the correct 'architectury' mod file.\",\n    \"Place the downloaded file into your game's mods folder.\"\n  ],\n  \"citations\": [\n    \"gh-issue:architectury/architectury-api#531\"\n  ],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "refusal": null,
+   "reasoning": null
+  }
+ }
+}

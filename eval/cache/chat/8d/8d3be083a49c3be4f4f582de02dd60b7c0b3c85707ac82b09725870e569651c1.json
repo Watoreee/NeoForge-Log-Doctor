@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"cobblemon\",\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"The crash is caused by multiple missing dependencies. Specifically, several mods require the 'cobblemon' mod, which is not installed. Furthermore, other mods are failing to load because the 'kotlinforforge' language provider is missing or an incorrect version is present. You must install 'cobblemon' and ensure 'kotlinforforge' is correctly added to your mod list.\",\n  \"fix_steps\": [\n    \"Install the 'cobblemon' mod compatible with Minecraft 1.21.1 and NeoForge.\",\n    \"Install the 'kotlinforforge' dependency mod.\",\n    \"Double-check that all mods have their required dependencies present in the mods folder.\"\n  ],\n  \"citations\": [\n    \"gh-issue:thedarkcolour/KotlinForForge#160\"\n  ],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

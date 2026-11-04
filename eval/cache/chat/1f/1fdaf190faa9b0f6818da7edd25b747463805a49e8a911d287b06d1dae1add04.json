@@ -1,0 +1,12 @@
+{
+ "prompt_version": "rag1-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"yungsapi\",\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"Several mods, including betterstrongholds, bettermineshafts, betterdungeons, and betterendisland, require the YungsApi mod to function. The crash log clearly indicates that YungsApi is either missing or an incompatible version is present, causing these dependent mods to fail loading.\",\n  \"fix_steps\": [\n    \"Ensure you have the YungsApi mod installed in your mods folder.\",\n    \"Verify that the version of YungsApi matches the required version (e.g., 1.21.1-NeoForge-5.1.4 or newer) for all the YUNGs mods you are using.\",\n    \"Check the mod pages for any specific version requirements for YungsApi on Minecraft 1.21.1.\"\n  ],\n  \"citations\": [\n    \"gh-issue:YUNG-GANG/YUNGs-API#5\"\n  ],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "refusal": null,
+   "reasoning": null
+  }
+ }
+}

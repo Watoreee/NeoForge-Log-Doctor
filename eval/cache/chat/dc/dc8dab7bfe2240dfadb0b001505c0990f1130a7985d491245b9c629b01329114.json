@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": null,\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"Several mods in your pack are failing to load because they require other mods that are not installed. Specifically, 'cobblemon_battle_tower' needs 'rctapi', and both 'fightorflight' and 'wild_battle_api' need 'architectury'.\",\n  \"fix_steps\": [\n    \"Check the mod list for 'rctapi' and ensure it is installed for Minecraft 1.21.1.\",\n    \"Check the mod list for 'architectury' and ensure it is installed for Minecraft 1.21.1.\",\n    \"Verify that the versions of these required mods match the versions expected by the dependent mods.\"\n  ],\n  \"citations\": [],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

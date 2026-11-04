@@ -1,0 +1,12 @@
+{
+ "prompt_version": "rag1-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": null,\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"The crash is caused because two of your mods, 'theurgy_kubejs' and 'ars_nouveau', require other mods ('theurgy' and 'geckolib' respectively) to be installed, but they are missing from your modpack.\",\n  \"fix_steps\": [\n    \"Install the 'theurgy' mod version 1.34.0 or newer.\",\n    \"Install the 'geckolib' mod version 4.2.1 or newer.\"\n  ],\n  \"citations\": [],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "refusal": null,
+   "reasoning": null
+  }
+ }
+}

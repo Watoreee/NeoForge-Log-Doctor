@@ -1,0 +1,12 @@
+{
+ "prompt_version": "rag1-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": null,\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"The crash is caused because several mods, including cobblemon_battle_tower, fightorflight, and wild_battle_api, require specific dependency mods (rctapi and architectury) that are not present in your modpack. These dependencies must be installed for the dependent mods to function correctly.\",\n  \"fix_steps\": [\n    \"Identify the required versions of 'rctapi' and 'architectury' that match your Minecraft 1.21.1 and NeoForge 21.1.224 setup.\",\n    \"Download and add the correct versions of 'rctapi' and 'architectury' to your mods folder.\",\n    \"Ensure all dependencies are compatible with your current Minecraft and NeoForge versions.\"\n  ],\n  \"citations\": [\n    \"gh-issue:architectury/architectury-api#664\"\n  ],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

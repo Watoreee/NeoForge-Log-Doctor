@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"yungsapi\",\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"The crash is caused because several YUNGs mods (like betterstrongholds) explicitly require YungsApi to be present and at a specific version to load. The log indicates that YungsApi is currently not installed or is an incompatible version for the other mods.\",\n  \"fix_steps\": [\n    \"Install YungsApi into your mods folder.\",\n    \"Ensure the version of YungsApi is 1.21.1-NeoForge-5.1.4 or newer to satisfy the requirements of betterstrongholds, bettermineshafts, betterdungeons, and betterendisland.\",\n    \"If you have multiple versions of YungsApi, remove all but the correct one.\"\n  ],\n  \"citations\": [\n    \"gh-issue:YUNG-GANG/YUNGs-API#84\"\n  ],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "refusal": null,
+   "reasoning": null
+  }
+ }
+}

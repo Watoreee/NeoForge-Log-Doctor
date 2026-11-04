@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"ironfurnaces\",\n  \"category\": \"version_mismatch\",\n  \"explanation\": \"The crash log indicates that the mod file 'ironfurnaces-neoforge-26.1.2-4.4.2.jar' is not a valid mod file because it is missing the ModLoader information. This strongly suggests that the version of Iron Furnaces you have is incompatible with your current Minecraft/NeoForge setup (1.21.1).\",\n  \"fix_steps\": [\n    \"Check the official download page for Iron Furnaces.\",\n    \"Ensure you download the version specifically built for Minecraft 1.21.1 and NeoForge.\",\n    \"Replace the existing 'ironfurnaces-neoforge-26.1.2-4.4.2.jar' file in your mods folder with the correct, compatible version.\"\n  ],\n  \"citations\": [],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

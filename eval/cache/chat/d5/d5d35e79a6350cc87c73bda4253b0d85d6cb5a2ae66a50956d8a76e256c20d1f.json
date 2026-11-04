@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"supermartijn642corelib\",\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"The crash is caused because the mod 'trashcans' requires a specific version of 'supermartijn642corelib' that is not met by your current installation. The log shows 'trashcans' expects a version between 1.1.24 and 1.2.0, but you have 1.1.21. You also have a Minecraft version mismatch, as 'trashcans' expects a different Minecraft version than 1.21.1.\",\n  \"fix_steps\": [\n    \"Update 'supermartijn642corelib' to a version compatible with Minecraft 1.21.1 and NeoForge 21.1.224.\",\n    \"Verify that 'trashcans' itself has a release specifically built for Minecraft 1.21.1.\",\n    \"If the dependency cannot be found or updated, consider removing 'trashcans' until compatible versions are available.\"\n  ],\n  \"citations\": [\n    \"Mod ID: 'supermartijn642corelib', Requested by: 'trashcans', Expected range: '[1.1.24,1.2.0)', Actual version: '1.1.21'\"\n  ],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

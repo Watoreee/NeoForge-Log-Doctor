@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"konkrete\",\n  \"category\": \"version_mismatch\",\n  \"explanation\": \"The mod 'konkrete' is incompatible with your current Minecraft and NeoForge versions. It explicitly requires a newer version of NeoForge (21.11.13-beta or higher) and a newer version of Minecraft (1.21.11 or higher) than what you are running. This mismatch prevents the mod from loading correctly.\",\n  \"fix_steps\": [\n    \"Check the mod page for 'konkrete' to see if there is an updated version compatible with Minecraft 1.21.1 and NeoForge 21.1.224.\",\n    \"If no update is available, you may need to downgrade the mod or update your entire modpack to match the mod's required versions.\"\n  ],\n  \"citations\": [],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "refusal": null,
+   "reasoning": null
+  }
+ }
+}

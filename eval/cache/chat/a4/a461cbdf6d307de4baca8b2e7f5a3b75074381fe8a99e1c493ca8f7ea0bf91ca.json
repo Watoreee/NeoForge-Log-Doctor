@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"create\",\n  \"category\": \"version_mismatch\",\n  \"explanation\": \"Several mods in your modpack require a specific, newer version of the 'create' mod (e.g., 6.0.8 or 6.0.9), but the version currently installed is older (6.0.0). This dependency mismatch prevents the game from loading correctly.\",\n  \"fix_steps\": [\n    \"Identify all mods that list 'create' as a dependency (e.g., bellsandwhistles, ars_technica).\",\n    \"Update the 'create' mod to a version that satisfies the highest required range (at least 6.0.9).\",\n    \"Ensure all dependent mods are also compatible with the new version of 'create'.\"\n  ],\n  \"citations\": [],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

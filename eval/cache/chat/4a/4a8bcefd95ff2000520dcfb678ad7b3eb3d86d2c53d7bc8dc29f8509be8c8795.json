@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"trashcans\",\n  \"category\": \"version_mismatch\",\n  \"explanation\": \"The 'trashcans' mod is failing to load because it has version requirements that do not match your current game setup. Specifically, it requires a version of 'supermartijn642corelib' that is different from what is installed, and it also has a Minecraft version requirement that conflicts with your 1.21.1 installation.\",\n  \"fix_steps\": [\n    \"Check the mod's CurseForge or GitHub page for compatibility notes regarding Minecraft 1.21.1.\",\n    \"Ensure you have the correct version of 'supermartijn642corelib' installed that matches the 'trashcans' mod version.\",\n    \"If no compatible version exists, you may need to remove 'trashcans' from your mod list.\"\n  ],\n  \"citations\": [],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

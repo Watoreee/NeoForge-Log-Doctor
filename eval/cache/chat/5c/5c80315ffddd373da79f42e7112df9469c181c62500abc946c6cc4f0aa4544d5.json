@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"simpletms\",\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"The mod 'allthemons' is crashing because it cannot find a required class, `SimpleTMsBlockEntities`, which belongs to the mod 'simpletms'. This is a classic missing dependency error, meaning 'simpletms' is not installed or is incompatible with your current Minecraft/NeoForge setup.\",\n  \"fix_steps\": [\n    \"Install the 'simpletms' mod into your mods folder.\",\n    \"Ensure the version of 'simpletms' matches Minecraft 1.21.1 and NeoForge 21.1.224.\",\n    \"If the mod is installed, check its documentation for any specific dependency requirements.\"\n  ],\n  \"citations\": [],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

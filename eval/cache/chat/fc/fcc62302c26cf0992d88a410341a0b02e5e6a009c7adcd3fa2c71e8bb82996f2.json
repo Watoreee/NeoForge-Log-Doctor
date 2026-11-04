@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"architectury\",\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"The crash is caused by several mods requiring the 'architectury' library, but it is not present or is the wrong version for your setup. The logs clearly indicate that mods like cobblefurnies and mega_showdown are failing because they cannot find the required 'architectury' dependency. You must install the correct version of Architectury for Minecraft 1.21.1 and NeoForge.\",\n  \"fix_steps\": [\n    \"Download the correct version of the 'architectury' mod for Minecraft 1.21.1 and NeoForge.\",\n    \"Place the downloaded 'architectury' JAR file into your mods folder.\",\n    \"Ensure the version meets or exceeds the minimum requirements specified by the mods that are failing to load.\"\n  ],\n  \"citations\": [\n    \"gh-issue:architectury/architectury-api#531\"\n  ],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "refusal": null,
+   "reasoning": null
+  }
+ }
+}

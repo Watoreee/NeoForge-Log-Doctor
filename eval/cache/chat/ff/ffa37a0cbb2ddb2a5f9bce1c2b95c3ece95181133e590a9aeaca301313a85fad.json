@@ -1,0 +1,21 @@
+{
+ "prompt_version": "dbg-2",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "role": "assistant",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-988d6f26910fb47c",
+    "function": {
+     "arguments": "{\"query\": \"geckolib missing\"}",
+     "name": "search_docs"
+    },
+    "type": "function"
+   }
+  ],
+  "provider_specific_fields": {
+   "refusal": null,
+   "reasoning": null
+  }
+ }
+}

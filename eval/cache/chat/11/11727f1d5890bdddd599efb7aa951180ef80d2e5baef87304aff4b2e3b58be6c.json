@@ -1,0 +1,12 @@
+{
+ "prompt_version": "rag1-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "{\n  \"culprit_mod_id\": null,\n  \"category\": \"out_of_memory\",\n  \"explanation\": \"The crash log clearly indicates an `java.lang.OutOfMemoryError: Java heap space`. This means the game ran out of available memory allocated to the Java Virtual Machine (JVM) while trying to load or process data. The numerous texture generation errors from 'Moonlight' are symptoms of this memory exhaustion.\",\n  \"fix_steps\": [\n    \"Increase the allocated RAM for Minecraft (e.g., allocate more than the default amount).\",\n    \"Reduce the number of mods in your modpack to lower the memory footprint.\",\n    \"Ensure you are using a modern and appropriate Java version for Minecraft 1.21.1.\"\n  ],\n  \"citations\": [],\n  \"confidence\": \"high\"\n}",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

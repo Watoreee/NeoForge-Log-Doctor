@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"ironfurnaces\",\n  \"category\": \"version_mismatch\",\n  \"explanation\": \"The error 'Missing ModLoader in file' for ironfurnaces indicates that the mod JAR file is corrupted or, more likely, it is not compiled for the correct NeoForge version you are running (1.21.1). The mod loader cannot recognize the file as a valid mod.\",\n  \"fix_steps\": [\n    \"Verify that the Iron Furnaces mod version you downloaded explicitly supports Minecraft 1.21.1 and NeoForge.\",\n    \"Delete the current 'ironfurnaces-neoforge-26.1.2-4.4.2.jar' from your mods folder.\",\n    \"Download and place the correct, compatible version of Iron Furnaces into the mods folder.\"\n  ],\n  \"citations\": [],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

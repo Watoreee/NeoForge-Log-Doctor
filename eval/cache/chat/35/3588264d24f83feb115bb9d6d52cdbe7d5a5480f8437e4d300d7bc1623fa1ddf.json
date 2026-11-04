@@ -1,0 +1,12 @@
+{
+ "prompt_version": "rag1-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"cobblemon\",\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"Several mods in your pack require Cobblemon to be installed to function correctly. Specifically, wild_battle_api, cobblemon_utility, and fightorflight all list Cobblemon as a required dependency. You must ensure that the correct version of Cobblemon is present in your mods folder.\",\n  \"fix_steps\": [\n    \"Verify that the Cobblemon mod is installed in your mods folder.\",\n    \"Ensure the version of Cobblemon matches the requirements of the dependent mods (e.g., cobblemon_utility requires 1.7 or above).\",\n    \"Check if there are any other missing dependencies mentioned in the crash log, such as kotlinforforge.\"\n  ],\n  \"citations\": [\n    \"gh-issue:thedarkcolour/KotlinForForge#160\"\n  ],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

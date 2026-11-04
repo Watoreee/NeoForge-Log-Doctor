@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": null,\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"The crash is caused by missing mandatory dependencies for several mods. 'cobblemon_battle_tower' requires 'rctapi', and 'fightorflight' and 'wild_battle_api' require 'architectury'. These dependencies must be installed for the game to load correctly.\",\n  \"fix_steps\": [\n    \"Install the 'rctapi' mod for Minecraft 1.21.1.\",\n    \"Install the 'architectury' mod for Minecraft 1.21.1.\",\n    \"Ensure all installed mods are compatible with NeoForge 21.1.224.\"\n  ],\n  \"citations\": [\n    \"gh-issue:thedarkcolour/KotlinForForge#75\"\n  ],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

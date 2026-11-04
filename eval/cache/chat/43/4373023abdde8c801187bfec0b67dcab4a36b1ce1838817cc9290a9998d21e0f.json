@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"curios\",\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"The crash log clearly shows that several mods (ars_nouveau, allthearcanistgear, and occultism) are reporting that the 'curios' mod is missing. This is a mandatory dependency, meaning the game cannot start because the required mod is not installed in your mods folder.\",\n  \"fix_steps\": [\n    \"Download the 'curios' mod file that is compatible with Minecraft 1.21.1 and NeoForge.\",\n    \"Place the downloaded 'curios' mod JAR file into your mods folder.\",\n    \"Restart Minecraft.\"\n  ],\n  \"citations\": [\n    \"gh-issue:TheIllusiveC4/Curios#473\"\n  ],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

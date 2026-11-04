@@ -1,0 +1,12 @@
+{
+ "prompt_version": "rag1-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"trashcans\",\n  \"category\": \"version_mismatch\",\n  \"explanation\": \"The 'trashcans' mod is failing to load because it has dependency requirements that do not match your current game setup. Specifically, it requires 'supermartijn642corelib' version 1.1.24 or newer, but you have version 1.1.21. Additionally, the mod expects Minecraft version 26.2 or above, while you are running 1.21.1.\",\n  \"fix_steps\": [\n    \"Check the mod's CurseForge/Modrinth page for the correct version compatible with Minecraft 1.21.1 and NeoForge.\",\n    \"Ensure you have the required dependency, 'supermartijn642corelib', installed and that its version meets the 'trashcans' mod's requirements.\",\n    \"If no compatible version exists, you may need to remove 'trashcans' from your mod list.\"\n  ],\n  \"citations\": [\n    \"gh-issue:SuperMartijn642/TrashCans#37\"\n  ],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

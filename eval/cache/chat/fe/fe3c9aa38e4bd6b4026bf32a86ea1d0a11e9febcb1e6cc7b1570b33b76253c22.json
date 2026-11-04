@@ -1,0 +1,12 @@
+{
+ "prompt_version": "rag1-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"theurgy\",\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"The mod 'theurgy_kubejs' requires the main mod 'theurgy' to be installed in your modpack. Since 'theurgy' is missing, the game cannot load 'theurgy_kubejs' and crashes during startup. You also have a dependency issue with 'ars_nouveau' requiring 'geckolib'.\",\n  \"fix_steps\": [\n    \"Install the 'theurgy' mod version compatible with Minecraft 1.21.1 and NeoForge.\",\n    \"Install the 'geckolib' mod version compatible with Minecraft 1.21.1 and NeoForge.\"\n  ],\n  \"citations\": [],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

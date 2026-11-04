@@ -1,0 +1,12 @@
+{
+ "prompt_version": "rag1-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "{\n  \"culprit_mod_id\": \"aquaculture\",\n  \"category\": \"version_mismatch\",\n  \"explanation\": \"The mod 'aquaculture' requires a newer version of NeoForge (26.1.0.0 or above) than the one you are currently running (21.1.224). This dependency mismatch is causing the game to crash during the loading phase.\",\n  \"fix_steps\": [\n    \"Check for an updated version of the 'aquaculture' mod that supports Minecraft 1.21.1 and NeoForge 21.1.224.\",\n    \"If no compatible version exists, you may need to downgrade your NeoForge version or wait for the mod author to release an update.\"\n  ],\n  \"citations\": [\n    \"gh-issue:TeamMetallurgy/Aquaculture#446\"\n  ],\n  \"confidence\": \"high\"\n}",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "prompt_version": "dbg-3",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "refusal": null,
+   "reasoning": null
+  }
+ }
+}

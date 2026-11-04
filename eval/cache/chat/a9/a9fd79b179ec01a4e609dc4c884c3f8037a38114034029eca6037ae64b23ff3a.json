@@ -1,0 +1,12 @@
+{
+ "prompt_version": "rag1-v1",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"supermartijn642corelib\",\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"The mod 'trashcans' requires 'supermartijn642corelib' to function correctly, but the version installed (1.1.21) is too old for the version of 'trashcans' you are running. Additionally, 'trashcans' is expecting a newer version of Minecraft than what is currently loaded.\",\n  \"fix_steps\": [\n    \"Ensure you have the correct version of 'supermartijn642corelib' that matches your Minecraft 1.21.1 and NeoForge version.\",\n    \"Verify that 'trashcans' is compatible with Minecraft 1.21.1.\",\n    \"If the dependency is missing, try manually downloading and placing the required core library JAR file into your mods folder.\"\n  ],\n  \"citations\": [\n    \"gh-issue:SuperMartijn642/TrashCans#38\"\n  ],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v2",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"theurgy\",\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"The crash is caused because the mod 'theurgy_kubejs' requires the mod 'theurgy' to be installed, but it was not found in your mods folder. Additionally, 'ars_nouveau' requires 'geckolib' to run, which is also missing.\",\n  \"fix_steps\": [\n    \"Install the 'theurgy' mod version compatible with Minecraft 1.21.1 and NeoForge.\",\n    \"Install the 'geckolib' mod version compatible with Minecraft 1.21.1 and NeoForge.\",\n    \"Ensure all required dependencies for your mods are present in the mods folder.\"\n  ],\n  \"citations\": [],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

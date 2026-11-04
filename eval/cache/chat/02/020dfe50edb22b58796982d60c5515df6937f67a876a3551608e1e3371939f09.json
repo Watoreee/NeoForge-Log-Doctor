@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"rctapi\",\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"The crash is caused by several mods failing to load because they are missing required dependencies. Specifically, 'cobblemon_battle_tower' requires 'rctapi', and 'fightorflight' and 'wild_battle_api' require 'architectury'.\",\n  \"fix_steps\": [\n    \"Install the 'rctapi' mod for Minecraft 1.21.1.\",\n    \"Install the 'architectury' mod for Minecraft 1.21.1.\"\n  ],\n  \"citations\": [],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v2",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "{\n  \"culprit_mod_id\": \"sophisticatedcore\",\n  \"category\": \"version_mismatch\",\n  \"explanation\": \"The mod 'sophisticatedcore' is incompatible with your current game setup. It requires a newer version of NeoForge (26.1.2.44-beta or above) and a newer version of Minecraft (26.1.2 or above) than what you are running (NeoForge 21.1.224 and Minecraft 1.21.1). It also has a dependency issue with JEI.\",\n  \"fix_steps\": [\n    \"Update 'sophisticatedcore' to a version compatible with Minecraft 1.21.1 and NeoForge 21.1.224.\",\n    \"Alternatively, update your entire modpack to use a newer version of Minecraft and NeoForge that matches the requirements of 'sophisticatedcore'.\",\n    \"Ensure your JEI mod is also updated to a version compatible with 'sophisticatedcore' (29.5.0.24 or above).\"\n  ],\n  \"citations\": [],\n  \"confidence\": \"high\"\n}",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

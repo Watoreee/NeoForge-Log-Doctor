@@ -102,7 +102,7 @@ also redact pasted logs before any LLM call or cache write, so both share one im
 - Player names come from `Setting user:` **and** launcher `--username` args, plus `--names`. They are replaced
   case-insensitively (Minecraft names are) and as whole tokens only, so `Steve` doesn't hit `Steven`.
 - OS account names are captured from user-home paths and also replaced elsewhere (e.g. `user.name=`), but
-  case-sensitively, so an account `Asus` doesn't erase a GPU vendor `ASUS`.
+  case-sensitively, so an account named like a GPU vendor (`Nvidia`) doesn't erase `NVIDIA`.
 - `hs_err` environment identity lines (`USERNAME=`, `COMPUTERNAME=`, …) and e-mail addresses are also redacted.
 - `127.0.0.1` / `0.0.0.0` are kept: they aren't personal and help diagnose bind errors.
 - **IPv4 only in network context (human's request, before the first real run).** Mod versions are often 4-part
@@ -490,3 +490,16 @@ progress events reached the page about 4.5 s, 8.4 s, 8.4 s and 11.4 s after the 
 **Not done (cut list):** (d) the rule-based citation gate (human: skip for now), the retriever comparison beyond what `run_retrieval_eval.py`
 prints, the chunking experiment, the tool-call panel, a `sweep.py`, and the replay-mode test of `run_eval.py`.
 Groundedness is for the human: `scripts/export_groundedness_sheet.py` writes `data/groundedness/test_FULL.md`.
+
+## History scan and spot-check (Day 5)
+**Git history scanned (42 commits, all refs, file contents and commit messages) for the player name, the Windows
+username, local paths, tokens (`ghp_`, `github_pat_`, `sk-`, `Bearer`) and emails.** The only identifier found was the
+default Windows username, in a test fixture (13 commits) and in two explanatory comments (32 commits). No player name,
+token or local drive path was found. The fixture and comments are removed from HEAD (neutral example names are used
+now). **History was left unchanged** to avoid a force-push before submission; 12 of the 22 commits already on
+`origin/main` contain the username.
+**Spot-check of the LLM relevance judgments.** `scripts/make_spotcheck.py` draws 15 ticked + 15 unticked (sheet,
+document) pairs with seed 42 into `data/spotcheck.md`, excluding the 8 doc ids in `data/spotcheck_exclude.txt` (already
+reviewed by the human; all were unticked, 19 sheet entries removed). The human fills the agree/disagree boxes and
+`scripts/score_spotcheck.py` counts them. No label is changed by either script. The number the human spot-checked
+(for `report-notes.md` finding 10) is those 8 plus the 30 in the sample, once answered.

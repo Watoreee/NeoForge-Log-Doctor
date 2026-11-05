@@ -46,11 +46,11 @@ def test_home_path_cut_off_or_without_trailing_separator_is_redacted(raw, expect
 
 
 def test_account_name_from_path_is_redacted_elsewhere_case_sensitively():
-    raw = "C:\\Users\\Bob\\game\nuser.name=Bob\nGPU: ASUS GeForce"
+    raw = "C:\\Users\\Nvidia\\game\nuser.name=Nvidia\nGPU: NVIDIA GeForce"
     out = redact_text(raw).text
-    assert "Bob" not in out.replace("ASUS", "")
+    assert "Nvidia" not in out
     assert "user.name=<user>" in out
-    assert "ASUS GeForce" in out  # different case: a GPU vendor, not the account
+    assert "NVIDIA GeForce" in out  # different case: a GPU vendor, not the account
 
 
 # ---------------------------------------------------------------- player names

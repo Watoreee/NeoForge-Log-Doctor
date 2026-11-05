@@ -111,7 +111,7 @@ def redact_text(text: str, extra_names: list[str] | tuple[str, ...] = ()) -> Red
 
     # Player names: case-insensitive (Minecraft names are), whole-token only.
     text = _replace_names(players, "<player>", text, counts, "player_name", ignore_case=True)
-    # Account names: case-sensitive, so an account "Asus" doesn't also erase a GPU vendor "ASUS".
+    # Account names: case-sensitive, so an account named like a GPU vendor ("Nvidia") doesn't also erase "NVIDIA".
     text = _replace_names(accounts - players, "<user>", text, counts, "account_name", ignore_case=False)
     return RedactionResult(text=text, counts=counts, known_names=len(players | accounts))
 

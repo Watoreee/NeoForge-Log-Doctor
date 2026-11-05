@@ -1,0 +1,8 @@
+gh-issue:GlodBlock/ExtendedAE#260
+gh-issue:GlodBlock/ExtendedAE#638
+gh-issue:P3pp3rF1y/SophisticatedStorage#728
+gh-issue:TheIllusiveC4/Curios#619
+gh-issue:TheIllusiveC4/Curios#454
+neoforge-docs:docs/1.21.1/gettingstarted/versioning
+gh-issue:SuperMartijn642/TrashCans#11
+gh-issue:YUNG-GANG/YUNGs-API#84

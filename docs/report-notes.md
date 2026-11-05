@@ -5,6 +5,8 @@ Every number here comes from `eval/results/*.json`, rebuilt by `python scripts/r
 and `retrieval_test_2026-11-05T083402+0000_25417e4.json`. Intervals are 95%, scenario-level paired bootstrap
 (1,000 resamples, seed 0): logs of one scenario are resampled together.
 
+**Provenance.** The code was built with Claude Code from a written plan (`PLAN.md`), and the author reviewed it.
+
 **Setup in one paragraph.** Test split: 25 logs from 14 scenarios (r10 and r11 are one scenario). Dev: 7 logs from 4
 scenarios. Culprit accuracy is **strict** (prediction equals `culprit_mod_id`) and **lenient** (prediction is in
 `acceptable_culprits`). B0 = the LLM alone. B1 = a regex heuristic. RAG-1 = extraction, retrieval, one diagnosis call.

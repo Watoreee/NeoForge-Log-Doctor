@@ -111,6 +111,8 @@ produces reviewed, redacted copies.
 
 ## Limitations
 
+The code was built with Claude Code from a written plan (`PLAN.md`), and the author reviewed it.
+
 - **One modpack, one author.** All 19 usable fault-injection runs (r07 dropped; r10 and r11 count as one scenario, so
   18 scenarios) come from a single modpack, produced by injecting faults into it. 25 test logs from 14 scenarios,
   7 dev logs from 4. Differences of a few logs are noise.

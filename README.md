@@ -1,7 +1,7 @@
 # NeoForge Log Doctor
 
 Paste a Minecraft **NeoForge 1.21.1** crash report or `latest.log`. The service redacts it, reads the facts out of it
-with a small LLM (Gemma), searches a corpus of NeoForge docs, GitHub issues and release notes for 15 mods, and returns
+with a small LLM (Gemma), searches a corpus of NeoForge docs, GitHub issues and release notes for 22 mod repositories, and returns
 a structured diagnosis: the culprit mod, a category, an explanation, fix steps, and citations to the retrieved
 documents. It streams its progress to a small web page.
 
@@ -12,17 +12,34 @@ It is a course project (KMITL LLM Applications). It has been evaluated on logs f
 
 Requires **Python 3.11+**.
 
+**bash / zsh / Git Bash**
+
 ```bash
-python -m venv .venv && source .venv/bin/activate        # Windows PowerShell: .venv\Scripts\Activate.ps1
+python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt && pip install -e .
-cp .env.example .env                                      # then fill in OPENAI_API_KEY and OPENAI_BASE_URL
+cp .env.example .env        # then fill in OPENAI_API_KEY and OPENAI_BASE_URL
+```
+
+**Windows PowerShell** (no `&&` or `source` in PowerShell 5.1)
+
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+pip install -e .
+Copy-Item .env.example .env   # then fill in OPENAI_API_KEY and OPENAI_BASE_URL
+```
+
+If `pip install` fails with `CERTIFICATE_VERIFY_FAILED` (some networks re-sign HTTPS, e.g. a school or company proxy),
+use the operating system's certificate store instead, in either shell:
+
+```
+pip install --use-feature=truststore -r requirements.txt
+pip install --use-feature=truststore --no-build-isolation -e .
 ```
 
 The corpus index (`data/processed/`) and the LLM/embedding cache (`eval/cache/`) are committed, so a clean clone
 needs no fetching and can reproduce every evaluation number **without any API key** (replay mode, below).
-
-If `pip install` fails with `CERTIFICATE_VERIFY_FAILED` (some networks re-sign HTTPS), use
-`pip install --use-feature=truststore -r requirements.txt` and `pip install --no-build-isolation -e .`.
 
 ### Environment variables (`.env.example`)
 
@@ -47,7 +64,9 @@ redacted sample logs from `data/examples/`. Progress events appear as they happe
 
 - `GET /health` returns the models and whether a proxy is configured.
 - `POST /diagnose` with `{"log": "<text>"}` streams Server-Sent Events: `facts`, `tool_call`, `tool_result`, `final`
-  (or `error`). No raw model tokens are streamed. Logs over **200 KB** get HTTP 413; empty or non-log input gets 422.
+  (or `error`). No raw model tokens are streamed. Logs over **10 MB** get HTTP 413 (a hard cap for the server); empty or non-log input gets 422. Logs
+  longer than the model budget (about 6,000 tokens) are trimmed to their most informative lines before the model sees
+  them; the `facts` event then carries `"truncated": true` and `"original_bytes"`, and the page says so.
   The log is redacted (player name, UUID, tokens, IPs, user folders) before anything else sees it.
 
 ```python
@@ -120,7 +139,9 @@ The code was built with Claude Code from a written plan (`PLAN.md`), and the aut
   test result). Some culprits have no tracker in the corpus, so for them nothing relevant exists to retrieve.
 - **Relevance labels were made by an LLM** and spot-checked by the author; retrieval metrics inherit their errors.
 - **Abstention does not work.** The cosine floor (0.45) never triggers on the logs where nothing relevant exists
-  (recall 0/7 on test). The system effectively always answers and often cites loosely related documents.
+  (recall 0/7 on test). The system effectively always answers. <!-- TODO (author): add a sentence on how well the
+  citations support the explanations, after judging data/groundedness/test_FULL.md -->
+  Whether the citations support the explanations has not been measured yet.
 - **B0, RAG-1 and the agent are statistically indistinguishable** on this sample. Do not claim that retrieval or the
   agent improves diagnosis from these numbers.
 - **Category errors are systematic:** wrong-version jars that dependants report as "not installed" are often labelled

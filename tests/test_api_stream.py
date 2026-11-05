@@ -69,16 +69,50 @@ def test_streams_the_four_event_kinds_in_order_with_sse_headers(client):
     assert '"token"' not in r.text and "delta" not in r.text  # structured events only, no raw model tokens
 
 
-def test_log_over_200kb_is_413(client):
+def test_the_cap_is_10_mb():
+    assert service.MAX_LOG_BYTES == 10 * 1024 * 1024
+
+
+def test_log_over_10mb_is_413(client):
     big = "[17:37:04] [main/INFO]: " + "x" * (service.MAX_LOG_BYTES + 10) + "\n"
     assert client.post("/diagnose", json={"log": big}).status_code == 413
-    assert client.post("/diagnose", content=b"x" * (service.MAX_LOG_BYTES + 100000)).status_code == 413
+    assert client.post("/diagnose", content=b"x" * (service.MAX_LOG_BYTES + 2 * 1024 * 1024)).status_code == 413
 
 
 def test_a_log_just_under_the_limit_is_accepted(client):
     line = "[17:37:04] [main/INFO]: " + "y" * 90 + "\n"
     log = line * ((service.MAX_LOG_BYTES - 1000) // len(line))
     assert len(log.encode()) < service.MAX_LOG_BYTES and client.post("/diagnose", json={"log": log}).status_code == 200
+
+
+def test_a_log_over_200kb_is_accepted_truncated_for_the_model_and_streams_normally(monkeypatch):
+    """The real default pipeline (redact -> preprocess -> extraction -> agent) with a scripted model."""
+    from tests.test_agent import EXTRACTION, FakeLLM, Reply, final_json, tiny_index, tool
+
+    filler = "".join(f"[17:37:{i % 60:02d}] [main/INFO]: loading number {i} " + "z" * 60 + "\n" for i in range(3000))
+    log = filler + LOG + filler
+    size = len(log.encode())
+    assert size > 200 * 1024
+    llm = FakeLLM(Reply(EXTRACTION), tool("check_compat", {}), final_json(citations=[]))
+    monkeypatch.setattr(service, "_shared", lambda: (llm, tiny_index()))
+    r = TestClient(create_app(service.default_pipeline)).post("/diagnose", json={"log": log})
+    assert r.status_code == 200
+    events = parse_sse(r.text)
+    assert [e for e, _ in events] == ["facts", "tool_call", "tool_result", "final"]
+    facts = events[0][1]
+    assert facts["truncated"] is True and facts["original_bytes"] == size
+    sent = llm.calls[0]["messages"][-1]["content"]  # what the model actually received
+    assert len(sent.encode()) < size / 4 and "curios" in sent
+    assert events[-1][1]["diagnosis"]["culprit_mod_id"] == "curios"
+
+
+def test_a_short_log_is_not_marked_truncated(monkeypatch):
+    from tests.test_agent import EXTRACTION, FakeLLM, Reply, final_json, tiny_index, tool
+
+    llm = FakeLLM(Reply(EXTRACTION), tool("check_compat", {}), final_json(citations=[]))
+    monkeypatch.setattr(service, "_shared", lambda: (llm, tiny_index()))
+    events = parse_sse(TestClient(create_app(service.default_pipeline)).post("/diagnose", json={"log": LOG}).text)
+    assert events[0][1]["truncated"] is False and events[0][1]["original_bytes"] == len(LOG.encode())
 
 
 @pytest.mark.parametrize("body", [{"log": ""}, {"log": "hello there, what a lovely day"}, {"log": 5}, {}])

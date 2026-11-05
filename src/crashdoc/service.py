@@ -11,7 +11,7 @@ from crashdoc.config import CHAT_MODEL, EMBED_MODEL, get_settings
 from crashdoc.preprocess import parse_log, preprocess_log
 from crashdoc.redact import redact_text
 
-MAX_LOG_BYTES = 200 * 1024  # the pasted log limit (200 KB)
+MAX_LOG_BYTES = 10 * 1024 * 1024  # hard cap protecting the server (PLAN 10 MB); preprocessing trims to the model budget
 
 Pipeline = Callable[[str], Iterator[dict]]
 
@@ -42,7 +42,7 @@ def check_input(log: str) -> str:
         raise Rejected(422, "The log is empty.")
     if len(log.encode("utf-8", errors="replace")) > MAX_LOG_BYTES:
         raise Rejected(
-            413, f"The log is larger than {MAX_LOG_BYTES // 1024} KB. Paste the crash report or the relevant part."
+            413, f"The log is larger than {MAX_LOG_BYTES // 2**20} MB. Paste the crash report or the relevant part."
         )
     if parse_log(log).format == "rejected":
         raise Rejected(
@@ -85,11 +85,13 @@ def default_pipeline(log: str) -> Iterator[dict]:
 
     with _lock:
         llm, index = _shared()
+    original_bytes = len(log.encode("utf-8", errors="replace"))
     redacted = redact_text(log)
     pre = preprocess_log(redacted.text)
     for event in run_agent_events(llm, index, pre, redacted.text):
         if event["event"] == "facts":
             event["data"]["redactions"] = dict(redacted.counts)  # counts only, never the values
+            event["data"]["original_bytes"] = original_bytes  # "truncated" is set by the agent loop
         if event["event"] == "final":
             event["data"]["citation_links"] = citation_links(event["data"]["diagnosis"]["citations"])
         yield {"event": event["event"], "data": event["data"]}

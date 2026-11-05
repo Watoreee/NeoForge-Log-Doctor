@@ -26,7 +26,7 @@
 <body>
 <main>
   <h1>NeoForge Log Doctor</h1>
-  <p class="sub">Paste a NeoForge crash report or <code>latest.log</code> (up to 200 KB). If a crash report doesn't name a mod, paste <code>latest.log</code> instead.</p>
+  <p class="sub">Paste a NeoForge crash report or <code>latest.log</code> (up to 10 MB; long logs are trimmed to the most informative lines before the model sees them). If a crash report doesn't name a mod, paste <code>latest.log</code> instead.</p>
   <textarea id="log" spellcheck="false" placeholder="Paste the log here"></textarea>
   <button id="go">Diagnose</button>
   <p class="sub" style="margin-top:14px">Or try a redacted sample log:
@@ -68,7 +68,13 @@ async function diagnose() {
   const btn = $("go"); if (btn.disabled) return; btn.disabled = true; $("events").replaceChildren(); $("progress").hidden = false; $("result").hidden = true;
   const parser = createSseParser(({ event, data }) => {
     const d = JSON.parse(data);
-    if (event === "facts") addEvent("Read the log: " + (d.facts.error_category || "category unknown") + (d.facts.suspect_mod_ids.length ? ", suspects " + d.facts.suspect_mod_ids.join(", ") : ""));
+    if (event === "facts") {
+      addEvent("Read the log: " + (d.facts.error_category || "category unknown") + (d.facts.suspect_mod_ids.length ? ", suspects " + d.facts.suspect_mod_ids.join(", ") : ""));
+      if (d.truncated) {
+        const kb = typeof d.original_bytes === "number" ? " (original " + (d.original_bytes / 1024).toFixed(0) + " KB)" : "";
+        addEvent("The log was long, so only its most informative lines were sent to the model" + kb + ".");
+      }
+    }
     else if (event === "tool_call") addEvent("Using tool: " + d.name);
     else if (event === "tool_result") addEvent("Tool " + d.name + (d.ok ? " returned" : " failed"), d.ok ? "" : "error");
     else if (event === "final") { addEvent("Done."); render(d); }

@@ -20,7 +20,7 @@ from crashdoc.config import REPO_ROOT
 
 WEB_DIR = REPO_ROOT / "web"
 EXAMPLES_DIR = REPO_ROOT / "data" / "examples"
-BODY_SLACK = 4096  # JSON overhead allowed on top of the 200 KB log
+BODY_SLACK = 1024 * 1024  # JSON escaping overhead allowed on top of the 10 MB log cap
 
 
 def sse(event: str, data: dict) -> str:
@@ -51,7 +51,7 @@ def create_app(pipeline: service.Pipeline | None = None) -> FastAPI:
     async def diagnose(request: Request):
         body = await request.body()
         if len(body) > service.MAX_LOG_BYTES + BODY_SLACK:
-            return JSONResponse({"error": "log too large (limit 200 KB)"}, status_code=413)
+            return JSONResponse({"error": "log too large (limit 10 MB)"}, status_code=413)
         try:
             log = json.loads(body).get("log", "") if body else ""
             log = service.check_input(log if isinstance(log, str) else "")

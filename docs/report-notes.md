@@ -60,9 +60,9 @@ The cosine floor (`min_score = 0.45`, chosen on dev) never fired where it should
 the `none_found` test logs, specificity 18/18 (it never wrongly abstained, because it never abstained). Max cosine of
 `none_found` logs 0.535 to 0.647; for logs with relevant documents 0.618 to 0.787. The ranges overlap, and the dev
 `none_found` logs scored *higher* than the dev logs with relevant documents. A similarity floor does not detect
-"nothing in the corpus is relevant". The model itself is a better abstainer than the floor: on those 7 logs the agent
-cited nothing in all 7, RAG-1 cited something in 1 (`r04_latest`). But **confidence is useless**: the agent said
-`high` on all 7, and on all 6 of its strict-culprit misses.
+"nothing in the corpus is relevant". On those 7 logs the agent cited nothing in all 7 and RAG-1 cited something in 1
+(`r04_latest`), but the agent still diagnosed all 7 with `high` confidence, so this is not abstention. **Confidence is
+useless**: the agent said `high` on all 7, and on all 6 of its strict-culprit misses.
 
 ### 6. Tuning
 The **RAG-1 prompt (`rag1-v1`) was not tuned**. The **agent prompt (`agent-v4`) was tuned on dev only**
@@ -81,8 +81,8 @@ Twice, both after test results had been seen, both documented in `decisions.md` 
 (ii) **r14**: `mixin_conflict` changed to `other` (the log shows one plugin crashing on a missing mod, not two mixins
 conflicting). B0, RAG-1 and the agent each lost one on category accuracy on test (20/25 to 19/25) because they said
 `mixin_conflict`; culprit and retrieval numbers did not change. Side effect: **no log has the category
-`mixin_conflict` any more**, so it is never evaluated. The test split was therefore run three times in total (two
-label corrections, one initial); the numbers reported are from the last run and are label-corrected, not tuned.
+`mixin_conflict` any more**, so it is never evaluated. Test runs per condition: retrieval, B0 and B1 ran three times on the test split
+(initial, after the r04 fix, after the r14 fix); RAG-1 and the agent ran twice (their first test run was the second pass). The numbers reported are from the last run and are label-corrected, not tuned.
 
 ### 9. Single pack; corpus extended after the logs were collected
 All logs come from one modpack (ATMons) with injected faults, collected by one person. The corpus was extended with 7
@@ -146,9 +146,10 @@ r09_latest 0.50, r17_latest 0.50, r19_latest 1.00). Why is not investigated. The
 
 - **Cobblemon is not in the corpus.** Its issue tracker is on GitLab and the fetcher only covers GitHub. Crashes whose
   fix is documented only there can't be supported by a citation, so expect `none_found` and abstention there.
-- **Changelog coverage is partial.** Only some of the 15 repos publish GitHub releases; the others keep changelogs on
+- **Changelog coverage is partial.** Only some of the 22 repos publish GitHub releases; the others keep changelogs on
   CurseForge/Modrinth, which are not fetched.
-- **The corpus is limited to the 15 chosen mods + NeoForge docs.**
+- **The corpus is limited to 22 GitHub repos (15 chosen from the pack + 7 added after the logs were collected) and the NeoForge docs
+  (689 documents).**
 - **Issue threads are truncated** (3,000 characters per post, 12 comments, 6 chunks), so a fix stated late in a long
   thread can be missing.
 - **`mixin_conflict` is not evaluated.** Its only scenario (r14) was relabelled `other` (finding 8), so the category

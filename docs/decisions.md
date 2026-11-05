@@ -503,3 +503,21 @@ document) pairs with seed 42 into `data/spotcheck.md`, excluding the 8 doc ids i
 reviewed by the human; all were unticked, 19 sheet entries removed). The human fills the agree/disagree boxes and
 `scripts/score_spotcheck.py` counts them. No label is changed by either script. The number the human spot-checked
 (for `report-notes.md` finding 10) is those 8 plus the 30 in the sample, once answered.
+
+## Pre-submission fixes (Day 5)
+
+- **Request size limit: 10 MB, not 200 KB.** The 200 KB figure was a mistake: it contradicted `PLAN.md` (10 MB limit,
+  server-side truncation, smoke test on a log over 200 KB) and made the API answer HTTP 413 to 6 of the 32 gold logs
+  (largest 1,830 KB). `service.MAX_LOG_BYTES` is now 10 MB, a hard cap that protects the server. The model budget is
+  unchanged: `preprocess_log` still trims the log to about 6,000 Gemma tokens of the most informative lines. The `facts`
+  SSE event now carries `truncated` (true/false) and `original_bytes`; the page shows a line when the log was trimmed.
+  Tests: a log over 200 KB is accepted, trimmed for the model and streams the four event kinds; a short log is not
+  marked truncated; a log over 10 MB gets 413. No evaluation number is affected (eval does not go through the API).
+- **Wording corrected** (no data changed): the report no longer calls the agent "a better abstainer" (it cited nothing
+  on the 7 `none_found` logs but still answered with `high` confidence); the README no longer says the system "often
+  cites loosely related documents" (groundedness is not judged yet, TODO marker left for the author); finding 8 now
+  says retrieval, B0 and B1 ran three times on test and RAG-1 and the agent twice; the corpus count is 22 GitHub repos
+  (15 from the pack + 7 added) plus the NeoForge docs. Older entries above that say "15 repos" describe the state at
+  the time and were left as written.
+- **LICENSE** added (MIT, 2026, copyright holder from `git config user.name`). README setup now has bash and PowerShell
+  blocks and the `--use-feature=truststore` note.

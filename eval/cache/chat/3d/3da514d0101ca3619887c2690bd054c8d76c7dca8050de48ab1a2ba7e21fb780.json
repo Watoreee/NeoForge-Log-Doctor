@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"cobblemon\",\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"The crash log clearly indicates that multiple mods, such as 'createmonballsoverhaul' and 'more_cobblemon_tweaks', are failing to load because they require 'cobblemon', but it is not present in your mod list. This is a classic missing dependency error where the required core mod is absent.\",\n  \"fix_steps\": [\n    \"Locate the 'cobblemon' mod file for Minecraft 1.21.1 and NeoForge.\",\n    \"Place the 'cobblemon' mod file into your game's mods folder.\",\n    \"Ensure the version of 'cobblemon' is compatible with all other mods that depend on it.\"\n  ],\n  \"citations\": [\n    \"neoforge-docs:docs/1.21.1/gettingstarted/modfiles\"\n  ],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "refusal": null,
+   "reasoning": null
+  }
+ }
+}

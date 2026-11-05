@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"create\",\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"The mods 'create_aquatic_ambitions' and 'bellsandwhistles' require the 'create' mod to function, but it is not installed in your modpack. This dependency error prevents the game from loading correctly.\",\n  \"fix_steps\": [\n    \"Ensure the 'create' mod is installed in your mods folder.\",\n    \"Verify that the version of 'create' you install is compatible with Minecraft 1.21.1 and NeoForge 21.1.224.\",\n    \"Check the modpack documentation or configuration to confirm all required dependencies are present.\"\n  ],\n  \"citations\": [],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "refusal": null,
+   "reasoning": null
+  }
+ }
+}

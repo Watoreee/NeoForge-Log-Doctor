@@ -19,6 +19,7 @@ from crashdoc import service
 from crashdoc.config import REPO_ROOT
 
 WEB_DIR = REPO_ROOT / "web"
+EXAMPLES_DIR = REPO_ROOT / "data" / "examples"
 BODY_SLACK = 4096  # JSON overhead allowed on top of the 200 KB log
 
 
@@ -77,6 +78,8 @@ def create_app(pipeline: service.Pipeline | None = None) -> FastAPI:
 
     if WEB_DIR.is_dir():
         app.mount("/web", StaticFiles(directory=WEB_DIR), name="web")
+    if EXAMPLES_DIR.is_dir():  # two redacted sample logs for the page's example buttons
+        app.mount("/examples", StaticFiles(directory=EXAMPLES_DIR), name="examples")
     return app
 
 

@@ -8,7 +8,7 @@
     "owo",
     "mega_showdown"
   ],
-  "category": "mixin_conflict",
+  "category": "other",
   "relevant_doc_ids": [],
   "support_search": "none_found",
   "notes": "disabled owo-lib in CurseForge (its dependents, incl. Mega Showdown, were auto-disabled); Cobblemon Raid Dens' mixin plugin crashed with a NullPointerException in isModAndNewerThan while checking for a mod that was no longer loaded"

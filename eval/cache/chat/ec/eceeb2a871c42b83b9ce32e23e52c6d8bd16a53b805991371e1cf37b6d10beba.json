@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"action\": \"tool\",\n  \"tool\": \"search_docs\",\n  \"args\": {\n    \"query\": \"kuma_api requires minecraft 26.2- or above, and below 26.3\",\n    \"k\": 1\n  }\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "refusal": null,
+   "reasoning": null
+  }
+ }
+}

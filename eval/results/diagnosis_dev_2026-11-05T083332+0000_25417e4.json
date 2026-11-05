@@ -1,0 +1,635 @@
+{
+  "split": "dev",
+  "git_sha": "25417e4",
+  "utc": "2026-11-05T08:33:32+00:00",
+  "summary": {
+    "B0": {
+      "n_logs": 7,
+      "n_scenarios": 4,
+      "culprit_strict": "4/7",
+      "culprit_lenient": "5/7",
+      "culprit_strict_rate": 0.571,
+      "culprit_lenient_rate": 0.714,
+      "category": "6/7"
+    },
+    "B1": {
+      "n_logs": 7,
+      "n_scenarios": 4,
+      "culprit_strict": "4/7",
+      "culprit_lenient": "4/7",
+      "culprit_strict_rate": 0.571,
+      "culprit_lenient_rate": 0.571
+    },
+    "RAG1": {
+      "n_logs": 7,
+      "n_scenarios": 4,
+      "culprit_strict": "4/7",
+      "culprit_lenient": "5/7",
+      "culprit_strict_rate": 0.571,
+      "culprit_lenient_rate": 0.714,
+      "category": "7/7",
+      "citations": "4/4 valid",
+      "logs_with_a_citation": "4/7",
+      "fallback_logs": "0/7",
+      "tool_calls": 0
+    },
+    "FULL": {
+      "n_logs": 7,
+      "n_scenarios": 4,
+      "culprit_strict": "4/7",
+      "culprit_lenient": "6/7",
+      "culprit_strict_rate": 0.571,
+      "culprit_lenient_rate": 0.857,
+      "category": "7/7",
+      "citations": "4/5 valid",
+      "logs_with_a_citation": "4/7",
+      "fallback_logs": "0/7",
+      "tool_calls": 7
+    }
+  },
+  "per_log": {
+    "B0": [
+      {
+        "log_id": "r02_crash",
+        "scenario_id": "r02_missing_dependency_geckolib",
+        "pred_culprit": "theurgy_kubejs",
+        "pred_category": "missing_dependency",
+        "strict": false,
+        "lenient": false,
+        "category": true,
+        "gold_culprit": "geckolib",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r02_latest",
+        "scenario_id": "r02_missing_dependency_geckolib",
+        "pred_culprit": "theurgy",
+        "pred_category": "missing_dependency",
+        "strict": false,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "geckolib",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r13_latest",
+        "scenario_id": "r13_missing_dependency_extendedae",
+        "pred_culprit": "kubejs",
+        "pred_category": "other",
+        "strict": false,
+        "lenient": false,
+        "category": false,
+        "gold_culprit": "extendedae",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r15_crash",
+        "scenario_id": "r15_version_mismatch_aquaculture",
+        "pred_culprit": "aquaculture",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "aquaculture",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r15_latest",
+        "scenario_id": "r15_version_mismatch_aquaculture",
+        "pred_culprit": "aquaculture",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "aquaculture",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r18_crash",
+        "scenario_id": "r18_version_mismatch_sophisticatedcore",
+        "pred_culprit": "sophisticatedcore",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "sophisticatedcore",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r18_latest",
+        "scenario_id": "r18_version_mismatch_sophisticatedcore",
+        "pred_culprit": "sophisticatedcore",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "sophisticatedcore",
+        "gold_category": "version_mismatch"
+      }
+    ],
+    "B1": [
+      {
+        "log_id": "r02_crash",
+        "scenario_id": "r02_missing_dependency_geckolib",
+        "pred_culprit": "theurgy_kubejs",
+        "pred_category": null,
+        "strict": false,
+        "lenient": false,
+        "category": false,
+        "gold_culprit": "geckolib",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r02_latest",
+        "scenario_id": "r02_missing_dependency_geckolib",
+        "pred_culprit": "theurgy_kubejs",
+        "pred_category": null,
+        "strict": false,
+        "lenient": false,
+        "category": false,
+        "gold_culprit": "geckolib",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r13_latest",
+        "scenario_id": "r13_missing_dependency_extendedae",
+        "pred_culprit": null,
+        "pred_category": null,
+        "strict": false,
+        "lenient": false,
+        "category": false,
+        "gold_culprit": "extendedae",
+        "gold_category": "missing_dependency"
+      },
+      {
+        "log_id": "r15_crash",
+        "scenario_id": "r15_version_mismatch_aquaculture",
+        "pred_culprit": "aquaculture",
+        "pred_category": null,
+        "strict": true,
+        "lenient": true,
+        "category": false,
+        "gold_culprit": "aquaculture",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r15_latest",
+        "scenario_id": "r15_version_mismatch_aquaculture",
+        "pred_culprit": "aquaculture",
+        "pred_category": null,
+        "strict": true,
+        "lenient": true,
+        "category": false,
+        "gold_culprit": "aquaculture",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r18_crash",
+        "scenario_id": "r18_version_mismatch_sophisticatedcore",
+        "pred_culprit": "sophisticatedcore",
+        "pred_category": null,
+        "strict": true,
+        "lenient": true,
+        "category": false,
+        "gold_culprit": "sophisticatedcore",
+        "gold_category": "version_mismatch"
+      },
+      {
+        "log_id": "r18_latest",
+        "scenario_id": "r18_version_mismatch_sophisticatedcore",
+        "pred_culprit": "sophisticatedcore",
+        "pred_category": null,
+        "strict": true,
+        "lenient": true,
+        "category": false,
+        "gold_culprit": "sophisticatedcore",
+        "gold_category": "version_mismatch"
+      }
+    ],
+    "RAG1": [
+      {
+        "log_id": "r02_crash",
+        "scenario_id": "r02_missing_dependency_geckolib",
+        "pred_culprit": "theurgy",
+        "pred_category": "missing_dependency",
+        "strict": false,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "geckolib",
+        "gold_category": "missing_dependency",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The mod 'theurgy_kubejs' requires the main mod 'theurgy' to be installed in your modpack. Since 'theurgy' is missing, the game cannot load 'theurgy_kubejs' and crashes during startup. You also have a dependency issue with 'ars_nouveau' requiring 'geckolib'.",
+        "citations": [],
+        "citations_total": 0,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:bernie-g/geckolib#508",
+          "gh-issue:bernie-g/geckolib#666",
+          "gh-issue:bernie-g/geckolib#887",
+          "gh-issue:bernie-g/geckolib#642"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {}
+      },
+      {
+        "log_id": "r02_latest",
+        "scenario_id": "r02_missing_dependency_geckolib",
+        "pred_culprit": null,
+        "pred_category": "missing_dependency",
+        "strict": false,
+        "lenient": false,
+        "category": true,
+        "gold_culprit": "geckolib",
+        "gold_category": "missing_dependency",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The crash is caused because two of your mods, 'theurgy_kubejs' and 'ars_nouveau', require other mods ('theurgy' and 'geckolib' respectively) to be installed, but they are missing from your modpack.",
+        "citations": [],
+        "citations_total": 0,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:bernie-g/geckolib#887",
+          "gh-issue:bernie-g/geckolib#669",
+          "gh-issue:bernie-g/geckolib#881",
+          "gh-issue:bernie-g/geckolib#642"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {}
+      },
+      {
+        "log_id": "r13_latest",
+        "scenario_id": "r13_missing_dependency_extendedae",
+        "pred_culprit": "aquaticambitions",
+        "pred_category": "missing_dependency",
+        "strict": false,
+        "lenient": false,
+        "category": true,
+        "gold_culprit": "extendedae",
+        "gold_category": "missing_dependency",
+        "source": "llm",
+        "confidence": "medium",
+        "explanation": "The log shows a `ClassNotFoundException` when KubeJS tries to load a plugin from `aquaticambitions`. This usually means that the mod `aquaticambitions` is either missing a required dependency or is not installed correctly for your current Minecraft/NeoForge version.",
+        "citations": [
+          "gh-issue:TwelveIterations/Waystones#1118"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:thedarkcolour/KotlinForForge#108",
+          "gh-issue:TwelveIterations/Waystones#1118",
+          "neoforge-docs:docs/1.21.1/gettingstarted/modfiles",
+          "gh-issue:TeamMetallurgy/Aquaculture#516"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {
+          "gh-issue:TwelveIterations/Waystones#1118": "knot//net.minecraft.client.main.Main.main(Main.java:250) at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:514) at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72) at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) at java.base/java.lang.reflect.Method.invoke(Unknown Source) at com.modrinth.theseus.MinecraftLaunch.relaunch(MinecraftLaunch.java:63) at com.modrinth.theseus.MinecraftLaunch.main(MinecraftLaunch.java:28) Caused by: java.lang.ClassNotFoundException: net.blay09.mods.kuma.api.Kuma at java.base/jdk.internal.loader."
+        }
+      },
+      {
+        "log_id": "r15_crash",
+        "scenario_id": "r15_version_mismatch_aquaculture",
+        "pred_culprit": "aquaculture",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "aquaculture",
+        "gold_category": "version_mismatch",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The Aquaculture mod you are using requires a newer version of NeoForge (26.1.0.0 or above) than what is currently installed in your game (21.1.224). This version mismatch is causing the mod to fail during the loading process.",
+        "citations": [
+          "gh-issue:TeamMetallurgy/Aquaculture#443"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:TeamMetallurgy/Aquaculture#391",
+          "gh-issue:TeamMetallurgy/Aquaculture#351",
+          "gh-issue:TeamMetallurgy/Aquaculture#343",
+          "gh-issue:TeamMetallurgy/Aquaculture#443"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {
+          "gh-issue:TeamMetallurgy/Aquaculture#443": "[issue by ffuentesm] ![image](https://github.com/TeamMetallurgy/Aquaculture/assets/44974827/c3a8cb98-6acf-4dde-a56b-d57da393caf5) New Neoforge 21.0.31 made the following changes to damage events: ``` import net.neoforged.neoforge.event.entity.living.LivingHurtEvent; ``` ``` import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent; ``` ``` public static void dodge(LivingHurtEvent event) { ``` ``` public static void dodge(LivingIncomingDamageEvent event) { ``` ``` public static void livingDamageEvent(LivingDamageEvent event) { if (!(event.getSource().getEntity() instanceof Player player)) ``` ``` public static void livingDamageEvent(LivingIncomingDamageEvent event) { if (!(e"
+        }
+      },
+      {
+        "log_id": "r15_latest",
+        "scenario_id": "r15_version_mismatch_aquaculture",
+        "pred_culprit": "aquaculture",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "aquaculture",
+        "gold_category": "version_mismatch",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The mod 'aquaculture' requires a newer version of NeoForge (26.1.0.0 or above) than the one you are currently running (21.1.224). This dependency mismatch is causing the game to crash during the loading phase.",
+        "citations": [
+          "gh-issue:TeamMetallurgy/Aquaculture#446"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:TeamMetallurgy/Aquaculture#391",
+          "gh-issue:TeamMetallurgy/Aquaculture#442",
+          "gh-issue:TeamMetallurgy/Aquaculture#446",
+          "gh-issue:TeamMetallurgy/Aquaculture#526"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {
+          "gh-issue:TeamMetallurgy/Aquaculture#446": "[issue by ffuentesm] Aquaculture-1.21-2.7.2.jar Neoforge: 21.0.42 Crashlog: https://pastebin.com/LptNpi3y I used an Iron Fishing Rod with a Gold Hook, and when I casted the line it crashed the game. [comment by thatkiddie (none)] Have a similar problem, a diamond fishing rod with a gold hook on 1.21, if that matters. Similar error code. [comment by GirafiStudios (collaborator)] Fixed in Dev already. Waiting for a fix in NeoForge, related to an other issue. Use NeoForge version 21.0.38 for now, or grab the latest AQ2 build from my Jenkins :) [comment by ffuentesm (none)] Yeah, can't really use .38 other mods I am using are coded for .40 and up. \ud83d\ude02 [comment by GirafiStudios (collaborator)] Use "
+        }
+      },
+      {
+        "log_id": "r18_crash",
+        "scenario_id": "r18_version_mismatch_sophisticatedcore",
+        "pred_culprit": "sophisticatedcore",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "sophisticatedcore",
+        "gold_category": "version_mismatch",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The mod 'sophisticatedcore' is incompatible with your current setup due to version mismatches. It requires a newer version of NeoForge (26.1.2.44-beta or above) than what you are running (21.1.224). Additionally, it requires a newer version of JEI than the one you have installed.",
+        "citations": [
+          "gh-issue:P3pp3rF1y/SophisticatedStorage#728"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:P3pp3rF1y/SophisticatedStorage#728",
+          "gh-issue:thedarkcolour/KotlinForForge#98",
+          "gh-issue:bernie-g/geckolib#508",
+          "gh-issue:mezz/JustEnoughItems#4003"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {
+          "gh-issue:P3pp3rF1y/SophisticatedStorage#728": "[issue by peachmimosa15] Description: Mod loading failures have occurred; consult the issue messages for more details net.neoforged.neoforge.logging.CrashReportExtender$ModLoadingCrashException: Mod loading has failed I updated my modpack today and sophisiticated storage is not happy. I just uploaded the latest version on modrinth for 7 minutes ago and still not working. sophisticatedstorage-1.21.1-1.5.0.1254.jar [crash-2025-09-01_08.59.59-fml.txt](https://github.com/user-attachments/files/22078851/crash-2025-09-01_08.59.59-fml.txt) [comment by P3pp3rF1y (owner)] You need to update SophisticatedStorage to latest version as well. there was a change in core that required changes to both backpa"
+        }
+      },
+      {
+        "log_id": "r18_latest",
+        "scenario_id": "r18_version_mismatch_sophisticatedcore",
+        "pred_culprit": "sophisticatedcore",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "sophisticatedcore",
+        "gold_category": "version_mismatch",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The mod 'sophisticatedcore' requires a much newer version of NeoForge (26.1.2.44-beta or newer) and Minecraft (26.1.2 or newer) than what you currently have (NeoForge 21.1.224 and Minecraft 1.21.1). It also requires a newer version of 'jei' than the one installed.",
+        "citations": [],
+        "citations_total": 0,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:P3pp3rF1y/SophisticatedStorage#825",
+          "gh-issue:P3pp3rF1y/SophisticatedStorage#725",
+          "gh-issue:architectury/architectury-api#719",
+          "gh-issue:CaffeineMC/sodium#3771"
+        ],
+        "tool_calls": [],
+        "cited_excerpts": {}
+      }
+    ],
+    "FULL": [
+      {
+        "log_id": "r02_crash",
+        "scenario_id": "r02_missing_dependency_geckolib",
+        "pred_culprit": "theurgy",
+        "pred_category": "missing_dependency",
+        "strict": false,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "geckolib",
+        "gold_category": "missing_dependency",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The crash report clearly shows that 'theurgy_kubejs' cannot load because its required dependency, the 'theurgy' mod, is not installed in your modpack. Additionally, 'ars_nouveau' is missing its dependency, 'geckolib'.",
+        "citations": [],
+        "citations_total": 0,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:mrh0/createaddition#1118",
+          "gh-issue:GlodBlock/ExtendedAE#422",
+          "gh-issue:GlodBlock/ExtendedAE#260"
+        ],
+        "tool_calls": [
+          "search_docs"
+        ],
+        "cited_excerpts": {}
+      },
+      {
+        "log_id": "r02_latest",
+        "scenario_id": "r02_missing_dependency_geckolib",
+        "pred_culprit": "theurgy",
+        "pred_category": "missing_dependency",
+        "strict": false,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "geckolib",
+        "gold_category": "missing_dependency",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The crash is due to missing mandatory dependencies. The mod 'theurgy_kubejs' requires the 'theurgy' mod to function, and 'ars_nouveau' requires 'geckolib'. NeoForge checks for these dependencies before loading mods, and since they are missing, the game fails to start.",
+        "citations": [
+          "neoforge-docs:docs/1.21.1/gettingstarted/modfiles"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "neoforge-docs:docs/1.21.1/gettingstarted/modfiles",
+          "gh-issue:TheIllusiveC4/Curios#502",
+          "gh-issue:TwelveIterations/Waystones#905"
+        ],
+        "tool_calls": [
+          "search_docs"
+        ],
+        "cited_excerpts": {
+          "neoforge-docs:docs/1.21.1/gettingstarted/modfiles": "mixin configuration file. | `config=\"examplemod.mixins.json\"` | ### Dependency Configurations Mods can specify their dependencies, which are checked by NeoForge before loading the mods. These configurations are created using the [array of tables][array] `[[dependencies.<modid>]]`, where `modid` is the identifier of the mod that consumes the dependency. | Property | Type | Default | Description | Example | |----------------|---------|----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+        }
+      },
+      {
+        "log_id": "r13_latest",
+        "scenario_id": "r13_missing_dependency_extendedae",
+        "pred_culprit": "aquaticambitions",
+        "pred_category": "missing_dependency",
+        "strict": false,
+        "lenient": false,
+        "category": true,
+        "gold_culprit": "extendedae",
+        "gold_category": "missing_dependency",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The primary error is a 'ClassNotFoundException' for a KubeJS plugin belonging to 'aquaticambitions'. This strongly suggests that the 'aquaticambitions' mod is either missing from your installation or is an outdated/incorrect version that KubeJS cannot properly load its components from.",
+        "citations": [],
+        "citations_total": 0,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:GlodBlock/ExtendedAE#422",
+          "gh-issue:thedarkcolour/KotlinForForge#108",
+          "gh-issue:GlodBlock/ExtendedAE#399",
+          "gh-issue:TwelveIterations/Waystones#1118",
+          "gh-issue:mrh0/createaddition#1118"
+        ],
+        "tool_calls": [
+          "search_docs"
+        ],
+        "cited_excerpts": {}
+      },
+      {
+        "log_id": "r15_crash",
+        "scenario_id": "r15_version_mismatch_aquaculture",
+        "pred_culprit": "aquaculture",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "aquaculture",
+        "gold_category": "version_mismatch",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The 'aquaculture' mod is explicitly reporting a version mismatch. It requires NeoForge version 26.1.0.0 or newer, but your current installation is using NeoForge 21.1.224. This incompatibility is causing the mod loading failure.",
+        "citations": [
+          "gh-issue:TeamMetallurgy/Aquaculture#350"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:TeamMetallurgy/Aquaculture#350",
+          "gh-issue:TeamMetallurgy/Aquaculture#446",
+          "gh-issue:CaffeineMC/sodium#3743"
+        ],
+        "tool_calls": [
+          "search_docs"
+        ],
+        "cited_excerpts": {
+          "gh-issue:TeamMetallurgy/Aquaculture#350": "[issue by StarrSage] Trying to load this mod gives an error that says \"Failed to load correctly java.lang.InvocationTargetException: null\" [comment by GirafiStudios (collaborator)] Please provide a crash report, otherwise there is nowhere for me to even start attempting to look into the issue. [comment by StarrSage (none)] I\u2019ve dealt with this issue on a few of my mods and have learned it has something to do with the mod needing to be updated for Forge. I am currently using the recommended 1.19 version. [comment by GirafiStudios (collaborator)] What version of Aquaculture 2 are you using? [comment by StarrSage (none)] I was trying to use the latest 1.19 (not 1.19.1) version, 1.19-2.4.4.jar ["
+        }
+      },
+      {
+        "log_id": "r15_latest",
+        "scenario_id": "r15_version_mismatch_aquaculture",
+        "pred_culprit": "aquaculture",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "aquaculture",
+        "gold_category": "version_mismatch",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The mod 'aquaculture' requires a much newer version of NeoForge (26.1.0.0 or above) than the 21.1.224 you are currently using. This is a dependency mismatch, meaning the mod is built for a future or different version of the loader.",
+        "citations": [],
+        "citations_total": 1,
+        "citations_dropped": 1,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:TeamMetallurgy/Aquaculture#446",
+          "gh-issue:TeamMetallurgy/Aquaculture#442",
+          "gh-issue:CaffeineMC/sodium#3743",
+          "gh-issue:architectury/architectury-api#719",
+          "gh-issue:TeamMetallurgy/Aquaculture#443"
+        ],
+        "tool_calls": [
+          "search_docs"
+        ],
+        "cited_excerpts": {}
+      },
+      {
+        "log_id": "r18_crash",
+        "scenario_id": "r18_version_mismatch_sophisticatedcore",
+        "pred_culprit": "sophisticatedcore",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "sophisticatedcore",
+        "gold_category": "version_mismatch",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The mod 'sophisticatedcore' is failing to load because it requires a much newer version of NeoForge (26.1.2.44-beta or above) and Minecraft (26.1.2 or above) than the 1.21.1/21.1.224 combination you are using. It also has a dependency conflict with the version of JEI installed. You must update 'sophisticatedcore' and its dependencies to match your Minecraft version.",
+        "citations": [
+          "gh-issue:architectury/architectury-api#719"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:CaffeineMC/sodium#3743",
+          "gh-issue:architectury/architectury-api#719",
+          "gh-issue:bernie-g/geckolib#675"
+        ],
+        "tool_calls": [
+          "search_docs"
+        ],
+        "cited_excerpts": {
+          "gh-issue:architectury/architectury-api#719": "file \"neoforge-26.1.0.11-beta-minecraft-merged-deobf-26.1.jar\" [locator: game locator] [23:03:15] [ForkJo [... truncated] [comment by st0x0ef (collaborator)] Thanks for the report, I'll check what version are incompatible and remove them. Please use latest 26.1.2. [comment by GallonEmilien (none)] It's working fine with 26.1.2 \ud83d\udcaa, thanks again for this port"
+        }
+      },
+      {
+        "log_id": "r18_latest",
+        "scenario_id": "r18_version_mismatch_sophisticatedcore",
+        "pred_culprit": "sophisticatedcore",
+        "pred_category": "version_mismatch",
+        "strict": true,
+        "lenient": true,
+        "category": true,
+        "gold_culprit": "sophisticatedcore",
+        "gold_category": "version_mismatch",
+        "source": "llm",
+        "confidence": "high",
+        "explanation": "The mod 'sophisticatedcore' is requesting versions of NeoForge and Minecraft that are significantly newer than what you have installed. The log shows it expects NeoForge 26.1.2.44-beta or newer, but you are running NeoForge 21.1.224. This is a clear version incompatibility issue.",
+        "citations": [
+          "gh-issue:P3pp3rF1y/SophisticatedStorage#825"
+        ],
+        "citations_total": 1,
+        "citations_dropped": 0,
+        "culprit_dropped": null,
+        "retrieved_doc_ids": [
+          "gh-issue:architectury/architectury-api#719",
+          "gh-issue:thedarkcolour/KotlinForForge#90",
+          "gh-issue:P3pp3rF1y/SophisticatedStorage#825"
+        ],
+        "tool_calls": [
+          "search_docs"
+        ],
+        "cited_excerpts": {
+          "gh-issue:P3pp3rF1y/SophisticatedStorage#825": "[issue by Baggytrousers27] SophisticatedCore is named in the crashlog but there isn't a repo for it so posting it here instead. Seemed to occur after cursor moved over an item in Backpack Description: Ticking entity com.google.common.util.concurrent.UncheckedExecutionException: java.lang.IllegalArgumentException: Failed to hash minecraft:max_damage=>0: Value must be positive: 0 [Crashlog](https://pastebin.com/RcQVcg5K) (Will post a Full log when Gists decide to work again) sophisticatedbackpacks-1.21.11-3.25.34.1565 sophisticatedcore-1.21.11-1.4.7.1513 sophisticateditemactions-1.21.11-0.3.4.91 sophisticatedstorage-1.21.11-1.5.35.1511 sophisticatedstorageinmotion-1.21.11-0.10.26.189 [comment "
+        }
+      }
+    ]
+  },
+  "usage": {
+    "chat_requests": 0,
+    "chat_cache_hits": 49,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "embed_requests": 0,
+    "embed_inputs_sent": 0,
+    "embed_cache_hits": 14,
+    "embed_reported_usage_chars": 0,
+    "retries": 0,
+    "rate_limited": 0,
+    "total_requests": 0,
+    "total_chat_tokens": 0
+  }
+}

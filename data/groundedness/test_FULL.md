@@ -1,8 +1,8 @@
 # Groundedness sheet: FULL on test (25 logs)
 
-Source: `diagnosis_test_2026-11-04T101159+0000_482c723.json` (git 482c723). Produced by `scripts/export_groundedness_sheet.py`; nothing here was judged.
+Source: `diagnosis_test_2026-11-05T083345+0000_25417e4.json` (git 25417e4). Produced by `scripts/export_groundedness_sheet.py`; nothing here was judged.
 
-For each log: does the cited excerpt SUPPORT the explanation? Tick `[x]` if yes (judge the excerpt shown, open the URL only if it does not settle it). Leave `[ ]` if no, or if nothing is cited.
+For each log: does the cited excerpt SUPPORT the explanation? Tick `[x]` if yes (judge the excerpt shown, open the URL only if it does not settle it). Leave `[ ]` if no. Logs with no citation have no box: they are left out of the groundedness denominator and reported separately as citation coverage (`python scripts/export_groundedness_sheet.py --score <this file>`).
 
 ---
 
@@ -64,7 +64,7 @@ For each log: does the cited excerpt SUPPORT the explanation? Tick `[x]` if yes 
 
 **Citations:** none, so there is no source to support this explanation.
 
-**Grounded?**  [ ]
+**Grounded?**  not scored (no citation)
 
 ---
 
@@ -74,7 +74,7 @@ For each log: does the cited excerpt SUPPORT the explanation? Tick `[x]` if yes 
 
 **Citations:** none, so there is no source to support this explanation.
 
-**Grounded?**  [ ]
+**Grounded?**  not scored (no citation)
 
 ---
 
@@ -110,7 +110,7 @@ For each log: does the cited excerpt SUPPORT the explanation? Tick `[x]` if yes 
 
 **Citations:** none, so there is no source to support this explanation.
 
-**Grounded?**  [ ]
+**Grounded?**  not scored (no citation)
 
 ---
 
@@ -159,7 +159,7 @@ For each log: does the cited excerpt SUPPORT the explanation? Tick `[x]` if yes 
 
 **Citations:** none, so there is no source to support this explanation.
 
-**Grounded?**  [ ]
+**Grounded?**  not scored (no citation)
 
 ---
 
@@ -169,7 +169,7 @@ For each log: does the cited excerpt SUPPORT the explanation? Tick `[x]` if yes 
 
 **Citations:** none, so there is no source to support this explanation.
 
-**Grounded?**  [ ]
+**Grounded?**  not scored (no citation)
 
 ---
 
@@ -179,7 +179,7 @@ For each log: does the cited excerpt SUPPORT the explanation? Tick `[x]` if yes 
 
 **Citations:** none, so there is no source to support this explanation.
 
-**Grounded?**  [ ]
+**Grounded?**  not scored (no citation)
 
 ---
 
@@ -189,7 +189,7 @@ For each log: does the cited excerpt SUPPORT the explanation? Tick `[x]` if yes 
 
 **Citations:** none, so there is no source to support this explanation.
 
-**Grounded?**  [ ]
+**Grounded?**  not scored (no citation)
 
 ---
 
@@ -212,7 +212,7 @@ For each log: does the cited excerpt SUPPORT the explanation? Tick `[x]` if yes 
 
 **Citations:** none, so there is no source to support this explanation.
 
-**Grounded?**  [ ]
+**Grounded?**  not scored (no citation)
 
 ---
 
@@ -274,7 +274,7 @@ For each log: does the cited excerpt SUPPORT the explanation? Tick `[x]` if yes 
 
 **Citations:** none, so there is no source to support this explanation.
 
-**Grounded?**  [ ]
+**Grounded?**  not scored (no citation)
 
 ---
 
@@ -284,7 +284,7 @@ For each log: does the cited excerpt SUPPORT the explanation? Tick `[x]` if yes 
 
 **Citations:** none, so there is no source to support this explanation.
 
-**Grounded?**  [ ]
+**Grounded?**  not scored (no citation)
 
 ---
 
@@ -294,4 +294,4 @@ For each log: does the cited excerpt SUPPORT the explanation? Tick `[x]` if yes 
 
 **Citations:** none, so there is no source to support this explanation.
 
-**Grounded?**  [ ]
+**Grounded?**  not scored (no citation)

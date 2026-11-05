@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": null,\n  \"category\": \"version_mismatch\",\n  \"explanation\": \"The mods 'kuma_api' and 'balm' are explicitly requesting versions of Minecraft and NeoForge that are newer than what you are currently running. They require Minecraft 26.2+ and NeoForge 26.2.0.0-beta or newer, but your setup is on Minecraft 1.21.1 and NeoForge 21.1.224.\",\n  \"fix_steps\": [\n    \"Check the mod pages for 'kuma_api' and 'balm' to find the correct versions compatible with Minecraft 1.21.1 and NeoForge 21.1.224.\",\n    \"Update or downgrade the mods to match your current game version.\",\n    \"If no compatible versions exist, you must update your entire modpack to a newer Minecraft/NeoForge version.\"\n  ],\n  \"citations\": [],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "refusal": null,
+   "reasoning": null
+  }
+ }
+}

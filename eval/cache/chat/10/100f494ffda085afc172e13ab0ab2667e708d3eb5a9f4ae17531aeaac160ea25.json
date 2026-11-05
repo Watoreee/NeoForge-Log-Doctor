@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"accessories\",\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"The crash is caused because 'zamega' and 'mega_showdown' require a specific, newer version of the 'accessories' mod (1.1.0-beta.52+1.21.1 or higher), but the version currently installed is older (1.1.0-beta.48+1.21.1). This is a dependency version mismatch.\",\n  \"fix_steps\": [\n    \"Locate the 'accessories' mod file in your mods folder.\",\n    \"Replace it with a version that matches or exceeds 1.1.0-beta.52+1.21.1 for Minecraft 1.21.1.\",\n    \"Ensure all required mods are compatible with NeoForge 1.21.1.\"\n  ],\n  \"citations\": [\n    \"gh-issue:wisp-forest/owo-lib#405\"\n  ],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "refusal": null,
+   "reasoning": null
+  }
+ }
+}

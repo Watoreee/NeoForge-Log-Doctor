@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"action\": \"tool\",\n  \"tool\": \"search_docs\",\n  \"args\": {\n    \"query\": \"Missing or unsupported mandatory dependencies: Mod ID: 'create', Requested by: 'create_aquatic_ambitions', Expected range: '[6.0.8,6.1.0)', Actual version: '[MISSING]'\",\n    \"k\": 3\n  }\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "refusal": null,
+   "reasoning": null
+  }
+ }
+}

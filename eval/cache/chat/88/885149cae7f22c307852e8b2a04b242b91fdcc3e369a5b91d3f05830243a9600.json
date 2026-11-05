@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"cobblemon\",\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"Several mods in your modpack require 'cobblemon' to function, but it appears to be missing from your installation. The log shows multiple mods failing to load because they cannot find the necessary 'cobblemon' dependency. You must install the correct version of Cobblemon for Minecraft 1.21.1 to resolve these errors.\",\n  \"fix_steps\": [\n    \"Download the correct version of the Cobblemon mod for Minecraft 1.21.1.\",\n    \"Place the Cobblemon JAR file into your mods folder.\",\n    \"Ensure all other dependent mods (like createmonballsoverhaul, more_cobblemon_tweaks, etc.) are also present and compatible.\"\n  ],\n  \"citations\": [],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "reasoning": null,
+   "refusal": null
+  }
+ }
+}

@@ -18,6 +18,7 @@
   #events { list-style:none; margin:0; padding:0; color:var(--muted); font-size:.9rem; }
   #events li { padding:2px 0; } #events li.error { color:var(--bad); }
   .tag { display:inline-block; padding:1px 8px; border-radius:99px; border:1px solid var(--line); font-size:.8rem; margin-right:6px; }
+  button.ghost { background:transparent; color:var(--accent); border:1px solid var(--accent); padding:6px 12px; margin:4px 6px 0 0; }
   .low { color:var(--bad); } .high { color:var(--ok); }
   ol, ul.cites { margin:6px 0 0 20px; padding:0; }
 </style>
@@ -28,6 +29,10 @@
   <p class="sub">Paste a NeoForge crash report or <code>latest.log</code> (up to 200 KB). If a crash report doesn't name a mod, paste <code>latest.log</code> instead.</p>
   <textarea id="log" spellcheck="false" placeholder="Paste the log here"></textarea>
   <button id="go">Diagnose</button>
+  <p class="sub" style="margin-top:14px">Or try a redacted sample log:
+    <button class="ghost" data-example="/examples/success_missing_dependency.log">Success example</button>
+    <button class="ghost" data-example="/examples/failure_version_mismatch.log">Known failure</button><br>
+    <small>Success: Create was disabled, and the diagnosis names it. Known failure: a Fabric build of Cobblemon was installed, which is a <code>version_mismatch</code>. The system finds the right mod but labels it <code>missing_dependency</code>.</small></p>
   <div class="card" id="progress" hidden><strong>Progress</strong><ul id="events" aria-live="polite"></ul></div>
   <div class="card" id="result" hidden></div>
 </main>
@@ -60,7 +65,7 @@ function render(d) {
 }
 
 async function diagnose() {
-  const btn = $("go"); btn.disabled = true; $("events").replaceChildren(); $("progress").hidden = false; $("result").hidden = true;
+  const btn = $("go"); if (btn.disabled) return; btn.disabled = true; $("events").replaceChildren(); $("progress").hidden = false; $("result").hidden = true;
   const parser = createSseParser(({ event, data }) => {
     const d = JSON.parse(data);
     if (event === "facts") addEvent("Read the log: " + (d.facts.error_category || "category unknown") + (d.facts.suspect_mod_ids.length ? ", suspects " + d.facts.suspect_mod_ids.join(", ") : ""));
@@ -78,6 +83,14 @@ async function diagnose() {
   finally { btn.disabled = false; }
 }
 $("go").addEventListener("click", diagnose);
+document.querySelectorAll("button[data-example]").forEach(b => b.addEventListener("click", async () => {
+  try {
+    const r = await fetch(b.dataset.example);
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    $("log").value = await r.text();
+    diagnose();
+  } catch (e) { $("progress").hidden = false; addEvent("Could not load the example: " + e.message, "error"); }
+}));
 </script>
 </body>
 </html>

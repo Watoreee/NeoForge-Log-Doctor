@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"culprit_mod_id\": \"accessories\",\n  \"category\": \"missing_dependency\",\n  \"explanation\": \"The mods 'zamega' and 'mega_showdown' require a specific version of the 'accessories' mod to function correctly. The version currently installed is too old or incorrect for what these mods expect, causing the game to crash during loading.\",\n  \"fix_steps\": [\n    \"Check the modpack's configuration or mod list to ensure 'accessories' is present.\",\n    \"Verify that the installed version of 'accessories' matches the required range: '[1.1.0-beta.52+1.21.1,)' for both 'zamega' and 'mega_showdown'.\",\n    \"If the version is incorrect, replace it with the specified compatible version.\"\n  ],\n  \"citations\": [],\n  \"confidence\": \"high\"\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "refusal": null,
+   "reasoning": null
+  }
+ }
+}

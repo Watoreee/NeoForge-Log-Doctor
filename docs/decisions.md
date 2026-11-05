@@ -427,10 +427,26 @@ Nothing moved because r04 has no relevant documents (`none_found`) and neither m
 `python scripts/run_eval.py --split test --allow-test --conditions B0,B1[,RAG1,FULL]`,
 `python scripts/run_retrieval_eval.py --split test --allow-test --min-score 0.45`.
 
-**r14 is still `mixin_conflict`, pending the human's decision.** The log shows one mixin plugin
-(`CobblemonRaidDensNeoForgeMixinPlugin.isModAndNewerThan`) throwing a NullPointerException while preparing the
+**r14 relabelled `mixin_conflict` -> `other` (human's decision, after the second test run).** The log shows one mixin
+plugin (`CobblemonRaidDensNeoForgeMixinPlugin.isModAndNewerThan`) throwing a NullPointerException while preparing the
 `msd.BattlePokemonStateMixin` (the Mega Showdown compat mixin) because Mega Showdown was disabled; no two mixins
-conflict. Proposed: `other`.
+conflict. Culprit `cobblemonraiddens`, acceptable culprits `cobblemonraiddens, owo, mega_showdown` (unchanged).
+This leaves `mixin_conflict` with **no logs at all**, so the category is never evaluated (it has no gold example).
+Re-run from the cache (no new LLM calls; this is the third test run, label-only change). **One number changed:**
+category accuracy on test fell for B0, RAG-1 and the agent, because all three said `mixin_conflict` for r14.
+
+| Test | before (r14 = `mixin_conflict`) | after (r14 = `other`) |
+|---|---|---|
+| B0 category | 20/25 | 19/25 |
+| RAG-1 category | 20/25 | 19/25 |
+| Agent category | 20/25 | 19/25 |
+| culprit strict / lenient, all conditions | unchanged | unchanged |
+| retrieval recall@5, MRR, abstention | unchanged | unchanged |
+
+Dev numbers are unchanged (r14 is a test log). Reproduce: `python scripts/run_eval.py --split test --allow-test
+--conditions B0,B1,RAG1,FULL` and `python scripts/run_retrieval_eval.py --split test --allow-test --min-score 0.45`.
+Like r04's, this label was corrected after test results had been seen. It lowered the scores, so it was not chosen
+to flatter them.
 
 **Oracle (c2).** (c) = LLM-extracted `exception_type` + gold `acceptable_culprits` + gold category keywords. (c2) = gold
 `culprit_mod_id` + gold category + the parser's regex exception type (no LLM output). Reported side by side; neither is an
@@ -460,8 +476,17 @@ about a mod), `check_compat` (the static NeoForge/Java table). Retrieved set = u
 first, and streams SSE events `facts`, `tool_call`, `tool_result`, `final`, `error` (structured events only). `GET
 /health`. `web/index.html` reads the stream with `fetch` + `ReadableStream` and a small parser (`web/sse.js`, tested under
 node); model text is inserted with `textContent` only. A test with a real uvicorn server checks the events arrive spread
-over time, not in one burst. The page was not exercised in a real browser in this environment.
+over time, not in one burst. The page was later exercised in a real (headless) Chrome, see "Example logs on the page" below.
 
-**Not done (cut list):** (d) the rule-based citation gate, the retriever comparison beyond what `run_retrieval_eval.py`
+**Groundedness scoring (human's decision).** The denominator is only the logs that have a citation (14 of 25);
+citation coverage (14/25 logs) is a separate number. A log with no citation has no box on the sheet.
+`python scripts/export_groundedness_sheet.py --score data/groundedness/test_FULL.md` counts the ticks; the script
+refuses to overwrite a sheet that already has ticks. The human judges; the code never does.
+**Example logs on the page.** `data/examples/` holds two redacted demo logs (d6 and d3, never in dev or test), checked
+unchanged by the redactor (`tests/test_examples.py`). "Success example" is d6 (the system names `create`, category
+right). "Known failure" is d3 (Cobblemon replaced by its Fabric build): culprit right, category `missing_dependency`
+instead of `version_mismatch`. Checked in a headless Chrome 156 over the DevTools protocol: on an uncached log the
+progress events reached the page about 4.5 s, 8.4 s, 8.4 s and 11.4 s after the click.
+**Not done (cut list):** (d) the rule-based citation gate (human: skip for now), the retriever comparison beyond what `run_retrieval_eval.py`
 prints, the chunking experiment, the tool-call panel, a `sweep.py`, and the replay-mode test of `run_eval.py`.
 Groundedness is for the human: `scripts/export_groundedness_sheet.py` writes `data/groundedness/test_FULL.md`.

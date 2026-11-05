@@ -1,0 +1,12 @@
+{
+ "prompt_version": "agent-v4",
+ "model": "gemma-4-E4B-it",
+ "message": {
+  "content": "```json\n{\n  \"action\": \"tool\",\n  \"tool\": \"search_docs\",\n  \"args\": {\n    \"query\": \"Missing or unsupported mandatory dependencies: Mod ID: 'accessories', Requested by: 'zamega', Expected range: '[1.1.0-beta.52+1.21.1,)', Actual version: '1.1.0-beta.48+1.21.1'\",\n    \"k\": 5\n  }\n}\n```",
+  "role": "assistant",
+  "provider_specific_fields": {
+   "refusal": null,
+   "reasoning": null
+  }
+ }
+}

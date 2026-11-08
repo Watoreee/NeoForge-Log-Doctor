@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -75,7 +76,8 @@ def score(sheet_path: Path) -> dict:
     sections = [s for s in sheet_path.read_text(encoding="utf-8").split("\n## ")[1:]]
     cited = [s for s in sections if "**Citations:** none" not in s]
     ticked = sum("**Grounded?**  [x]" in s.replace("[X]", "[x]") for s in cited)
-    unjudged = sum("**Grounded?**  [ ]" in s for s in cited)
+    # an open box with a "Judgment ...: no." note was judged "no"; only a bare open box is still unjudged
+    unjudged = sum("**Grounded?**  [ ]" in s and not re.search(r"^Judgment \([^)]*\): no\.", s, re.M) for s in cited)
     return {
         "logs": len(sections),
         "logs_with_a_citation": len(cited),

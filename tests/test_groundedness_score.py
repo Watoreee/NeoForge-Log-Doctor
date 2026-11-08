@@ -49,3 +49,10 @@ def test_a_tick_on_a_log_without_a_citation_is_ignored(tmp_path):
     p = tmp_path / "s.md"
     p.write_text(SHEET.replace("not scored (no citation)", "[x]"), encoding="utf-8")
     assert mod.score(p)["grounded"] == "1/2"
+
+
+def test_a_judged_no_is_not_an_open_box(tmp_path):
+    p = tmp_path / "s.md"
+    p.write_text(SHEET.replace("**Grounded?**  [ ]\n", "**Grounded?**  [ ]\n\nJudgment (Claude): no. reason\n"), encoding="utf-8")
+    r = mod.score(p)
+    assert r["grounded"] == "1/2" and r["boxes_still_open"] == 0

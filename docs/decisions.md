@@ -535,3 +535,16 @@ as a Fabric jar and reported `[MISSING]`. **Decision (author): keep the labels.*
 
 Scorer bug found and fixed before scoring: `agree \[x\]` also matched inside `disagree [x]`, so a disagreement would
 have been counted as invalid. Fixed with a look-behind and tested in `tests/test_spotcheck_score.py`.
+
+## Groundedness judged by an LLM; PLAN.md untracked; architecture diagram (2026-11-09)
+
+- **Groundedness.** At the author's request, Claude judged the 14 cited logs in `data/groundedness/test_FULL.md` from
+  the excerpt shown, without opening the URLs. Rule: tick when the excerpt supports the central diagnosis or the fix;
+  mark PARTIAL when it supports only part. Each box has a one-line reason, and the header says the judge is an LLM.
+  Result: **5/14 grounded (3 PARTIAL), coverage 14/25**. The report and README state that an LLM, not a human, judged
+  it. The scorer now treats an open box with a `Judgment (...): no.` line as judged (test added); before that it
+  reported the 9 "no" answers as open boxes.
+- **PLAN.md is no longer tracked** (author's decision; a local copy is kept and git-ignored). It remains in the git
+  history, which is not rewritten. Section references such as "PLAN 6.4" in older entries and in docstrings point to
+  that history.
+- **Architecture diagram**: `docs/architecture.md` (Mermaid), drawn from the modules as they are.

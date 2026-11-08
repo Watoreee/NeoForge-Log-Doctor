@@ -130,18 +130,19 @@ produces reviewed, redacted copies.
 
 ## Limitations
 
-The code was built with Claude Code from a written plan (`PLAN.md`), and the author reviewed it.
+The code was built with Claude Code from a written plan (not included in the repository), and the author reviewed it.
 
 - **One modpack, one author.** All 19 usable fault-injection runs (r07 dropped; r10 and r11 count as one scenario, so
   18 scenarios) come from a single modpack, produced by injecting faults into it. 25 test logs from 14 scenarios,
   7 dev logs from 4. Differences of a few logs are noise.
 - **The corpus was extended after the logs were collected** (7 repos for the broken mods, before any judgment or
   test result). Some culprits have no tracker in the corpus, so for them nothing relevant exists to retrieve.
-- **Relevance labels were made by an LLM** and spot-checked by the author; retrieval metrics inherit their errors.
+- **Relevance labels were made by an LLM**; 8 documents were checked by the author and 30 by a second LLM pass (26/30 agreed); retrieval metrics inherit their errors.
 - **Abstention does not work.** The cosine floor (0.45) never triggers on the logs where nothing relevant exists
-  (recall 0/7 on test). The system effectively always answers. <!-- TODO (author): add a sentence on how well the
-  citations support the explanations, after judging data/groundedness/test_FULL.md -->
-  Whether the citations support the explanations has not been measured yet.
+  (recall 0/7 on test). The system effectively always answers.
+- **Citations rarely support the explanation.** The agent cited something on 14 of 25 test logs; on 5 of those 14 the
+  cited excerpt supports the explanation (3 of the 5 only in part). This was judged by an LLM (Claude), not by a
+  human (`data/groundedness/test_FULL.md`).
 - **B0, RAG-1 and the agent are statistically indistinguishable** on this sample. Do not claim that retrieval or the
   agent improves diagnosis from these numbers.
 - **Category errors are systematic:** wrong-version jars that dependants report as "not installed" are often labelled

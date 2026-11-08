@@ -47,3 +47,6 @@ Thumbs.db
 
 # Per-chunk corpus embedding cache (resume only; embeddings.npy is committed)
 data/processed/embed_cache/
+
+# the build plan is kept locally, not published
+PLAN.md

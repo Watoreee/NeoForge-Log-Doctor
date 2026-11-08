@@ -5,7 +5,7 @@ Every number here comes from `eval/results/*.json`, rebuilt by `python scripts/r
 and `retrieval_test_2026-11-05T083402+0000_25417e4.json`. Intervals are 95%, scenario-level paired bootstrap
 (1,000 resamples, seed 0): logs of one scenario are resampled together.
 
-**Provenance.** The code was built with Claude Code from a written plan (`PLAN.md`), and the author reviewed it.
+**Provenance.** The code was built with Claude Code from a written plan (not included in the repository), and the author reviewed it.
 
 **Setup in one paragraph.** Test split: 25 logs from 14 scenarios (r10 and r11 are one scenario). Dev: 7 logs from 4
 scenarios. Culprit accuracy is **strict** (prediction equals `culprit_mod_id`) and **lenient** (prediction is in
@@ -100,14 +100,24 @@ architectury-api #542 for r03; #528 and #664 for r17). The author kept the label
 use them as they are. A second LLM pass is not a human check. The pool holds only the top 5 of six conditions, so
 retrieval metrics have pooling bias and inherit any labelling error.
 
-## Groundedness (hand-judged)
-Not yet judged. `data/groundedness/test_FULL.md`: 25 logs, 14 with a citation. Rule (human's decision): the denominator
-is the logs that have a citation; coverage is reported separately.
+## Groundedness (judged by an LLM, not by a human)
+`data/groundedness/test_FULL.md`: 25 logs, 14 with a citation. Rule (author's decision): the denominator is the logs
+that have a citation; coverage is reported separately. **At the author's request, Claude (an LLM) judged the 14 boxes**
+from the excerpt shown, without opening the URLs. It ticked a box when the excerpt supports the explanation's central
+diagnosis or its fix, and marked PARTIAL when the excerpt supports only part of the explanation. Each box has a one-line
+reason. This is an LLM judgment, so report it as such, not as a human evaluation.
 
 | | value |
 |---|---|
 | Citation coverage (Agent, test) | 14/25 logs |
-| Grounded, among logs with a citation | **TODO** /14 (`python scripts/export_groundedness_sheet.py --score data/groundedness/test_FULL.md`) |
+| Grounded, among logs with a citation | **5/14** (0.357), of which 3 PARTIAL; fully supported 2/14 (`python scripts/export_groundedness_sheet.py --score data/groundedness/test_FULL.md`) |
+
+Supported: r08_crash and r08_latest (createaddition #897: requires Create 6.0.1, 6.0.0 installed). PARTIAL: r03_crash
+and r03_latest (KFF #75 supports "install Architectury" but not the rctapi half) and r05_latest (KFF #160 supports the
+kotlinforforge half). Not supported (9): the excerpt is about a different failure of the same mod (r01 x2 Curios #473,
+r16 x2 YUNG's API #84, r17 x2 architectury-api #531, r09_crash TrashCans #38) or is unrelated (r05_crash Waystones
+#1207, r12_latest AE2 #8922). So the citation validity number (14/15 for the agent) says little about support:
+most citations are on-topic by mod name, not by cause.
 
 ## Failure cases (real log ids; test split, Agent unless stated)
 

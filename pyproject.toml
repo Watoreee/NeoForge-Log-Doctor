@@ -26,3 +26,7 @@ select = ["E", "F", "W", "I", "UP", "B"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src", "."]
+
+[tool.vercel]
+# app.py puts src/ on the path and re-exports crashdoc.api:app (the package is not installed on Vercel)
+entrypoint = "app:app"

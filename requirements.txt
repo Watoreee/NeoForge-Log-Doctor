@@ -1,23 +1,19 @@
-# Python 3.11+. Exact pins = the versions this project was developed and evaluated with.
+# Runtime dependencies only (what the app imports). Exact pins = the versions this project was developed and
+# evaluated with. Keep in sync with [project] dependencies in pyproject.toml. Dev tools: requirements-dev.txt.
 
 # LLM proxy client + config
 openai==2.54.0
 python-dotenv==1.2.4
-# Use the OS certificate store for TLS (some networks re-sign HTTPS; see docs/decisions.md)
+# Optional: verify TLS against the OS certificate store (config.py ignores it if absent; see docs/decisions.md)
 truststore==0.10.5
 
 # Schemas + API
 pydantic==2.14.1
 fastapi==0.162.0
+# Local server (`uvicorn crashdoc.api:app`); not used on Vercel, which serves the ASGI app itself
 uvicorn==0.54.0
 
-# Retrieval
+# Retrieval + token counting
 numpy==2.4.6
 rank-bm25==0.2.2
 tiktoken==0.14.0
-# (sentence-transformers was listed as a local embedding fallback but is never imported; removed because it pulls in
-# PyTorch, which does not fit a serverless function. The proxy serves bge-m3.)
-
-# Dev
-pytest==9.1.1
-ruff==0.17.3

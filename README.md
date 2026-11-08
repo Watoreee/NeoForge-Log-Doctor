@@ -16,7 +16,7 @@ Requires **Python 3.11+**.
 
 ```bash
 python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt && pip install -e .
+pip install -r requirements-dev.txt && pip install -e .
 cp .env.example .env        # then fill in OPENAI_API_KEY and OPENAI_BASE_URL
 ```
 
@@ -25,7 +25,7 @@ cp .env.example .env        # then fill in OPENAI_API_KEY and OPENAI_BASE_URL
 ```powershell
 python -m venv .venv
 .venv\Scripts\Activate.ps1
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
 pip install -e .
 Copy-Item .env.example .env   # then fill in OPENAI_API_KEY and OPENAI_BASE_URL
 ```
@@ -34,9 +34,12 @@ If `pip install` fails with `CERTIFICATE_VERIFY_FAILED` (some networks re-sign H
 use the operating system's certificate store instead, in either shell:
 
 ```
-pip install --use-feature=truststore -r requirements.txt
+pip install --use-feature=truststore -r requirements-dev.txt
 pip install --use-feature=truststore --no-build-isolation -e .
 ```
+
+`requirements.txt` holds only what the app imports (it is what a deployment installs). `requirements-dev.txt` adds
+pytest, ruff, httpx and the tokenizer used to rebuild the index.
 
 The corpus index (`data/processed/`) and the LLM/embedding cache (`eval/cache/`) are committed, so a clean clone
 needs no fetching and can reproduce every evaluation number **without any API key** (replay mode, below).

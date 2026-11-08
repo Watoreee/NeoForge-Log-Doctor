@@ -1,0 +1,7 @@
+# Tests, lint, the HTTP client used by tests and the README example, and the tokenizer used only by
+# scripts/build_index.py (rebuilding the corpus index; the app never imports it).
+-r requirements.txt
+httpx==0.28.1
+pytest==9.1.1
+ruff==0.17.3
+transformers==5.21.0

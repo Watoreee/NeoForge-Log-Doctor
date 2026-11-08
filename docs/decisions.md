@@ -559,3 +559,18 @@ have been counted as invalid. Fixed with a look-behind and tested in `tests/test
   returned and simply not cached. Replay reads of the committed `eval/cache/` are unchanged.
 - Platform limits that override the app's own: Vercel caps a request body at 4.5 MB, so the 10 MB cap in
   `service.py` is not reachable there. Larger logs are refused by the platform before the app sees them.
+- **Dependencies on Vercel (runtime error `No module named 'fastapi'`).** Vercel's Python docs (runtime and FastAPI
+  pages, checked 2026-11-09) say it reads `pyproject.toml`, `requirements.txt` or `Pipfile`, but not which one wins.
+  Our `pyproject.toml` declared no dependencies. The runtime dependencies are now declared in both files with identical
+  pins. `requirements.txt` holds only what the app imports. Dev tools (pytest, ruff, httpx, and `transformers` for
+  `build_index.py`) are in `requirements-dev.txt`. `.python-version` pins 3.13, one of the versions Vercel supports
+  (3.12-3.14), and the one the clean-install check below ran on.
+- **Clean-install check before pushing.** The staged tree was exported to a temp dir and a fresh Python 3.13 venv got
+  only `requirements.txt` (35 packages, no `pip install -e .`, no torch or transformers). With no `OPENAI_*` variables
+  and `CRASHDOC_REPLAY=1`, `app.py` was loaded from another working directory and driven over raw ASGI. Results:
+  `/health`, `/`, `/web/sse.js` and both `/examples/*.log` returned 200. Both example logs streamed
+  `facts, tool_call, tool_result, final` (create / missing_dependency; cobblemon / missing_dependency). An unrecorded
+  log returned the replay `error` event. Importing the app took 1.3 s, because the index and LLM load on the first
+  request. Size: about 114 MB of dependencies plus 32 MB of project, against Vercel's 500 MB limit, so no
+  `excludeFiles` is needed. The only file the app writes is the LLM cache (best effort). tiktoken caches its encoding
+  in the system temp dir (`/tmp` on Linux) and downloads it once per cold start.

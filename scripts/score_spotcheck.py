@@ -21,7 +21,7 @@ def parse(path: Path) -> list[dict]:
     for sec in path.read_text(encoding="utf-8").split("\n### ")[1:]:
         head = sec.splitlines()[0]
         mark = "ticked" if "TICKED (relevant)" in sec else "unticked"
-        agree = re.search(r"agree \[([xX])\]", sec) is not None
+        agree = re.search(r"(?<!dis)agree \[([xX])\]", sec) is not None
         disagree = re.search(r"disagree \[([xX])\]", sec) is not None
         if agree and disagree:
             status = "invalid"

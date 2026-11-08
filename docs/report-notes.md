@@ -91,10 +91,14 @@ repository present. Culprits with no tracker in the corpus (simpletms, cobblemon
 ftbquests, cobblemon) are `none_found` scenarios: they test abstention, not retrieval. Cobblemon's own issue tracker
 (GitLab) is not in the corpus.
 
-### 10. Relevance labels were made by an LLM and spot-checked by the human
+### 10. Relevance labels were made by an LLM; 8 checked by the author, 30 by a second LLM pass
 An LLM (Claude) judged each pooled document from its title and one excerpt; the human reviewed the unsure ones and
-did not open every URL. Documents spot-checked by the human: **n = TODO (human to fill in)**. The pool holds only the
-top 5 of six conditions, so retrieval metrics have pooling bias and inherit any labelling error.
+did not open every URL. **8 documents were checked by the author; 30 more were checked by a second LLM pass, which
+agreed with 26/30** (15 ticked, 15 unticked, seed 42, `data/spotcheck.md`, `python scripts/score_spotcheck.py`). All 4
+disagreements are ticked documents whose title matches the failure but whose cause differs (ExtendedAE #422 for r13;
+architectury-api #542 for r03; #528 and #664 for r17). The author kept the labels, so the reported retrieval numbers
+use them as they are. A second LLM pass is not a human check. The pool holds only the top 5 of six conditions, so
+retrieval metrics have pooling bias and inherit any labelling error.
 
 ## Groundedness (hand-judged)
 Not yet judged. `data/groundedness/test_FULL.md`: 25 logs, 14 with a citation. Rule (human's decision): the denominator

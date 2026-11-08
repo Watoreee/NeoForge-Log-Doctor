@@ -385,8 +385,8 @@ split order in `scripts/export_relevance_pool.py`; the six conditions and `min_s
 ## Labels finalised (Day 4)
 
 **Relevance labels were produced by an LLM (Claude) from each document's title + the one excerpt shown in the sheet, then
-the human reviewed the unsure ones; the human did not open every URL.** Number of documents the human spot-checked:
-**TODO (human to fill in)**. The sheets in `data/pool/` are final and are never edited. `scripts/apply_judgments.py`
+the human reviewed the unsure ones; the human did not open every URL.** Number of documents the human checked:
+**8** (see "Spot-check result" below for the 30 checked by a second LLM pass). The sheets in `data/pool/` are final and are never edited. `scripts/apply_judgments.py`
 turns them into `relevant_doc_ids` / `support_search` (a log inherits its scenario's judgments; the dry run lists every
 judgment; inconsistent sheets are errors).
 
@@ -521,3 +521,17 @@ reviewed by the human; all were unticked, 19 sheet entries removed). The human f
   the time and were left as written.
 - **LICENSE** added (MIT, 2026, copyright holder from `git config user.name`). README setup now has bash and PowerShell
   blocks and the `--use-feature=truststore` note.
+
+## Spot-check result (2026-11-09)
+
+At the author's request, Claude filled in the 30 boxes of `data/spotcheck.md` (2026-11-09), reading the document text
+from `data/processed/chunks.jsonl` and, for r03, r09 and r17, the gold log. It did not open the URLs. The file header
+says so, and each entry has a one-line reason. Result (`python scripts/score_spotcheck.py`): **26/30 agree** (ticked
+11/15, unticked 15/15). Disagreements, all ticked: ExtendedAE #422 (r13), architectury-api #542 (r03), #528 and
+#664 (r17). In each, the thread shares the mod and error words but has a different cause. For example, #528 and #664
+are a runtime "Mod 'architectury' is not available" caused by omegaconfig, while r17's log shows architectury skipped
+as a Fabric jar and reported `[MISSING]`. **Decision (author): keep the labels.** No number changes. The report counts
+8 author-checked documents and 30 LLM-checked documents separately, never 38 human ones.
+
+Scorer bug found and fixed before scoring: `agree \[x\]` also matched inside `disagree [x]`, so a disagreement would
+have been counted as invalid. Fixed with a look-behind and tested in `tests/test_spotcheck_score.py`.

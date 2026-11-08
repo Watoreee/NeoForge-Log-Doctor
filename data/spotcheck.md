@@ -1,6 +1,7 @@
 # Spot-check of the relevance judgments
 
 Seed 42; 15 ticked + 15 unticked, drawn from 21 ticked and 492 unticked eligible (sheet, document) pairs in `data/pool/` (532 judged in total); **exclusion list applied** (`spotcheck_exclude.txt`: 8 doc ids, 19 sheet entries removed, i.e. the documents already reviewed by the human). Produced by `scripts/make_spotcheck.py`. Nothing here changes a label.
+**Who answered: Claude (an LLM), at the author's request, 2026-11-09.** These 30 answers are NOT a human spot-check. Claude read the document text in `data/processed/chunks.jsonl` and, where it mattered, the gold log (r03, r09, r17); it did not open the URLs. The human-reviewed count stays at the 8 documents in `spotcheck_exclude.txt`.
 
 For each: open the URL if the excerpt/title does not settle it. **agree** = the sheet's mark is right (ticked: it helps diagnose or fix THIS failure; unticked: it does not). **disagree** = it is wrong. Tick exactly one box. Then run `python scripts/score_spotcheck.py`.
 
@@ -14,7 +15,9 @@ For each: open the URL if the excerpt/title does not settle it. **agree** = the 
 - **Sheet's current mark: UNTICKED (not relevant)**
 - What was broken (notes.txt): disabled geckolib in CurseForge; theurgy was auto-disabled as its dependent
 
-Your call:  agree [ ]   disagree [ ]
+Your call:  agree [x]   disagree [ ]
+
+Reason (Claude): Curios crash caused by the Tiered mod; nothing about a missing geckolib.
 
 ---
 
@@ -26,7 +29,9 @@ Your call:  agree [ ]   disagree [ ]
 - **Sheet's current mark: TICKED (relevant)**
 - What was broken (notes.txt): disabled geckolib in CurseForge; theurgy was auto-disabled as its dependent
 
-Your call:  agree [ ]   disagree [ ]
+Your call:  agree [x]   disagree [ ]
+
+Reason (Claude): Dependency section of neoforge.mods.toml (type=required, versionRange) explains the 'requires geckolib' load error.
 
 ---
 
@@ -38,7 +43,9 @@ Your call:  agree [ ]   disagree [ ]
 - **Sheet's current mark: UNTICKED (not relevant)**
 - What was broken (notes.txt): set the pack's max RAM to 3000 MB in the launcher; opening a world failed with the data pack error screen
 
-Your call:  agree [ ]   disagree [ ]
+Your call:  agree [x]   disagree [ ]
+
+Reason (Claude): Fabric/Sodium preLaunch crash; unrelated to a low max-RAM setting.
 
 ---
 
@@ -50,7 +57,9 @@ Your call:  agree [ ]   disagree [ ]
 - **Sheet's current mark: TICKED (relevant)**
 - What was broken (notes.txt): ExtendedAE and MEGA Cells were left auto-disabled after the AE2 run; the pack's KubeJS startup script ExtendedAE/InfinityCells.js failed with Unknown type 'kubejs:custom_infinity_cell'
 
-Your call:  agree [ ]   disagree [ ]
+Your call:  agree [x]   disagree [ ]
+
+Reason (Claude): Same symptom (KubeJS does not know the custom infinity cell type) because ExtendedAE's KJS integration is absent; points at ExtendedAE as the provider.
 
 ---
 
@@ -62,7 +71,9 @@ Your call:  agree [ ]   disagree [ ]
 - **Sheet's current mark: TICKED (relevant)**
 - What was broken (notes.txt): ExtendedAE and MEGA Cells were left auto-disabled after the AE2 run; the pack's KubeJS startup script ExtendedAE/InfinityCells.js failed with Unknown type 'kubejs:custom_infinity_cell'
 
-Your call:  agree [ ]   disagree [ ]
+Your call:  agree [ ]   disagree [x]
+
+Reason (Claude): Different failure: ExtendedAE is loaded and its KJS plugin hits a NoSuchMethodError against KubeJS (version mismatch, fix = update). In r13 ExtendedAE is disabled, so the fix does not apply.
 
 ---
 
@@ -74,7 +85,9 @@ Your call:  agree [ ]   disagree [ ]
 - **Sheet's current mark: UNTICKED (not relevant)**
 - What was broken (notes.txt): updated Sophisticated Core to the Minecraft 26.1.2 build (sophisticatedcore-26.1.2-1.5.24.2445.jar) in a 1.21.1 pack; it requires minecraft 26.1.2 and neoforge 26.1.2.44-beta+, and its 'only supports jei 29.5.0.24' line is a side effect, not a JEI problem
 
-Your call:  agree [ ]   disagree [ ]
+Your call:  agree [x]   disagree [ ]
+
+Reason (Claude): Balm loading a client class on a 26.1 dedicated server; unrelated.
 
 ---
 
@@ -86,7 +99,9 @@ Your call:  agree [ ]   disagree [ ]
 - **Sheet's current mark: UNTICKED (not relevant)**
 - What was broken (notes.txt): updated Sophisticated Core to the Minecraft 26.1.2 build (sophisticatedcore-26.1.2-1.5.24.2445.jar) in a 1.21.1 pack; it requires minecraft 26.1.2 and neoforge 26.1.2.44-beta+, and its 'only supports jei 29.5.0.24' line is a side effect, not a JEI problem
 
-Your call:  agree [ ]   disagree [ ]
+Your call:  agree [x]   disagree [ ]
+
+Reason (Claude): Forge 1.19.2 crash with no link to Sophisticated Core or version mismatch.
 
 ---
 
@@ -98,7 +113,9 @@ Your call:  agree [ ]   disagree [ ]
 - **Sheet's current mark: UNTICKED (not relevant)**
 - What was broken (notes.txt): updated Sophisticated Core to the Minecraft 26.1.2 build (sophisticatedcore-26.1.2-1.5.24.2445.jar) in a 1.21.1 pack; it requires minecraft 26.1.2 and neoforge 26.1.2.44-beta+, and its 'only supports jei 29.5.0.24' line is a side effect, not a JEI problem
 
-Your call:  agree [ ]   disagree [ ]
+Your call:  agree [x]   disagree [ ]
+
+Reason (Claude): FerriteCore conflict with Industrial Upgrade on 1.20.1; unrelated.
 
 ---
 
@@ -110,7 +127,9 @@ Your call:  agree [ ]   disagree [ ]
 - **Sheet's current mark: UNTICKED (not relevant)**
 - What was broken (notes.txt): updated Sophisticated Core to the Minecraft 26.1.2 build (sophisticatedcore-26.1.2-1.5.24.2445.jar) in a 1.21.1 pack; it requires minecraft 26.1.2 and neoforge 26.1.2.44-beta+, and its 'only supports jei 29.5.0.24' line is a side effect, not a JEI problem
 
-Your call:  agree [ ]   disagree [ ]
+Your call:  agree [x]   disagree [ ]
+
+Reason (Claude): KotlinForForge crash after a NeoForge 20.6 update in a dev environment; unrelated to a 26.1.2 Sophisticated Core jar.
 
 ---
 
@@ -122,7 +141,9 @@ Your call:  agree [ ]   disagree [ ]
 - **Sheet's current mark: TICKED (relevant)**
 - What was broken (notes.txt): disabled curios in CurseForge
 
-Your call:  agree [ ]   disagree [ ]
+Your call:  agree [x]   disagree [ ]
+
+Reason (Claude): Dependency section explains the 'requires curios' load error.
 
 ---
 
@@ -134,7 +155,9 @@ Your call:  agree [ ]   disagree [ ]
 - **Sheet's current mark: TICKED (relevant)**
 - What was broken (notes.txt): disabled Architectury API in CurseForge; rctapi was auto-disabled as its dependent
 
-Your call:  agree [ ]   disagree [ ]
+Your call:  agree [ ]   disagree [x]
+
+Reason (Claude): No log and no diagnosis in the thread (the maintainer only asks for logs and points to #528, a runtime IllegalStateException from omegaconfig). r03 is a [MISSING] dependency (Architectury disabled); this issue does not help diagnose or fix it.
 
 ---
 
@@ -146,7 +169,9 @@ Your call:  agree [ ]   disagree [ ]
 - **Sheet's current mark: TICKED (relevant)**
 - What was broken (notes.txt): disabled Architectury API in CurseForge; rctapi was auto-disabled as its dependent
 
-Your call:  agree [ ]   disagree [ ]
+Your call:  agree [x]   disagree [ ]
+
+Reason (Claude): Dependency section explains the 'architectury [MISSING]' load error.
 
 ---
 
@@ -158,7 +183,9 @@ Your call:  agree [ ]   disagree [ ]
 - **Sheet's current mark: UNTICKED (not relevant)**
 - What was broken (notes.txt): disabled cloth-config in CurseForge; cloth_config stayed loaded via fightorflight but simpletms was missing too
 
-Your call:  agree [ ]   disagree [ ]
+Your call:  agree [x]   disagree [ ]
+
+Reason (Claude): KFF install crash fixed by adding Architectury; r04 is cloth_config/simpletms, so it does not help.
 
 ---
 
@@ -170,7 +197,9 @@ Your call:  agree [ ]   disagree [ ]
 - **Sheet's current mark: UNTICKED (not relevant)**
 - What was broken (notes.txt): disabled KotlinForForge in CurseForge; Cobblemon and its dependents then failed to load
 
-Your call:  agree [ ]   disagree [ ]
+Your call:  agree [x]   disagree [ ]
+
+Reason (Claude): Forge 1.19 Balm crash; unrelated to KotlinForForge.
 
 ---
 
@@ -182,7 +211,9 @@ Your call:  agree [ ]   disagree [ ]
 - **Sheet's current mark: TICKED (relevant)**
 - What was broken (notes.txt): disabled KotlinForForge in CurseForge; Cobblemon and its dependents then failed to load
 
-Your call:  agree [ ]   disagree [ ]
+Your call:  agree [x]   disagree [ ]
+
+Reason (Claude): Exactly r05: Cobblemon needs language provider kotlinforforge, all dependants fail.
 
 ---
 
@@ -194,7 +225,9 @@ Your call:  agree [ ]   disagree [ ]
 - **Sheet's current mark: UNTICKED (not relevant)**
 - What was broken (notes.txt): updated Iron Furnaces to the 26.1 build (ironfurnaces-neoforge-26.1.2-4.4.2.jar) in a 1.21.1 pack
 
-Your call:  agree [ ]   disagree [ ]
+Your call:  agree [x]   disagree [ ]
+
+Reason (Claude): GeckoLib armor renderer NPE; unrelated to an Iron Furnaces 26.1 jar.
 
 ---
 
@@ -206,7 +239,9 @@ Your call:  agree [ ]   disagree [ ]
 - **Sheet's current mark: UNTICKED (not relevant)**
 - What was broken (notes.txt): downgraded Create to 6.0.0 (create-1.21.1-6.0.0.jar); 11 mods require a newer Create
 
-Your call:  agree [ ]   disagree [ ]
+Your call:  agree [x]   disagree [ ]
+
+Reason (Claude): Create Aeronautics + Sodium rendering bug; unrelated to a Create downgrade.
 
 ---
 
@@ -218,7 +253,9 @@ Your call:  agree [ ]   disagree [ ]
 - **Sheet's current mark: UNTICKED (not relevant)**
 - What was broken (notes.txt): downgraded Create to 6.0.0 (create-1.21.1-6.0.0.jar); 11 mods require a newer Create
 
-Your call:  agree [ ]   disagree [ ]
+Your call:  agree [x]   disagree [ ]
+
+Reason (Claude): Forge 1.19 Balm crash; unrelated.
 
 ---
 
@@ -230,7 +267,9 @@ Your call:  agree [ ]   disagree [ ]
 - **Sheet's current mark: TICKED (relevant)**
 - What was broken (notes.txt): downgraded Create to 6.0.0 (create-1.21.1-6.0.0.jar); 11 mods require a newer Create
 
-Your call:  agree [ ]   disagree [ ]
+Your call:  agree [x]   disagree [ ]
+
+Reason (Claude): versionRange explains 'X requires create N or above' after the downgrade.
 
 ---
 
@@ -242,7 +281,9 @@ Your call:  agree [ ]   disagree [ ]
 - **Sheet's current mark: TICKED (relevant)**
 - What was broken (notes.txt): updated Trash Cans to the latest build (trashcans-1.1.2a-neoforge-mc26.3.jar), which targets Minecraft 26.x
 
-Your call:  agree [ ]   disagree [ ]
+Your call:  agree [x]   disagree [ ]
+
+Reason (Claude): r09's error is 'trashcans requires supermartijn642corelib 1.1.24 or above' (log); the thread is a corelib dependency failure for Trash Cans and the fix (get the right corelib) applies.
 
 ---
 
@@ -254,7 +295,9 @@ Your call:  agree [ ]   disagree [ ]
 - **Sheet's current mark: UNTICKED (not relevant)**
 - What was broken (notes.txt): updated Trash Cans to the latest build (trashcans-1.1.2a-neoforge-mc26.3.jar), which targets Minecraft 26.x
 
-Your call:  agree [ ]   disagree [ ]
+Your call:  agree [x]   disagree [ ]
+
+Reason (Claude): YUNG's API 1.16 worldgen IllegalAccessError; unrelated.
 
 ---
 
@@ -266,7 +309,9 @@ Your call:  agree [ ]   disagree [ ]
 - **Sheet's current mark: TICKED (relevant)**
 - What was broken (notes.txt): updated Trash Cans to the latest build (trashcans-1.1.2a-neoforge-mc26.3.jar), which targets Minecraft 26.x
 
-Your call:  agree [ ]   disagree [ ]
+Your call:  agree [x]   disagree [ ]
+
+Reason (Claude): versionRange explains the corelib / minecraft version requirement in r09.
 
 ---
 
@@ -278,7 +323,9 @@ Your call:  agree [ ]   disagree [ ]
 - **Sheet's current mark: UNTICKED (not relevant)**
 - What was broken (notes.txt): set the pack's max RAM to 1000 MB; ran out of memory during mod loading
 
-Your call:  agree [ ]   disagree [ ]
+Your call:  agree [x]   disagree [ ]
+
+Reason (Claude): Create deployer gameplay bug; the -Xmx in its debug info is not about memory errors.
 
 ---
 
@@ -290,7 +337,9 @@ Your call:  agree [ ]   disagree [ ]
 - **Sheet's current mark: UNTICKED (not relevant)**
 - What was broken (notes.txt): disabled Applied Energistics 2 (ae2) in CurseForge; aeinfinitybooster, ae2ct and ae2importexportcard still required it
 
-Your call:  agree [ ]   disagree [ ]
+Your call:  agree [x]   disagree [ ]
+
+Reason (Claude): Create enchantment description bug; unrelated.
 
 ---
 
@@ -302,7 +351,9 @@ Your call:  agree [ ]   disagree [ ]
 - **Sheet's current mark: UNTICKED (not relevant)**
 - What was broken (notes.txt): disabled Applied Energistics 2 (ae2) in CurseForge; aeinfinitybooster, ae2ct and ae2importexportcard still required it
 
-Your call:  agree [ ]   disagree [ ]
+Your call:  agree [x]   disagree [ ]
+
+Reason (Claude): Waystones/Balm config error on 1.21.4; unrelated to AE2 being disabled.
 
 ---
 
@@ -314,7 +365,9 @@ Your call:  agree [ ]   disagree [ ]
 - **Sheet's current mark: TICKED (relevant)**
 - What was broken (notes.txt): downgraded YUNG's API to the 1.20.4 build (YungsApi-1.20.4-NeoForge-4.4.3.jar); NeoForge 21.1 skipped the jar as being for Forge or an older NeoForge, so betterstrongholds, bettermineshafts, betterdungeons and betterendisland reported yungsapi as not installed
 
-Your call:  agree [ ]   disagree [ ]
+Your call:  agree [x]   disagree [ ]
+
+Reason (Claude): The page says the metadata file is neoforge.mods.toml; a 1.20.4 YUNG's API jar is skipped, so dependants report it missing.
 
 ---
 
@@ -326,7 +379,9 @@ Your call:  agree [ ]   disagree [ ]
 - **Sheet's current mark: TICKED (relevant)**
 - What was broken (notes.txt): replaced Architectury API with the Fabric build (architectury-fabric-22.0.5.jar); NeoForge skipped it as a Fabric mod, so 25 mods reported architectury as not installed
 
-Your call:  agree [ ]   disagree [ ]
+Your call:  agree [ ]   disagree [x]
+
+Reason (Claude): Different error: architectury is installed and a runtime IllegalStateException 'Mod architectury is not available' is caused by omegaconfig. r17's log has no such error; it shows architectury skipped (Fabric jar) and reported missing by 25 mods.
 
 ---
 
@@ -338,7 +393,9 @@ Your call:  agree [ ]   disagree [ ]
 - **Sheet's current mark: TICKED (relevant)**
 - What was broken (notes.txt): replaced Architectury API with the Fabric build (architectury-fabric-22.0.5.jar); NeoForge skipped it as a Fabric mod, so 25 mods reported architectury as not installed
 
-Your call:  agree [ ]   disagree [ ]
+Your call:  agree [ ]   disagree [x]
+
+Reason (Claude): Same as #528: the IllegalStateException caused by omegaconfig (Mo' Structures) or modified packs, not a Fabric jar being skipped.
 
 ---
 
@@ -350,7 +407,9 @@ Your call:  agree [ ]   disagree [ ]
 - **Sheet's current mark: TICKED (relevant)**
 - What was broken (notes.txt): replaced Architectury API with the Fabric build (architectury-fabric-22.0.5.jar); NeoForge skipped it as a Fabric mod, so 25 mods reported architectury as not installed
 
-Your call:  agree [ ]   disagree [ ]
+Your call:  agree [x]   disagree [ ]
+
+Reason (Claude): The page says NeoForge reads neoforge.mods.toml; a Fabric jar has none and is skipped, so dependants report architectury missing.
 
 ---
 
@@ -362,4 +421,6 @@ Your call:  agree [ ]   disagree [ ]
 - **Sheet's current mark: TICKED (relevant)**
 - What was broken (notes.txt): replaced Konkrete with the Minecraft 1.21.11 build (konkrete_neoforge_1.9.15_MC_1.21.11.jar) in a 1.21.1 pack; it requires minecraft 1.21.11+ and neoforge 21.11.13-beta+ (1.21.11 vs 1.21.1 is easy to misread)
 
-Your call:  agree [ ]   disagree [ ]
+Your call:  agree [x]   disagree [ ]
+
+Reason (Claude): Same failure shape: Konkrete refuses to load over a loader-version requirement; the owner says the wrong version is installed.

@@ -548,3 +548,14 @@ have been counted as invalid. Fixed with a look-behind and tested in `tests/test
   history, which is not rewritten. Section references such as "PLAN 6.4" in older entries and in docstrings point to
   that history.
 - **Architecture diagram**: `docs/architecture.md` (Mermaid), drawn from the modules as they are.
+
+## Deployment on Vercel (2026-11-09)
+
+- `app.py` at the repository root is the entrypoint. It puts `src/` on the path and re-exports `crashdoc.api:app`,
+  because the platform does not install the package.
+- `sentence-transformers` was removed from `requirements.txt`. Nothing imports it, and it pulls in PyTorch, which
+  does not fit a serverless function. No evaluation number depends on it, because the proxy serves bge-m3.
+- Cache writes in `llm.py` are best effort, because the deployed filesystem is read-only. A live answer is still
+  returned and simply not cached. Replay reads of the committed `eval/cache/` are unchanged.
+- Platform limits that override the app's own: Vercel caps a request body at 4.5 MB, so the 10 MB cap in
+  `service.py` is not reachable there. Larger logs are refused by the platform before the app sees them.

@@ -223,3 +223,23 @@ def test_embed_without_cache_writes_nothing(tmp_path):
     llm = LLM(settings=_settings(tmp_path), client=FakeClient())
     llm.embed(["corpus chunk"], use_cache=False)
     assert not (tmp_path / "cache").exists()
+
+
+def test_a_read_only_cache_dir_does_not_break_a_live_call(tmp_path, monkeypatch):
+    """Serverless filesystems are read-only: the answer must still come back, just uncached."""
+    from crashdoc import llm as llm_mod
+
+    def refuse(*a, **k):
+        raise OSError(30, "Read-only file system")
+
+    monkeypatch.setattr(llm_mod.tempfile, "mkstemp", refuse)
+    client = FakeClient()
+    result = LLM(settings=_settings(tmp_path), client=client).chat(MESSAGES, prompt_version="v1")
+    assert result.content == "hello" and result.cached is False
+
+
+def test_the_deployment_entrypoint_exposes_the_app():
+    import importlib
+
+    entry = importlib.import_module("app")
+    assert entry.app.title == "NeoForge Log Doctor"

@@ -247,9 +247,15 @@ def _read_json(path: Path) -> dict[str, Any] | None:
 
 
 def _write_json(path: Path, data: dict[str, Any]) -> None:
-    """Atomic write (temp file + rename), so an interrupted run never leaves a half-written cache entry."""
-    path.parent.mkdir(parents=True, exist_ok=True)
-    fd, tmp = tempfile.mkstemp(dir=path.parent, suffix=".tmp")
-    with os.fdopen(fd, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=1)
-    os.replace(tmp, path)
+    """Atomic write (temp file + rename), so an interrupted run never leaves a half-written cache entry.
+
+    Best effort: on a read-only filesystem (a serverless deployment such as Vercel) the answer is still returned and
+    simply not cached. Reads of the committed cache keep working there."""
+    try:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        fd, tmp = tempfile.mkstemp(dir=path.parent, suffix=".tmp")
+        with os.fdopen(fd, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=1)
+        os.replace(tmp, path)
+    except OSError:
+        return

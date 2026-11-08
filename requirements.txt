@@ -15,8 +15,8 @@ uvicorn==0.54.0
 numpy==2.4.6
 rank-bm25==0.2.2
 tiktoken==0.14.0
-# Local embedding fallback (only needed if the proxy has no embedding model; see docs/proxy-notes.md)
-sentence-transformers==6.2.0
+# (sentence-transformers was listed as a local embedding fallback but is never imported; removed because it pulls in
+# PyTorch, which does not fit a serverless function. The proxy serves bge-m3.)
 
 # Dev
 pytest==9.1.1
